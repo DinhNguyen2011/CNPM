@@ -152,6 +152,7 @@
             this.btnLichTrinh.Name = "btnLichTrinh";
             this.btnLichTrinh.Size = new System.Drawing.Size(170, 90);
             this.btnLichTrinh.TabIndex = 1;
+            this.btnLichTrinh.Text = "Quản Lý Nhân Viên";
             // 
             // btnDatVe
             // 
