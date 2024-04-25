@@ -1,0 +1,12 @@
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Guna.UI2.dll
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\fromDangNhap.csproj.AssemblyReference.cache
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\fromDangNhap.csproj.GenerateResource.cache
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\fromDangNhap.csproj.CoreCompileInputs.cache
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\fromDangNhap.csproj.CopyComplete
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

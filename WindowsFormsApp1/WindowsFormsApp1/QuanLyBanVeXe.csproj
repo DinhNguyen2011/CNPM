@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BangDieuKhien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BangDieuKhien.Designer.cs">
+      <DependentUpon>BangDieuKhien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BangDieuKhienAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BangDieuKhienAdmin.Designer.cs">
+      <DependentUpon>BangDieuKhienAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyBanVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyBanVe.Designer.cs">
+      <DependentUpon>QuanLyBanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\QuanLyXe.Designer.cs">
+      <DependentUpon>QuanLyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserChiTietVeXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserChiTietVeXe.Designer.cs">
+      <DependentUpon>UserChiTietVeXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserDatVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserDatVe.Designer.cs">
+      <DependentUpon>UserDatVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserLichTrinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserLichTrinh.Designer.cs">
+      <DependentUpon>UserLichTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatUser\UserThanhToan.Designer.cs">
+      <DependentUpon>UserThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BangDieuKhien.resx">
+      <DependentUpon>BangDieuKhien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BangDieuKhienAdmin.resx">
+      <DependentUpon>BangDieuKhienAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\QuanLyBanVe.resx">
+      <DependentUpon>QuanLyBanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\QuanLyXe.resx">
+      <DependentUpon>QuanLyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatUser\UserChiTietVeXe.resx">
+      <DependentUpon>UserChiTietVeXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatUser\UserDatVe.resx">
+      <DependentUpon>UserDatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatUser\UserLichTrinh.resx">
+      <DependentUpon>UserLichTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatUser\UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatUser\UserThanhToan.resx">
+      <DependentUpon>UserThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
