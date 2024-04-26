@@ -76,5 +76,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void userChiTietVeXe1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

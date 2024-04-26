@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.KiemSoatAmin
+namespace WindowsFormsApp1
 {
-    public partial class QuanLyBanVe : UserControl
+    public partial class DangKiTaiKhoang : Form
     {
-        public QuanLyBanVe()
+        public DangKiTaiKhoang()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();          
         }
     }
 }

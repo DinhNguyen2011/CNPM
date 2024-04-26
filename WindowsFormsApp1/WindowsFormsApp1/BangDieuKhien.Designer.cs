@@ -40,16 +40,16 @@
             this.btnDatVe = new Guna.UI2.WinForms.Guna2Button();
             this.PnMoving = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
             this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
             this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
             this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
             this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
+            this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -210,10 +210,52 @@
             this.panel2.Controls.Add(this.userLichTrinh1);
             this.panel2.Controls.Add(this.userProfile1);
             this.panel2.Controls.Add(this.userDatVe1);
-            this.panel2.Location = new System.Drawing.Point(12, 175);
+            this.panel2.Location = new System.Drawing.Point(12, 174);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1443, 600);
             this.panel2.TabIndex = 3;
+            // 
+            // userChiTietVeXe1
+            // 
+            this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.userChiTietVeXe1.Location = new System.Drawing.Point(-1, -1);
+            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
+            this.userChiTietVeXe1.Size = new System.Drawing.Size(1370, 496);
+            this.userChiTietVeXe1.TabIndex = 4;
+            this.userChiTietVeXe1.Load += new System.EventHandler(this.userChiTietVeXe1_Load);
+            // 
+            // userThanhToan1
+            // 
+            this.userThanhToan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.userThanhToan1.Location = new System.Drawing.Point(-1, -1);
+            this.userThanhToan1.Name = "userThanhToan1";
+            this.userThanhToan1.Size = new System.Drawing.Size(1370, 490);
+            this.userThanhToan1.TabIndex = 3;
+            // 
+            // userLichTrinh1
+            // 
+            this.userLichTrinh1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.userLichTrinh1.Location = new System.Drawing.Point(-1, -1);
+            this.userLichTrinh1.Name = "userLichTrinh1";
+            this.userLichTrinh1.Size = new System.Drawing.Size(1370, 490);
+            this.userLichTrinh1.TabIndex = 2;
+            // 
+            // userProfile1
+            // 
+            this.userProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.userProfile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userProfile1.Location = new System.Drawing.Point(-9, -1);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(1370, 490);
+            this.userProfile1.TabIndex = 1;
+            // 
+            // userDatVe1
+            // 
+            this.userDatVe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.userDatVe1.Location = new System.Drawing.Point(-1, -1);
+            this.userDatVe1.Name = "userDatVe1";
+            this.userDatVe1.Size = new System.Drawing.Size(1370, 490);
+            this.userDatVe1.TabIndex = 0;
             // 
             // guna2ElipseDatVe
             // 
@@ -235,52 +277,11 @@
             // 
             this.guna2ElipseCTVeXe.TargetControl = this;
             // 
-            // userChiTietVeXe1
-            // 
-            this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.userChiTietVeXe1.Location = new System.Drawing.Point(0, -2);
-            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
-            this.userChiTietVeXe1.Size = new System.Drawing.Size(1370, 490);
-            this.userChiTietVeXe1.TabIndex = 4;
-            // 
-            // userThanhToan1
-            // 
-            this.userThanhToan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.userThanhToan1.Location = new System.Drawing.Point(3, -1);
-            this.userThanhToan1.Name = "userThanhToan1";
-            this.userThanhToan1.Size = new System.Drawing.Size(1370, 490);
-            this.userThanhToan1.TabIndex = 3;
-            // 
-            // userLichTrinh1
-            // 
-            this.userLichTrinh1.BackColor = System.Drawing.Color.White;
-            this.userLichTrinh1.Location = new System.Drawing.Point(3, -3);
-            this.userLichTrinh1.Name = "userLichTrinh1";
-            this.userLichTrinh1.Size = new System.Drawing.Size(1370, 490);
-            this.userLichTrinh1.TabIndex = 2;
-            // 
-            // userProfile1
-            // 
-            this.userProfile1.BackColor = System.Drawing.Color.White;
-            this.userProfile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userProfile1.Location = new System.Drawing.Point(3, -1);
-            this.userProfile1.Name = "userProfile1";
-            this.userProfile1.Size = new System.Drawing.Size(1370, 490);
-            this.userProfile1.TabIndex = 1;
-            // 
-            // userDatVe1
-            // 
-            this.userDatVe1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userDatVe1.Location = new System.Drawing.Point(3, 3);
-            this.userDatVe1.Name = "userDatVe1";
-            this.userDatVe1.Size = new System.Drawing.Size(1370, 490);
-            this.userDatVe1.TabIndex = 0;
-            // 
             // BangDieuKhien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.PnMoving);
             this.Controls.Add(this.panel2);

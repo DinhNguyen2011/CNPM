@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.KiemSoatAmin
 {
-    public partial class QuanLyKhachHang : UserControl
+    public partial class UserQuanLyKhachHang : UserControl
     {
-        public QuanLyKhachHang()
+        public UserQuanLyKhachHang()
         {
             InitializeComponent();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnproFile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

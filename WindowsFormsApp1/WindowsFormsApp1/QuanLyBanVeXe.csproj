@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,29 +62,41 @@
     <Compile Include="BangDieuKhienAdmin.Designer.cs">
       <DependentUpon>BangDieuKhienAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DangKiTaiKhoang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKiTaiKhoang.Designer.cs">
+      <DependentUpon>DangKiTaiKhoang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyBanVe.cs">
+    <Compile Include="KiemSoatAmin\UserQuanLyBanVe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyBanVe.Designer.cs">
-      <DependentUpon>QuanLyBanVe.cs</DependentUpon>
+    <Compile Include="KiemSoatAmin\UserQuanLyBanVe.Designer.cs">
+      <DependentUpon>UserQuanLyBanVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyKhachHang.cs">
+    <Compile Include="KiemSoatAmin\UserQuanLyKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyKhachHang.Designer.cs">
-      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    <Compile Include="KiemSoatAmin\UserQuanLyKhachHang.Designer.cs">
+      <DependentUpon>UserQuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyXe.cs">
+    <Compile Include="KiemSoatAmin\UserQuanLyNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KiemSoatAmin\QuanLyXe.Designer.cs">
-      <DependentUpon>QuanLyXe.cs</DependentUpon>
+    <Compile Include="KiemSoatAmin\UserQuanLyNhanVien.Designer.cs">
+      <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyXe.Designer.cs">
+      <DependentUpon>UserQuanLyXe.cs</DependentUpon>
     </Compile>
     <Compile Include="KiemSoatUser\UserChiTietVeXe.cs">
       <SubType>UserControl</SubType>
@@ -123,17 +136,23 @@
     <EmbeddedResource Include="BangDieuKhienAdmin.resx">
       <DependentUpon>BangDieuKhienAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DangKiTaiKhoang.resx">
+      <DependentUpon>DangKiTaiKhoang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\QuanLyBanVe.resx">
-      <DependentUpon>QuanLyBanVe.cs</DependentUpon>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyBanVe.resx">
+      <DependentUpon>UserQuanLyBanVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\QuanLyKhachHang.resx">
-      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyKhachHang.resx">
+      <DependentUpon>UserQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\QuanLyXe.resx">
-      <DependentUpon>QuanLyXe.cs</DependentUpon>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyNhanVien.resx">
+      <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyXe.resx">
+      <DependentUpon>UserQuanLyXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatUser\UserChiTietVeXe.resx">
       <DependentUpon>UserChiTietVeXe.cs</DependentUpon>

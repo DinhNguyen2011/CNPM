@@ -30,11 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDkiTK = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
-            this.txtLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtPw = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUseName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,11 +49,13 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.btnDkiTK);
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.lblError);
-            this.guna2Panel1.Controls.Add(this.txtLogin);
+            this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.txtPw);
             this.guna2Panel1.Controls.Add(this.txtUseName);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -62,6 +66,33 @@
             this.guna2Panel1.Size = new System.Drawing.Size(800, 400);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnDkiTK
+            // 
+            this.btnDkiTK.BorderRadius = 18;
+            this.btnDkiTK.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnDkiTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDkiTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDkiTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDkiTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDkiTK.FillColor = System.Drawing.Color.White;
+            this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnDkiTK.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
+            this.btnDkiTK.Location = new System.Drawing.Point(564, 301);
+            this.btnDkiTK.Name = "btnDkiTK";
+            this.btnDkiTK.Size = new System.Drawing.Size(95, 23);
+            this.btnDkiTK.TabIndex = 12;
+            this.btnDkiTK.Text = "Đăng ký ngay";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(457, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Chưa có tài khoảng ?";
             // 
             // guna2HtmlLabel2
             // 
@@ -107,22 +138,22 @@
             this.lblError.Text = "Tên đăng nhập hoặc mật khẩu sai ";
             this.lblError.Visible = false;
             // 
-            // txtLogin
+            // btnLogin
             // 
-            this.txtLogin.BorderRadius = 18;
-            this.txtLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.txtLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.txtLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.txtLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.txtLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.ForeColor = System.Drawing.Color.White;
-            this.txtLogin.Location = new System.Drawing.Point(398, 267);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(262, 45);
-            this.txtLogin.TabIndex = 5;
-            this.txtLogin.Text = "Login ";
-            this.txtLogin.Click += new System.EventHandler(this.txtLogin_Click);
+            this.btnLogin.BorderRadius = 18;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(401, 248);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(262, 45);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login ";
+            this.btnLogin.Click += new System.EventHandler(this.txtLogin_Click);
             // 
             // txtPw
             // 
@@ -139,7 +170,7 @@
             this.txtPw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPw.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPw.IconLeft")));
             this.txtPw.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtPw.Location = new System.Drawing.Point(398, 204);
+            this.txtPw.Location = new System.Drawing.Point(398, 194);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.PlaceholderText = "Enter Password";
@@ -162,7 +193,7 @@
             this.txtUseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUseName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUseName.IconLeft")));
             this.txtUseName.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtUseName.Location = new System.Drawing.Point(398, 148);
+            this.txtUseName.Location = new System.Drawing.Point(398, 136);
             this.txtUseName.Name = "txtUseName";
             this.txtUseName.PasswordChar = '\0';
             this.txtUseName.PlaceholderText = "Enter User Name";
@@ -235,12 +266,14 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2TextBox txtUseName;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button txtLogin;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtPw;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnDkiTK;
     }
 }
 
