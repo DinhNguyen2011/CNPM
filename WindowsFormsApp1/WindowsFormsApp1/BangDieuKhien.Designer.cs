@@ -40,16 +40,17 @@
             this.btnDatVe = new Guna.UI2.WinForms.Guna2Button();
             this.PnMoving = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
-            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
-            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
-            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
-            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
             this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.LogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(1, 2);
+            this.btnClose.Location = new System.Drawing.Point(1325, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(44, 37);
             this.btnClose.TabIndex = 0;
@@ -82,7 +83,7 @@
             this.btnMiniSize.ForeColor = System.Drawing.Color.White;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMiniSize.Location = new System.Drawing.Point(1, 45);
+            this.btnMiniSize.Location = new System.Drawing.Point(1278, 7);
             this.btnMiniSize.Name = "btnMiniSize";
             this.btnMiniSize.Size = new System.Drawing.Size(44, 37);
             this.btnMiniSize.TabIndex = 1;
@@ -215,6 +216,42 @@
             this.panel2.Size = new System.Drawing.Size(1443, 600);
             this.panel2.TabIndex = 3;
             // 
+            // guna2ElipseDatVe
+            // 
+            this.guna2ElipseDatVe.TargetControl = this;
+            // 
+            // guna2ElipseProfile
+            // 
+            this.guna2ElipseProfile.TargetControl = this;
+            // 
+            // guna2ElipseTimKiem
+            // 
+            this.guna2ElipseTimKiem.TargetControl = this;
+            // 
+            // guna2ElipseThanhToan
+            // 
+            this.guna2ElipseThanhToan.TargetControl = this;
+            // 
+            // guna2ElipseCTVeXe
+            // 
+            this.guna2ElipseCTVeXe.TargetControl = this;
+            // 
+            // LogOut
+            // 
+            this.LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LogOut.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Image = ((System.Drawing.Image)(resources.GetObject("LogOut.Image")));
+            this.LogOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.LogOut.Location = new System.Drawing.Point(1327, 48);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(44, 37);
+            this.LogOut.TabIndex = 6;
+            // 
             // userChiTietVeXe1
             // 
             this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -257,32 +294,13 @@
             this.userDatVe1.Size = new System.Drawing.Size(1370, 490);
             this.userDatVe1.TabIndex = 0;
             // 
-            // guna2ElipseDatVe
-            // 
-            this.guna2ElipseDatVe.TargetControl = this;
-            // 
-            // guna2ElipseProfile
-            // 
-            this.guna2ElipseProfile.TargetControl = this;
-            // 
-            // guna2ElipseTimKiem
-            // 
-            this.guna2ElipseTimKiem.TargetControl = this;
-            // 
-            // guna2ElipseThanhToan
-            // 
-            this.guna2ElipseThanhToan.TargetControl = this;
-            // 
-            // guna2ElipseCTVeXe
-            // 
-            this.guna2ElipseCTVeXe.TargetControl = this;
-            // 
             // BangDieuKhien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.LogOut);
             this.Controls.Add(this.PnMoving);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -322,6 +340,7 @@
         private KiemSoatUser.UserThanhToan userThanhToan1;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseCTVeXe;
         private KiemSoatUser.UserChiTietVeXe userChiTietVeXe1;
+        private Guna.UI2.WinForms.Guna2Button LogOut;
         // private KiemSoatUser.UserChiTietVeXe userCTVeXe1;
     }
 }

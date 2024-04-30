@@ -43,6 +43,7 @@
             this.guna2QLKH = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLNV = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.LogOut = new Guna.UI2.WinForms.Guna2Button();
             this.userQuanLyXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe();
             this.userQuanLyNhanVien1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien();
             this.userQuanLyKhachHang1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang();
@@ -62,7 +63,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(2, 0);
+            this.btnClose.Location = new System.Drawing.Point(1325, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(44, 37);
             this.btnClose.TabIndex = 1;
@@ -79,7 +80,7 @@
             this.btnMiniSize.ForeColor = System.Drawing.Color.White;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMiniSize.Location = new System.Drawing.Point(2, 43);
+            this.btnMiniSize.Location = new System.Drawing.Point(1280, 0);
             this.btnMiniSize.Name = "btnMiniSize";
             this.btnMiniSize.Size = new System.Drawing.Size(44, 37);
             this.btnMiniSize.TabIndex = 2;
@@ -205,6 +206,22 @@
             // 
             this.guna2QLXe.TargetControl = this;
             // 
+            // LogOut
+            // 
+            this.LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LogOut.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Image = ((System.Drawing.Image)(resources.GetObject("LogOut.Image")));
+            this.LogOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.LogOut.Location = new System.Drawing.Point(1327, 43);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(44, 37);
+            this.LogOut.TabIndex = 8;
+            // 
             // userQuanLyXe1
             // 
             this.userQuanLyXe1.BackColor = System.Drawing.Color.Silver;
@@ -247,6 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.LogOut);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PnMovingad);
             this.Controls.Add(this.panel1);
@@ -282,5 +300,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2QLNV;
         private KiemSoatAmin.UserQuanLyXe userQuanLyXe1;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLXe;
+        private Guna.UI2.WinForms.Guna2Button LogOut;
     }
 }
