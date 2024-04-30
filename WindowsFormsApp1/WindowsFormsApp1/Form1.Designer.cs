@@ -79,7 +79,7 @@
             this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
             this.btnDkiTK.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
-            this.btnDkiTK.Location = new System.Drawing.Point(564, 301);
+            this.btnDkiTK.Location = new System.Drawing.Point(561, 301);
             this.btnDkiTK.Name = "btnDkiTK";
             this.btnDkiTK.Size = new System.Drawing.Size(95, 23);
             this.btnDkiTK.TabIndex = 12;
@@ -90,9 +90,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(457, 307);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 13);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Chưa có tài khoảng ?";
+            this.label2.Text = "Chưa có tài khoản ?";
             // 
             // guna2HtmlLabel2
             // 
