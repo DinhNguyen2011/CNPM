@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserQuanLyBanVe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDiemDen = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDiemDi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtBienXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThemVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaVe = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSwap = new Guna.UI2.WinForms.Guna2Button();
             this.dgvVeXe = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +50,10 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaQuanLyVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.cbGheNam = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btntim = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,26 +78,6 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "Thông tin chuyến đi ";
             // 
-            // txtDiemDen
-            // 
-            this.txtDiemDen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiemDen.DefaultText = "";
-            this.txtDiemDen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiemDen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiemDen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDen.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDiemDen.ForeColor = System.Drawing.Color.Black;
-            this.txtDiemDen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDen.Location = new System.Drawing.Point(1068, 103);
-            this.txtDiemDen.Name = "txtDiemDen";
-            this.txtDiemDen.PasswordChar = '\0';
-            this.txtDiemDen.PlaceholderText = "Enter Address";
-            this.txtDiemDen.SelectedText = "";
-            this.txtDiemDen.Size = new System.Drawing.Size(216, 41);
-            this.txtDiemDen.TabIndex = 33;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -106,26 +87,6 @@
             this.label10.Size = new System.Drawing.Size(61, 17);
             this.label10.TabIndex = 32;
             this.label10.Text = "Điểm đến";
-            // 
-            // txtDiemDi
-            // 
-            this.txtDiemDi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiemDi.DefaultText = "";
-            this.txtDiemDi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiemDi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiemDi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDi.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDiemDi.ForeColor = System.Drawing.Color.Black;
-            this.txtDiemDi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDi.Location = new System.Drawing.Point(798, 106);
-            this.txtDiemDi.Name = "txtDiemDi";
-            this.txtDiemDi.PasswordChar = '\0';
-            this.txtDiemDi.PlaceholderText = "Enter Address";
-            this.txtDiemDi.SelectedText = "";
-            this.txtDiemDi.Size = new System.Drawing.Size(222, 41);
-            this.txtDiemDi.TabIndex = 31;
             // 
             // label11
             // 
@@ -203,34 +164,18 @@
             this.btnXoaVe.TabIndex = 37;
             this.btnXoaVe.Text = "Xóa vé xe của hành khách";
             // 
-            // btnSwap
-            // 
-            this.btnSwap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSwap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSwap.FillColor = System.Drawing.SystemColors.Window;
-            this.btnSwap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSwap.ForeColor = System.Drawing.Color.White;
-            this.btnSwap.Image = ((System.Drawing.Image)(resources.GetObject("btnSwap.Image")));
-            this.btnSwap.ImageSize = new System.Drawing.Size(50, 45);
-            this.btnSwap.Location = new System.Drawing.Point(1022, 105);
-            this.btnSwap.Name = "btnSwap";
-            this.btnSwap.Size = new System.Drawing.Size(45, 40);
-            this.btnSwap.TabIndex = 38;
-            // 
             // dgvVeXe
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvVeXe.ColumnHeadersHeight = 28;
             this.dgvVeXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvVeXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -241,14 +186,14 @@
             this.Column12,
             this.Column13,
             this.Column14});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVeXe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVeXe.Location = new System.Drawing.Point(86, 77);
             this.dgvVeXe.Name = "dgvVeXe";
@@ -317,21 +262,99 @@
             this.gunaQuanLyVeXe.BorderRadius = 30;
             this.gunaQuanLyVeXe.TargetControl = this;
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.SystemColors.Window;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(45, 40);
+            this.guna2Button1.Location = new System.Drawing.Point(1015, 105);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(50, 45);
+            this.guna2Button1.TabIndex = 40;
+            // 
+            // cbGheNam
+            // 
+            this.cbGheNam.BackColor = System.Drawing.Color.Transparent;
+            this.cbGheNam.BorderRadius = 15;
+            this.cbGheNam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbGheNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGheNam.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGheNam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbGheNam.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbGheNam.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbGheNam.ForeColor = System.Drawing.Color.Black;
+            this.cbGheNam.ItemHeight = 30;
+            this.cbGheNam.Items.AddRange(new object[] {
+            "1A",
+            "1B",
+            "1C"});
+            this.cbGheNam.Location = new System.Drawing.Point(803, 109);
+            this.cbGheNam.Name = "cbGheNam";
+            this.cbGheNam.Size = new System.Drawing.Size(213, 36);
+            this.cbGheNam.TabIndex = 41;
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderRadius = 15;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "1A",
+            "1B",
+            "1C"});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(1063, 109);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(213, 36);
+            this.guna2ComboBox1.TabIndex = 42;
+            // 
+            // btntim
+            // 
+            this.btntim.BorderRadius = 18;
+            this.btntim.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btntim.BorderThickness = 1;
+            this.btntim.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btntim.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btntim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btntim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btntim.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btntim.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btntim.ForeColor = System.Drawing.Color.Black;
+            this.btntim.Location = new System.Drawing.Point(1123, 171);
+            this.btntim.Name = "btntim";
+            this.btntim.Size = new System.Drawing.Size(154, 45);
+            this.btntim.TabIndex = 43;
+            this.btntim.Text = "Tìm chuyến đi";
+            // 
             // UserQuanLyBanVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.btntim);
+            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.cbGheNam);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.dgvVeXe);
-            this.Controls.Add(this.btnSwap);
             this.Controls.Add(this.btnXoaVe);
             this.Controls.Add(this.btnThemVe);
             this.Controls.Add(this.txtBienXe);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtDiemDen);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtDiemDi);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -347,15 +370,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox txtDiemDen;
         private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2TextBox txtDiemDi;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txtBienXe;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button btnThemVe;
         private Guna.UI2.WinForms.Guna2Button btnXoaVe;
-        private Guna.UI2.WinForms.Guna2Button btnSwap;
         private Guna.UI2.WinForms.Guna2DataGridView dgvVeXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
@@ -365,5 +385,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         public Guna.UI2.WinForms.Guna2Elipse gunaQuanLyVeXe;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbGheNam;
+        private Guna.UI2.WinForms.Guna2Button btntim;
     }
 }

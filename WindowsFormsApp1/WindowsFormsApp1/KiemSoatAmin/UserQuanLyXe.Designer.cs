@@ -46,6 +46,7 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbSoXe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2QLXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,19 +63,21 @@
             // 
             // btnTimCXe
             // 
-            this.btnTimCXe.BackColor = System.Drawing.Color.White;
-            this.btnTimCXe.BorderColor = System.Drawing.Color.White;
+            this.btnTimCXe.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTimCXe.BorderColor = System.Drawing.Color.MintCream;
             this.btnTimCXe.BorderRadius = 18;
             this.btnTimCXe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.btnTimCXe.BorderThickness = 1;
+            this.btnTimCXe.CustomBorderColor = System.Drawing.Color.White;
             this.btnTimCXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTimCXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimCXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTimCXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTimCXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTimCXe.FocusedColor = System.Drawing.Color.Transparent;
             this.btnTimCXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnTimCXe.ForeColor = System.Drawing.Color.White;
-            this.btnTimCXe.Location = new System.Drawing.Point(664, 83);
+            this.btnTimCXe.ForeColor = System.Drawing.Color.Black;
+            this.btnTimCXe.Location = new System.Drawing.Point(657, 86);
             this.btnTimCXe.Name = "btnTimCXe";
             this.btnTimCXe.Size = new System.Drawing.Size(180, 45);
             this.btnTimCXe.TabIndex = 27;
@@ -221,11 +224,34 @@
             this.guna2QLXe.BorderRadius = 30;
             this.guna2QLXe.TargetControl = this;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXoa.BorderColor = System.Drawing.Color.MintCream;
+            this.btnXoa.BorderRadius = 18;
+            this.btnXoa.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnXoa.BorderThickness = 1;
+            this.btnXoa.CustomBorderColor = System.Drawing.Color.White;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXoa.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.Location = new System.Drawing.Point(864, 86);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(180, 45);
+            this.btnXoa.TabIndex = 31;
+            this.btnXoa.Text = "Xóa ";
+            // 
             // UserQuanLyXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.cbSoXe);
             this.Controls.Add(this.dgvXe);
             this.Controls.Add(this.btnTimCXe);
@@ -255,5 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Guna.UI2.WinForms.Guna2ComboBox cbSoXe;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLXe;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
     }
 }

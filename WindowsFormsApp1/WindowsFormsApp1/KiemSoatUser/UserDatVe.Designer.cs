@@ -32,14 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDatVe));
             this.label1 = new System.Windows.Forms.Label();
-            this.lblSoVe = new System.Windows.Forms.Label();
-            this.txtDiemDi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbSoVe = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDiemDen = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnTimXe = new Guna.UI2.WinForms.Guna2Button();
@@ -78,7 +73,6 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,42 +87,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm Vé ";
             // 
-            // lblSoVe
-            // 
-            this.lblSoVe.AutoSize = true;
-            this.lblSoVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoVe.Location = new System.Drawing.Point(777, 38);
-            this.lblSoVe.Name = "lblSoVe";
-            this.lblSoVe.Size = new System.Drawing.Size(65, 18);
-            this.lblSoVe.TabIndex = 2;
-            this.lblSoVe.Text = "Điểm đi";
-            // 
-            // txtDiemDi
-            // 
-            this.txtDiemDi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiemDi.DefaultText = "";
-            this.txtDiemDi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiemDi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiemDi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemDi.ForeColor = System.Drawing.Color.Black;
-            this.txtDiemDi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDi.Location = new System.Drawing.Point(772, 60);
-            this.txtDiemDi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDiemDi.Name = "txtDiemDi";
-            this.txtDiemDi.PasswordChar = '\0';
-            this.txtDiemDi.PlaceholderText = "";
-            this.txtDiemDi.SelectedText = "";
-            this.txtDiemDi.Size = new System.Drawing.Size(237, 36);
-            this.txtDiemDi.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(780, 130);
+            this.label2.Location = new System.Drawing.Point(722, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 4;
@@ -144,47 +107,16 @@
             this.cbSoVe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSoVe.ForeColor = System.Drawing.Color.Black;
             this.cbSoVe.ItemHeight = 30;
-            this.cbSoVe.Location = new System.Drawing.Point(777, 158);
+            this.cbSoVe.Location = new System.Drawing.Point(719, 78);
             this.cbSoVe.Name = "cbSoVe";
             this.cbSoVe.Size = new System.Drawing.Size(162, 36);
             this.cbSoVe.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1058, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Điểm đến";
-            // 
-            // txtDiemDen
-            // 
-            this.txtDiemDen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiemDen.DefaultText = "";
-            this.txtDiemDen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDiemDen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDiemDen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDiemDen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemDen.ForeColor = System.Drawing.Color.Black;
-            this.txtDiemDen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDiemDen.Location = new System.Drawing.Point(1058, 59);
-            this.txtDiemDen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDiemDen.Name = "txtDiemDen";
-            this.txtDiemDen.PasswordChar = '\0';
-            this.txtDiemDen.PlaceholderText = "";
-            this.txtDiemDen.SelectedText = "";
-            this.txtDiemDen.Size = new System.Drawing.Size(237, 36);
-            this.txtDiemDen.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(774, 218);
+            this.label4.Location = new System.Drawing.Point(716, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 18);
             this.label4.TabIndex = 8;
@@ -195,7 +127,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(1096, 116);
+            this.label5.Location = new System.Drawing.Point(1038, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 10;
@@ -215,11 +147,11 @@
             this.btnTimXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTimXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimXe.ForeColor = System.Drawing.Color.White;
-            this.btnTimXe.Location = new System.Drawing.Point(1012, 400);
+            this.btnTimXe.Location = new System.Drawing.Point(954, 320);
             this.btnTimXe.Name = "btnTimXe";
             this.btnTimXe.Size = new System.Drawing.Size(180, 45);
             this.btnTimXe.TabIndex = 12;
-            this.btnTimXe.Text = "Tìm chuyến xe";
+            this.btnTimXe.Text = "Đặt vé";
             // 
             // guna2Elipse1
             // 
@@ -232,7 +164,7 @@
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Aqua;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(776, 247);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(718, 167);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -243,7 +175,7 @@
             // btnA1
             // 
             this.btnA1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnA1.Location = new System.Drawing.Point(1003, 142);
+            this.btnA1.Location = new System.Drawing.Point(945, 62);
             this.btnA1.Name = "btnA1";
             this.btnA1.Size = new System.Drawing.Size(75, 23);
             this.btnA1.TabIndex = 14;
@@ -253,7 +185,7 @@
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(1091, 141);
+            this.button2.Location = new System.Drawing.Point(1033, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -263,7 +195,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(1003, 172);
+            this.button3.Location = new System.Drawing.Point(945, 92);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -273,7 +205,7 @@
             // button4
             // 
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(1177, 141);
+            this.button4.Location = new System.Drawing.Point(1119, 61);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 17;
@@ -283,7 +215,7 @@
             // button5
             // 
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.Location = new System.Drawing.Point(1091, 172);
+            this.button5.Location = new System.Drawing.Point(1033, 92);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 17;
@@ -293,7 +225,7 @@
             // button6
             // 
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(1003, 201);
+            this.button6.Location = new System.Drawing.Point(945, 121);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 18;
@@ -303,7 +235,7 @@
             // button7
             // 
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Location = new System.Drawing.Point(1091, 201);
+            this.button7.Location = new System.Drawing.Point(1033, 121);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 19;
@@ -313,7 +245,7 @@
             // button8
             // 
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.Location = new System.Drawing.Point(1003, 230);
+            this.button8.Location = new System.Drawing.Point(945, 150);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 20;
@@ -323,7 +255,7 @@
             // button9
             // 
             this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button9.Location = new System.Drawing.Point(1091, 230);
+            this.button9.Location = new System.Drawing.Point(1033, 150);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 21;
@@ -333,7 +265,7 @@
             // button10
             // 
             this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(1003, 260);
+            this.button10.Location = new System.Drawing.Point(945, 180);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 23);
             this.button10.TabIndex = 22;
@@ -343,7 +275,7 @@
             // button11
             // 
             this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button11.Location = new System.Drawing.Point(1091, 260);
+            this.button11.Location = new System.Drawing.Point(1033, 180);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 23;
@@ -353,7 +285,7 @@
             // button12
             // 
             this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button12.Location = new System.Drawing.Point(1177, 171);
+            this.button12.Location = new System.Drawing.Point(1119, 91);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 23);
             this.button12.TabIndex = 24;
@@ -363,7 +295,7 @@
             // button13
             // 
             this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button13.Location = new System.Drawing.Point(1177, 201);
+            this.button13.Location = new System.Drawing.Point(1119, 121);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 23);
             this.button13.TabIndex = 25;
@@ -373,7 +305,7 @@
             // button14
             // 
             this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button14.Location = new System.Drawing.Point(1177, 230);
+            this.button14.Location = new System.Drawing.Point(1119, 150);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(75, 23);
             this.button14.TabIndex = 26;
@@ -383,7 +315,7 @@
             // button15
             // 
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button15.Location = new System.Drawing.Point(1177, 260);
+            this.button15.Location = new System.Drawing.Point(1119, 180);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(75, 23);
             this.button15.TabIndex = 27;
@@ -393,7 +325,7 @@
             // button16
             // 
             this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button16.Location = new System.Drawing.Point(1003, 289);
+            this.button16.Location = new System.Drawing.Point(945, 209);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(75, 23);
             this.button16.TabIndex = 28;
@@ -403,7 +335,7 @@
             // button17
             // 
             this.button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button17.Location = new System.Drawing.Point(1091, 289);
+            this.button17.Location = new System.Drawing.Point(1033, 209);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(75, 23);
             this.button17.TabIndex = 29;
@@ -413,7 +345,7 @@
             // button18
             // 
             this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button18.Location = new System.Drawing.Point(1177, 289);
+            this.button18.Location = new System.Drawing.Point(1119, 209);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(75, 23);
             this.button18.TabIndex = 30;
@@ -423,7 +355,7 @@
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(1003, 323);
+            this.button1.Location = new System.Drawing.Point(945, 243);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 31;
@@ -433,7 +365,7 @@
             // button19
             // 
             this.button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button19.Location = new System.Drawing.Point(1003, 353);
+            this.button19.Location = new System.Drawing.Point(945, 273);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(75, 23);
             this.button19.TabIndex = 32;
@@ -443,7 +375,7 @@
             // button20
             // 
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button20.Location = new System.Drawing.Point(1091, 323);
+            this.button20.Location = new System.Drawing.Point(1033, 243);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(75, 23);
             this.button20.TabIndex = 32;
@@ -453,7 +385,7 @@
             // button21
             // 
             this.button21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button21.Location = new System.Drawing.Point(1177, 323);
+            this.button21.Location = new System.Drawing.Point(1119, 243);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(75, 23);
             this.button21.TabIndex = 33;
@@ -463,7 +395,7 @@
             // button22
             // 
             this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button22.Location = new System.Drawing.Point(1091, 354);
+            this.button22.Location = new System.Drawing.Point(1033, 274);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(75, 23);
             this.button22.TabIndex = 34;
@@ -473,7 +405,7 @@
             // button23
             // 
             this.button23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button23.Location = new System.Drawing.Point(1177, 354);
+            this.button23.Location = new System.Drawing.Point(1119, 274);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(75, 23);
             this.button23.TabIndex = 35;
@@ -579,28 +511,11 @@
             this.Column8.HeaderText = "Thành Tiền";
             this.Column8.Name = "Column8";
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(1009, 59);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(50, 38);
-            this.guna2Button1.TabIndex = 37;
-            // 
             // UserDatVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.button22);
@@ -630,12 +545,8 @@
             this.Controls.Add(this.btnTimXe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDiemDen);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbSoVe);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDiemDi);
-            this.Controls.Add(this.lblSoVe);
             this.Controls.Add(this.label1);
             this.Name = "UserDatVe";
             this.Size = new System.Drawing.Size(1370, 450);
@@ -648,12 +559,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblSoVe;
-        private Guna.UI2.WinForms.Guna2TextBox txtDiemDi;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbSoVe;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtDiemDen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnTimXe;
@@ -692,6 +599,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             userLichTrinh1.Visible = false;
             userThanhToan1.Visible = false;
             userChiTietVeXe1.Visible = false;
-            btnDatVe.PerformClick();
+            btnLichTrinh.PerformClick();
         }
         private void btnDatVe_Click(object sender, EventArgs e)
         {
