@@ -44,3 +44,4 @@ C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\CNPM\WindowsFormsApp1\WindowsForms
 C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang.resources
 C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien.resources
 C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.resources
+C:\Users\dinhn\OneDrive\Desktop\QuanLyBanVeXe\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe.resources

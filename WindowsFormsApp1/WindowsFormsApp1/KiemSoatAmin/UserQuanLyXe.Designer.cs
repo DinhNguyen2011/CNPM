@@ -47,6 +47,7 @@
             this.cbSoXe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2QLXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThemXe = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,17 +241,40 @@
             this.btnXoa.FocusedColor = System.Drawing.Color.Transparent;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Location = new System.Drawing.Point(864, 86);
+            this.btnXoa.Location = new System.Drawing.Point(1081, 87);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(180, 45);
             this.btnXoa.TabIndex = 31;
             this.btnXoa.Text = "Xóa ";
+            // 
+            // btnThemXe
+            // 
+            this.btnThemXe.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThemXe.BorderColor = System.Drawing.Color.MintCream;
+            this.btnThemXe.BorderRadius = 18;
+            this.btnThemXe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnThemXe.BorderThickness = 1;
+            this.btnThemXe.CustomBorderColor = System.Drawing.Color.White;
+            this.btnThemXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThemXe.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnThemXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnThemXe.ForeColor = System.Drawing.Color.Black;
+            this.btnThemXe.Location = new System.Drawing.Point(869, 86);
+            this.btnThemXe.Name = "btnThemXe";
+            this.btnThemXe.Size = new System.Drawing.Size(180, 45);
+            this.btnThemXe.TabIndex = 32;
+            this.btnThemXe.Text = "Thêm";
             // 
             // UserQuanLyXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.btnThemXe);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.cbSoXe);
             this.Controls.Add(this.dgvXe);
@@ -282,5 +306,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbSoXe;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLXe;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
+        private Guna.UI2.WinForms.Guna2Button btnThemXe;
     }
 }

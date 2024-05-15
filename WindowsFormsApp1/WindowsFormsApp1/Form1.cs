@@ -43,5 +43,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnDkiTK_Click(object sender, EventArgs e)
+        {
+            DangKiTaiKhoang dk=new DangKiTaiKhoang();   
+            this.Hide();
+            dk.Show();
+        }
     }
 }

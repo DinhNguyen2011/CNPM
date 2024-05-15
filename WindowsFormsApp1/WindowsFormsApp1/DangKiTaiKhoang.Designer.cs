@@ -39,7 +39,7 @@
             this.txtTenDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnDkiTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.btnDkiTK);
             this.guna2Panel1.Controls.Add(this.txtMatKhau);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -56,8 +57,7 @@
             this.guna2Panel1.Controls.Add(this.txtTenDK);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Location = new System.Drawing.Point(296, 162);
+            this.guna2Panel1.Location = new System.Drawing.Point(296, 159);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(800, 400);
             this.guna2Panel1.TabIndex = 1;
@@ -186,9 +186,9 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(399, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 35);
+            this.label1.Size = new System.Drawing.Size(283, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ĐĂNG KÍ TÀI KHOẢNG";
+            this.label1.Text = "ĐĂNG KÍ TÀI KHOẢN";
             // 
             // guna2PictureBox1
             // 
@@ -201,23 +201,24 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // btnClose
+            // btnDkiTK
             // 
-            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(757, 1);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(42, 36);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnDkiTK.BorderRadius = 18;
+            this.btnDkiTK.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnDkiTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDkiTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDkiTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDkiTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDkiTK.FillColor = System.Drawing.Color.White;
+            this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnDkiTK.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
+            this.btnDkiTK.Location = new System.Drawing.Point(578, 338);
+            this.btnDkiTK.Name = "btnDkiTK";
+            this.btnDkiTK.Size = new System.Drawing.Size(121, 23);
+            this.btnDkiTK.TabIndex = 14;
+            this.btnDkiTK.Text = "Trở về đăng nhập";
+            this.btnDkiTK.Click += new System.EventHandler(this.btnDkiTK_Click);
             // 
             // DangKiTaiKhoang
             // 
@@ -248,7 +249,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenDK;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
+        private Guna.UI2.WinForms.Guna2Button btnDkiTK;
     }
 }

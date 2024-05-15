@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTimNV = new Guna.UI2.WinForms.Guna2Button();
             this.txtCCCDNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,6 +43,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2QLNV = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnThemNV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTimNV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaNV = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuaNV = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLNV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,24 +59,6 @@
             this.label1.Size = new System.Drawing.Size(220, 28);
             this.label1.TabIndex = 29;
             this.label1.Text = "Quản lý nhân viên";
-            // 
-            // btnTimNV
-            // 
-            this.btnTimNV.BorderRadius = 18;
-            this.btnTimNV.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnTimNV.BorderThickness = 1;
-            this.btnTimNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnTimNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnTimNV.ForeColor = System.Drawing.Color.Black;
-            this.btnTimNV.Location = new System.Drawing.Point(744, 184);
-            this.btnTimNV.Name = "btnTimNV";
-            this.btnTimNV.Size = new System.Drawing.Size(274, 45);
-            this.btnTimNV.TabIndex = 39;
-            this.btnTimNV.Text = "Tìm Kiếm Nhân Viên";
             // 
             // txtCCCDNV
             // 
@@ -215,12 +200,87 @@
             this.guna2QLNV.BorderRadius = 30;
             this.guna2QLNV.TargetControl = this;
             // 
+            // btnThemNV
+            // 
+            this.btnThemNV.BorderRadius = 18;
+            this.btnThemNV.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnThemNV.BorderThickness = 1;
+            this.btnThemNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThemNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNV.ForeColor = System.Drawing.Color.Black;
+            this.btnThemNV.Location = new System.Drawing.Point(873, 157);
+            this.btnThemNV.Name = "btnThemNV";
+            this.btnThemNV.Size = new System.Drawing.Size(154, 45);
+            this.btnThemNV.TabIndex = 51;
+            this.btnThemNV.Text = "Thêm";
+            // 
+            // btnTimNV
+            // 
+            this.btnTimNV.BorderRadius = 18;
+            this.btnTimNV.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnTimNV.BorderThickness = 1;
+            this.btnTimNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTimNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimNV.ForeColor = System.Drawing.Color.Black;
+            this.btnTimNV.Location = new System.Drawing.Point(661, 157);
+            this.btnTimNV.Name = "btnTimNV";
+            this.btnTimNV.Size = new System.Drawing.Size(154, 45);
+            this.btnTimNV.TabIndex = 50;
+            this.btnTimNV.Text = "Tìm";
+            // 
+            // btnXoaNV
+            // 
+            this.btnXoaNV.BorderRadius = 18;
+            this.btnXoaNV.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnXoaNV.BorderThickness = 1;
+            this.btnXoaNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXoaNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNV.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaNV.Location = new System.Drawing.Point(873, 236);
+            this.btnXoaNV.Name = "btnXoaNV";
+            this.btnXoaNV.Size = new System.Drawing.Size(154, 45);
+            this.btnXoaNV.TabIndex = 49;
+            this.btnXoaNV.Text = "Xóa";
+            // 
+            // btnSuaNV
+            // 
+            this.btnSuaNV.BorderRadius = 18;
+            this.btnSuaNV.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnSuaNV.BorderThickness = 1;
+            this.btnSuaNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuaNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSuaNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaNV.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaNV.Location = new System.Drawing.Point(661, 236);
+            this.btnSuaNV.Name = "btnSuaNV";
+            this.btnSuaNV.Size = new System.Drawing.Size(154, 45);
+            this.btnSuaNV.TabIndex = 48;
+            this.btnSuaNV.Text = "Sửa";
+            // 
             // UserQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvQLNV);
+            this.Controls.Add(this.btnThemNV);
             this.Controls.Add(this.btnTimNV);
+            this.Controls.Add(this.btnXoaNV);
+            this.Controls.Add(this.btnSuaNV);
+            this.Controls.Add(this.dgvQLNV);
             this.Controls.Add(this.txtCCCDNV);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.TxtTenNV);
@@ -237,7 +297,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnTimNV;
         private Guna.UI2.WinForms.Guna2TextBox txtCCCDNV;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox TxtTenNV;
@@ -248,5 +307,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLNV;
+        private Guna.UI2.WinForms.Guna2Button btnThemNV;
+        private Guna.UI2.WinForms.Guna2Button btnTimNV;
+        private Guna.UI2.WinForms.Guna2Button btnXoaNV;
+        private Guna.UI2.WinForms.Guna2Button btnSuaNV;
     }
 }

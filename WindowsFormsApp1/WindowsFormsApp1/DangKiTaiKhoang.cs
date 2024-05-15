@@ -21,5 +21,12 @@ namespace WindowsFormsApp1
         {
             Application.Exit();          
         }
+
+        private void btnDkiTK_Click(object sender, EventArgs e)
+        {
+            Form1 f= new Form1();
+            this.Show();
+            f.Show();
+        }
     }
 }

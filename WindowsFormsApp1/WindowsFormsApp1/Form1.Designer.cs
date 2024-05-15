@@ -84,6 +84,7 @@
             this.btnDkiTK.Size = new System.Drawing.Size(95, 23);
             this.btnDkiTK.TabIndex = 12;
             this.btnDkiTK.Text = "Đăng ký ngay";
+            this.btnDkiTK.Click += new System.EventHandler(this.btnDkiTK_Click);
             // 
             // label2
             // 
@@ -148,7 +149,7 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(401, 248);
+            this.btnLogin.Location = new System.Drawing.Point(415, 248);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(262, 45);
             this.btnLogin.TabIndex = 5;
