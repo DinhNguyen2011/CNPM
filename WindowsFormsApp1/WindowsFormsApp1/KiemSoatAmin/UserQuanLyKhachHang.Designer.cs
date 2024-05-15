@@ -72,7 +72,7 @@
             this.txtCCCD.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCCCD.ForeColor = System.Drawing.Color.Black;
             this.txtCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCCCD.Location = new System.Drawing.Point(780, 26);
+            this.txtCCCD.Location = new System.Drawing.Point(682, 71);
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.PasswordChar = '\0';
             this.txtCCCD.PlaceholderText = "Enter ID";
@@ -84,7 +84,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(778, 6);
+            this.label8.Location = new System.Drawing.Point(680, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 17);
             this.label8.TabIndex = 32;
@@ -102,7 +102,7 @@
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.ForeColor = System.Drawing.Color.Black;
             this.txtTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTen.Location = new System.Drawing.Point(387, 26);
+            this.txtTen.Location = new System.Drawing.Point(289, 71);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';
             this.txtTen.PlaceholderText = "Enter Name";
@@ -115,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(385, 6);
+            this.label2.Location = new System.Drawing.Point(287, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 17);
             this.label2.TabIndex = 30;
@@ -149,7 +149,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTimKH.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTimKH.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvTimKH.Location = new System.Drawing.Point(440, 85);
+            this.dgvTimKH.Location = new System.Drawing.Point(342, 130);
             this.dgvTimKH.Name = "dgvTimKH";
             this.dgvTimKH.RowHeadersVisible = false;
             this.dgvTimKH.Size = new System.Drawing.Size(588, 218);
@@ -213,7 +213,7 @@
             this.btnThemKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThemKH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKH.ForeColor = System.Drawing.Color.Black;
-            this.btnThemKH.Location = new System.Drawing.Point(578, 319);
+            this.btnThemKH.Location = new System.Drawing.Point(480, 364);
             this.btnThemKH.Name = "btnThemKH";
             this.btnThemKH.Size = new System.Drawing.Size(154, 45);
             this.btnThemKH.TabIndex = 51;
@@ -231,7 +231,7 @@
             this.btnTimKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTimKH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKH.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKH.Location = new System.Drawing.Point(360, 319);
+            this.btnTimKH.Location = new System.Drawing.Point(262, 364);
             this.btnTimKH.Name = "btnTimKH";
             this.btnTimKH.Size = new System.Drawing.Size(154, 45);
             this.btnTimKH.TabIndex = 50;
@@ -249,7 +249,7 @@
             this.btnXoaKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoaKH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaKH.ForeColor = System.Drawing.Color.Black;
-            this.btnXoaKH.Location = new System.Drawing.Point(779, 319);
+            this.btnXoaKH.Location = new System.Drawing.Point(681, 364);
             this.btnXoaKH.Name = "btnXoaKH";
             this.btnXoaKH.Size = new System.Drawing.Size(154, 45);
             this.btnXoaKH.TabIndex = 49;
@@ -267,7 +267,7 @@
             this.btnSuaKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSuaKH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaKH.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaKH.Location = new System.Drawing.Point(969, 319);
+            this.btnSuaKH.Location = new System.Drawing.Point(871, 364);
             this.btnSuaKH.Name = "btnSuaKH";
             this.btnSuaKH.Size = new System.Drawing.Size(154, 45);
             this.btnSuaKH.TabIndex = 48;

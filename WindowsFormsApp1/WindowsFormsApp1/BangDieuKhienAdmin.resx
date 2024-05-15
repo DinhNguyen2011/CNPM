@@ -418,4 +418,10 @@
   <metadata name="guna2QLXe.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>390, 19</value>
   </metadata>
+  <metadata name="guna2QLChuyenXe.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>505, 19</value>
+  </metadata>
+  <metadata name="guna2QLTuyenxe.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>661, 19</value>
+  </metadata>
 </root>

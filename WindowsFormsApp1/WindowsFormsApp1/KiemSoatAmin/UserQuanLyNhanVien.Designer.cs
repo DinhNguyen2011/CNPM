@@ -212,7 +212,7 @@
             this.btnThemNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThemNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNV.ForeColor = System.Drawing.Color.Black;
-            this.btnThemNV.Location = new System.Drawing.Point(873, 157);
+            this.btnThemNV.Location = new System.Drawing.Point(752, 146);
             this.btnThemNV.Name = "btnThemNV";
             this.btnThemNV.Size = new System.Drawing.Size(154, 45);
             this.btnThemNV.TabIndex = 51;
@@ -230,7 +230,7 @@
             this.btnTimNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTimNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimNV.ForeColor = System.Drawing.Color.Black;
-            this.btnTimNV.Location = new System.Drawing.Point(661, 157);
+            this.btnTimNV.Location = new System.Drawing.Point(540, 146);
             this.btnTimNV.Name = "btnTimNV";
             this.btnTimNV.Size = new System.Drawing.Size(154, 45);
             this.btnTimNV.TabIndex = 50;
@@ -248,7 +248,7 @@
             this.btnXoaNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoaNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNV.ForeColor = System.Drawing.Color.Black;
-            this.btnXoaNV.Location = new System.Drawing.Point(873, 236);
+            this.btnXoaNV.Location = new System.Drawing.Point(752, 225);
             this.btnXoaNV.Name = "btnXoaNV";
             this.btnXoaNV.Size = new System.Drawing.Size(154, 45);
             this.btnXoaNV.TabIndex = 49;
@@ -266,7 +266,7 @@
             this.btnSuaNV.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSuaNV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaNV.ForeColor = System.Drawing.Color.Black;
-            this.btnSuaNV.Location = new System.Drawing.Point(661, 236);
+            this.btnSuaNV.Location = new System.Drawing.Point(540, 225);
             this.btnSuaNV.Name = "btnSuaNV";
             this.btnSuaNV.Size = new System.Drawing.Size(154, 45);
             this.btnSuaNV.TabIndex = 48;

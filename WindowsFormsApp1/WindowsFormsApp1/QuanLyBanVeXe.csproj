@@ -74,11 +74,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyBanVe.cs">
+    <Compile Include="KiemSoatAmin\UserQuanLyTuyenXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyBanVe.Designer.cs">
-      <DependentUpon>UserQuanLyBanVe.cs</DependentUpon>
+    <Compile Include="KiemSoatAmin\UserQuanLyTuyenXe.Designer.cs">
+      <DependentUpon>UserQuanLyTuyenXe.cs</DependentUpon>
     </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyChuyenXe.cs">
       <SubType>UserControl</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyBanVe.resx">
-      <DependentUpon>UserQuanLyBanVe.cs</DependentUpon>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyTuyenXe.resx">
+      <DependentUpon>UserQuanLyTuyenXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyChuyenXe.resx">
       <DependentUpon>UserQuanLyChuyenXe.cs</DependentUpon>

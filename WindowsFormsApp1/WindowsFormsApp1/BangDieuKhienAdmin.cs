@@ -25,18 +25,19 @@ namespace WindowsFormsApp1
 
         private void btnDatVe_Click(object sender, EventArgs e)
         {
-            PnMovingad.Left = btnQLBanVe.Left + 60;
-            userQuanLyBanVe1.Visible = true;
-            userQuanLyBanVe1.BringToFront();
+            PnMovingad.Left = btnQLTuyenXe.Left + 60;
+            userQuanLyTuyenXe1.Visible = true;
+            userQuanLyTuyenXe1.BringToFront();
+
         }
 
         private void BangDieuKhienAdmin_Load(object sender, EventArgs e)
         {
-            userQuanLyBanVe1.Visible =false ;
+            userQuanLyTuyenXe1.Visible = true;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false ;
+            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
-            btnQLBanVe.PerformClick();
+            btnQLTuyenXe.PerformClick();
         }
 
         private void btnThongTinKH_Click(object sender, EventArgs e)

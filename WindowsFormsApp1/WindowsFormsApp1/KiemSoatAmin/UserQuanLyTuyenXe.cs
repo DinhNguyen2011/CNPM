@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.KiemSoatAmin
 {
-    public partial class UserQuanLyBanVe : UserControl
+    public partial class UserQuanLyTuyenXe : UserControl
     {
-        public UserQuanLyBanVe()
+        public UserQuanLyTuyenXe()
         {
             InitializeComponent();
         }
