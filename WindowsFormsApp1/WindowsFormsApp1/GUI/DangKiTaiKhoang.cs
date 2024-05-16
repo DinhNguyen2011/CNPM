@@ -28,5 +28,10 @@ namespace WindowsFormsApp1
             this.Hide();
             f.Show();
         }
+
+        private void txtTenDK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

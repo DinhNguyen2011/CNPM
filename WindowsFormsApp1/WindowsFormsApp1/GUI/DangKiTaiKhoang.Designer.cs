@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiTaiKhoang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSĐT = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTrove = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -40,8 +42,9 @@
             this.txtTenDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtSĐT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dtNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTenNguoiDung = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +52,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.txtTenNguoiDung);
+            this.guna2Panel1.Controls.Add(this.dtNS);
+            this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.txtEmail);
             this.guna2Panel1.Controls.Add(this.txtSĐT);
             this.guna2Panel1.Controls.Add(this.btnTrove);
@@ -61,10 +67,54 @@
             this.guna2Panel1.Controls.Add(this.txtTenDK);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(296, 159);
+            this.guna2Panel1.Location = new System.Drawing.Point(296, 167);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(800, 482);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderRadius = 18;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.IconLeftSize = new System.Drawing.Size(40, 20);
+            this.txtEmail.Location = new System.Drawing.Point(228, 255);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "--Nhập email đăng ký--";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(255, 44);
+            this.txtEmail.TabIndex = 16;
+            // 
+            // txtSĐT
+            // 
+            this.txtSĐT.BorderRadius = 18;
+            this.txtSĐT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSĐT.DefaultText = "";
+            this.txtSĐT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSĐT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSĐT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSĐT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSĐT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSĐT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSĐT.ForeColor = System.Drawing.Color.Black;
+            this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSĐT.IconLeftSize = new System.Drawing.Size(40, 20);
+            this.txtSĐT.Location = new System.Drawing.Point(228, 186);
+            this.txtSĐT.Name = "txtSĐT";
+            this.txtSĐT.PasswordChar = '\0';
+            this.txtSĐT.PlaceholderText = "--Nhập SĐT đăng ký--";
+            this.txtSĐT.SelectedText = "";
+            this.txtSĐT.Size = new System.Drawing.Size(255, 44);
+            this.txtSĐT.TabIndex = 15;
             // 
             // btnTrove
             // 
@@ -78,7 +128,7 @@
             this.btnTrove.FocusedColor = System.Drawing.Color.Transparent;
             this.btnTrove.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrove.ForeColor = System.Drawing.Color.Black;
-            this.btnTrove.Location = new System.Drawing.Point(578, 419);
+            this.btnTrove.Location = new System.Drawing.Point(558, 434);
             this.btnTrove.Name = "btnTrove";
             this.btnTrove.Size = new System.Drawing.Size(121, 23);
             this.btnTrove.TabIndex = 14;
@@ -100,12 +150,12 @@
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhau.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMatKhau.IconLeft")));
             this.txtMatKhau.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtMatKhau.Location = new System.Drawing.Point(398, 263);
+            this.txtMatKhau.Location = new System.Drawing.Point(509, 188);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.PlaceholderText = "Nhập mật khẩu ";
             this.txtMatKhau.SelectedText = "";
-            this.txtMatKhau.Size = new System.Drawing.Size(300, 42);
+            this.txtMatKhau.Size = new System.Drawing.Size(255, 42);
             this.txtMatKhau.TabIndex = 13;
             // 
             // guna2HtmlLabel2
@@ -151,9 +201,9 @@
             this.btnDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.ForeColor = System.Drawing.Color.White;
-            this.btnDangKy.Location = new System.Drawing.Point(417, 372);
+            this.btnDangKy.Location = new System.Drawing.Point(318, 384);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(262, 45);
+            this.btnDangKy.Size = new System.Drawing.Size(308, 45);
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Đăng ký";
             // 
@@ -172,12 +222,12 @@
             this.txtNhapLaiMK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhapLaiMK.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtNhapLaiMK.IconLeft")));
             this.txtNhapLaiMK.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtNhapLaiMK.Location = new System.Drawing.Point(398, 320);
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(508, 255);
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.PasswordChar = '*';
             this.txtNhapLaiMK.PlaceholderText = "Nhập lại mật khẩu 1 lần nữa";
             this.txtNhapLaiMK.SelectedText = "";
-            this.txtNhapLaiMK.Size = new System.Drawing.Size(300, 42);
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(255, 42);
             this.txtNhapLaiMK.TabIndex = 4;
             // 
             // txtTenDK
@@ -195,13 +245,14 @@
             this.txtTenDK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDK.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTenDK.IconLeft")));
             this.txtTenDK.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtTenDK.Location = new System.Drawing.Point(398, 97);
+            this.txtTenDK.Location = new System.Drawing.Point(509, 116);
             this.txtTenDK.Name = "txtTenDK";
             this.txtTenDK.PasswordChar = '\0';
-            this.txtTenDK.PlaceholderText = "Nhập Tên Đăng Ký";
+            this.txtTenDK.PlaceholderText = "Nhập tên đăng nhập";
             this.txtTenDK.SelectedText = "";
-            this.txtTenDK.Size = new System.Drawing.Size(300, 44);
+            this.txtTenDK.Size = new System.Drawing.Size(255, 44);
             this.txtTenDK.TabIndex = 3;
+            this.txtTenDK.TextChanged += new System.EventHandler(this.txtTenDK_TextChanged);
             // 
             // label1
             // 
@@ -217,56 +268,58 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(88, 147);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 137);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(259, 192);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(179, 150);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // txtSĐT
+            // dtNS
             // 
-            this.txtSĐT.BorderRadius = 18;
-            this.txtSĐT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSĐT.DefaultText = "";
-            this.txtSĐT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSĐT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSĐT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSĐT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSĐT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSĐT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSĐT.ForeColor = System.Drawing.Color.Black;
-            this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSĐT.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtSĐT.Location = new System.Drawing.Point(398, 152);
-            this.txtSĐT.Name = "txtSĐT";
-            this.txtSĐT.PasswordChar = '\0';
-            this.txtSĐT.PlaceholderText = "--Nhập SĐT đăng ký--";
-            this.txtSĐT.SelectedText = "";
-            this.txtSĐT.Size = new System.Drawing.Size(300, 44);
-            this.txtSĐT.TabIndex = 15;
+            this.dtNS.Checked = true;
+            this.dtNS.FillColor = System.Drawing.Color.Aqua;
+            this.dtNS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNS.Location = new System.Drawing.Point(229, 324);
+            this.dtNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNS.Name = "dtNS";
+            this.dtNS.Size = new System.Drawing.Size(259, 36);
+            this.dtNS.TabIndex = 13;
+            this.dtNS.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
             // 
-            // txtEmail
+            // label6
             // 
-            this.txtEmail.BorderRadius = 18;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtEmail.Location = new System.Drawing.Point(398, 207);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "--Nhập email đăng ký--";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(300, 44);
-            this.txtEmail.TabIndex = 16;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(230, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Ngày Sinh";
+            // 
+            // txtTenNguoiDung
+            // 
+            this.txtTenNguoiDung.BorderRadius = 18;
+            this.txtTenNguoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNguoiDung.DefaultText = "";
+            this.txtTenNguoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNguoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNguoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNguoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNguoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenNguoiDung.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNguoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNguoiDung.IconLeftSize = new System.Drawing.Size(40, 20);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(228, 117);
+            this.txtTenNguoiDung.Name = "txtTenNguoiDung";
+            this.txtTenNguoiDung.PasswordChar = '\0';
+            this.txtTenNguoiDung.PlaceholderText = "--Nhập họ và tên của bạn--";
+            this.txtTenNguoiDung.SelectedText = "";
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(255, 44);
+            this.txtTenNguoiDung.TabIndex = 17;
             // 
             // DangKiTaiKhoang
             // 
@@ -301,5 +354,8 @@
         private Guna.UI2.WinForms.Guna2Button btnTrove;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtSĐT;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtNS;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenNguoiDung;
     }
 }
