@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1
 {
@@ -25,15 +26,21 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
+        private bool login(string username, string password)
+        {
+            return AccountDAO.Instance.Login(username, password);
+        }
         private void txtLogin_Click(object sender, EventArgs e)
         {
-            if ((txtUseName.Text == "DinhNguyen" && txtPw.Text == "20112003") || (txtUseName.Text == "DangMinhNghia" && txtPw.Text == "111")|| (txtUseName.Text == "DucLozz" && txtPw.Text == "222")|| (txtUseName.Text == "TruongFAT" && txtPw.Text == "333"))
+
+            string username = txtUseName.Text;
+            string password = txtPw.Text;
+            if (login(username, password))
             {
                 lblError.Visible = false;
-                BangDieuKhien ds = new BangDieuKhien();
+                BangDieuKhienAdmin bdk = new BangDieuKhienAdmin();
                 this.Hide();
-                ds.Show();
+                bdk.ShowDialog();
             }
             else lblError.Visible = true;
             txtPw.Clear();

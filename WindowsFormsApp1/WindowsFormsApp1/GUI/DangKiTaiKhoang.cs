@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         private void btnDkiTK_Click(object sender, EventArgs e)
         {
             Form1 f= new Form1();
-            this.Show();
+            this.Hide();
             f.Show();
         }
     }

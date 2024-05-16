@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiTaiKhoang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnTrove = new Guna.UI2.WinForms.Guna2Button();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,7 +40,6 @@
             this.txtTenDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnDkiTK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.btnDkiTK);
+            this.guna2Panel1.Controls.Add(this.btnTrove);
             this.guna2Panel1.Controls.Add(this.txtMatKhau);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -61,6 +61,25 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(800, 400);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // btnTrove
+            // 
+            this.btnTrove.BorderRadius = 18;
+            this.btnTrove.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnTrove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTrove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTrove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTrove.FillColor = System.Drawing.Color.White;
+            this.btnTrove.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnTrove.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrove.ForeColor = System.Drawing.Color.Black;
+            this.btnTrove.Location = new System.Drawing.Point(578, 338);
+            this.btnTrove.Name = "btnTrove";
+            this.btnTrove.Size = new System.Drawing.Size(121, 23);
+            this.btnTrove.TabIndex = 14;
+            this.btnTrove.Text = "Trở về đăng nhập";
+            this.btnTrove.Click += new System.EventHandler(this.btnDkiTK_Click);
             // 
             // txtMatKhau
             // 
@@ -201,25 +220,6 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // btnDkiTK
-            // 
-            this.btnDkiTK.BorderRadius = 18;
-            this.btnDkiTK.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnDkiTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDkiTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDkiTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDkiTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDkiTK.FillColor = System.Drawing.Color.White;
-            this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
-            this.btnDkiTK.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
-            this.btnDkiTK.Location = new System.Drawing.Point(578, 338);
-            this.btnDkiTK.Name = "btnDkiTK";
-            this.btnDkiTK.Size = new System.Drawing.Size(121, 23);
-            this.btnDkiTK.TabIndex = 14;
-            this.btnDkiTK.Text = "Trở về đăng nhập";
-            this.btnDkiTK.Click += new System.EventHandler(this.btnDkiTK_Click);
-            // 
             // DangKiTaiKhoang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +250,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
-        private Guna.UI2.WinForms.Guna2Button btnDkiTK;
+        private Guna.UI2.WinForms.Guna2Button btnTrove;
     }
 }
