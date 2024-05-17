@@ -1,10 +1,8 @@
-﻿--DROP DATABASE QuanLyBanVeXe
+﻿DROP DATABASE if exists QuanLyBanVeXe;
 CREATE DATABASE QuanLyBanVeXe
-go
-
+GO
 USE QuanLyBanVeXe
-go
-
+GO
 drop table if exists CHUYENXE;
 drop table if exists KHACHHANG;
 drop table if exists LOAINV;
@@ -48,7 +46,6 @@ create table KHACHHANG
 (
    MAKH         int             identity(1,1) not null,
    TENKH        nvarchar(30)    null,
-   CMND         nchar(20)       not null,
    NGAYSINH     datetime        null,
    SDT          nchar(20)       null,
    EMAIL		nchar(30)		null
@@ -201,22 +198,18 @@ INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD) VALUES ('admin','123456')
 --ALTER TABLE KHACHHANG ADD CONSTRAINT MATK FOREIGN KEY(MATK) REFERENCES TAIKHOAN(MATK)
 --ALTER TABLE KHACHHANG drop CONSTRAINT MATK
 --ALTER TABLE KHACHHANG DROP COLUMN CMND 
-
 GO
 /*==============================================================*/
 /* Stored procedure: DANGNHAP   (Đăng nhập tài khoản)           */
 /*==============================================================*/
-CREATE PROC DANGNHAP @taikhoan char(50), @matkhau char(50), @hople bit OUTPUT
+CREATE PROC DANGNHAP @taikhoan char(50), @matkhau char(50)
 AS 
 BEGIN
-	IF (exists (SELECT * FROM TAIKHOAN T WHERE @taikhoan = T.ACCOUNT AND @matkhau = T.PASSWORD))
-	BEGIN
-		SET @hople = 1
-	END
-	ELSE SET @hople = 0
+	select * from taikhoan where ACCOUNT = @taikhoan and PASSWORD = @matkhau
 END
 
 GO
+
 /*==============================================================*/
 /* Stored procedure: ĐĂNG KÝ	(Đăng ký tài khoản và thông tin)*/
 /*==============================================================*/

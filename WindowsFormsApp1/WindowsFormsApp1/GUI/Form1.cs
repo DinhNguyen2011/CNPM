@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         }
         private bool login(string username, string password)
         {
-            return AccountDAO.Instance.Login(username, password);
+            return TaiKhoanDAO.Instance.Login(username, password);
         }
         private void txtLogin_Click(object sender, EventArgs e)
         {
@@ -37,10 +37,19 @@ namespace WindowsFormsApp1
             string password = txtPw.Text;
             if (login(username, password))
             {
-                lblError.Visible = false;
-                BangDieuKhienAdmin bdk = new BangDieuKhienAdmin();
-                this.Hide();
-                bdk.ShowDialog();
+                if (username == "admin")
+                {
+                    //lblError.Visible = false;
+                    BangDieuKhienAdmin bdkAdmin = new BangDieuKhienAdmin();
+                    this.Hide();
+                    bdkAdmin.ShowDialog();
+                }
+                else
+                {
+                    BangDieuKhien bangDieuKhien = new BangDieuKhien();
+                    this.Hide();
+                    bangDieuKhien.ShowDialog();
+                }    
             }
             else lblError.Visible = true;
             txtPw.Clear();

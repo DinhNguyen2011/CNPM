@@ -5,13 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1
 {
     public partial class DangKiTaiKhoang : Form
     {
+        
         public DangKiTaiKhoang()
         {
             InitializeComponent();
@@ -30,6 +33,83 @@ namespace WindowsFormsApp1
         }
 
         private void txtTenDK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private bool DangKy(string tenkh, DateTime ngaysinh, string sdt, string email, string taikhoan, string matkhau)
+        {
+            return TaiKhoanDAO.Instance.Register(tenkh, ngaysinh, sdt, email, taikhoan, matkhau);
+        }
+        private bool isValidSoDienThoai(string sdt)
+        {
+            if (sdt.Length != 10)
+                return false;
+            if (sdt.StartsWith("0") == false) 
+                return false;
+            foreach (char s in sdt)
+            {
+                if (s < 48 || s > 57)
+                    return false;
+            }    
+            return true;
+        }
+        public bool isValidEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return false;
+            }
+
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            return regex.IsMatch(email);
+        }
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            string tenkh = txtTenNguoiDung.Text;
+            DateTime ngaysinh = DateTime.Parse(dtNS.Value.ToString());
+            string sdt = txtSĐT.Text;
+            string email = txtEmail.Text;
+            string taikhoan = txtTenDK.Text;
+            string matkhau = txtMatKhau.Text;
+            string nhaplaimk = txtNhapLaiMK.Text;
+            if (tenkh == "" || sdt == "" || email == "" || taikhoan == "" || matkhau == "")
+            {
+                lblThongBao.Text = "Vui lòng nhập đầy đủ thông tin";
+                lblThongBao.Visible = true;
+                return;
+            }
+            if (!isValidSoDienThoai(sdt))
+            {
+                lblThongBao.Text = "Số điện thoại không hợp lệ. Vui lòng nhập lại";
+                lblThongBao.Visible = true;
+                return;
+            }
+            if (!isValidEmail(email))
+            {
+                lblThongBao.Text = "Địa chỉ email không hợp lệ. Vui lòng nhập lại";
+                lblThongBao.Visible = true;
+                return;
+            }    
+            if (String.Compare(matkhau,nhaplaimk,false) != 0)
+            {
+                lblThongBao.Text = "Mật khẩu không giống nhau. Vui lòng nhập lại";
+                lblThongBao.Visible=true;
+                return;
+            }
+ 
+            if (DangKy(tenkh,ngaysinh,sdt,email,taikhoan,matkhau))
+            {
+                lblThongBao.Text = "Đăng ký tài khoản thành công";
+                lblThongBao.Visible = true;
+                return;
+            }
+            lblThongBao.Text = "Tên đăng nhập đã tồn tại";
+            lblThongBao.Visible = true;
+        }
+
+        private void lblThongBao_Click(object sender, EventArgs e)
         {
 
         }

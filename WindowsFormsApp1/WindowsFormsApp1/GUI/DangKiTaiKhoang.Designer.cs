@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiTaiKhoang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtTenNguoiDung = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dtNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSĐT = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTrove = new Guna.UI2.WinForms.Guna2Button();
@@ -42,9 +45,7 @@
             this.txtTenDK = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.dtNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtTenNguoiDung = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblThongBao = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.lblThongBao);
             this.guna2Panel1.Controls.Add(this.txtTenNguoiDung);
             this.guna2Panel1.Controls.Add(this.dtNS);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -71,6 +73,52 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(800, 482);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // txtTenNguoiDung
+            // 
+            this.txtTenNguoiDung.BorderRadius = 18;
+            this.txtTenNguoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNguoiDung.DefaultText = "";
+            this.txtTenNguoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNguoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNguoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNguoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNguoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTenNguoiDung.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNguoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNguoiDung.IconLeftSize = new System.Drawing.Size(40, 20);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(228, 117);
+            this.txtTenNguoiDung.Name = "txtTenNguoiDung";
+            this.txtTenNguoiDung.PasswordChar = '\0';
+            this.txtTenNguoiDung.PlaceholderText = "--Nhập họ và tên của bạn--";
+            this.txtTenNguoiDung.SelectedText = "";
+            this.txtTenNguoiDung.Size = new System.Drawing.Size(255, 44);
+            this.txtTenNguoiDung.TabIndex = 17;
+            // 
+            // dtNS
+            // 
+            this.dtNS.Checked = true;
+            this.dtNS.FillColor = System.Drawing.Color.Aqua;
+            this.dtNS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNS.Location = new System.Drawing.Point(229, 324);
+            this.dtNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtNS.Name = "dtNS";
+            this.dtNS.Size = new System.Drawing.Size(259, 36);
+            this.dtNS.TabIndex = 13;
+            this.dtNS.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(230, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Ngày Sinh";
             // 
             // txtEmail
             // 
@@ -206,6 +254,7 @@
             this.btnDangKy.Size = new System.Drawing.Size(308, 45);
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // txtNhapLaiMK
             // 
@@ -275,51 +324,16 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // dtNS
+            // lblThongBao
             // 
-            this.dtNS.Checked = true;
-            this.dtNS.FillColor = System.Drawing.Color.Aqua;
-            this.dtNS.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNS.Location = new System.Drawing.Point(229, 324);
-            this.dtNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtNS.Name = "dtNS";
-            this.dtNS.Size = new System.Drawing.Size(259, 36);
-            this.dtNS.TabIndex = 13;
-            this.dtNS.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(230, 302);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Ngày Sinh";
-            // 
-            // txtTenNguoiDung
-            // 
-            this.txtTenNguoiDung.BorderRadius = 18;
-            this.txtTenNguoiDung.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenNguoiDung.DefaultText = "";
-            this.txtTenNguoiDung.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenNguoiDung.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenNguoiDung.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNguoiDung.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNguoiDung.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNguoiDung.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTenNguoiDung.ForeColor = System.Drawing.Color.Black;
-            this.txtTenNguoiDung.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNguoiDung.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtTenNguoiDung.Location = new System.Drawing.Point(228, 117);
-            this.txtTenNguoiDung.Name = "txtTenNguoiDung";
-            this.txtTenNguoiDung.PasswordChar = '\0';
-            this.txtTenNguoiDung.PlaceholderText = "--Nhập họ và tên của bạn--";
-            this.txtTenNguoiDung.SelectedText = "";
-            this.txtTenNguoiDung.Size = new System.Drawing.Size(255, 44);
-            this.txtTenNguoiDung.TabIndex = 17;
+            this.lblThongBao.BackColor = System.Drawing.Color.White;
+            this.lblThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lblThongBao.Location = new System.Drawing.Point(531, 332);
+            this.lblThongBao.Name = "lblThongBao";
+            this.lblThongBao.Size = new System.Drawing.Size(232, 27);
+            this.lblThongBao.TabIndex = 18;
+            this.lblThongBao.Visible = false;
+            this.lblThongBao.Click += new System.EventHandler(this.lblThongBao_Click);
             // 
             // DangKiTaiKhoang
             // 
@@ -357,5 +371,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtNS;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtTenNguoiDung;
+        private System.Windows.Forms.Label lblThongBao;
     }
 }
