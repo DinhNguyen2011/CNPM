@@ -129,3 +129,6 @@ E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\dje-NE\WindowsFormsApp1.reso
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyCTCX.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.dje-NE.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\dje-NE\WindowsFormsApp1.resources.dll
+C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.dje-NE.resources
+C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\dje-NE\WindowsFormsApp1.resources.dll
+C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\dje-NE\WindowsFormsApp1.resources.dll
