@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             InitializeComponent();
         }
+
+        private void UserQuanLyChuyenXe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

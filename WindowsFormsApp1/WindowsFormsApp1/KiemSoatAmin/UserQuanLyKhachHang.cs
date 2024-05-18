@@ -66,5 +66,9 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 xoa();
             }
         }
+        private void dgvTimKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
