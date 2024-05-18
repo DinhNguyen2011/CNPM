@@ -96,3 +96,4 @@ C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp
 C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\tqpha\Source\Repos\DinhNguyen2011\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyCTCX.resources
+E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyCTCX.resources
