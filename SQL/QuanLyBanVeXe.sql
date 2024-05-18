@@ -228,9 +228,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Đổi mật khẩu						        */
-/*==============================================================*/
+
 CREATE PROC DOIMATKHAU @matk int, @mkcu char(50), @mkmoi char(50)
 AS
 BEGIN
@@ -248,7 +246,7 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: DSKHACHHANG	(Lấy DS khách hàng)         */
+/* Stored procedure: DSKHACHHANG	(Lấy DS tuyến xe)             */
 /*==============================================================*/
 CREATE PROC DSKHACHHANG
 AS
@@ -257,7 +255,7 @@ BEGIN
 END
 
 GO
-
+SELECT * FROM CHUYENXE
 /*==============================================================*/
 /* Stored procedure: XOAKHACHHANG	(Xóa tài khoản)             */
 /*==============================================================*/
@@ -272,6 +270,14 @@ BEGIN
 END
 
 GO
+select * from KHACHHANG
+select * from TAIKHOAN
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+
 
 /*==============================================================*/
 /* Stored procedure: SUATHONGTINKHACHHANG                       */
@@ -287,9 +293,6 @@ END
 
 GO
 
-/*==============================================================*/
-/* Stored procedure: DSTUYENXE	(Lấy DS Tuyến Xe)               */
-/*==============================================================*/
 CREATE PROC DSTUYENXE
 AS
 BEGIN
@@ -297,9 +300,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: THUYENTUYENXE	(Thêm tuyến xe mới)         */
-/*==============================================================*/
+
 CREATE PROC THEMTUYENXE @diemdi nvarchar(20), @diemden nvarchar(20)
 AS
 	IF (not exists (SELECT * FROM TUYENXE WHERE DIEMDI = @diemdi and DIEMDEN = @diemden))
@@ -309,17 +310,13 @@ AS
 	ELSE RETURN N'Tuyến xe đã tồn tại!'
 
 GO
-/*==============================================================*/
-/* Stored procedure: XOATUYENXE	(Xóa tuyến xe)                  */
-/*==============================================================*/
+select * from TUYENXE
 CREATE PROC XOATUYENXE @matuyen int
 AS 
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
 GO
+select * from XE
 
-/*==============================================================*/
-/* Stored procedure: THEMCHUYENXE	(thêm chuyến xe)            */
-/*==============================================================*/
 CREATE or alter PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @matuyen int
 AS 
 BEGIN
@@ -331,9 +328,6 @@ END
 
 GO
 
-/*==============================================================*/
-/* Stored procedure: Sửa thông tin chuyến xe			        */
-/*==============================================================*/
 CREATE PROC SUATHONGTINCHUYENXE @machuyen int, @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money
 AS
 BEGIN
@@ -343,18 +337,14 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Xóa chuyến xe						        */
-/*==============================================================*/
+
 CREATE PROC XOACHUYENXE @machuyen int
 AS 
 	DELETE CHUYENXE WHERE CHUYENXE.MACHUYEN = @machuyen
 	DELETE CHITIETCHUYENXE WHERE CHITIETCHUYENXE.MACHUYEN = @machuyen
 
 GO
-/*==============================================================*/
-/* Stored procedure: Thêm xe							        */
-/*==============================================================*/
+
 CREATE PROC THEMXE @tenxe nvarchar(50), @bienso nchar(20), @soghe int
 AS 
 BEGIN
@@ -365,9 +355,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Sửa thông tin xe					        */
-/*==============================================================*/
+
 CREATE PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @bienso nchar(20), @soghe int
 AS
 BEGIN
@@ -377,17 +365,13 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Xóa xe								        */
-/*==============================================================*/
+
 CREATE PROC XOAXE @maxe int
 AS 
 	DELETE XE WHERE XE.MAXE = @maxe
 
 GO
-/*==============================================================*/
-/* Stored procedure: Danh sách nhân viên				        */
-/*==============================================================*/
+
 CREATE PROC DSNHANVIEN
 AS
 BEGIN
@@ -395,9 +379,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Thêm nhân viên						        */
-/*==============================================================*/
+
 CREATE PROC THEMNHANVIEN @tennv nvarchar(30), @cmnd nchar(20), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
@@ -408,9 +390,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Sửa thông tin nhân viên				    */
-/*==============================================================*/
+
 CREATE PROC SUATHONGTINNV @manv int, @tennv nvarchar(30), @cmnd nchar(20), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
@@ -420,17 +400,13 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Xóa nhân viên							    */
-/*==============================================================*/
+
 CREATE PROC XOANHANVIEN @manv int
 AS 
 	DELETE NHANVIEN WHERE NHANVIEN.MANV = @manv
 
 GO
-/*==============================================================*/
-/* Stored procedure: Thêm tài xế							    */
-/*==============================================================*/
+
 CREATE PROC THEMTAIXE @tentx nvarchar(30), @cmnd nchar(20), @sdt nchar(20)
 AS 
 BEGIN
@@ -441,9 +417,7 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Sửa thông tin tài xế					    */
-/*==============================================================*/
+
 CREATE PROC SUATHONGTINTX @mataixe int, @tentx nvarchar(30), @cmnd nchar(20), @sdt nchar(20)
 AS 
 BEGIN
@@ -453,17 +427,13 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Xóa tài xế								    */
-/*==============================================================*/
+
 CREATE PROC XOATAIXE @mataixe int
 AS 
 	DELETE TAIXE WHERE TAIXE.MATAIXE = @mataixe
 
 GO
-/*==============================================================*/
-/* Stored procedure: Thêm loại nhân viên					    */
-/*==============================================================*/
+
 CREATE PROC THEMLOAINV @tenloai nvarchar(20)
 AS
 BEGIN
@@ -474,11 +444,10 @@ BEGIN
 END
 
 GO
-/*==============================================================*/
-/* Stored procedure: Xóa loại nhân viên						    */
-/*==============================================================*/
+
 CREATE PROC XOALOAINV @maloainv int
 AS 
 	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
 
 GO
+select * from KHACHHANG
