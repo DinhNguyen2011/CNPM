@@ -21,11 +21,8 @@ namespace WindowsFormsApp1
         
         private void btnClose_Click(object sender, EventArgs e)
         {
-            {
-                {
-                    Application.Exit();
-                }
-            }
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
         }
         private bool login(string username, string password)
         {

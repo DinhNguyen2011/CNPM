@@ -47,9 +47,13 @@ namespace WindowsFormsApp1.DAO
             {
                 string query = "THEMTUYENXE @diemdi , @diemden";
                 result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { tx.Diemdi, tx.Diemden });
-            } catch (SqlException e)
+            }
+            catch (SqlException e)
             {
-                MessageBox.Show("Tuyến xe đã tồn tại","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tuyến xe đã tồn tại!' "))
+                    MessageBox.Show("Tuyến xe đã tồn tại", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    throw e;
             }
             return result;
         }
@@ -59,11 +63,11 @@ namespace WindowsFormsApp1.DAO
             try
             {
                 string query = "XOATUYENXE @ma";
-                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] {ma});
+                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { ma });
             }
             catch (SqlException e)
             {
-                MessageBox.Show("", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw e;
             }
             return result;
         }

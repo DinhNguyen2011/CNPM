@@ -24,7 +24,8 @@ namespace WindowsFormsApp1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
         }
 
         private void BangDieuKhien_Load(object sender, EventArgs e)
@@ -80,6 +81,13 @@ namespace WindowsFormsApp1
         private void userChiTietVeXe1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }
