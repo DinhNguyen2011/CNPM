@@ -38,6 +38,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dgvVeXe = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnSwap = new Guna.UI2.WinForms.Guna2Button();
+            this.cbDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbDiemDen = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnSuaTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemTuyen = new Guna.UI2.WinForms.Guna2Button();
@@ -45,8 +48,6 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtdiemdi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtdiemden = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1382, 107);
+            this.label10.Location = new System.Drawing.Point(1423, 105);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 23);
@@ -144,24 +145,6 @@
             this.dgvVeXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvVeXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellContentClick);
             // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Mã tuyến xe";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Điểm đi";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Điểm đến";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            // 
             // btnSwap
             // 
             this.btnSwap.BorderRadius = 20;
@@ -174,11 +157,74 @@
             this.btnSwap.ForeColor = System.Drawing.Color.White;
             this.btnSwap.Image = ((System.Drawing.Image)(resources.GetObject("btnSwap.Image")));
             this.btnSwap.ImageSize = new System.Drawing.Size(45, 40);
-            this.btnSwap.Location = new System.Drawing.Point(1308, 144);
+            this.btnSwap.Location = new System.Drawing.Point(1325, 134);
             this.btnSwap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSwap.Name = "btnSwap";
             this.btnSwap.Size = new System.Drawing.Size(71, 44);
             this.btnSwap.TabIndex = 40;
+            // 
+            // cbDiemDi
+            // 
+            this.cbDiemDi.BackColor = System.Drawing.Color.Transparent;
+            this.cbDiemDi.BorderRadius = 15;
+            this.cbDiemDi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDiemDi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDiemDi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiemDi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiemDi.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDiemDi.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbDiemDi.ForeColor = System.Drawing.Color.Black;
+            this.cbDiemDi.ItemHeight = 30;
+            this.cbDiemDi.Items.AddRange(new object[] {
+            "1A",
+            "1B",
+            "1C"});
+            this.cbDiemDi.Location = new System.Drawing.Point(1071, 134);
+            this.cbDiemDi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbDiemDi.Name = "cbDiemDi";
+            this.cbDiemDi.Size = new System.Drawing.Size(245, 36);
+            this.cbDiemDi.TabIndex = 41;
+            // 
+            // cbDiemDen
+            // 
+            this.cbDiemDen.BackColor = System.Drawing.Color.Transparent;
+            this.cbDiemDen.BorderRadius = 15;
+            this.cbDiemDen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDiemDen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDiemDen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiemDen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDiemDen.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbDiemDen.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cbDiemDen.ForeColor = System.Drawing.Color.Black;
+            this.cbDiemDen.ItemHeight = 30;
+            this.cbDiemDen.Items.AddRange(new object[] {
+            "1A",
+            "1B",
+            "1C"});
+            this.cbDiemDen.Location = new System.Drawing.Point(1404, 134);
+            this.cbDiemDen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbDiemDen.Name = "cbDiemDen";
+            this.cbDiemDen.Size = new System.Drawing.Size(241, 36);
+            this.cbDiemDen.TabIndex = 42;
+            // 
+            // btnSuaTuyen
+            // 
+            this.btnSuaTuyen.BorderRadius = 18;
+            this.btnSuaTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnSuaTuyen.BorderThickness = 1;
+            this.btnSuaTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuaTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuaTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuaTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSuaTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaTuyen.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaTuyen.Location = new System.Drawing.Point(1071, 325);
+            this.btnSuaTuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaTuyen.Name = "btnSuaTuyen";
+            this.btnSuaTuyen.Size = new System.Drawing.Size(205, 55);
+            this.btnSuaTuyen.TabIndex = 44;
+            this.btnSuaTuyen.Text = "Sửa";
             // 
             // btnXoaTuyen
             // 
@@ -192,7 +238,7 @@
             this.btnXoaTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoaTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnXoaTuyen.Location = new System.Drawing.Point(1071, 340);
+            this.btnXoaTuyen.Location = new System.Drawing.Point(1353, 325);
             this.btnXoaTuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoaTuyen.Name = "btnXoaTuyen";
             this.btnXoaTuyen.Size = new System.Drawing.Size(205, 55);
@@ -265,43 +311,6 @@
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
-            // txtdiemdi
-            // 
-            this.txtdiemdi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdiemdi.DefaultText = "";
-            this.txtdiemdi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtdiemdi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtdiemdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdiemdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdiemdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemdi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtdiemdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemdi.Location = new System.Drawing.Point(1067, 152);
-            this.txtdiemdi.Name = "txtdiemdi";
-            this.txtdiemdi.PasswordChar = '\0';
-            this.txtdiemdi.PlaceholderText = "";
-            this.txtdiemdi.SelectedText = "";
-            this.txtdiemdi.Size = new System.Drawing.Size(234, 36);
-            this.txtdiemdi.TabIndex = 0;
-            // 
-            // txtdiemden
-            // 
-            this.txtdiemden.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdiemden.DefaultText = "";
-            this.txtdiemden.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtdiemden.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtdiemden.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdiemden.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtdiemden.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemden.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtdiemden.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemden.Location = new System.Drawing.Point(1386, 152);
-            this.txtdiemden.Name = "txtdiemden";
-            this.txtdiemden.PasswordChar = '\0';
-            this.txtdiemden.PlaceholderText = "";
-            this.txtdiemden.SelectedText = "";
-            this.txtdiemden.Size = new System.Drawing.Size(241, 36);
-            this.txtdiemden.TabIndex = 48;
             // 
             // UserQuanLyTuyenXe
             // 
@@ -309,11 +318,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.txtdiemden);
-            this.Controls.Add(this.txtdiemdi);
             this.Controls.Add(this.btnThemTuyen);
             this.Controls.Add(this.btnTimTuyen);
             this.Controls.Add(this.btnXoaTuyen);
+            this.Controls.Add(this.btnSuaTuyen);
+            this.Controls.Add(this.cbDiemDen);
+            this.Controls.Add(this.cbDiemDi);
             this.Controls.Add(this.btnSwap);
             this.Controls.Add(this.dgvVeXe);
             this.Controls.Add(this.label10);
@@ -336,17 +346,15 @@
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2DataGridView dgvVeXe;
         private Guna.UI2.WinForms.Guna2Button btnSwap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private Guna.UI2.WinForms.Guna2ComboBox cbDiemDen;
+        private Guna.UI2.WinForms.Guna2ComboBox cbDiemDi;
         private Guna.UI2.WinForms.Guna2Button btnThemTuyen;
         private Guna.UI2.WinForms.Guna2Button btnTimTuyen;
         private Guna.UI2.WinForms.Guna2Button btnXoaTuyen;
+        private Guna.UI2.WinForms.Guna2Button btnSuaTuyen;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLTuyenXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private Guna.UI2.WinForms.Guna2TextBox txtdiemden;
-        private Guna.UI2.WinForms.Guna2TextBox txtdiemdi;
     }
 }
