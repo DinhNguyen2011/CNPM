@@ -16,8 +16,9 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-        }
 
+        }
+        
         private void btnClose_Click(object sender, EventArgs e)
         {
             {
@@ -30,9 +31,9 @@ namespace WindowsFormsApp1
         {
             return TaiKhoanDAO.Instance.Login(username, password);
         }
-        private void txtLogin_Click(object sender, EventArgs e)
-        {
 
+        private void checkLogin()
+        {
             string username = txtUseName.Text;
             string password = txtPw.Text;
             if (login(username, password))
@@ -49,15 +50,14 @@ namespace WindowsFormsApp1
                     BangDieuKhien bangDieuKhien = new BangDieuKhien();
                     this.Hide();
                     bangDieuKhien.ShowDialog();
-                }    
+                }
             }
             else lblError.Visible = true;
             txtPw.Clear();
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void txtLogin_Click(object sender, EventArgs e)
         {
-
+            checkLogin();            
         }
 
         private void btnDkiTK_Click(object sender, EventArgs e)
@@ -65,6 +65,11 @@ namespace WindowsFormsApp1
             DangKiTaiKhoang dk=new DangKiTaiKhoang();   
             this.Hide();
             dk.Show();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
