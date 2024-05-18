@@ -83,7 +83,6 @@ namespace WindowsFormsApp1
            
         }
 
-<<<<<<< Updated upstream
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
@@ -95,7 +94,6 @@ namespace WindowsFormsApp1
         {
             this.WindowState = FormWindowState.Minimized;
         }
-=======
         private void btnQLCX_Click(object sender, EventArgs e)
         {
             PnMovingad.Left = btnQLCX.Left + 60;
@@ -107,6 +105,5 @@ namespace WindowsFormsApp1
             userQuanLyXe1.Visible = false;
         }
 
->>>>>>> Stashed changes
     }
 }

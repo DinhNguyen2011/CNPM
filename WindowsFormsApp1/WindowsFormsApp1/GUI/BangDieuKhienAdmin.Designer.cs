@@ -44,16 +44,12 @@
             this.guna2QLKH = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLNV = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-<<<<<<< Updated upstream
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2QLChuyenXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLTuyenxe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-=======
-            this.LogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2QLChuyenXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLTuyenxe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userQuanLyChuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe();
->>>>>>> Stashed changes
             this.userQuanLyTuyenXe2 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
             this.userQuanLyTuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
             this.userQuanLyXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe();
@@ -251,7 +247,6 @@
             // 
             // btnLogOut
             // 
-<<<<<<< Updated upstream
             this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -266,23 +261,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(59, 46);
             this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-=======
-            this.LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LogOut.FillColor = System.Drawing.SystemColors.ButtonFace;
-            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.LogOut.ForeColor = System.Drawing.Color.White;
-            this.LogOut.Image = ((System.Drawing.Image)(resources.GetObject("LogOut.Image")));
-            this.LogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.LogOut.Location = new System.Drawing.Point(1769, 53);
-            this.LogOut.Margin = new System.Windows.Forms.Padding(4);
-            this.LogOut.Name = "LogOut";
-            this.LogOut.Size = new System.Drawing.Size(59, 46);
-            this.LogOut.TabIndex = 8;
->>>>>>> Stashed changes
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);          
             // 
             // guna2QLChuyenXe
             // 
@@ -292,8 +271,6 @@
             // 
             this.guna2QLTuyenxe.TargetControl = this;
             // 
-<<<<<<< Updated upstream
-=======
             // userQuanLyChuyenXe1
             // 
             this.userQuanLyChuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -303,94 +280,52 @@
             this.userQuanLyChuyenXe1.Size = new System.Drawing.Size(1823, 612);
             this.userQuanLyChuyenXe1.TabIndex = 6;
             // 
->>>>>>> Stashed changes
             // userQuanLyTuyenXe2
             // 
             this.userQuanLyTuyenXe2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.userQuanLyTuyenXe2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-<<<<<<< Updated upstream
-            this.userQuanLyTuyenXe2.Location = new System.Drawing.Point(8, 4);
-            this.userQuanLyTuyenXe2.Margin = new System.Windows.Forms.Padding(5);
-            this.userQuanLyTuyenXe2.Name = "userQuanLyTuyenXe2";
-            this.userQuanLyTuyenXe2.Size = new System.Drawing.Size(1820, 548);
-=======
             this.userQuanLyTuyenXe2.Location = new System.Drawing.Point(-1, 17);
             this.userQuanLyTuyenXe2.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyTuyenXe2.Name = "userQuanLyTuyenXe2";
             this.userQuanLyTuyenXe2.Size = new System.Drawing.Size(1823, 612);
->>>>>>> Stashed changes
             this.userQuanLyTuyenXe2.TabIndex = 5;
             // 
             // userQuanLyTuyenXe1
             // 
             this.userQuanLyTuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-<<<<<<< Updated upstream
-            this.userQuanLyTuyenXe1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(4, 4);
-            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5);
-            this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
-            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1820, 548);
-=======
             this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(-1, 17);
             this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
             this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1823, 612);
->>>>>>> Stashed changes
             this.userQuanLyTuyenXe1.TabIndex = 4;
             // 
             // userQuanLyXe1
             // 
-<<<<<<< Updated upstream
-            this.userQuanLyXe1.BackColor = System.Drawing.Color.Silver;
-            this.userQuanLyXe1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userQuanLyXe1.Location = new System.Drawing.Point(3, 2);
-            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5);
-            this.userQuanLyXe1.Name = "userQuanLyXe1";
-            this.userQuanLyXe1.Size = new System.Drawing.Size(1825, 614);
-=======
             this.userQuanLyXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.userQuanLyXe1.Location = new System.Drawing.Point(-1, 17);
             this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyXe1.Name = "userQuanLyXe1";
             this.userQuanLyXe1.Size = new System.Drawing.Size(1823, 612);
->>>>>>> Stashed changes
             this.userQuanLyXe1.TabIndex = 3;
             this.userQuanLyXe1.Load += new System.EventHandler(this.userQuanLyXe1_Load);
             // 
             // userQuanLyNhanVien1
             // 
-<<<<<<< Updated upstream
-            this.userQuanLyNhanVien1.BackColor = System.Drawing.Color.DarkGray;
-            this.userQuanLyNhanVien1.Location = new System.Drawing.Point(1, 4);
-            this.userQuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(5);
-            this.userQuanLyNhanVien1.Name = "userQuanLyNhanVien1";
-            this.userQuanLyNhanVien1.Size = new System.Drawing.Size(1827, 615);
-=======
             this.userQuanLyNhanVien1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.userQuanLyNhanVien1.Location = new System.Drawing.Point(-1, 17);
             this.userQuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyNhanVien1.Name = "userQuanLyNhanVien1";
             this.userQuanLyNhanVien1.Size = new System.Drawing.Size(1823, 612);
->>>>>>> Stashed changes
             this.userQuanLyNhanVien1.TabIndex = 2;
             // 
             // userQuanLyKhachHang1
             // 
-<<<<<<< Updated upstream
-            this.userQuanLyKhachHang1.BackColor = System.Drawing.Color.DarkGray;
-            this.userQuanLyKhachHang1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userQuanLyKhachHang1.Location = new System.Drawing.Point(1, 2);
-            this.userQuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(5);
-            this.userQuanLyKhachHang1.Name = "userQuanLyKhachHang1";
-            this.userQuanLyKhachHang1.Size = new System.Drawing.Size(1825, 614);
-=======
             this.userQuanLyKhachHang1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.userQuanLyKhachHang1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.userQuanLyKhachHang1.Location = new System.Drawing.Point(-1, 17);
             this.userQuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyKhachHang1.Name = "userQuanLyKhachHang1";
             this.userQuanLyKhachHang1.Size = new System.Drawing.Size(1823, 612);
->>>>>>> Stashed changes
             this.userQuanLyKhachHang1.TabIndex = 1;
             // 
             // BangDieuKhienAdmin
