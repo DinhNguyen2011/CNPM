@@ -28,12 +28,17 @@ namespace WindowsFormsApp1
             PnMovingad.Left = btnQLTuyenXe.Left + 60;
             userQuanLyTuyenXe1.Visible = true;
             userQuanLyTuyenXe1.BringToFront();
+            userQuanLyChuyenXe1.Visible = false;
+            userQuanLyNhanVien1.Visible = false;
+            userQuanLyKhachHang1.Visible = false;
+            userQuanLyXe1.Visible = false;
 
         }
 
         private void BangDieuKhienAdmin_Load(object sender, EventArgs e)
         {
             userQuanLyTuyenXe1.Visible = true;
+            userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
@@ -45,6 +50,10 @@ namespace WindowsFormsApp1
             PnMovingad.Left = btnQLKH.Left + 60;
             userQuanLyKhachHang1.Visible = true;
             userQuanLyKhachHang1.BringToFront();
+            userQuanLyTuyenXe1.Visible = false;
+            userQuanLyChuyenXe1.Visible = false;
+            userQuanLyNhanVien1.Visible = false;
+            userQuanLyXe1.Visible = false;
         }
 
         private void btnLichTrinh_Click(object sender, EventArgs e)
@@ -52,6 +61,10 @@ namespace WindowsFormsApp1
             PnMovingad.Left = btnQLNV.Left + 60;
             userQuanLyNhanVien1.Visible = true;
             userQuanLyNhanVien1.BringToFront();
+            userQuanLyTuyenXe1.Visible = false;
+            userQuanLyChuyenXe1.Visible = false;
+            userQuanLyKhachHang1.Visible = false;
+            userQuanLyXe1.Visible = false;
         }
 
         private void btnQLXe_Click(object sender, EventArgs e)
@@ -59,6 +72,10 @@ namespace WindowsFormsApp1
             PnMovingad.Left = btnQLXe.Left + 60;
             userQuanLyXe1.Visible = true;
             userQuanLyXe1.BringToFront();
+            userQuanLyTuyenXe1.Visible = false;
+            userQuanLyChuyenXe1.Visible = false;
+            userQuanLyNhanVien1.Visible = false;
+            userQuanLyKhachHang1.Visible = false;
         }
 
         private void userQuanLyXe1_Load(object sender, EventArgs e)
@@ -66,6 +83,7 @@ namespace WindowsFormsApp1
            
         }
 
+<<<<<<< Updated upstream
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
@@ -77,5 +95,18 @@ namespace WindowsFormsApp1
         {
             this.WindowState = FormWindowState.Minimized;
         }
+=======
+        private void btnQLCX_Click(object sender, EventArgs e)
+        {
+            PnMovingad.Left = btnQLCX.Left + 60;
+            userQuanLyChuyenXe1.Visible = true;
+            userQuanLyChuyenXe1.BringToFront();
+            userQuanLyTuyenXe1.Visible = false;
+            userQuanLyNhanVien1.Visible = false;
+            userQuanLyKhachHang1.Visible = false;
+            userQuanLyXe1.Visible = false;
+        }
+
+>>>>>>> Stashed changes
     }
 }
