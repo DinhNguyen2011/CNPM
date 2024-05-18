@@ -66,5 +66,10 @@ namespace WindowsFormsApp1
             this.Hide();
             dk.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Console.WriteLine("intwf");
+        }
     }
 }
