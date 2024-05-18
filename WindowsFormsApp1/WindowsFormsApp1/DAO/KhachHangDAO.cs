@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1.DAO
 {
@@ -24,10 +27,31 @@ namespace WindowsFormsApp1.DAO
             }
             private set { instance = value; }
         }
-        public DataTable getDSKhachHang()
+        public List<KhachHang> getDSKhachHang()
         {
+            List<KhachHang> list = new List<KhachHang>();
             string query = "DSKHACHHANG";
             DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                KhachHang kh = new KhachHang(item);
+                list.Add(kh);
+            }
+            return list;
+        }
+        public int xoaKhachHang(int ma)
+        {
+            int result = 0;
+            try
+            {
+                string query = "XOAKHACHHANG @ma";
+                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { ma });
+            }
+            catch (SqlException e)
+            {
+                //MessageBox.Show("", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw e;
+            }
             return result;
         }
     }

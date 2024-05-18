@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
     public partial class UserQuanLyTuyenXe : UserControl
     {
         private List<TuyenXe> listTuyenXe;
-        private int index = -1;
+        private int index = 0;
         public UserQuanLyTuyenXe()
         {
             InitializeComponent();
@@ -38,8 +38,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
             TuyenXe tx = new TuyenXe(diemdi,diemden);
             if (TuyenXeDAO.Instance.themTuyenXe(tx) != 0)
             {
-                MessageBox.Show("Thêm tuyến xe mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadTuyenXe();
+                MessageBox.Show("Thêm tuyến xe mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }  
 
         }
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         private void dgvVeXe_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             int indexRow = dgvVeXe.Rows[e.RowIndex].Index;
-            if (indexRow > 0)
+            if (indexRow > -1)
             {
                 TuyenXe tx = listTuyenXe[indexRow];
                 txtdiemdi.Text = tx.Diemdi;
@@ -77,7 +77,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
 
         private void btnXoaTuyen_Click(object sender, EventArgs e)
         {
-            xoaTuyenXe();
+            if (MessageBox.Show("Bạn có muốn xóa tuyến xe này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                xoaTuyenXe();
         }
     }
 }

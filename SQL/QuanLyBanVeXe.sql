@@ -270,6 +270,15 @@ BEGIN
 END
 
 GO
+select * from KHACHHANG
+select * from TAIKHOAN
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+
+
 /*==============================================================*/
 /* Stored procedure: SUATHONGTINKHACHHANG                       */
 /*==============================================================*/
@@ -306,7 +315,7 @@ CREATE PROC XOATUYENXE @matuyen int
 AS 
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
 GO
-
+select * from XE
 
 CREATE PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @matuyen int
 AS 
@@ -441,4 +450,4 @@ AS
 	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
 
 GO
-select * from TUYENXE
+select * from KHACHHANG

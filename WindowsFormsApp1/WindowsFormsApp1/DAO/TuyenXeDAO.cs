@@ -28,12 +28,6 @@ namespace WindowsFormsApp1.DAO
             }
             private set { instance = value; }
         }
-        public DataTable LoadTuyenXe()
-        {
-            string query = "DSTUYENXE";
-            DataTable result = DataProvider.Instance.ExcuteQuery(query);
-            return result;
-        }
         public List<TuyenXe> getDSTuyenXe()
         {
             List<TuyenXe> list = new List<TuyenXe>();
