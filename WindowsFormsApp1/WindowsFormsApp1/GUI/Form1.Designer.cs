@@ -63,17 +63,16 @@ namespace WindowsFormsApp1
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Location = new System.Drawing.Point(596, 393);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel1.Location = new System.Drawing.Point(397, 255);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1360, 834);
+            this.guna2Panel1.Size = new System.Drawing.Size(907, 542);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnDkiTK
             // 
             this.btnDkiTK.AutoRoundedCorners = true;
-            this.btnDkiTK.BorderRadius = 23;
+            this.btnDkiTK.BorderRadius = 17;
             this.btnDkiTK.BorderThickness = 1;
             this.btnDkiTK.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnDkiTK.DefaultAutoSize = true;
@@ -85,10 +84,9 @@ namespace WindowsFormsApp1
             this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
             this.btnDkiTK.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
             this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
-            this.btnDkiTK.Location = new System.Drawing.Point(883, 704);
-            this.btnDkiTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDkiTK.Location = new System.Drawing.Point(589, 458);
             this.btnDkiTK.Name = "btnDkiTK";
-            this.btnDkiTK.Size = new System.Drawing.Size(230, 49);
+            this.btnDkiTK.Size = new System.Drawing.Size(162, 36);
             this.btnDkiTK.TabIndex = 12;
             this.btnDkiTK.Text = "Đăng ký ngay";
             this.btnDkiTK.Click += new System.EventHandler(this.btnDkiTK_Click);
@@ -97,10 +95,9 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(605, 714);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(403, 464);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 33);
+            this.label2.Size = new System.Drawing.Size(167, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Chưa có tài khoản ?";
             // 
@@ -110,10 +107,9 @@ namespace WindowsFormsApp1
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(187, 95);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(125, 62);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(809, 74);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(539, 48);
             this.guna2HtmlLabel2.TabIndex = 9;
             this.guna2HtmlLabel2.Text = "Cùng bạn trên mọi nẻo đường ";
             // 
@@ -123,10 +119,9 @@ namespace WindowsFormsApp1
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(87, 22);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(58, 14);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(540, 83);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(360, 54);
             this.guna2HtmlLabel1.TabIndex = 8;
             this.guna2HtmlLabel1.Text = "QB_TTH_KH ";
             // 
@@ -135,10 +130,9 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(311, 778);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(207, 506);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(802, 36);
+            this.label3.Size = new System.Drawing.Size(563, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "*Bạn sẽ chấp nhận các điều khoản của chúng tôi khi đăng nhập";
             // 
@@ -147,10 +141,9 @@ namespace WindowsFormsApp1
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(776, 559);
-            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblError.Location = new System.Drawing.Point(517, 363);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(345, 27);
+            this.lblError.Size = new System.Drawing.Size(218, 19);
             this.lblError.TabIndex = 6;
             this.lblError.Text = "*Tên đăng nhập hoặc mật khẩu sai";
             this.lblError.Visible = false;
@@ -165,10 +158,9 @@ namespace WindowsFormsApp1
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLogin.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(727, 611);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(485, 397);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(346, 69);
+            this.btnLogin.Size = new System.Drawing.Size(231, 45);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login ";
             this.btnLogin.Click += new System.EventHandler(this.txtLogin_Click);
@@ -188,13 +180,12 @@ namespace WindowsFormsApp1
             this.txtPw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPw.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPw.IconLeft")));
             this.txtPw.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtPw.Location = new System.Drawing.Point(671, 458);
-            this.txtPw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPw.Location = new System.Drawing.Point(447, 298);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.PlaceholderText = "Enter Password";
             this.txtPw.SelectedText = "";
-            this.txtPw.Size = new System.Drawing.Size(450, 78);
+            this.txtPw.Size = new System.Drawing.Size(300, 51);
             this.txtPw.TabIndex = 4;
             // 
             // txtUseName
@@ -212,23 +203,21 @@ namespace WindowsFormsApp1
             this.txtUseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUseName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUseName.IconLeft")));
             this.txtUseName.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtUseName.Location = new System.Drawing.Point(671, 330);
-            this.txtUseName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUseName.Location = new System.Drawing.Point(447, 214);
             this.txtUseName.Name = "txtUseName";
             this.txtUseName.PasswordChar = '\0';
             this.txtUseName.PlaceholderText = "Enter User Name";
             this.txtUseName.SelectedText = "";
-            this.txtUseName.Size = new System.Drawing.Size(450, 78);
+            this.txtUseName.Size = new System.Drawing.Size(300, 51);
             this.txtUseName.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(753, 209);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(502, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 72);
+            this.label1.Size = new System.Drawing.Size(199, 49);
             this.label1.TabIndex = 2;
             this.label1.Text = "Use Login ";
             // 
@@ -236,10 +225,9 @@ namespace WindowsFormsApp1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(148, 259);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(99, 168);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(388, 348);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(259, 226);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -255,26 +243,25 @@ namespace WindowsFormsApp1
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(1293, 5);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(862, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(63, 55);
+            this.btnClose.Size = new System.Drawing.Size(42, 36);
             this.btnClose.TabIndex = 0;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(2111, 1152);
+            this.ClientSize = new System.Drawing.Size(1151, 707);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "QB_TTH_KH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
