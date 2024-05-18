@@ -63,10 +63,20 @@ namespace WindowsFormsApp1
             this.Hide();
             dk.Show();
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        private void txtPw_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                checkLogin();
+            }
+        }
 
+        private void txtUseName_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                checkLogin();
+            }
         }
     }
 }

@@ -191,6 +191,7 @@ namespace WindowsFormsApp1
             this.txtPw.SelectedText = "";
             this.txtPw.Size = new System.Drawing.Size(450, 78);
             this.txtPw.TabIndex = 4;
+            this.txtPw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPw_KeyUp);
             // 
             // txtUseName
             // 
@@ -217,6 +218,7 @@ namespace WindowsFormsApp1
             this.txtUseName.SelectedText = "";
             this.txtUseName.Size = new System.Drawing.Size(450, 78);
             this.txtUseName.TabIndex = 3;
+            this.txtUseName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtUseName_KeyUp);
             // 
             // label1
             // 
