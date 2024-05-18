@@ -22,7 +22,6 @@ namespace WindowsFormsApp1
         {
             Application.Exit();
         }
-
         private void btnDatVe_Click(object sender, EventArgs e)
         {
             PnMovingad.Left = btnQLTuyenXe.Left + 60;
@@ -63,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void userQuanLyXe1_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

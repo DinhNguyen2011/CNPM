@@ -270,6 +270,14 @@ END
 
 GO
 
+CREATE PROC DSTUYENXE
+AS
+BEGIN
+	select MATUYEN, DIEMDI, DIEMDEN from TUYENXE
+END
+
+GO
+
 CREATE PROC THEMTUYENXE @diemdi nvarchar(20), @diemden nvarchar(20)
 AS
 	IF (not exists (SELECT * FROM TUYENXE WHERE DIEMDI = @diemdi and DIEMDEN = @diemden))
@@ -285,6 +293,7 @@ AS
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
 
 GO
+
 
 CREATE PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @matuyen int
 AS 
@@ -338,6 +347,14 @@ GO
 CREATE PROC XOAXE @maxe int
 AS 
 	DELETE XE WHERE XE.MAXE = @maxe
+
+GO
+
+CREATE PROC DSNHANVIEN
+AS
+BEGIN
+	select MANV, TENNV, CMND, SDT, EMAIL, MALOAINV from NHANVIEN
+END
 
 GO
 
@@ -411,3 +428,4 @@ AS
 	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
 
 GO
+select * from TUYENXE

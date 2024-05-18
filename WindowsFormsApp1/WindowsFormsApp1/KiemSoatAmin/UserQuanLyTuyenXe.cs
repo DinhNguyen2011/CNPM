@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1.KiemSoatAmin
 {
@@ -15,6 +16,21 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyTuyenXe()
         {
             InitializeComponent();
+        }
+
+        private void dgvVeXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+        public void LoadTuyenXe()
+        {
+            dgvVeXe.DataSource = TuyenXeDAO.Instance.getDSTuyenXe();
+            dgvVeXe.Refresh();
+        }
+
+        private void UserQuanLyTuyenXe_Load(object sender, EventArgs e)
+        {
+            LoadTuyenXe();
         }
     }
 }
