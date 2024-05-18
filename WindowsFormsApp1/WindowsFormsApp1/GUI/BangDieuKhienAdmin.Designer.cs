@@ -315,6 +315,56 @@
             // 
             this.guna2QLTuyenxe.TargetControl = this;
             // 
+            // userQuanLyTuyenXe2
+            // 
+            this.userQuanLyTuyenXe2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyTuyenXe2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userQuanLyTuyenXe2.Location = new System.Drawing.Point(8, 4);
+            this.userQuanLyTuyenXe2.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyTuyenXe2.Name = "userQuanLyTuyenXe2";
+            this.userQuanLyTuyenXe2.Size = new System.Drawing.Size(1820, 548);
+            this.userQuanLyTuyenXe2.TabIndex = 5;
+            // 
+            // userQuanLyTuyenXe1
+            // 
+            this.userQuanLyTuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyTuyenXe1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(4, 4);
+            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
+            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1820, 548);
+            this.userQuanLyTuyenXe1.TabIndex = 4;
+            // 
+            // userQuanLyXe1
+            // 
+            this.userQuanLyXe1.BackColor = System.Drawing.Color.Silver;
+            this.userQuanLyXe1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userQuanLyXe1.Location = new System.Drawing.Point(3, 2);
+            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyXe1.Name = "userQuanLyXe1";
+            this.userQuanLyXe1.Size = new System.Drawing.Size(1825, 614);
+            this.userQuanLyXe1.TabIndex = 3;
+            this.userQuanLyXe1.Load += new System.EventHandler(this.userQuanLyXe1_Load);
+            // 
+            // userQuanLyNhanVien1
+            // 
+            this.userQuanLyNhanVien1.BackColor = System.Drawing.Color.DarkGray;
+            this.userQuanLyNhanVien1.Location = new System.Drawing.Point(1, 4);
+            this.userQuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyNhanVien1.Name = "userQuanLyNhanVien1";
+            this.userQuanLyNhanVien1.Size = new System.Drawing.Size(1827, 615);
+            this.userQuanLyNhanVien1.TabIndex = 2;
+            // 
+            // userQuanLyKhachHang1
+            // 
+            this.userQuanLyKhachHang1.BackColor = System.Drawing.Color.DarkGray;
+            this.userQuanLyKhachHang1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userQuanLyKhachHang1.Location = new System.Drawing.Point(1, 2);
+            this.userQuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyKhachHang1.Name = "userQuanLyKhachHang1";
+            this.userQuanLyKhachHang1.Size = new System.Drawing.Size(1825, 614);
+            this.userQuanLyKhachHang1.TabIndex = 1;
+            // 
             // BangDieuKhienAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
