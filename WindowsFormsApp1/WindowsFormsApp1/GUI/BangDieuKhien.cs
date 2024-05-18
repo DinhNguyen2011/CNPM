@@ -73,12 +73,7 @@ namespace WindowsFormsApp1
             userChiTietVeXe1.BringToFront();
         }
 
-        private void btnMiniSize_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userChiTietVeXe1_Load(object sender, EventArgs e)
+        private void userLichTrinh1_Load(object sender, EventArgs e)
         {
 
         }

@@ -22,6 +22,9 @@ namespace WindowsFormsApp1.KiemSoatUser
             dgvLichTrinh.DataSource = tuyenXeList;
         }
 
-        
+        private void UserLichTrinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

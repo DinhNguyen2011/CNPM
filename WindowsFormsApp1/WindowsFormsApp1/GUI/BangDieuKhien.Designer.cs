@@ -50,7 +50,15 @@
             this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+<<<<<<< Updated upstream
             this.LogOut = new Guna.UI2.WinForms.Guna2Button();
+=======
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
+>>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,15 +69,22 @@
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClose.FillColor = System.Drawing.Color.White;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
+<<<<<<< Updated upstream
             this.btnClose.Location = new System.Drawing.Point(1767, 9);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(59, 46);
+=======
+            this.btnClose.Location = new System.Drawing.Point(1619, 9);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(45, 48);
+>>>>>>> Stashed changes
             this.btnClose.TabIndex = 0;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -79,47 +94,71 @@
             this.btnMiniSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMiniSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMiniSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMiniSize.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMiniSize.FillColor = System.Drawing.Color.White;
             this.btnMiniSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMiniSize.ForeColor = System.Drawing.Color.White;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
+<<<<<<< Updated upstream
             this.btnMiniSize.Location = new System.Drawing.Point(1704, 9);
             this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMiniSize.Name = "btnMiniSize";
             this.btnMiniSize.Size = new System.Drawing.Size(59, 46);
+=======
+            this.btnMiniSize.Location = new System.Drawing.Point(1561, 9);
+            this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMiniSize.Name = "btnMiniSize";
+            this.btnMiniSize.Size = new System.Drawing.Size(45, 48);
+>>>>>>> Stashed changes
             this.btnMiniSize.TabIndex = 1;
-            this.btnMiniSize.Click += new System.EventHandler(this.btnMiniSize_Click);
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnThongTinKH);
             this.panel1.Controls.Add(this.btnChiTietVe);
             this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.btnLichTrinh);
             this.panel1.Controls.Add(this.btnDatVe);
+<<<<<<< Updated upstream
             this.panel1.Location = new System.Drawing.Point(68, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1552, 159);
+=======
+            this.panel1.ForeColor = System.Drawing.Color.Coral;
+            this.panel1.Location = new System.Drawing.Point(133, 37);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1362, 110);
+>>>>>>> Stashed changes
             this.panel1.TabIndex = 2;
             // 
             // btnThongTinKH
             // 
             this.btnThongTinKH.BorderRadius = 18;
+            this.btnThongTinKH.BorderThickness = 2;
             this.btnThongTinKH.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnThongTinKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTinKH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThongTinKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThongTinKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThongTinKH.FillColor = System.Drawing.Color.Yellow;
+            this.btnThongTinKH.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnThongTinKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.btnThongTinKH.ForeColor = System.Drawing.Color.Black;
             this.btnThongTinKH.Location = new System.Drawing.Point(665, 15);
             this.btnThongTinKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongTinKH.Name = "btnThongTinKH";
             this.btnThongTinKH.Size = new System.Drawing.Size(227, 111);
+=======
+            this.btnThongTinKH.ForeColor = System.Drawing.Color.White;
+            this.btnThongTinKH.Location = new System.Drawing.Point(496, 20);
+            this.btnThongTinKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThongTinKH.Name = "btnThongTinKH";
+            this.btnThongTinKH.Size = new System.Drawing.Size(304, 69);
+>>>>>>> Stashed changes
             this.btnThongTinKH.TabIndex = 4;
             this.btnThongTinKH.Text = "Thông tin hành khách";
             this.btnThongTinKH.Click += new System.EventHandler(this.btnThongTinKH_Click);
@@ -127,18 +166,27 @@
             // btnChiTietVe
             // 
             this.btnChiTietVe.BorderRadius = 18;
+            this.btnChiTietVe.BorderThickness = 2;
             this.btnChiTietVe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnChiTietVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTietVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTietVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnChiTietVe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnChiTietVe.FillColor = System.Drawing.Color.Yellow;
+            this.btnChiTietVe.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnChiTietVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.btnChiTietVe.ForeColor = System.Drawing.Color.Black;
             this.btnChiTietVe.Location = new System.Drawing.Point(1241, 15);
             this.btnChiTietVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChiTietVe.Name = "btnChiTietVe";
             this.btnChiTietVe.Size = new System.Drawing.Size(227, 111);
+=======
+            this.btnChiTietVe.ForeColor = System.Drawing.Color.White;
+            this.btnChiTietVe.Location = new System.Drawing.Point(1095, 20);
+            this.btnChiTietVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChiTietVe.Name = "btnChiTietVe";
+            this.btnChiTietVe.Size = new System.Drawing.Size(230, 69);
+>>>>>>> Stashed changes
             this.btnChiTietVe.TabIndex = 3;
             this.btnChiTietVe.Text = "Chi Tiết Vé Xe";
             this.btnChiTietVe.Click += new System.EventHandler(this.btnChiTietVe_Click);
@@ -146,18 +194,27 @@
             // btnThanhToan
             // 
             this.btnThanhToan.BorderRadius = 18;
+            this.btnThanhToan.BorderThickness = 2;
             this.btnThanhToan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThanhToan.FillColor = System.Drawing.Color.Yellow;
+            this.btnThanhToan.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btnThanhToan.Location = new System.Drawing.Point(955, 15);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(227, 111);
+=======
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(858, 20);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(178, 69);
+>>>>>>> Stashed changes
             this.btnThanhToan.TabIndex = 2;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -165,18 +222,27 @@
             // btnLichTrinh
             // 
             this.btnLichTrinh.BorderRadius = 18;
+            this.btnLichTrinh.BorderThickness = 2;
             this.btnLichTrinh.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnLichTrinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLichTrinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLichTrinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLichTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLichTrinh.FillColor = System.Drawing.Color.Yellow;
+            this.btnLichTrinh.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnLichTrinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.btnLichTrinh.ForeColor = System.Drawing.Color.Black;
             this.btnLichTrinh.Location = new System.Drawing.Point(81, 15);
             this.btnLichTrinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLichTrinh.Name = "btnLichTrinh";
             this.btnLichTrinh.Size = new System.Drawing.Size(227, 111);
+=======
+            this.btnLichTrinh.ForeColor = System.Drawing.Color.White;
+            this.btnLichTrinh.Location = new System.Drawing.Point(41, 20);
+            this.btnLichTrinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLichTrinh.Name = "btnLichTrinh";
+            this.btnLichTrinh.Size = new System.Drawing.Size(168, 69);
+>>>>>>> Stashed changes
             this.btnLichTrinh.TabIndex = 1;
             this.btnLichTrinh.Text = "Lịch trình";
             this.btnLichTrinh.Click += new System.EventHandler(this.btnLichTrinh_Click);
@@ -184,31 +250,48 @@
             // btnDatVe
             // 
             this.btnDatVe.BorderRadius = 18;
+            this.btnDatVe.BorderThickness = 2;
             this.btnDatVe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnDatVe.CustomBorderColor = System.Drawing.Color.White;
             this.btnDatVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDatVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDatVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDatVe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDatVe.FillColor = System.Drawing.Color.Yellow;
+            this.btnDatVe.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnDatVe.FocusedColor = System.Drawing.Color.White;
             this.btnDatVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.btnDatVe.ForeColor = System.Drawing.Color.Black;
             this.btnDatVe.Location = new System.Drawing.Point(369, 15);
             this.btnDatVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDatVe.Name = "btnDatVe";
             this.btnDatVe.Size = new System.Drawing.Size(227, 111);
+=======
+            this.btnDatVe.ForeColor = System.Drawing.Color.White;
+            this.btnDatVe.Location = new System.Drawing.Point(278, 20);
+            this.btnDatVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDatVe.Name = "btnDatVe";
+            this.btnDatVe.Size = new System.Drawing.Size(153, 69);
+>>>>>>> Stashed changes
             this.btnDatVe.TabIndex = 0;
             this.btnDatVe.Text = "Đặt vé";
             this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
             // 
             // PnMoving
             // 
+<<<<<<< Updated upstream
             this.PnMoving.BackColor = System.Drawing.Color.White;
             this.PnMoving.Location = new System.Drawing.Point(152, 176);
             this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PnMoving.Name = "PnMoving";
             this.PnMoving.Size = new System.Drawing.Size(200, 9);
+=======
+            this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.PnMoving.Location = new System.Drawing.Point(48, 180);
+            this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PnMoving.Name = "PnMoving";
+            this.PnMoving.Size = new System.Drawing.Size(225, 11);
+>>>>>>> Stashed changes
             this.PnMoving.TabIndex = 5;
             this.PnMoving.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -220,10 +303,17 @@
             this.panel2.Controls.Add(this.userChiTietVeXe1);
             this.panel2.Controls.Add(this.userThanhToan1);
             this.panel2.Controls.Add(this.userDatVe1);
+<<<<<<< Updated upstream
             this.panel2.Location = new System.Drawing.Point(16, 214);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1923, 738);
+=======
+            this.panel2.Location = new System.Drawing.Point(10, 200);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1658, 869);
+>>>>>>> Stashed changes
             this.panel2.TabIndex = 3;
             // 
             // userLichTrinh1
@@ -295,6 +385,7 @@
             // 
             this.guna2ElipseCTVeXe.TargetControl = this;
             // 
+<<<<<<< Updated upstream
             // LogOut
             // 
             this.LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -320,17 +411,80 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1848, 970);
             this.Controls.Add(this.LogOut);
+=======
+            // userLichTrinh1
+            // 
+            this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.userLichTrinh1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userLichTrinh1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userLichTrinh1.Location = new System.Drawing.Point(23, 22);
+            this.userLichTrinh1.Margin = new System.Windows.Forms.Padding(0);
+            this.userLichTrinh1.Name = "userLichTrinh1";
+            this.userLichTrinh1.Size = new System.Drawing.Size(1600, 820);
+            this.userLichTrinh1.TabIndex = 2;
+            this.userLichTrinh1.Load += new System.EventHandler(this.userLichTrinh1_Load);
+            // 
+            // userProfile1
+            // 
+            this.userProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userProfile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userProfile1.Location = new System.Drawing.Point(23, 22);
+            this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(1600, 800);
+            this.userProfile1.TabIndex = 1;
+            // 
+            // userChiTietVeXe1
+            // 
+            this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userChiTietVeXe1.Location = new System.Drawing.Point(23, 22);
+            this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
+            this.userChiTietVeXe1.Size = new System.Drawing.Size(1600, 820);
+            this.userChiTietVeXe1.TabIndex = 4;
+            // 
+            // userThanhToan1
+            // 
+            this.userThanhToan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userThanhToan1.Location = new System.Drawing.Point(23, 22);
+            this.userThanhToan1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userThanhToan1.Name = "userThanhToan1";
+            this.userThanhToan1.Size = new System.Drawing.Size(1600, 820);
+            this.userThanhToan1.TabIndex = 3;
+            // 
+            // userDatVe1
+            // 
+            this.userDatVe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userDatVe1.Location = new System.Drawing.Point(23, 22);
+            this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userDatVe1.Name = "userDatVe1";
+            this.userDatVe1.Size = new System.Drawing.Size(1600, 800);
+            this.userDatVe1.TabIndex = 0;
+            // 
+            // BangDieuKhien
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1690, 1111);
+            this.ControlBox = false;
+>>>>>>> Stashed changes
             this.Controls.Add(this.PnMoving);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMiniSize);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< Updated upstream
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.Location = new System.Drawing.Point(20, 20);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+>>>>>>> Stashed changes
             this.Name = "BangDieuKhien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BangDieuKhien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Đặt vé xe";
             this.Load += new System.EventHandler(this.BangDieuKhien_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -361,7 +515,6 @@
         private KiemSoatUser.UserThanhToan userThanhToan1;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseCTVeXe;
         private KiemSoatUser.UserChiTietVeXe userChiTietVeXe1;
-        private Guna.UI2.WinForms.Guna2Button LogOut;
         // private KiemSoatUser.UserChiTietVeXe userCTVeXe1;
     }
 }
