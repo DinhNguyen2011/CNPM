@@ -181,9 +181,6 @@
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyNhanVien.resx">
       <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyXe.dje-NE.resx">
-      <DependentUpon>UserQuanLyXe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyXe.resx">
       <DependentUpon>UserQuanLyXe.cs</DependentUpon>
     </EmbeddedResource>
