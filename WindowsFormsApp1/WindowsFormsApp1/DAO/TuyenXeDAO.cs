@@ -49,10 +49,7 @@ namespace WindowsFormsApp1.DAO
                 result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { tx.Diemdi, tx.Diemden });
             } catch (SqlException e)
             {
-                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tuyến xe đã tồn tại!'"))
-                    MessageBox.Show("Tuyến xe đã tồn tại","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                else
-                    throw e;
+                MessageBox.Show("Tuyến xe đã tồn tại","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             return result;
         }
@@ -66,7 +63,7 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                MessageBox.Show("", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }

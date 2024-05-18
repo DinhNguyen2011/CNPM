@@ -22,8 +22,8 @@ namespace WindowsFormsApp1.DAO
             private set { instance = value; }
         }
         public DataProvider() { }
-        private static string connectionSTR = "Data Source=MinhNghia;Initial Catalog=QuanLyBanVeXe;Integrated Security=True";
-        //Thay đổi Data Source= <tên host trên máy> để kết nối vào Database trên máy localhost
+        private static string connectionSTR = "Data Source=TrQPhat;Initial Catalog=QuanLyBanVeXe;Integrated Security=True";
+
         public DataTable ExcuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
