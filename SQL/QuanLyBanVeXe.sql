@@ -246,13 +246,27 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: XOATAIKHOAN	(Xóa tài khoản)             */
+/* Stored procedure: DSKHACHHANG	(Lấy DS tuyến xe)             */
 /*==============================================================*/
-CREATE PROC XOATAIKHOAN @matk int
+CREATE PROC DSKHACHHANG
 AS
 BEGIN
-	IF (exists (SELECT * FROM TAIKHOAN T WHERE T.MATK = @matk))
-	DELETE FROM TAIKHOAN WHERE TAIKHOAN.MATK = @matk
+	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG
+END
+
+GO
+SELECT * FROM CHUYENXE
+/*==============================================================*/
+/* Stored procedure: XOAKHACHHANG	(Xóa tài khoản)             */
+/*==============================================================*/
+CREATe PROC XOAKHACHHANG @makh int
+AS
+BEGIN
+	IF (exists (SELECT * FROM KHACHHANG k WHERE k.MAKH = @makh))
+	begin
+		DELETE FROM KHACHHANG WHERE MAKH = @makh
+		DELETE FROM TAIKHOAN WHERE MAKH = @makh
+	end
 END
 
 GO
@@ -287,11 +301,10 @@ AS
 	ELSE RETURN N'Tuyến xe đã tồn tại!'
 
 GO
-
+select * from TUYENXE
 CREATE PROC XOATUYENXE @matuyen int
 AS 
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
-
 GO
 
 

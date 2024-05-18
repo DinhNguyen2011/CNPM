@@ -51,11 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TuyenXe.cs" />
     <Compile Include="GUI\BangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>

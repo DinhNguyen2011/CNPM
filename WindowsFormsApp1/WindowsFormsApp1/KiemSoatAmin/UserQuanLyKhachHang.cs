@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1.KiemSoatAmin
 {
@@ -25,6 +26,15 @@ namespace WindowsFormsApp1.KiemSoatAmin
         private void btnproFile_Click(object sender, EventArgs e)
         {
 
+        }
+        public void LoadKhachHang()
+        {
+            dgvTimKH.DataSource = KhachHangDAO.Instance.getDSKhachHang();
+            dgvTimKH.Refresh();
+        }
+        private void UserQuanLyKhachHang_Load(object sender, EventArgs e)
+        {
+            LoadKhachHang();
         }
     }
 }

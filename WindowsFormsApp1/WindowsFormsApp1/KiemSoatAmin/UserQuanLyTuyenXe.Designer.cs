@@ -37,14 +37,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvVeXe = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSwap = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.btnTimTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.guna2QLTuyenXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtdiemdi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtdiemden = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).BeginInit();
@@ -114,7 +114,7 @@
             this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVeXe.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVeXe.Location = new System.Drawing.Point(115, 95);
-            this.dgvVeXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvVeXe.Margin = new System.Windows.Forms.Padding(4);
             this.dgvVeXe.Name = "dgvVeXe";
             this.dgvVeXe.ReadOnly = true;
             this.dgvVeXe.RowHeadersVisible = false;
@@ -143,104 +143,7 @@
             this.dgvVeXe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVeXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvVeXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellContentClick);
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Mã tuyến xe";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Điểm đi";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Điểm đến";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            // 
-            // btnSwap
-            // 
-            this.btnSwap.BorderRadius = 20;
-            this.btnSwap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSwap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSwap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSwap.FillColor = System.Drawing.SystemColors.Window;
-            this.btnSwap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSwap.ForeColor = System.Drawing.Color.White;
-            this.btnSwap.Image = ((System.Drawing.Image)(resources.GetObject("btnSwap.Image")));
-            this.btnSwap.ImageSize = new System.Drawing.Size(45, 40);
-            this.btnSwap.Location = new System.Drawing.Point(1308, 144);
-            this.btnSwap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSwap.Name = "btnSwap";
-            this.btnSwap.Size = new System.Drawing.Size(71, 44);
-            this.btnSwap.TabIndex = 40;
-            // 
-            // btnXoaTuyen
-            // 
-            this.btnXoaTuyen.BorderRadius = 18;
-            this.btnXoaTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnXoaTuyen.BorderThickness = 1;
-            this.btnXoaTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXoaTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXoaTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXoaTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnXoaTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnXoaTuyen.Location = new System.Drawing.Point(1071, 340);
-            this.btnXoaTuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnXoaTuyen.Name = "btnXoaTuyen";
-            this.btnXoaTuyen.Size = new System.Drawing.Size(205, 55);
-            this.btnXoaTuyen.TabIndex = 45;
-            this.btnXoaTuyen.Text = "Xóa";
-            // 
-            // btnTimTuyen
-            // 
-            this.btnTimTuyen.BorderRadius = 18;
-            this.btnTimTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnTimTuyen.BorderThickness = 1;
-            this.btnTimTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnTimTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnTimTuyen.Location = new System.Drawing.Point(1071, 228);
-            this.btnTimTuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTimTuyen.Name = "btnTimTuyen";
-            this.btnTimTuyen.Size = new System.Drawing.Size(205, 55);
-            this.btnTimTuyen.TabIndex = 46;
-            this.btnTimTuyen.Text = "Tìm";
-            // 
-            // btnThemTuyen
-            // 
-            this.btnThemTuyen.BorderRadius = 18;
-            this.btnThemTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnThemTuyen.BorderThickness = 1;
-            this.btnThemTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnThemTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnThemTuyen.Location = new System.Drawing.Point(1353, 228);
-            this.btnThemTuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThemTuyen.Name = "btnThemTuyen";
-            this.btnThemTuyen.Size = new System.Drawing.Size(205, 55);
-            this.btnThemTuyen.TabIndex = 47;
-            this.btnThemTuyen.Text = "Thêm";
-            // 
-            // guna2QLTuyenXe
-            // 
-            this.guna2QLTuyenXe.BorderRadius = 30;
-            this.guna2QLTuyenXe.TargetControl = this;
+            this.dgvVeXe.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_RowEnter);
             // 
             // Column12
             // 
@@ -265,6 +168,89 @@
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            // 
+            // btnSwap
+            // 
+            this.btnSwap.BorderRadius = 20;
+            this.btnSwap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSwap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSwap.FillColor = System.Drawing.SystemColors.Window;
+            this.btnSwap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSwap.ForeColor = System.Drawing.Color.White;
+            this.btnSwap.Image = ((System.Drawing.Image)(resources.GetObject("btnSwap.Image")));
+            this.btnSwap.ImageSize = new System.Drawing.Size(45, 40);
+            this.btnSwap.Location = new System.Drawing.Point(1308, 144);
+            this.btnSwap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSwap.Name = "btnSwap";
+            this.btnSwap.Size = new System.Drawing.Size(71, 44);
+            this.btnSwap.TabIndex = 40;
+            // 
+            // btnXoaTuyen
+            // 
+            this.btnXoaTuyen.BorderRadius = 18;
+            this.btnXoaTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnXoaTuyen.BorderThickness = 1;
+            this.btnXoaTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoaTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoaTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoaTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXoaTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTuyen.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaTuyen.Location = new System.Drawing.Point(1071, 340);
+            this.btnXoaTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoaTuyen.Name = "btnXoaTuyen";
+            this.btnXoaTuyen.Size = new System.Drawing.Size(205, 55);
+            this.btnXoaTuyen.TabIndex = 45;
+            this.btnXoaTuyen.Text = "Xóa";
+            this.btnXoaTuyen.Click += new System.EventHandler(this.btnXoaTuyen_Click);
+            // 
+            // btnTimTuyen
+            // 
+            this.btnTimTuyen.BorderRadius = 18;
+            this.btnTimTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnTimTuyen.BorderThickness = 1;
+            this.btnTimTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTimTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTuyen.ForeColor = System.Drawing.Color.Black;
+            this.btnTimTuyen.Location = new System.Drawing.Point(1071, 228);
+            this.btnTimTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimTuyen.Name = "btnTimTuyen";
+            this.btnTimTuyen.Size = new System.Drawing.Size(205, 55);
+            this.btnTimTuyen.TabIndex = 46;
+            this.btnTimTuyen.Text = "Tìm";
+            // 
+            // btnThemTuyen
+            // 
+            this.btnThemTuyen.BorderRadius = 18;
+            this.btnThemTuyen.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnThemTuyen.BorderThickness = 1;
+            this.btnThemTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemTuyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemTuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemTuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThemTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemTuyen.ForeColor = System.Drawing.Color.Black;
+            this.btnThemTuyen.Location = new System.Drawing.Point(1353, 228);
+            this.btnThemTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemTuyen.Name = "btnThemTuyen";
+            this.btnThemTuyen.Size = new System.Drawing.Size(205, 55);
+            this.btnThemTuyen.TabIndex = 47;
+            this.btnThemTuyen.Text = "Thêm";
+            this.btnThemTuyen.Click += new System.EventHandler(this.btnThemTuyen_Click);
+            // 
+            // guna2QLTuyenXe
+            // 
+            this.guna2QLTuyenXe.BorderRadius = 30;
+            this.guna2QLTuyenXe.TargetControl = this;
+            // 
             // txtdiemdi
             // 
             this.txtdiemdi.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -319,7 +305,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserQuanLyTuyenXe";
             this.Size = new System.Drawing.Size(1827, 554);
             this.Load += new System.EventHandler(this.UserQuanLyTuyenXe_Load);
@@ -343,9 +329,6 @@
         private Guna.UI2.WinForms.Guna2Button btnTimTuyen;
         private Guna.UI2.WinForms.Guna2Button btnXoaTuyen;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLTuyenXe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private Guna.UI2.WinForms.Guna2TextBox txtdiemden;
         private Guna.UI2.WinForms.Guna2TextBox txtdiemdi;
     }
