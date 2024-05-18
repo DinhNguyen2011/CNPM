@@ -51,11 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\LichTrinhDAO.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
+    <Compile Include="DAO\TuyenXeDAO.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TuyenXe.cs" />
     <Compile Include="GUI\BangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyCTCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyCTCX.Designer.cs">
+      <DependentUpon>UserQuanLyCTCX.cs</DependentUpon>
     </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyTuyenXe.cs">
       <SubType>UserControl</SubType>
@@ -153,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyCTCX.resx">
+      <DependentUpon>UserQuanLyCTCX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyTuyenXe.resx">
       <DependentUpon>UserQuanLyTuyenXe.cs</DependentUpon>

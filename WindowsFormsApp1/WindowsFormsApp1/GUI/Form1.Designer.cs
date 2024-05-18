@@ -63,10 +63,10 @@ namespace WindowsFormsApp1
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Location = new System.Drawing.Point(649, 288);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Panel1.Location = new System.Drawing.Point(405, 281);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1289, 914);
+            this.guna2Panel1.Size = new System.Drawing.Size(1067, 492);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -82,10 +82,10 @@ namespace WindowsFormsApp1
             this.btnDkiTK.FocusedColor = System.Drawing.Color.Transparent;
             this.btnDkiTK.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDkiTK.ForeColor = System.Drawing.Color.Black;
-            this.btnDkiTK.Location = new System.Drawing.Point(849, 664);
-            this.btnDkiTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDkiTK.Location = new System.Drawing.Point(748, 370);
+            this.btnDkiTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDkiTK.Name = "btnDkiTK";
-            this.btnDkiTK.Size = new System.Drawing.Size(177, 49);
+            this.btnDkiTK.Size = new System.Drawing.Size(127, 28);
             this.btnDkiTK.TabIndex = 12;
             this.btnDkiTK.Text = "Đăng ký ngay";
             this.btnDkiTK.Click += new System.EventHandler(this.btnDkiTK_Click);
@@ -93,11 +93,10 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(534, 665);
+            this.label2.Location = new System.Drawing.Point(609, 378);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(266, 36);
+            this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Chưa có tài khoản ?";
             // 
@@ -107,10 +106,10 @@ namespace WindowsFormsApp1
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(182, 101);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(77, 38);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(786, 101);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(332, 34);
             this.guna2HtmlLabel2.TabIndex = 9;
             this.guna2HtmlLabel2.Text = "Cùng bạn trên mọi nẻo đường ";
             // 
@@ -120,10 +119,10 @@ namespace WindowsFormsApp1
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Red;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(87, 49);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(77, 18);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(536, 77);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(88, 21);
             this.guna2HtmlLabel1.TabIndex = 8;
             this.guna2HtmlLabel1.Text = "QB_TTH_KH ";
             // 
@@ -132,10 +131,10 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(263, 803);
+            this.label3.Location = new System.Drawing.Point(253, 457);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(802, 36);
+            this.label3.Size = new System.Drawing.Size(464, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "*Bạn sẽ chấp nhận các điều khoản của chúng tôi khi đăng nhập";
             // 
@@ -144,10 +143,10 @@ namespace WindowsFormsApp1
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(588, 732);
+            this.lblError.Location = new System.Drawing.Point(572, 405);
             this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(438, 36);
+            this.lblError.Size = new System.Drawing.Size(212, 16);
             this.lblError.TabIndex = 6;
             this.lblError.Text = "Tên đăng nhập hoặc mật khẩu sai ";
             this.lblError.Visible = false;
@@ -162,10 +161,10 @@ namespace WindowsFormsApp1
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(633, 549);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(553, 305);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(393, 69);
+            this.btnLogin.Size = new System.Drawing.Size(349, 55);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login ";
             this.btnLogin.Click += new System.EventHandler(this.txtLogin_Click);
@@ -185,13 +184,13 @@ namespace WindowsFormsApp1
             this.txtPw.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPw.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPw.IconLeft")));
             this.txtPw.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.txtPw.Location = new System.Drawing.Point(597, 432);
-            this.txtPw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPw.Location = new System.Drawing.Point(531, 239);
+            this.txtPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.PlaceholderText = "Enter Password";
             this.txtPw.SelectedText = "";
-            this.txtPw.Size = new System.Drawing.Size(450, 77);
+            this.txtPw.Size = new System.Drawing.Size(400, 62);
             this.txtPw.TabIndex = 4;
             // 
             // txtUseName
@@ -209,23 +208,23 @@ namespace WindowsFormsApp1
             this.txtUseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUseName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUseName.IconLeft")));
             this.txtUseName.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtUseName.Location = new System.Drawing.Point(597, 307);
-            this.txtUseName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUseName.Location = new System.Drawing.Point(531, 167);
+            this.txtUseName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUseName.Name = "txtUseName";
             this.txtUseName.PasswordChar = '\0';
             this.txtUseName.PlaceholderText = "Enter User Name";
             this.txtUseName.SelectedText = "";
-            this.txtUseName.Size = new System.Drawing.Size(450, 77);
+            this.txtUseName.Size = new System.Drawing.Size(400, 62);
             this.txtUseName.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(729, 184);
+            this.label1.Location = new System.Drawing.Point(621, 107);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 50);
+            this.label1.Size = new System.Drawing.Size(171, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Use Login ";
             // 
@@ -233,10 +232,10 @@ namespace WindowsFormsApp1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(133, 307);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(129, 121);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(388, 340);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(345, 236);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -252,27 +251,28 @@ namespace WindowsFormsApp1
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(1226, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(1011, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnClose.Size = new System.Drawing.Size(63, 55);
+            this.btnClose.Size = new System.Drawing.Size(56, 44);
             this.btnClose.TabIndex = 0;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(2055, 1152);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

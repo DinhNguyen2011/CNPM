@@ -246,16 +246,39 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: XOATAIKHOAN	(Xóa tài khoản)             */
+/* Stored procedure: DSKHACHHANG	(Lấy DS tuyến xe)             */
 /*==============================================================*/
-CREATE PROC XOATAIKHOAN @matk int
+CREATE PROC DSKHACHHANG
 AS
 BEGIN
-	IF (exists (SELECT * FROM TAIKHOAN T WHERE T.MATK = @matk))
-	DELETE FROM TAIKHOAN WHERE TAIKHOAN.MATK = @matk
+	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG
 END
 
 GO
+SELECT * FROM CHUYENXE
+/*==============================================================*/
+/* Stored procedure: XOAKHACHHANG	(Xóa tài khoản)             */
+/*==============================================================*/
+CREATe PROC XOAKHACHHANG @makh int
+AS
+BEGIN
+	IF (exists (SELECT * FROM KHACHHANG k WHERE k.MAKH = @makh))
+	begin
+		DELETE FROM KHACHHANG WHERE MAKH = @makh
+		DELETE FROM TAIKHOAN WHERE MAKH = @makh
+	end
+END
+
+GO
+select * from KHACHHANG
+select * from TAIKHOAN
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+insert into KHACHHANG values ('nghĩa','2003-12-06','11111','dsada')
+
+
 /*==============================================================*/
 /* Stored procedure: SUATHONGTINKHACHHANG                       */
 /*==============================================================*/
@@ -270,6 +293,14 @@ END
 
 GO
 
+CREATE PROC DSTUYENXE
+AS
+BEGIN
+	select MATUYEN, DIEMDI, DIEMDEN from TUYENXE
+END
+
+GO
+
 CREATE PROC THEMTUYENXE @diemdi nvarchar(20), @diemden nvarchar(20)
 AS
 	IF (not exists (SELECT * FROM TUYENXE WHERE DIEMDI = @diemdi and DIEMDEN = @diemden))
@@ -279,12 +310,12 @@ AS
 	ELSE RETURN N'Tuyến xe đã tồn tại!'
 
 GO
-
+select * from TUYENXE
 CREATE PROC XOATUYENXE @matuyen int
 AS 
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
-
 GO
+select * from XE
 
 CREATE or alter PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @matuyen int
 AS 
@@ -338,6 +369,14 @@ GO
 CREATE PROC XOAXE @maxe int
 AS 
 	DELETE XE WHERE XE.MAXE = @maxe
+
+GO
+
+CREATE PROC DSNHANVIEN
+AS
+BEGIN
+	select MANV, TENNV, CMND, SDT, EMAIL, MALOAINV from NHANVIEN
+END
 
 GO
 
@@ -411,3 +450,4 @@ AS
 	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
 
 GO
+select * from KHACHHANG
