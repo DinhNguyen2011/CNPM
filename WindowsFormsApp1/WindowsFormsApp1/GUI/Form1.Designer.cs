@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
             // 
             this.btnDkiTK.AutoRoundedCorners = true;
             this.btnDkiTK.BorderRadius = 23;
+            this.btnDkiTK.BorderThickness = 1;
             this.btnDkiTK.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnDkiTK.DefaultAutoSize = true;
             this.btnDkiTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -267,7 +268,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(2055, 1152);
+            this.ClientSize = new System.Drawing.Size(2111, 1152);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
