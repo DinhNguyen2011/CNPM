@@ -56,10 +56,8 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\LichTrinhDAO.cs" />
     <Compile Include="DTO\KhachHang.cs" />
-    <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />
-    <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TuyenXe.cs" />
     <Compile Include="GUI\BangDieuKhien.cs">
