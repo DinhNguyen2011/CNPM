@@ -54,6 +54,7 @@
             // 
             // txtCCCD
             // 
+            this.txtCCCD.BorderColor = System.Drawing.Color.Black;
             this.txtCCCD.BorderRadius = 20;
             this.txtCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCCCD.DefaultText = "";
@@ -76,6 +77,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.BorderColor = System.Drawing.Color.Black;
             this.txtTen.BorderRadius = 20;
             this.txtTen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTen.DefaultText = "";
@@ -125,6 +127,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvChiTietveXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvChiTietveXe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button5);

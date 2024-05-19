@@ -209,16 +209,16 @@
             // 
             // PnMoving
             // 
-            this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PnMoving.Location = new System.Drawing.Point(486, 479);
             this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnMoving.Name = "PnMoving";
             this.PnMoving.Size = new System.Drawing.Size(225, 11);
             this.PnMoving.TabIndex = 5;
-            this.PnMoving.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.userLichTrinh1);
             this.panel2.Controls.Add(this.userProfile1);
@@ -234,18 +234,16 @@
             // userLichTrinh1
             // 
             this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.userLichTrinh1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userLichTrinh1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userLichTrinh1.Location = new System.Drawing.Point(22, 22);
             this.userLichTrinh1.Margin = new System.Windows.Forms.Padding(0);
             this.userLichTrinh1.Name = "userLichTrinh1";
             this.userLichTrinh1.Size = new System.Drawing.Size(1597, 820);
             this.userLichTrinh1.TabIndex = 2;
-            this.userLichTrinh1.Load += new System.EventHandler(this.userLichTrinh1_Load);
             // 
             // userProfile1
             // 
-            this.userProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.userProfile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userProfile1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userProfile1.Location = new System.Drawing.Point(22, 22);
             this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userProfile1.Name = "userProfile1";
@@ -254,7 +252,7 @@
             // 
             // userChiTietVeXe1
             // 
-            this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userChiTietVeXe1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userChiTietVeXe1.Location = new System.Drawing.Point(22, 22);
             this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userChiTietVeXe1.Name = "userChiTietVeXe1";
@@ -263,7 +261,7 @@
             // 
             // userThanhToan1
             // 
-            this.userThanhToan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userThanhToan1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userThanhToan1.Location = new System.Drawing.Point(22, 22);
             this.userThanhToan1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userThanhToan1.Name = "userThanhToan1";
@@ -272,7 +270,7 @@
             // 
             // userDatVe1
             // 
-            this.userDatVe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userDatVe1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userDatVe1.Location = new System.Drawing.Point(22, 22);
             this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userDatVe1.Name = "userDatVe1";
@@ -304,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(2586, 1626);
             this.ControlBox = false;
             this.Controls.Add(this.PnMoving);

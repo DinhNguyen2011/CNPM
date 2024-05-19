@@ -17,10 +17,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -71,11 +67,6 @@ namespace WindowsFormsApp1
             PnMoving.Left = btnChiTietVe.Left + 60;
             userChiTietVeXe1.Visible = true;
             userChiTietVeXe1.BringToFront();
-        }
-
-        private void userLichTrinh1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void LogOut_Click(object sender, EventArgs e)

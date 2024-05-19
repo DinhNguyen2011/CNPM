@@ -385,6 +385,7 @@
             // 
             // txtTuyenXe
             // 
+            this.txtTuyenXe.BorderColor = System.Drawing.Color.Black;
             this.txtTuyenXe.BorderRadius = 20;
             this.txtTuyenXe.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTuyenXe.DefaultText = "";
@@ -409,6 +410,7 @@
             // 
             // txtGiodi
             // 
+            this.txtGiodi.BorderColor = System.Drawing.Color.Black;
             this.txtGiodi.BorderRadius = 20;
             this.txtGiodi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtGiodi.DefaultText = "";
@@ -433,6 +435,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.BorderColor = System.Drawing.Color.Black;
             this.txtTongTien.BorderRadius = 20;
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTongTien.DefaultText = "";
@@ -561,6 +564,7 @@
             // 
             // txtSoVe
             // 
+            this.txtSoVe.BorderColor = System.Drawing.Color.Black;
             this.txtSoVe.BorderRadius = 20;
             this.txtSoVe.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSoVe.DefaultText = "";
@@ -653,7 +657,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.btnTang);
             this.Controls.Add(this.btnGiam);
             this.Controls.Add(this.guna2Button5);

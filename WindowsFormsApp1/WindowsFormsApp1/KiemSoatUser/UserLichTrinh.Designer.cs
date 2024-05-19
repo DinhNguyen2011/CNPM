@@ -280,7 +280,7 @@
             // 
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Snow;
+            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.guna2DateTimePicker1.BorderRadius = 20;
             this.guna2DateTimePicker1.Checked = true;
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Aqua;
@@ -392,7 +392,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.guna2Button5);
             this.Controls.Add(this.guna2Button4);
