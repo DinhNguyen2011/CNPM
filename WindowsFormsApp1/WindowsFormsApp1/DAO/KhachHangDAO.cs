@@ -49,7 +49,6 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                //MessageBox.Show("", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw e;
             }
             return result;

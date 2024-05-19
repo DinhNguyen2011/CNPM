@@ -112,14 +112,12 @@ E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BangDieuKhi
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BangDieuKhienAdmin.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DangKiTaiKhoang.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyCTCX.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe.resources
-E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserDatVe.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserLichTrinh.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserProfile.resources
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserThanhToan.resources
@@ -159,3 +157,4 @@ D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QuanLyBa.574C5558.Up2
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.btnInc.resources
+E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.btnInc.resources

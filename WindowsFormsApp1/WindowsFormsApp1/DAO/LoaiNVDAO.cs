@@ -38,6 +38,18 @@ namespace WindowsFormsApp1.DAO
             }
             return list;
         }
+        public List<String> getDSTenLoaiNV()
+        {
+            List<String> list = new List<String>();
+            string query = "DSTENLOAINV";
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                string loai = row["tenloai"].ToString();
+                list.Add(loai);
+            }
+            return list;
+        }
         public int themLoaiNV(LoaiNV l)
         {
             int result = 0;

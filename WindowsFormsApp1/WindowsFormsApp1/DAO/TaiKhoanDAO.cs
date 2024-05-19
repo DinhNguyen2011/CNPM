@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1.DAO
 {
@@ -24,6 +25,18 @@ namespace WindowsFormsApp1.DAO
                 return instance;
             }
             private set { instance = value; }
+        }
+        public List<TaiKhoan> getDSTaiKhoan()
+        {
+            List<TaiKhoan> list = new List<TaiKhoan>();
+            string query = "DSTAIKHOAN";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                TaiKhoan tk = new TaiKhoan(item);
+                list.Add(tk);
+            }
+            return list;
         }
         public string maHoaPassword(string passWord)
         {

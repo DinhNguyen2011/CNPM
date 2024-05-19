@@ -33,6 +33,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             btnXoaXe.Enabled = false;
             btnSuaXe.Enabled = false;
+            txtBienSo.Enabled = true;
             listXe = XeDAO.Instance.getDSXe();
             dgvXe.DataSource = listXe;
             dgvXe.Refresh();
@@ -75,7 +76,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             {
                 LoadXe();
                 reset();
-                MessageBox.Show("Đã xóa tuyến xe vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã xóa xe vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void suaXe()
@@ -135,6 +136,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 {
                     btnXoaXe.Enabled = true;
                     btnSuaXe.Enabled = true;
+                    txtBienSo.Enabled = false;
                     Xe x = listXe[indexRow];
                     txtTenXe.Text = x.Tenxe;
                     txtBienSo.Text = x.Bienso;

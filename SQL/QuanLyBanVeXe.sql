@@ -209,7 +209,16 @@ BEGIN
 END
 
 GO
+/*==============================================================*/
+/* Stored procedure: Lấy danh sách tài khoản		            */
+/*==============================================================*/
+CREATE OR ALTER PROC DSTAIKHOAN
+AS 
+BEGIN
+	select MATK, ACCOUNT, MAKH from TAIKHOAN
+END
 
+GO
 /*==============================================================*/
 /* Stored procedure: ĐĂNG KÝ	(Đăng ký tài khoản và thông tin)*/
 /*==============================================================*/
@@ -267,8 +276,8 @@ AS
 BEGIN
 	IF (exists (SELECT * FROM KHACHHANG k WHERE k.MAKH = @makh))
 	begin
-		DELETE FROM KHACHHANG WHERE MAKH = @makh
 		DELETE FROM TAIKHOAN WHERE MAKH = @makh
+		DELETE FROM KHACHHANG WHERE MAKH = @makh
 	end
 END
 
@@ -497,6 +506,17 @@ BEGIN
 END
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: Lấy danh sách tên loại nhân viên                    */
+/*==============================================================*/
+CREATE OR ALTER PROC DSTENLOAINV
+AS
+BEGIN
+	select TENLOAI from LOAINV
+END
+
+GO
 /*==============================================================*/
 /* Stored procedure: Thêm loại nhân viên	                    */
 /*==============================================================*/
@@ -588,6 +608,7 @@ BEGIN
  SET @strInput = replace(@strInput,' ','-')
  RETURN @strInput
 END
+GO
 update TAIKHOAN set PASSWORD = '2251022057731868917119086224872421513662' where ACCOUNT = 'admin'
 
 -- NEW!!!! 19/5/2024 10:02pm xóa bảng tài xế và chi tiết tuyến xe + liên kết nhân viên với chuyến xe
@@ -596,12 +617,13 @@ alter table chitietchuyenxe drop constraint FK__CHITIETCH__MATAI__5070F446
 drop table TAIXE
 alter table chitietchuyenxe drop constraint FK__CHITIETCH__MACHU__4E88ABD4
 alter table chitietchuyenxe drop constraint FK__CHITIETCHU__MANV__4F7CD00D
+ALTER table chuyenxe drop constraint MACTCX
 alter table chuyenxe drop column mactcx
 drop table CHITIETCHUYENXE
 alter table CHUYENXE ADD MATAIXE INT null
 ALTER TABLE CHUYENXE ADD CONSTRAINT MATAIXE FOREIGN KEY(MATAIXE) REFERENCES NHANVIEN(MANV)
 
--- chú ý execute lại proc XOALOAINV
+
 create or ALTER proc DSDIEMDEN
 as 
 begin
@@ -615,4 +637,5 @@ begin
 	 select DISTINCT DIEMDI FROM TUYENXE
 end
 
+--Nghĩa: Thêm (SP) DSTAIKHOAN, DSTENLOAINV ở phía trên, chạy lại SP XOAKHACHHANG nha
 

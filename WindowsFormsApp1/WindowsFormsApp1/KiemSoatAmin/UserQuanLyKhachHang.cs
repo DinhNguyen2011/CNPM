@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
     public partial class UserQuanLyKhachHang : UserControl
     {
         private List<KhachHang> listKhachHang;
+        private List<TaiKhoan> listTaiKhoan;
         private int index = -1;
         public UserQuanLyKhachHang()
         {
@@ -37,18 +38,27 @@ namespace WindowsFormsApp1.KiemSoatAmin
             dgvTimKH.DataSource = listKhachHang;
             dgvTimKH.Refresh();
         }
+        public void LoadTaiKhoan()
+        {
+            btnXoaKH.Enabled = false;
+            listTaiKhoan = TaiKhoanDAO.Instance.getDSTaiKhoan();
+            dgvtaikhoan.DataSource = listTaiKhoan;
+            dgvtaikhoan.Refresh();
+        }
         public void xoa()
         {
             KhachHang kh = listKhachHang[index];
             if (KhachHangDAO.Instance.xoaKhachHang(kh.Makh) > 0)
             {
                 LoadKhachHang();
+                LoadTaiKhoan();
                 MessageBox.Show("Đã xóa khách hàng vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void UserQuanLyKhachHang_Load(object sender, EventArgs e)
         {
             LoadKhachHang();
+            LoadTaiKhoan();
         }
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
