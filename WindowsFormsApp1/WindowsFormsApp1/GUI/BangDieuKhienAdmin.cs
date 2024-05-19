@@ -20,8 +20,6 @@ namespace WindowsFormsApp1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                Application.Exit();
         }
         private void btnDatVe_Click(object sender, EventArgs e)
         {
@@ -82,6 +80,7 @@ namespace WindowsFormsApp1
         {
            
         }
+<<<<<<< HEAD
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {

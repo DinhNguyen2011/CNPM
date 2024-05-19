@@ -49,6 +49,13 @@
             this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
             this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
             this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+=======
+            this.LogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +72,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
+<<<<<<< HEAD
             this.btnClose.Location = new System.Drawing.Point(2061, 336);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
@@ -83,6 +91,7 @@
             this.btnMiniSize.ForeColor = System.Drawing.Color.White;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
+<<<<<<< HEAD
             this.btnMiniSize.Location = new System.Drawing.Point(2003, 336);
             this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMiniSize.Name = "btnMiniSize";
@@ -98,11 +107,17 @@
             this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.btnLichTrinh);
             this.panel1.Controls.Add(this.btnDatVe);
+<<<<<<< HEAD
             this.panel1.ForeColor = System.Drawing.Color.Coral;
             this.panel1.Location = new System.Drawing.Point(571, 336);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1362, 110);
+=======
+            this.panel1.Location = new System.Drawing.Point(51, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1165, 130);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.panel1.TabIndex = 2;
             // 
             // btnThongTinKH
@@ -116,11 +131,18 @@
             this.btnThongTinKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThongTinKH.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnThongTinKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnThongTinKH.ForeColor = System.Drawing.Color.White;
             this.btnThongTinKH.Location = new System.Drawing.Point(496, 20);
             this.btnThongTinKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThongTinKH.Name = "btnThongTinKH";
             this.btnThongTinKH.Size = new System.Drawing.Size(304, 69);
+=======
+            this.btnThongTinKH.ForeColor = System.Drawing.Color.Black;
+            this.btnThongTinKH.Location = new System.Drawing.Point(499, 12);
+            this.btnThongTinKH.Name = "btnThongTinKH";
+            this.btnThongTinKH.Size = new System.Drawing.Size(170, 90);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.btnThongTinKH.TabIndex = 4;
             this.btnThongTinKH.Text = "Thông tin hành khách";
             this.btnThongTinKH.Click += new System.EventHandler(this.btnThongTinKH_Click);
@@ -136,11 +158,18 @@
             this.btnChiTietVe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnChiTietVe.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnChiTietVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnChiTietVe.ForeColor = System.Drawing.Color.White;
             this.btnChiTietVe.Location = new System.Drawing.Point(1095, 20);
             this.btnChiTietVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnChiTietVe.Name = "btnChiTietVe";
             this.btnChiTietVe.Size = new System.Drawing.Size(230, 69);
+=======
+            this.btnChiTietVe.ForeColor = System.Drawing.Color.Black;
+            this.btnChiTietVe.Location = new System.Drawing.Point(931, 12);
+            this.btnChiTietVe.Name = "btnChiTietVe";
+            this.btnChiTietVe.Size = new System.Drawing.Size(170, 90);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.btnChiTietVe.TabIndex = 3;
             this.btnChiTietVe.Text = "Chi Tiết Vé Xe";
             this.btnChiTietVe.Click += new System.EventHandler(this.btnChiTietVe_Click);
@@ -156,11 +185,18 @@
             this.btnThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnThanhToan.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnThanhToan.Location = new System.Drawing.Point(858, 20);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(178, 69);
+=======
+            this.btnThanhToan.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan.Location = new System.Drawing.Point(716, 12);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(170, 90);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.btnThanhToan.TabIndex = 2;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -176,11 +212,18 @@
             this.btnLichTrinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLichTrinh.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnLichTrinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnLichTrinh.ForeColor = System.Drawing.Color.White;
             this.btnLichTrinh.Location = new System.Drawing.Point(41, 20);
             this.btnLichTrinh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLichTrinh.Name = "btnLichTrinh";
             this.btnLichTrinh.Size = new System.Drawing.Size(168, 69);
+=======
+            this.btnLichTrinh.ForeColor = System.Drawing.Color.Black;
+            this.btnLichTrinh.Location = new System.Drawing.Point(61, 12);
+            this.btnLichTrinh.Name = "btnLichTrinh";
+            this.btnLichTrinh.Size = new System.Drawing.Size(170, 90);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.btnLichTrinh.TabIndex = 1;
             this.btnLichTrinh.Text = "Lịch trình";
             this.btnLichTrinh.Click += new System.EventHandler(this.btnLichTrinh_Click);
@@ -198,22 +241,36 @@
             this.btnDatVe.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnDatVe.FocusedColor = System.Drawing.Color.White;
             this.btnDatVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnDatVe.ForeColor = System.Drawing.Color.White;
             this.btnDatVe.Location = new System.Drawing.Point(278, 20);
             this.btnDatVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDatVe.Name = "btnDatVe";
             this.btnDatVe.Size = new System.Drawing.Size(153, 69);
+=======
+            this.btnDatVe.ForeColor = System.Drawing.Color.Black;
+            this.btnDatVe.Location = new System.Drawing.Point(277, 12);
+            this.btnDatVe.Name = "btnDatVe";
+            this.btnDatVe.Size = new System.Drawing.Size(170, 90);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.btnDatVe.TabIndex = 0;
             this.btnDatVe.Text = "Đặt vé";
             this.btnDatVe.Click += new System.EventHandler(this.btnDatVe_Click);
             // 
             // PnMoving
             // 
+<<<<<<< HEAD
             this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.PnMoving.Location = new System.Drawing.Point(486, 479);
             this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnMoving.Name = "PnMoving";
             this.PnMoving.Size = new System.Drawing.Size(225, 11);
+=======
+            this.PnMoving.BackColor = System.Drawing.Color.White;
+            this.PnMoving.Location = new System.Drawing.Point(114, 143);
+            this.PnMoving.Name = "PnMoving";
+            this.PnMoving.Size = new System.Drawing.Size(150, 7);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.PnMoving.TabIndex = 5;
             this.PnMoving.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -225,10 +282,16 @@
             this.panel2.Controls.Add(this.userChiTietVeXe1);
             this.panel2.Controls.Add(this.userThanhToan1);
             this.panel2.Controls.Add(this.userDatVe1);
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(448, 499);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1658, 869);
+=======
+            this.panel2.Location = new System.Drawing.Point(12, 174);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1443, 600);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.panel2.TabIndex = 3;
             // 
             // guna2ElipseDatVe
@@ -253,6 +316,7 @@
             // 
             // userLichTrinh1
             // 
+<<<<<<< HEAD
             this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.userLichTrinh1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.userLichTrinh1.Location = new System.Drawing.Point(22, 22);
@@ -261,11 +325,52 @@
             this.userLichTrinh1.Size = new System.Drawing.Size(1597, 820);
             this.userLichTrinh1.TabIndex = 2;
             this.userLichTrinh1.Load += new System.EventHandler(this.userLichTrinh1_Load);
+=======
+            this.LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LogOut.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Image = ((System.Drawing.Image)(resources.GetObject("LogOut.Image")));
+            this.LogOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.LogOut.Location = new System.Drawing.Point(1327, 48);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Size = new System.Drawing.Size(44, 37);
+            this.LogOut.TabIndex = 6;
+            // 
+            // userChiTietVeXe1
+            // 
+            this.userChiTietVeXe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userChiTietVeXe1.Location = new System.Drawing.Point(1, 2);
+            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
+            this.userChiTietVeXe1.Size = new System.Drawing.Size(1370, 496);
+            this.userChiTietVeXe1.TabIndex = 4;
+            this.userChiTietVeXe1.Load += new System.EventHandler(this.userChiTietVeXe1_Load);
+            // 
+            // userThanhToan1
+            // 
+            this.userThanhToan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userThanhToan1.Location = new System.Drawing.Point(2, 2);
+            this.userThanhToan1.Name = "userThanhToan1";
+            this.userThanhToan1.Size = new System.Drawing.Size(1370, 490);
+            this.userThanhToan1.TabIndex = 3;
+            // 
+            // userLichTrinh1
+            // 
+            this.userLichTrinh1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userLichTrinh1.Location = new System.Drawing.Point(0, 2);
+            this.userLichTrinh1.Name = "userLichTrinh1";
+            this.userLichTrinh1.Size = new System.Drawing.Size(1370, 490);
+            this.userLichTrinh1.TabIndex = 2;
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             // 
             // userProfile1
             // 
             this.userProfile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.userProfile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.userProfile1.Location = new System.Drawing.Point(22, 22);
             this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userProfile1.Name = "userProfile1";
@@ -297,23 +402,47 @@
             this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.userDatVe1.Name = "userDatVe1";
             this.userDatVe1.Size = new System.Drawing.Size(1600, 800);
+=======
+            this.userProfile1.Location = new System.Drawing.Point(0, 0);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(1370, 490);
+            this.userProfile1.TabIndex = 1;
+            // 
+            // userDatVe1
+            // 
+            this.userDatVe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.userDatVe1.Location = new System.Drawing.Point(-1, -1);
+            this.userDatVe1.Name = "userDatVe1";
+            this.userDatVe1.Size = new System.Drawing.Size(1370, 490);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.userDatVe1.TabIndex = 0;
             // 
             // BangDieuKhien
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(2586, 1626);
             this.ControlBox = false;
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.LogOut);
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.Controls.Add(this.PnMoving);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnMiniSize);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+>>>>>>> parent of ec027e5 (thêm chức năng logout, thu gọn ứng dụng và chú thích lại sql cho dễ nhìn)
             this.Name = "BangDieuKhien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt vé xe";
