@@ -89,12 +89,6 @@
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyCTCX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyCTCX.Designer.cs">
-      <DependentUpon>UserQuanLyCTCX.cs</DependentUpon>
-    </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyTuyenXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyCTCX.resx">
-      <DependentUpon>UserQuanLyCTCX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyTuyenXe.resx">
       <DependentUpon>UserQuanLyTuyenXe.cs</DependentUpon>
