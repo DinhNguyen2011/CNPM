@@ -66,53 +66,60 @@ namespace WindowsFormsApp1
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             return regex.IsMatch(email);
         }
+
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            string tenkh = txtTenNguoiDung.Text;
-            DateTime ngaysinh = DateTime.Parse(dtNS.Value.ToString());
-            string sdt = txtSĐT.Text;
-            string email = txtEmail.Text;
-            string taikhoan = txtTenDK.Text;
-            string matkhau = txtMatKhau.Text;
-            string nhaplaimk = txtNhapLaiMK.Text;
-            if (tenkh == "" || sdt == "" || email == "" || taikhoan == "" || matkhau == "")
+            try
             {
-                lblThongBao.Text = "Vui lòng nhập đầy đủ thông tin";
-                lblThongBao.Visible = true;
-                return;
-            }
-            if (!isValidSoDienThoai(sdt))
-            {
-                lblThongBao.Text = "Số điện thoại không hợp lệ. Vui lòng nhập lại";
-                lblThongBao.Visible = true;
-                return;
-            }
-            if (!isValidEmail(email))
-            {
-                lblThongBao.Text = "Địa chỉ email không hợp lệ. Vui lòng nhập lại";
-                lblThongBao.Visible = true;
-                return;
-            }    
-            if (String.Compare(matkhau,nhaplaimk,false) != 0)
-            {
-                lblThongBao.Text = "Mật khẩu không giống nhau. Vui lòng nhập lại";
-                lblThongBao.Visible=true;
-                return;
-            }
- 
-            if (DangKy(tenkh,ngaysinh,sdt,email,taikhoan,matkhau))
-            {
-                lblThongBao.Text = "Đăng ký tài khoản thành công";
-                lblThongBao.Visible = true;
-                return;
-            }
-            lblThongBao.Text = "Tên đăng nhập đã tồn tại";
-            lblThongBao.Visible = true;
-        }
+                string tenkh = txtTenNguoiDung.Text;
+                DateTime ngaysinh = DateTime.Parse(dtNS.Value.ToString());
+                string sdt = txtSĐT.Text;
+                string email = txtEmail.Text;
+                string taikhoan = txtTenDK.Text;
+                string matkhau = txtMatKhau.Text;
+                string nhaplaimk = txtNhapLaiMK.Text;
+                if (tenkh == "" || sdt == "" || email == "" || taikhoan == "" || matkhau == "")
+                {
+                    lblThongBao.Text = "Vui lòng nhập đầy đủ thông tin";
+                    lblThongBao.Visible = true;
+                    return;
+                }
+                if (!isValidSoDienThoai(sdt))
+                {
+                    lblThongBao.Text = "Số điện thoại không hợp lệ. Vui lòng nhập lại";
+                    lblThongBao.Visible = true;
+                    return;
+                }
+                if (!isValidEmail(email))
+                {
+                    lblThongBao.Text = "Địa chỉ email không hợp lệ. Vui lòng nhập lại";
+                    lblThongBao.Visible = true;
+                    return;
+                }
+                if (String.Compare(matkhau, nhaplaimk, false) != 0)
+                {
+                    lblThongBao.Text = "Mật khẩu không giống nhau. Vui lòng nhập lại";
+                    lblThongBao.Visible = true;
+                    return;
+                }
 
-        private void lblThongBao_Click(object sender, EventArgs e)
-        {
-
+                if (DangKy(tenkh, ngaysinh, sdt, email, taikhoan, matkhau))
+                {
+                    lblThongBao.Text = "Đăng ký tài khoản thành công";
+                    lblThongBao.Visible = true;
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tên tài khoản đã tồn tại!'"))
+                {
+                    lblThongBao.Text = "Tên đăng nhập đã tồn tại";
+                    lblThongBao.Visible = true;
+                }
+                else
+                    throw ex;
+            }
         }
 
     }

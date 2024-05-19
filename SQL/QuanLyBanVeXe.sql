@@ -221,10 +221,8 @@ BEGIN
 	BEGIN
 		INSERT INTO KHACHHANG(TENKH,NGAYSINH,SDT,EMAIL) VALUES (@tenkh,@ngaysinh,@sdt,@email)
 		INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MAKH) VALUES (@taikhoan,@matkhau,(SELECT MAX(MAKH) FROM KHACHHANG))
-		RETURN 1
 	END
-	ELSE PRINT(N'Tên tài khoản đã tồn tại!')
-	RETURN 0
+	ELSE RETURN N'Tên tài khoản đã tồn tại!'
 END
 
 GO
@@ -519,10 +517,14 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOALOAINV @maloainv int
 AS 
-	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
+BEGIN
+	IF (NOT EXISTS (SELECT * FROM NHANVIEN WHERE MALOAINV = @maloainv))
+		DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
+	ELSE
+		RETURN N'Tồn tại nv thuộc loại cần xóa'
+END
 
 GO
-
 /*==============================================================*/
 /* Stored procedure: Lấy danh sách lịch trình			        */
 /*==============================================================*/
@@ -533,3 +535,56 @@ begin
 	 select * from CHUYENXE left join TUYENXE on CHUYENXE.MATUYEN = TUYENXE.MATUYEN
 end
 GO
+
+/*==============================================================*/
+/* Stored procedure: Hàm loại bỏ dấu tiếng Việt để tìm kiếm     */
+/*==============================================================*/
+CREATE FUNCTION [dbo].[fuConvertToUnsign1]
+(
+ @strInput NVARCHAR(4000)
+)
+RETURNS NVARCHAR(4000)
+AS
+BEGIN 
+ IF @strInput IS NULL RETURN @strInput
+ IF @strInput = '' RETURN @strInput
+ DECLARE @RT NVARCHAR(4000)
+ DECLARE @SIGN_CHARS NCHAR(136)
+ DECLARE @UNSIGN_CHARS NCHAR (136)
+ SET @SIGN_CHARS = N'ăâđêôơưàảãạáằẳẵặắầẩẫậấèẻẽẹéềểễệế
+ ìỉĩịíòỏõọóồổỗộốờởỡợớùủũụúừửữựứỳỷỹỵý
+ ĂÂĐÊÔƠƯÀẢÃẠÁẰẲẴẶẮẦẨẪẬẤÈẺẼẸÉỀỂỄỆẾÌỈĨỊÍ
+ ÒỎÕỌÓỒỔỖỘỐỜỞỠỢỚÙỦŨỤÚỪỬỮỰỨỲỶỸỴÝ'
+ +NCHAR(272)+ NCHAR(208)
+ SET @UNSIGN_CHARS = N'aadeoouaaaaaaaaaaaaaaaeeeeeeeeee
+ iiiiiooooooooooooooouuuuuuuuuuyyyyy
+ AADEOOUAAAAAAAAAAAAAAAEEEEEEEEEEIIIII
+ OOOOOOOOOOOOOOOUUUUUUUUUUYYYYYDD'
+ DECLARE @COUNTER int
+ DECLARE @COUNTER1 int
+ SET @COUNTER = 1
+ WHILE (@COUNTER <=LEN(@strInput))
+ BEGIN 
+ SET @COUNTER1 = 1
+ WHILE (@COUNTER1 <=LEN(@SIGN_CHARS)+1)
+ BEGIN
+ IF UNICODE(SUBSTRING(@SIGN_CHARS, @COUNTER1,1))
+ = UNICODE(SUBSTRING(@strInput,@COUNTER ,1) )
+ BEGIN 
+ IF @COUNTER=1
+ SET @strInput = SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1)
+ + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)-1) 
+ ELSE
+ SET @strInput = SUBSTRING(@strInput, 1, @COUNTER-1)
+ +SUBSTRING(@UNSIGN_CHARS, @COUNTER1,1)
+ + SUBSTRING(@strInput, @COUNTER+1,LEN(@strInput)- @COUNTER)
+ BREAK
+ END
+ SET @COUNTER1 = @COUNTER1 +1
+ END
+ SET @COUNTER = @COUNTER +1
+ END
+ SET @strInput = replace(@strInput,' ','-')
+ RETURN @strInput
+END
+update TAIKHOAN set PASSWORD = '2251022057731868917119086224872421513662' where ACCOUNT = 'admin'
