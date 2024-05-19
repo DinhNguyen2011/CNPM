@@ -205,7 +205,7 @@ GO
 CREATE OR ALTER PROC DANGNHAP @taikhoan char(50), @matkhau char(50)
 AS 
 BEGIN
-	select * from taikhoan where ACCOUNT = @taikhoan and PASSWORD = @matkhau
+	select * from taikhoan where ACCOUNT = @taikhoan and PASSWORD = @matkhau COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 
 GO

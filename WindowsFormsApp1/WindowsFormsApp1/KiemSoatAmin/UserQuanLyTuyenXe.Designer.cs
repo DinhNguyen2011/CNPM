@@ -55,10 +55,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Heading", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(47, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 53);
+            this.label1.Size = new System.Drawing.Size(286, 43);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ TUYẾN XE";
             // 
@@ -66,10 +65,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1519, 235);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(1139, 191);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 23);
+            this.label10.Size = new System.Drawing.Size(61, 17);
             this.label10.TabIndex = 32;
             this.label10.Text = "Điểm đến";
             // 
@@ -77,10 +75,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1173, 235);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(880, 191);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 23);
+            this.label11.Size = new System.Drawing.Size(53, 17);
             this.label11.TabIndex = 30;
             this.label11.Text = "Điểm Đi";
             // 
@@ -115,14 +112,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVeXe.GridColor = System.Drawing.Color.DarkGray;
-            this.dgvVeXe.Location = new System.Drawing.Point(53, 169);
-            this.dgvVeXe.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvVeXe.Location = new System.Drawing.Point(40, 137);
             this.dgvVeXe.Name = "dgvVeXe";
-            this.dgvVeXe.ReadOnly = true;
             this.dgvVeXe.RowHeadersVisible = false;
             this.dgvVeXe.RowHeadersWidth = 51;
             this.dgvVeXe.RowTemplate.Height = 30;
-            this.dgvVeXe.Size = new System.Drawing.Size(1087, 364);
+            this.dgvVeXe.Size = new System.Drawing.Size(815, 296);
             this.dgvVeXe.TabIndex = 39;
             this.dgvVeXe.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvVeXe.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -154,7 +149,6 @@
             this.Column12.HeaderText = "Mã tuyến xe";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // Column13
             // 
@@ -162,7 +156,6 @@
             this.Column13.HeaderText = "Điểm đi";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
             // 
             // Column14
             // 
@@ -170,7 +163,6 @@
             this.Column14.HeaderText = "Điểm đến";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
             // 
             // btnSwap
             // 
@@ -186,10 +178,9 @@
             this.btnSwap.ForeColor = System.Drawing.Color.White;
             this.btnSwap.Image = ((System.Drawing.Image)(resources.GetObject("btnSwap.Image")));
             this.btnSwap.ImageSize = new System.Drawing.Size(45, 40);
-            this.btnSwap.Location = new System.Drawing.Point(1448, 261);
-            this.btnSwap.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSwap.Location = new System.Drawing.Point(1086, 212);
             this.btnSwap.Name = "btnSwap";
-            this.btnSwap.Size = new System.Drawing.Size(71, 44);
+            this.btnSwap.Size = new System.Drawing.Size(53, 36);
             this.btnSwap.TabIndex = 40;
             // 
             // btnXoaTuyen
@@ -204,10 +195,9 @@
             this.btnXoaTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoaTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnXoaTuyen.Location = new System.Drawing.Point(1611, 438);
-            this.btnXoaTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoaTuyen.Location = new System.Drawing.Point(1208, 356);
             this.btnXoaTuyen.Name = "btnXoaTuyen";
-            this.btnXoaTuyen.Size = new System.Drawing.Size(176, 55);
+            this.btnXoaTuyen.Size = new System.Drawing.Size(132, 45);
             this.btnXoaTuyen.TabIndex = 45;
             this.btnXoaTuyen.Text = "Xóa";
             this.btnXoaTuyen.Click += new System.EventHandler(this.btnXoaTuyen_Click);
@@ -224,10 +214,9 @@
             this.btnTimTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTimTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnTimTuyen.Location = new System.Drawing.Point(1394, 438);
-            this.btnTimTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimTuyen.Location = new System.Drawing.Point(1046, 356);
             this.btnTimTuyen.Name = "btnTimTuyen";
-            this.btnTimTuyen.Size = new System.Drawing.Size(176, 55);
+            this.btnTimTuyen.Size = new System.Drawing.Size(132, 45);
             this.btnTimTuyen.TabIndex = 46;
             this.btnTimTuyen.Text = "Tìm";
             // 
@@ -243,10 +232,9 @@
             this.btnThemTuyen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThemTuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemTuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnThemTuyen.Location = new System.Drawing.Point(1177, 438);
-            this.btnThemTuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemTuyen.Location = new System.Drawing.Point(883, 356);
             this.btnThemTuyen.Name = "btnThemTuyen";
-            this.btnThemTuyen.Size = new System.Drawing.Size(176, 55);
+            this.btnThemTuyen.Size = new System.Drawing.Size(132, 45);
             this.btnThemTuyen.TabIndex = 47;
             this.btnThemTuyen.Text = "Thêm";
             this.btnThemTuyen.Click += new System.EventHandler(this.btnThemTuyen_Click);
@@ -267,12 +255,13 @@
             this.txtdiemdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemdi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdiemdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemdi.Location = new System.Drawing.Point(1177, 261);
+            this.txtdiemdi.Location = new System.Drawing.Point(883, 212);
+            this.txtdiemdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtdiemdi.Name = "txtdiemdi";
             this.txtdiemdi.PasswordChar = '\0';
             this.txtdiemdi.PlaceholderText = "";
             this.txtdiemdi.SelectedText = "";
-            this.txtdiemdi.Size = new System.Drawing.Size(264, 50);
+            this.txtdiemdi.Size = new System.Drawing.Size(198, 41);
             this.txtdiemdi.TabIndex = 0;
             // 
             // txtdiemden
@@ -286,17 +275,18 @@
             this.txtdiemden.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemden.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdiemden.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemden.Location = new System.Drawing.Point(1523, 261);
+            this.txtdiemden.Location = new System.Drawing.Point(1142, 212);
+            this.txtdiemden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtdiemden.Name = "txtdiemden";
             this.txtdiemden.PasswordChar = '\0';
             this.txtdiemden.PlaceholderText = "";
             this.txtdiemden.SelectedText = "";
-            this.txtdiemden.Size = new System.Drawing.Size(264, 50);
+            this.txtdiemden.Size = new System.Drawing.Size(198, 41);
             this.txtdiemden.TabIndex = 48;
             // 
             // UserQuanLyTuyenXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Controls.Add(this.txtdiemden);
@@ -309,9 +299,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserQuanLyTuyenXe";
-            this.Size = new System.Drawing.Size(1823, 612);
+            this.Size = new System.Drawing.Size(1367, 497);
+            this.Load += new System.EventHandler(this.UserQuanLyTuyenXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

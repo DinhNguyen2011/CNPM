@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
     public partial class UserQuanLyTuyenXe : UserControl
     {
         private List<TuyenXe> listTuyenXe;
-        private int index = 0;
+        private int index = -1;
         public UserQuanLyTuyenXe()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadTuyenXe()
         {
+            btnXoaTuyen.Enabled = false;
             listTuyenXe = TuyenXeDAO.Instance.getDSTuyenXe();
             dgvVeXe.DataSource = listTuyenXe;
             dgvVeXe.Refresh();
@@ -69,6 +70,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             int indexRow = dgvVeXe.Rows[e.RowIndex].Index;
             if (indexRow > -1)
             {
+                btnXoaTuyen.Enabled = true;
                 TuyenXe tx = listTuyenXe[indexRow];
                 txtdiemdi.Text = tx.Diemdi;
                 txtdiemden.Text = tx.Diemden;

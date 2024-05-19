@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
     public partial class UserQuanLyKhachHang : UserControl
     {
         private List<KhachHang> listKhachHang;
-        private int index = 0;
+        private int index = -1;
         public UserQuanLyKhachHang()
         {
             InitializeComponent();
@@ -32,6 +32,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadKhachHang()
         {
+            btnXoaKH.Enabled = false;
             listKhachHang = KhachHangDAO.Instance.getDSKhachHang();
             dgvTimKH.DataSource = listKhachHang;
             dgvTimKH.Refresh();
@@ -55,6 +56,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             int indexRow = dgvTimKH.Rows[e.RowIndex].Index;
             if (indexRow > -1)
             {
+                btnXoaKH.Enabled=true;
                 index = indexRow;
             }
         }

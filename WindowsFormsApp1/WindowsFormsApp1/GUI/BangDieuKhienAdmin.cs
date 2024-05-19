@@ -85,9 +85,12 @@ namespace WindowsFormsApp1
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            this.Hide();
-            f.ShowDialog();
+            if (MessageBox.Show("Bạn có muốn đăng xuất tài khoản?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            { 
+                Form1 f = new Form1();
+                this.Hide();
+                f.ShowDialog();
+            }    
         }
 
         private void btnMiniSize_Click(object sender, EventArgs e)
