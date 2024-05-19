@@ -125,8 +125,8 @@
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBox1.ItemHeight = 50;
             this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Aribank ",
-            "VietcomBank",
+            "Agribank",
+            "Vietcombank",
             "Sacombank"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(433, 396);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

@@ -131,9 +131,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(479, 513);
+            this.label2.Location = new System.Drawing.Point(718, 789);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 51);
+            this.label2.Size = new System.Drawing.Size(177, 78);
             this.label2.TabIndex = 21;
             this.label2.Text = " Ngày sinh";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -249,13 +250,16 @@
             this.txtSĐT.ForeColor = System.Drawing.Color.Black;
             this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.IconLeftSize = new System.Drawing.Size(40, 20);
-            this.txtSĐT.Location = new System.Drawing.Point(444, 331);
+            this.txtSĐT.Location = new System.Drawing.Point(666, 509);
+            this.txtSĐT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSĐT.MaxLength = 10;
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.PasswordChar = '\0';
             this.txtSĐT.PlaceholderText = "Số điện thoại";
             this.txtSĐT.SelectedText = "";
             this.txtSĐT.Size = new System.Drawing.Size(255, 51);
             this.txtSĐT.TabIndex = 2;
+            this.txtSĐT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSĐT_KeyPress);
             // 
             // btnTrove
             // 

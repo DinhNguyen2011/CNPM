@@ -93,7 +93,7 @@
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "Nhập quốc tịch";
             this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(258, 72);
+            this.guna2TextBox3.Size = new System.Drawing.Size(504, 72);
             this.guna2TextBox3.TabIndex = 6;
             // 
             // radioButton1
@@ -129,7 +129,7 @@
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Aqua;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(1115, 553);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(1172, 553);
             this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -175,12 +175,14 @@
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.Location = new System.Drawing.Point(1050, 387);
             this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.guna2TextBox5.MaxLength = 10;
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderText = "SĐT liên hệ";
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.Size = new System.Drawing.Size(515, 72);
             this.guna2TextBox5.TabIndex = 13;
+            this.guna2TextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox5_KeyPress);
             // 
             // btnxacNhan
             // 
@@ -192,14 +194,14 @@
             this.btnxacNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnxacNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnxacNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnxacNhan.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxacNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnxacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnxacNhan.Location = new System.Drawing.Point(984, 689);
+            this.btnxacNhan.Location = new System.Drawing.Point(1070, 689);
             this.btnxacNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnxacNhan.Name = "btnxacNhan";
-            this.btnxacNhan.Size = new System.Drawing.Size(411, 69);
+            this.btnxacNhan.Size = new System.Drawing.Size(325, 69);
             this.btnxacNhan.TabIndex = 26;
-            this.btnxacNhan.Text = "Xác nhận thông tin ";
+            this.btnxacNhan.Text = "Xác nhận";
             // 
             // guna2Elipse1
             // 
@@ -264,7 +266,7 @@
             this.guna2Button2.Location = new System.Drawing.Point(49, 240);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(167, 72);
+            this.guna2Button2.Size = new System.Drawing.Size(183, 72);
             this.guna2Button2.TabIndex = 41;
             this.guna2Button2.Text = "Họ và tên";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -285,7 +287,7 @@
             this.guna2Button1.Location = new System.Drawing.Point(49, 387);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(144, 72);
+            this.guna2Button1.Size = new System.Drawing.Size(183, 72);
             this.guna2Button1.TabIndex = 42;
             this.guna2Button1.Text = " Địa chỉ";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -306,7 +308,7 @@
             this.guna2Button3.Location = new System.Drawing.Point(49, 544);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(167, 72);
+            this.guna2Button3.Size = new System.Drawing.Size(183, 72);
             this.guna2Button3.TabIndex = 43;
             this.guna2Button3.Text = "Quốc tịch";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -369,7 +371,7 @@
             this.guna2Button7.Location = new System.Drawing.Point(882, 553);
             this.guna2Button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(175, 63);
+            this.guna2Button7.Size = new System.Drawing.Size(195, 63);
             this.guna2Button7.TabIndex = 46;
             this.guna2Button7.Text = "Ngày sinh";
             this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -390,7 +392,7 @@
             this.guna2Button8.Location = new System.Drawing.Point(49, 686);
             this.guna2Button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(167, 72);
+            this.guna2Button8.Size = new System.Drawing.Size(183, 72);
             this.guna2Button8.TabIndex = 47;
             this.guna2Button8.Text = " Giới tính";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

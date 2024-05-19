@@ -536,6 +536,7 @@ begin
 end
 GO
 
+
 /*==============================================================*/
 /* Stored procedure: Hàm loại bỏ dấu tiếng Việt để tìm kiếm     */
 /*==============================================================*/
@@ -601,3 +602,17 @@ alter table CHUYENXE ADD MATAIXE INT null
 ALTER TABLE CHUYENXE ADD CONSTRAINT MATAIXE FOREIGN KEY(MATAIXE) REFERENCES NHANVIEN(MANV)
 
 -- chú ý execute lại proc XOALOAINV
+create or ALTER proc DSDIEMDEN
+as 
+begin
+	 select DISTINCT DIEMDEN FROM TUYENXE
+end
+go
+
+create or ALTER proc DSDIEMDI
+as 
+begin
+	 select DISTINCT DIEMDI FROM TUYENXE
+end
+
+

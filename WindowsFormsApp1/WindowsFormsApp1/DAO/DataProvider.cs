@@ -22,7 +22,7 @@ namespace WindowsFormsApp1.DAO
             private set { instance = value; }
         }
         public DataProvider() { }
-        private static string connectionSTR = "Data Source=LAPTOP-FB5286CV;Initial Catalog=QuanLyBanVeXe;Integrated Security=True";
+        private static string connectionSTR = "Data Source=TrQPhat;Initial Catalog=QuanLyBanVeXe;Integrated Security=True";
 
         public DataTable ExcuteQuery(string query, object[] parameter = null)
         {

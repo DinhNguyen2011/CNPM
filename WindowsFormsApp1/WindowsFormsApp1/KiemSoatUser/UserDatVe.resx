@@ -124,10 +124,30 @@
     <value>36</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnTang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADUSURBVGhD7dbNCcJAFATg1aNam6XYQ6zAg+DBWgTBhkwF
+        Og92IAREV/fnrcwHAyaCmUk8JIiIiIiI/KUFsouxz12xwkfkEXNGlkgX5uW7GmHlTwhLX2N4bN+5/TvN
+        7/wN2SAr5BLPWVw+iVflyfWId+XJ5YhPy5OrEanlycWIb8tT0xG/lqcmI3KVp6ojcpenKiNKlaeiI0qX
+        pyIjapWnrCNql6dsIw4If8TeKNdILXat6VusdUk2Ii3K03TE3U6k2iID0qI82bX3iHUREREREXElhCdL
+        aXW5UAm3VgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnGiam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADZSURBVGhD7dbNCcJQHAPw6lFxNTfRIZzAg+DBXURwIifQ
+        RAyUguir7+NfyQ8CStWX1Es7MzMzM7OQ1sgOWT7ftcGz2YFdkt2QO3JBWozgmTybHdgl2R7hl1uM6Jdn
+        2CXZDDkg+pErskJKWyBnROeekDkySu0RWctLrRFFykvpEUXLS6kRVcpL7hFVy0uuEU3Ky68jmpaXsSNC
+        lJfUEaHKy7cjQpaXTyNCl5d3IyZRXjjiiKgsnyj7T5W8xs+ENvwnlNB3fmg4YlLlhSO2yOb12szMzMzs
+        r3TdA4KsddSyZebZAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="guna2Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAToAAABNCAYAAAA2EqiRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAEetJREFUeF7tnXnUjdUex7tFReR1hYhF6uVmqFBJNF6kQSmlgTRqItFbpEkqJRZx
+        vwAADr8BOAVTJAAAEetJREFUeF7tnXnUjdUex7tFReR1hYhF6uVmqFBJNF6kQSmlgTRqItFbpEkqJRZx
         kzJk6rrRWxqQ6WoeNEjSJE2WqGhZ0aB53/N97nretc/vfM959nme45z3Pef3x2cty/P77d95n+H7PHvv
         3/7tXZ4zxiiKouQzKnSKouQ9KnSKouQ9KnSKouQ9KnSKouQ9KnSKouQ9KnSKouQ9KnRpUrppk5m7YYMT
         T27ZQttQFCWe//7xB/3/TKFClwZjn3/e7LLLLs5Ur1nTlG7cSNtSFMWYBdu3m6vGjDHNDj+cHs8UKnSO

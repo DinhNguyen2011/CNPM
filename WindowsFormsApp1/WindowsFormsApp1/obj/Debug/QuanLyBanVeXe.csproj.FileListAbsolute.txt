@@ -141,14 +141,12 @@ D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Bang
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BangDieuKhienAdmin.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DangKiTaiKhoang.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyCTCX.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe.resources
-D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserDatVe.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserLichTrinh.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserProfile.resources
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserThanhToan.resources
@@ -160,3 +158,4 @@ D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\dje-NE\WindowsFormsAp
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QuanLyBa.574C5558.Up2Date
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\HocTap\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.btnInc.resources

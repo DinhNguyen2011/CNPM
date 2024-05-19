@@ -71,5 +71,26 @@ namespace WindowsFormsApp1.DAO
             }
             return result;
         }
+        public List<String> getDsDiemDi()
+        {
+            List<String> list = new List<String>();
+            DataTable data = DataProvider.Instance.ExcuteQuery("dsdiemdi");
+            foreach (DataRow row in data.Rows) 
+            {
+                list.Add(row["diemdi"] + "");
+            }
+            return list;
+        }
+
+        public List<String> getDsDiemDen()
+        {
+            List<String> list = new List<String>();
+            DataTable data = DataProvider.Instance.ExcuteQuery("dsdiemden");
+            foreach (DataRow row in data.Rows)
+            {
+                list.Add(row["diemden"] + "");
+            }
+            return list;
+        }
     }
 }

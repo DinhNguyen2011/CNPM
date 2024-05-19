@@ -40,16 +40,16 @@
             this.btnDatVe = new Guna.UI2.WinForms.Guna2Button();
             this.PnMoving = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.btnInc();
             this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
-            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
-            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
-            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
-            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.UserDatVe();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -231,26 +231,6 @@
             this.panel2.Size = new System.Drawing.Size(1658, 869);
             this.panel2.TabIndex = 3;
             // 
-            // guna2ElipseDatVe
-            // 
-            this.guna2ElipseDatVe.TargetControl = this;
-            // 
-            // guna2ElipseProfile
-            // 
-            this.guna2ElipseProfile.TargetControl = this;
-            // 
-            // guna2ElipseTimKiem
-            // 
-            this.guna2ElipseTimKiem.TargetControl = this;
-            // 
-            // guna2ElipseThanhToan
-            // 
-            this.guna2ElipseThanhToan.TargetControl = this;
-            // 
-            // guna2ElipseCTVeXe
-            // 
-            this.guna2ElipseCTVeXe.TargetControl = this;
-            // 
             // userLichTrinh1
             // 
             this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -299,6 +279,26 @@
             this.userDatVe1.Size = new System.Drawing.Size(1600, 800);
             this.userDatVe1.TabIndex = 0;
             // 
+            // guna2ElipseDatVe
+            // 
+            this.guna2ElipseDatVe.TargetControl = this;
+            // 
+            // guna2ElipseProfile
+            // 
+            this.guna2ElipseProfile.TargetControl = this;
+            // 
+            // guna2ElipseTimKiem
+            // 
+            this.guna2ElipseTimKiem.TargetControl = this;
+            // 
+            // guna2ElipseThanhToan
+            // 
+            this.guna2ElipseThanhToan.TargetControl = this;
+            // 
+            // guna2ElipseCTVeXe
+            // 
+            this.guna2ElipseCTVeXe.TargetControl = this;
+            // 
             // BangDieuKhien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -313,6 +313,7 @@
             this.Controls.Add(this.btnMiniSize);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BangDieuKhien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -338,7 +339,7 @@
         private Guna.UI2.WinForms.Guna2Button btnThongTinKH;
         private Guna.UI2.WinForms.Guna2Panel PnMoving;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseDatVe;
-        private KiemSoatUser.UserDatVe userDatVe1;
+        private KiemSoatUser.btnInc userDatVe1;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseProfile;
         private KiemSoatUser.UserProfile userProfile1;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseTimKiem;
