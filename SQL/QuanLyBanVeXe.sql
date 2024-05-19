@@ -505,6 +505,24 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOALOAINV @maloainv int
 AS 
-	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
+	IF not exists (SELECT * FROM NHANVIEN WHERE NHANVIEN.MALOAINV = @maloainv)
+	BEGIN
+		DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
+		RETURN 1
+	END 
+	ELSE RETURN N'Không thể xóa! Có nhân viên thuộc loại nhân viên này.'
 
 GO
+
+-- NEW!!!! 19/5/2024 7:54pm xóa bảng tài xế và chi tiết tuyến xe + liên kết nhân viên với chuyến xe
+
+alter table chitietchuyenxe drop constraint FK__CHITIETCH__MATAI__5070F446
+drop table TAIXE
+alter table chitietchuyenxe drop constraint FK__CHITIETCH__MACHU__4E88ABD4
+alter table chitietchuyenxe drop constraint FK__CHITIETCHU__MANV__4F7CD00D
+alter table chuyenxe drop column mactcx
+drop table CHITIETCHUYENXE
+alter table CHUYENXE ADD MATAIXE INT null
+ALTER TABLE CHUYENXE ADD CONSTRAINT MATAIXE FOREIGN KEY(MATAIXE) REFERENCES NHANVIEN(MANV)
+
+-- chú ý execute lại proc XOALOAINV

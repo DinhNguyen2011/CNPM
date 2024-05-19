@@ -27,5 +27,15 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             LoadNhanVien();
         }
+
+        private void btnthemloainv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnxoaloainv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
