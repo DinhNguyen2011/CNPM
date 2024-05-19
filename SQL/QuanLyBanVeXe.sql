@@ -384,17 +384,12 @@ GO
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin xe				            */
 /*==============================================================*/
-CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @bienso nchar(20), @soghe int
+CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @soghe int
 AS
 BEGIN
-	IF (not exists (SELECT * FROM XE WHERE XE.BIENSO = @bienso))
-	BEGIN
 		UPDATE XE
-		SET TENXE=@tenxe, BIENSO = @bienso, SOGHE = @soghe
+		SET TENXE=@tenxe, SOGHE = @soghe
 		WHERE MAXE = @maxe
-	END
-	ELSE
-		RETURN N'Trùng biển số xe, không thể sửa thông tin'
 END
 
 GO
@@ -411,6 +406,7 @@ AS
 	DELETE XE WHERE XE.MAXE = @maxe
 
 GO
+select * from NHANVIEN
 /*==============================================================*/
 /* Stored procedure: Lấy danh sách nhân viên                    */
 /*==============================================================*/
@@ -431,18 +427,25 @@ BEGIN
 	BEGIN
 		INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES (@tennv,@cmnd,@sdt,@email,@maloainv)
 	END
+	ELSE
+		RETURN N'Trùng CMND'
 END
 
 GO
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin nhân viên                    */
 /*==============================================================*/
-CREATE OR ALTER PROC SUATHONGTINNV @manv int, @tennv nvarchar(30), @cmnd nchar(20), @sdt nchar(20), @email nvarchar(20), @maloainv int
+CREATE OR ALTER PROC SUATHONGTINNV @manv int, @tennv nvarchar(30), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
-	UPDATE NHANVIEN
-	SET TENNV = @tennv, CMND = @cmnd, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
-	WHERE MANV = @manv
+	IF (exists (SELECT * FROM LOAINV WHERE LOAINV.MALOAINV = @maloainv))
+	BEGIN
+			UPDATE NHANVIEN
+			SET TENNV = @tennv, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
+			WHERE MANV = @manv
+	END
+	ELSE 
+			RETURN N'Loại NV không phù hợp'
 END
 
 GO
@@ -452,7 +455,6 @@ GO
 CREATE OR ALTER PROC XOANHANVIEN @manv int
 AS 
 	DELETE NHANVIEN WHERE NHANVIEN.MANV = @manv
-
 GO
 /*==============================================================*/
 /* Stored procedure: Thêm tài xế			                    */
@@ -488,6 +490,16 @@ AS
 
 GO
 /*==============================================================*/
+/* Stored procedure: Lấy danh sách loại nhân viên                    */
+/*==============================================================*/
+CREATE OR ALTER PROC DSLOAINV
+AS
+BEGIN
+	select MALOAINV, TENLOAI from LOAINV
+END
+
+GO
+/*==============================================================*/
 /* Stored procedure: Thêm loại nhân viên	                    */
 /*==============================================================*/
 CREATE OR ALTER PROC THEMLOAINV @tenloai nvarchar(20)
@@ -497,6 +509,8 @@ BEGIN
 	BEGIN
 		INSERT INTO LOAINV(TENLOAI) VALUES (@tenloai)
 	END
+	ELSE
+		RETURN N'Trùng loại nv'
 END
 
 GO
@@ -518,3 +532,4 @@ as
 begin
 	 select * from CHUYENXE left join TUYENXE on CHUYENXE.MATUYEN = TUYENXE.MATUYEN
 end
+GO

@@ -75,8 +75,8 @@ namespace WindowsFormsApp1.DAO
             int result = 0;
             try
             {
-                string query = "SUATHONGTINXE @maxe , @tenxe , @bienso , @soghe";
-                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { x.Maxe, x.Tenxe, x.Bienso, x.Soghe });
+                string query = "SUATHONGTINXE @maxe , @tenxe , @soghe";
+                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { x.Maxe, x.Tenxe, x.Soghe });
             }
             catch (SqlException e)
             {

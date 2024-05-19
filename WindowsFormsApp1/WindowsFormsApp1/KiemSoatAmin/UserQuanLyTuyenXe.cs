@@ -95,5 +95,12 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     throw ex;
             }
         }
+
+        private void btnSwap_Click(object sender, EventArgs e)
+        {
+            string temp = txtdiemdi.Text;
+            txtdiemdi.Text = txtdiemden.Text;
+            txtdiemden.Text = temp;
+        }
     }
 }

@@ -188,6 +188,7 @@
             this.btnSwap.Name = "btnSwap";
             this.btnSwap.Size = new System.Drawing.Size(53, 36);
             this.btnSwap.TabIndex = 40;
+            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
             // 
             // btnXoaTuyen
             // 
@@ -262,7 +263,7 @@
             this.txtdiemdi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdiemdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemdi.Location = new System.Drawing.Point(883, 212);
-            this.txtdiemdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdiemdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtdiemdi.Name = "txtdiemdi";
             this.txtdiemdi.PasswordChar = '\0';
             this.txtdiemdi.PlaceholderText = "";
@@ -282,7 +283,7 @@
             this.txtdiemden.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdiemden.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemden.Location = new System.Drawing.Point(1142, 212);
-            this.txtdiemden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdiemden.Margin = new System.Windows.Forms.Padding(2);
             this.txtdiemden.Name = "txtdiemden";
             this.txtdiemden.PasswordChar = '\0';
             this.txtdiemden.PlaceholderText = "";

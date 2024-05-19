@@ -95,7 +95,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 Xe x = listXe[index];
                 x.Tenxe = tenxe;
                 x.Soghe = soghe;
-                x.Bienso = bienso;
                 if (XeDAO.Instance.suaXe(x) > 0)
                 {
                     LoadXe();
@@ -107,8 +106,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
             {
                 if (e.Message.StartsWith("Input string was not in a correct format"))
                     MessageBox.Show("Số ghế phải là kiểu dữ số nguyên", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Trùng biển số xe, không thể sửa thông tin'"))
-                    MessageBox.Show("Biển số xe bị trùng, sửa thông tin thất bại", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     throw e;
             }

@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiNVDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\LichTrinhDAO.cs" />
@@ -59,6 +60,8 @@
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />
+    <Compile Include="DTO\LoaiNV.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TuyenXe.cs" />
     <Compile Include="DTO\Xe.cs" />
