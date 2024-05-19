@@ -40,7 +40,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void xoa()
         {
             KhachHang kh = listKhachHang[index];
-            if (KhachHangDAO.Instance.xoaKhachHang(kh.Makh) != 0)
+            if (KhachHangDAO.Instance.xoaKhachHang(kh.Makh) > 0)
             {
                 LoadKhachHang();
                 MessageBox.Show("Đã xóa khách hàng vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -50,27 +50,32 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             LoadKhachHang();
         }
-
-        private void dgvTimKH_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexRow = dgvTimKH.Rows[e.RowIndex].Index;
-            if (indexRow > -1)
-            {
-                btnXoaKH.Enabled=true;
-                index = indexRow;
-            }
-        }
-
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa khách hàng này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            string tenkh = listKhachHang[index].Tenkh;
+            if (MessageBox.Show("Bạn có muốn xóa khách hàng " +tenkh+ "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 xoa();
             }
         }
-        private void dgvTimKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvTimKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            try
+            {
+                int indexRow = dgvTimKH.Rows[e.RowIndex].Index;
+                if (indexRow > -1)
+                {
+                    btnXoaKH.Enabled = true;
+                    index = indexRow;
+                }
+            }
+             catch(Exception ex)
+            {
+                if (ex.Message.StartsWith("Index was out of range"))
+                    MessageBox.Show("Đừng chọn linh tinh bạn nhé!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    throw ex;
+            }
         }
     }
 }
