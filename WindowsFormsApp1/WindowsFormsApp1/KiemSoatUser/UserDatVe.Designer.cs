@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnInc));
-            this.btnTimXe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnA1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -69,26 +68,6 @@
             this.btnGiam = new Guna.UI2.WinForms.Guna2Button();
             this.btnTang = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
-            // 
-            // btnTimXe
-            // 
-            this.btnTimXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnTimXe.BorderColor = System.Drawing.Color.White;
-            this.btnTimXe.BorderRadius = 18;
-            this.btnTimXe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnTimXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnTimXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimXe.ForeColor = System.Drawing.Color.Black;
-            this.btnTimXe.Location = new System.Drawing.Point(1294, 47);
-            this.btnTimXe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnTimXe.Name = "btnTimXe";
-            this.btnTimXe.Size = new System.Drawing.Size(270, 69);
-            this.btnTimXe.TabIndex = 12;
-            this.btnTimXe.Text = "Đặt vé";
             // 
             // guna2Elipse1
             // 
@@ -694,7 +673,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnA1);
-            this.Controls.Add(this.btnTimXe);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "btnInc";
             this.Size = new System.Drawing.Size(1600, 820);
@@ -703,7 +681,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btnTimXe;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;

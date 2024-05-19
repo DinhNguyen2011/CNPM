@@ -37,7 +37,6 @@
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnxacNhan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
@@ -189,25 +188,6 @@
             this.guna2TextBox5.Size = new System.Drawing.Size(515, 72);
             this.guna2TextBox5.TabIndex = 13;
             this.guna2TextBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox5_KeyPress);
-            // 
-            // btnxacNhan
-            // 
-            this.btnxacNhan.BorderRadius = 18;
-            this.btnxacNhan.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnxacNhan.BorderThickness = 1;
-            this.btnxacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnxacNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnxacNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnxacNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnxacNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnxacNhan.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxacNhan.ForeColor = System.Drawing.Color.Black;
-            this.btnxacNhan.Location = new System.Drawing.Point(1070, 689);
-            this.btnxacNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnxacNhan.Name = "btnxacNhan";
-            this.btnxacNhan.Size = new System.Drawing.Size(325, 69);
-            this.btnxacNhan.TabIndex = 26;
-            this.btnxacNhan.Text = "Xác nhận";
             // 
             // guna2Elipse1
             // 
@@ -420,7 +400,6 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button5);
             this.Controls.Add(this.guna2TextBox2);
-            this.Controls.Add(this.btnxacNhan);
             this.Controls.Add(this.guna2TextBox4);
             this.Controls.Add(this.guna2TextBox5);
             this.Controls.Add(this.guna2DateTimePicker1);
@@ -442,7 +421,6 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2Button btnxacNhan;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;

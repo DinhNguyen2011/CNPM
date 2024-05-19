@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class BangDieuKhien : Form
     {
+        private int index = 0;
         public BangDieuKhien()
         {
             InitializeComponent();
@@ -31,49 +32,133 @@ namespace WindowsFormsApp1
             userLichTrinh1.Visible = false;
             userThanhToan1.Visible = false;
             userChiTietVeXe1.Visible = false;
-            btnLichTrinh.PerformClick();
+            chonLichTrinh();
         }
-        private void btnDatVe_Click(object sender, EventArgs e)
+
+        private void resetColorOfTitlePage()
         {
-            PnMoving.Left = btnDatVe.Left + 50;
-            userDatVe1.Visible= true;
-            userDatVe1.BringToFront();  
+            btnTrangChu.FillColor = Color.RoyalBlue;
+
+            if (index > 0) 
+                btnChonVe.FillColor = Color.RoyalBlue;
+            else
+                btnChonVe.FillColor = Color.Cyan;
+
+            if (index > 1)
+                btnThongTinKH.FillColor = Color.RoyalBlue;
+            else
+                btnThongTinKH.FillColor = Color.Cyan;
+
+            if (index > 2)
+                btnThanhToan.FillColor = Color.RoyalBlue;
+            else
+                btnThanhToan.FillColor = Color.Cyan;
+
+            btnKiemTraVe.FillColor = Color.RoyalBlue;
         }
 
 
-        private void btnThongTinKH_Click(object sender, EventArgs e)
+        private void chonThongTinVe()
         {
-            PnMoving.Left=btnThongTinKH.Left + 55;
-            userProfile1.Visible=true;
+            PnMoving.Left = btnChonChuyen.Left + 50;
+            userDatVe1.Visible = true;
+            userDatVe1.BringToFront();
+            btnXacNhanVe.BringToFront();
+            resetColorOfTitlePage();
+            btnChonVe.FillColor = Color.FromArgb(0, 192, 0);
+        }
+     
+
+        private void nhapThongTinKhachHang()
+        {
+            PnMoving.Left = btnThongTinKH.Left + 55;
+            userProfile1.Visible = true;
             userProfile1.BringToFront();
+            btnXacNhanKH.BringToFront();
+            resetColorOfTitlePage();
+            btnThongTinKH.FillColor = Color.FromArgb(0, 192, 0);
         }
-
-        private void btnLichTrinh_Click(object sender, EventArgs e)
+        
+        private void chonLichTrinh()
         {
-            PnMoving.Left=btnLichTrinh.Left + 60;
+            PnMoving.Left=btnTrangChu.Left + 60;
             userLichTrinh1.Visible=true;
             userLichTrinh1.BringToFront();
+            btnChonChuyen.BringToFront();
+            resetColorOfTitlePage();
+            btnTrangChu.FillColor = Color.FromArgb(0, 192, 0);
         }
+       
 
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        private void thanhToan()
         {
             PnMoving.Left = btnThanhToan.Left + 60;
             userThanhToan1.Visible = true;
             userThanhToan1.BringToFront();
+            resetColorOfTitlePage();
+            btnThanhToan.FillColor = Color.FromArgb(0, 192, 0);
         }
-
-        private void btnChiTietVe_Click(object sender, EventArgs e)
+        private void kiemTraVe()
         {
-            PnMoving.Left = btnChiTietVe.Left + 60;
+            PnMoving.Left = btnKiemTraVe.Left + 60;
             userChiTietVeXe1.Visible = true;
             userChiTietVeXe1.BringToFront();
+            resetColorOfTitlePage();
+            btnKiemTraVe.FillColor = Color.FromArgb(0, 192, 0);
         }
+        
 
         private void LogOut_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            this.Hide();
-            f.ShowDialog();
+            if (MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Form1 f = new Form1();
+                this.Hide();
+                f.ShowDialog();
+            }
         }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            chonLichTrinh();
+        }
+
+        private void btnChonVe_Click(object sender, EventArgs e)
+        {
+            if (index > 0) chonThongTinVe();
+        }
+
+        private void btnThongTinKH_Click(object sender, EventArgs e)
+        {
+            if (index > 1) nhapThongTinKhachHang();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (index > 2) thanhToan();
+        }
+
+        private void btnKiemTraVe_Click(object sender, EventArgs e)
+        {
+            kiemTraVe();
+        }
+        private void btnChonChuyen_Click(object sender, EventArgs e)
+        {
+            index++;
+            chonThongTinVe();
+        }
+        private void btnXacNhanVe_Click(object sender, EventArgs e)
+        {
+            index++;
+            nhapThongTinKhachHang();
+        }
+
+        private void btnXacNhanKH_Click(object sender, EventArgs e)
+        {
+            index++;
+            thanhToan();
+        }
+
+        
     }
 }

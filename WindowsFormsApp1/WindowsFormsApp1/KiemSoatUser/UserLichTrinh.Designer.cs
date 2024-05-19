@@ -44,8 +44,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbDiemDen = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnThemCXe = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpkNgayDi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -57,9 +56,8 @@
             // btnTimCXe
             // 
             this.btnTimCXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnTimCXe.BorderColor = System.Drawing.Color.White;
             this.btnTimCXe.BorderRadius = 18;
-            this.btnTimCXe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnTimCXe.BorderThickness = 2;
             this.btnTimCXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTimCXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTimCXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -124,11 +122,11 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLichTrinh.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLichTrinh.Enabled = false;
             this.dgvLichTrinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLichTrinh.Location = new System.Drawing.Point(54, 347);
+            this.dgvLichTrinh.Location = new System.Drawing.Point(54, 356);
             this.dgvLichTrinh.Margin = new System.Windows.Forms.Padding(0);
             this.dgvLichTrinh.Name = "dgvLichTrinh";
+            this.dgvLichTrinh.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,7 +153,7 @@
             this.dgvLichTrinh.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvLichTrinh.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvLichTrinh.ThemeStyle.HeaderStyle.Height = 50;
-            this.dgvLichTrinh.ThemeStyle.ReadOnly = false;
+            this.dgvLichTrinh.ThemeStyle.ReadOnly = true;
             this.dgvLichTrinh.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLichTrinh.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvLichTrinh.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,6 +169,7 @@
             this.MaChuyen.HeaderText = "Mã";
             this.MaChuyen.MinimumWidth = 20;
             this.MaChuyen.Name = "MaChuyen";
+            this.MaChuyen.ReadOnly = true;
             // 
             // Column1
             // 
@@ -179,6 +178,7 @@
             this.Column1.HeaderText = "Giờ di";
             this.Column1.MinimumWidth = 180;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -187,6 +187,7 @@
             this.Column2.HeaderText = "Giờ đến";
             this.Column2.MinimumWidth = 180;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -195,6 +196,7 @@
             this.Column3.HeaderText = "Điểm đi";
             this.Column3.MinimumWidth = 140;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -203,6 +205,7 @@
             this.Column4.HeaderText = "Điểm đến";
             this.Column4.MinimumWidth = 140;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
@@ -211,6 +214,7 @@
             this.Column5.HeaderText = "Giá tiền";
             this.Column5.MinimumWidth = 120;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // cbDiemDi
             // 
@@ -258,43 +262,23 @@
             this.cbDiemDen.TabIndex = 32;
             this.cbDiemDen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnThemCXe
+            // dtpkNgayDi
             // 
-            this.btnThemCXe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThemCXe.BorderColor = System.Drawing.Color.White;
-            this.btnThemCXe.BorderRadius = 18;
-            this.btnThemCXe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnThemCXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemCXe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThemCXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThemCXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThemCXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnThemCXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemCXe.ForeColor = System.Drawing.Color.Black;
-            this.btnThemCXe.Location = new System.Drawing.Point(1339, 600);
-            this.btnThemCXe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThemCXe.Name = "btnThemCXe";
-            this.btnThemCXe.Size = new System.Drawing.Size(227, 69);
-            this.btnThemCXe.TabIndex = 33;
-            this.btnThemCXe.Text = "Chọn chuyến";
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2DateTimePicker1.BorderRadius = 20;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Aqua;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(1265, 264);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(304, 66);
-            this.guna2DateTimePicker1.TabIndex = 35;
-            this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
+            this.dtpkNgayDi.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dtpkNgayDi.BorderRadius = 20;
+            this.dtpkNgayDi.Checked = true;
+            this.dtpkNgayDi.FillColor = System.Drawing.Color.Aqua;
+            this.dtpkNgayDi.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkNgayDi.Location = new System.Drawing.Point(1265, 264);
+            this.dtpkNgayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpkNgayDi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpkNgayDi.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
+            this.dtpkNgayDi.Name = "dtpkNgayDi";
+            this.dtpkNgayDi.Size = new System.Drawing.Size(304, 66);
+            this.dtpkNgayDi.TabIndex = 35;
+            this.dtpkNgayDi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dtpkNgayDi.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
             // 
             // guna2Button2
             // 
@@ -398,8 +382,7 @@
             this.Controls.Add(this.guna2Button4);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2DateTimePicker1);
-            this.Controls.Add(this.btnThemCXe);
+            this.Controls.Add(this.dtpkNgayDi);
             this.Controls.Add(this.cbDiemDen);
             this.Controls.Add(this.cbDiemDi);
             this.Controls.Add(this.dgvLichTrinh);
@@ -419,8 +402,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvLichTrinh;
         private Guna.UI2.WinForms.Guna2ComboBox cbDiemDen;
         private Guna.UI2.WinForms.Guna2ComboBox cbDiemDi;
-        private Guna.UI2.WinForms.Guna2Button btnThemCXe;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpkNgayDi;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;

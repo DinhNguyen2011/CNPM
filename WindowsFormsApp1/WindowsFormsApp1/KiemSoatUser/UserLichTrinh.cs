@@ -28,12 +28,34 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private void btnTimCXe_Click(object sender, EventArgs e)
         {
-            String diemdi = cbDiemDi.SelectedValue.ToString();
-            String diemden = cbDiemDen.SelectedValue.ToString(); ;
-            List<LichTrinh> dsTim = lichTrinhList.FindAll(lt=>lt.DiemDi==diemdi && lt.DiemDen==diemden);
-            if (dsTim.Count==0)
-                MessageBox.Show(("Không có tuyến " + diemdi + " - " + diemden),"Thông báo");
-            else dgvLichTrinh.DataSource = dsTim;
+            String diemdi = "";
+            String diemden = "";
+            DateTime ngaydi = dtpkNgayDi.Value.Date;
+            if (cbDiemDi.SelectedIndex != -1)
+                diemdi = cbDiemDi.SelectedValue.ToString();
+
+            if (cbDiemDen.SelectedIndex != -1)
+                diemden = cbDiemDen.SelectedValue.ToString();
+
+            if (diemdi != "") 
+            {
+                if (diemden != "")
+                {
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && lt.Giodi.Value.Date == ngaydi.Date);
+                    if (dsTim.Count == 0)
+                        MessageBox.Show(("Không có tuyến " + diemdi + " - " + diemden + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year), "Thông báo");
+                    else dgvLichTrinh.DataSource = dsTim;
+                } 
+                else
+                {
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.Giodi.Value.Date == ngaydi.Date);
+                    if (dsTim.Count == 0)
+                        MessageBox.Show("Không có tuyến đi từ " + diemdi + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year, "Thông báo");
+                    else dgvLichTrinh.DataSource = dsTim;
+                }
+                    
+            }  
+            else MessageBox.Show("Vui lòng chọn điểm đi", "Thông báo");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -52,5 +74,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             cbDiemDi.SelectedIndex = b;
             cbDiemDen.SelectedIndex = a;
         }
+
+        
     }
 }

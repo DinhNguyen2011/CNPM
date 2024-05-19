@@ -93,20 +93,19 @@
             // btnproFile
             // 
             this.btnproFile.BorderRadius = 18;
-            this.btnproFile.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
-            this.btnproFile.BorderThickness = 1;
+            this.btnproFile.BorderThickness = 2;
             this.btnproFile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnproFile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnproFile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnproFile.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnproFile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnproFile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnproFile.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnproFile.ForeColor = System.Drawing.Color.Black;
-            this.btnproFile.Location = new System.Drawing.Point(1010, 718);
+            this.btnproFile.Location = new System.Drawing.Point(1192, 718);
             this.btnproFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnproFile.Name = "btnproFile";
             this.btnproFile.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnproFile.Size = new System.Drawing.Size(450, 69);
+            this.btnproFile.Size = new System.Drawing.Size(268, 69);
             this.btnproFile.TabIndex = 32;
             this.btnproFile.Text = "Thanh Toán";
             // 
@@ -121,12 +120,15 @@
             this.guna2ComboBox1.BorderColor = System.Drawing.Color.Black;
             this.guna2ComboBox1.BorderRadius = 18;
             this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownHeight = 300;
             this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.DropDownWidth = 100;
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.ItemHeight = 50;
+            this.guna2ComboBox1.IntegralHeight = false;
+            this.guna2ComboBox1.ItemHeight = 40;
             this.guna2ComboBox1.Items.AddRange(new object[] {
             "Agribank",
             "Vietcombank",
@@ -134,7 +136,7 @@
             this.guna2ComboBox1.Location = new System.Drawing.Point(433, 396);
             this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(423, 56);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(423, 46);
             this.guna2ComboBox1.TabIndex = 34;
             // 
             // guna2ContextMenuStrip1

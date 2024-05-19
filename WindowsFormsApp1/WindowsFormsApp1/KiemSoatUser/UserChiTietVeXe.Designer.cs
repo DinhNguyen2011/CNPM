@@ -101,9 +101,8 @@
             // btnChiTietVe
             // 
             this.btnChiTietVe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnChiTietVe.BorderColor = System.Drawing.Color.White;
             this.btnChiTietVe.BorderRadius = 18;
-            this.btnChiTietVe.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.btnChiTietVe.BorderThickness = 2;
             this.btnChiTietVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTietVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnChiTietVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -246,11 +245,11 @@
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageSize = new System.Drawing.Size(255, 50);
+            this.guna2Button5.ImageSize = new System.Drawing.Size(185, 60);
             this.guna2Button5.Location = new System.Drawing.Point(77, 40);
             this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(519, 106);
+            this.guna2Button5.Size = new System.Drawing.Size(519, 115);
             this.guna2Button5.TabIndex = 42;
             // 
             // guna2Button2
