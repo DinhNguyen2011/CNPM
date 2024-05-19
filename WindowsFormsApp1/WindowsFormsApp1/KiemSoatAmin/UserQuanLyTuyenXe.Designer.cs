@@ -83,6 +83,8 @@
             // 
             // dgvVeXe
             // 
+            this.dgvVeXe.AllowUserToAddRows = false;
+            this.dgvVeXe.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVeXe.BackgroundColor = System.Drawing.Color.Silver;
@@ -113,7 +115,9 @@
             this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVeXe.GridColor = System.Drawing.Color.DarkGray;
             this.dgvVeXe.Location = new System.Drawing.Point(40, 137);
+            this.dgvVeXe.MultiSelect = false;
             this.dgvVeXe.Name = "dgvVeXe";
+            this.dgvVeXe.ReadOnly = true;
             this.dgvVeXe.RowHeadersVisible = false;
             this.dgvVeXe.RowHeadersWidth = 51;
             this.dgvVeXe.RowTemplate.Height = 30;
@@ -132,7 +136,7 @@
             this.dgvVeXe.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvVeXe.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvVeXe.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvVeXe.ThemeStyle.ReadOnly = false;
+            this.dgvVeXe.ThemeStyle.ReadOnly = true;
             this.dgvVeXe.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvVeXe.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvVeXe.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,8 +144,7 @@
             this.dgvVeXe.ThemeStyle.RowsStyle.Height = 30;
             this.dgvVeXe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVeXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvVeXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellContentClick);
-            this.dgvVeXe.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_RowEnter);
+            this.dgvVeXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVeXe_CellClick);
             // 
             // Column12
             // 
@@ -149,6 +152,7 @@
             this.Column12.HeaderText = "Mã tuyến xe";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
             // Column13
             // 
@@ -156,6 +160,7 @@
             this.Column13.HeaderText = "Điểm đi";
             this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             // 
             // Column14
             // 
@@ -163,6 +168,7 @@
             this.Column14.HeaderText = "Điểm đến";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
             // 
             // btnSwap
             // 

@@ -355,6 +355,17 @@ AS
 	DELETE CHITIETCHUYENXE WHERE CHITIETCHUYENXE.MACHUYEN = @machuyen
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: Lấy danh sách xe				                    */
+/*==============================================================*/
+CREATE OR ALTER PROC DSXE
+AS
+BEGIN
+	select MAXE, TENXE, BIENSO, SOGHE from XE
+END
+
+GO
 /*==============================================================*/
 /* Stored procedure: Thêm xe				                    */
 /*==============================================================*/
@@ -365,6 +376,8 @@ BEGIN
 	BEGIN
 		INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES (@tenxe, @bienso, @soghe)
 	END
+	ELSE
+		RETURN N'Trùng biển số xe, không thể thêm'
 END
 
 GO
@@ -374,12 +387,22 @@ GO
 CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @bienso nchar(20), @soghe int
 AS
 BEGIN
-	UPDATE XE
-	SET TENXE=@tenxe, BIENSO = @bienso, SOGHE = @soghe
-	WHERE MAXE = @maxe
+	IF (not exists (SELECT * FROM XE WHERE XE.BIENSO = @bienso))
+	BEGIN
+		UPDATE XE
+		SET TENXE=@tenxe, BIENSO = @bienso, SOGHE = @soghe
+		WHERE MAXE = @maxe
+	END
+	ELSE
+		RETURN N'Trùng biển số xe, không thể sửa thông tin'
 END
 
 GO
+select * from XE
+insert into XE values ('Limousine','51A-12345',30)
+insert into XE values ('Giuong nam','51A-56789',45)
+insert into XE values ('Limousine2','51A-11111',30)
+insert into XE values ('Limousine3','51A-22222',30)
 /*==============================================================*/
 /* Stored procedure: Xóa xe					                    */
 /*==============================================================*/

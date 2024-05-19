@@ -21,11 +21,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
             InitializeComponent();
             
         }
-
-        private void dgvVeXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
         public void LoadTuyenXe()
         {
             btnXoaTuyen.Enabled = false;
@@ -33,14 +28,20 @@ namespace WindowsFormsApp1.KiemSoatAmin
             dgvVeXe.DataSource = listTuyenXe;
             dgvVeXe.Refresh();
         }
+        public void reset() 
+        {
+            txtdiemden.Text = string.Empty;
+            txtdiemdi.Text = string.Empty;
+        }
         public void themTuyenXe()
         {
-            string diemdi = txtdiemdi.Text;
-            string diemden = txtdiemden.Text;
+            string diemdi = txtdiemdi.Text.Trim();
+            string diemden = txtdiemden.Text.Trim();
             TuyenXe tx = new TuyenXe(diemdi,diemden);
-            if (TuyenXeDAO.Instance.themTuyenXe(tx) != 0)
+            if (TuyenXeDAO.Instance.themTuyenXe(tx) > 0)
             {
                 LoadTuyenXe();
+                reset();
                 MessageBox.Show("Thêm tuyến xe mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }  
 
@@ -48,9 +49,10 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void xoaTuyenXe()
         {
             TuyenXe tx = listTuyenXe[index];
-            if (TuyenXeDAO.Instance.xoaTuyenxe(tx.Matuyen) != 0)
+            if (TuyenXeDAO.Instance.xoaTuyenxe(tx.Matuyen) > 0)
             {
                 LoadTuyenXe();
+                reset();
                 MessageBox.Show("Đã xóa tuyến xe vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -64,24 +66,34 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             themTuyenXe();
         }
-
-        private void dgvVeXe_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexRow = dgvVeXe.Rows[e.RowIndex].Index;
-            if (indexRow > -1)
-            {
-                btnXoaTuyen.Enabled = true;
-                TuyenXe tx = listTuyenXe[indexRow];
-                txtdiemdi.Text = tx.Diemdi;
-                txtdiemden.Text = tx.Diemden;
-                index = indexRow;
-            }    
-        }
-
         private void btnXoaTuyen_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa tuyến xe này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            string diemdi = listTuyenXe[index].Diemdi;
+            string diemden = listTuyenXe[index].Diemden;
+            if (MessageBox.Show("Bạn có muốn xóa tuyến xe "+diemdi+" - " + diemden+  "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 xoaTuyenXe();
+        }
+        private void dgvVeXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int indexRow = dgvVeXe.Rows[e.RowIndex].Index;
+                if (indexRow > -1)
+                {
+                    btnXoaTuyen.Enabled = true;
+                    TuyenXe tx = listTuyenXe[indexRow];
+                    txtdiemdi.Text = tx.Diemdi;
+                    txtdiemden.Text = tx.Diemden;
+                    index = indexRow;
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.StartsWith("Index was out of range"))
+                    MessageBox.Show("Đừng chọn linh tinh bạn nhé!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    throw ex;
+            }
         }
     }
 }

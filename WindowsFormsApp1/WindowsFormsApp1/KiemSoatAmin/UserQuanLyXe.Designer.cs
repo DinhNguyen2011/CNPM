@@ -37,11 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvXe = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbSoXe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2QLXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnXoaXe = new Guna.UI2.WinForms.Guna2Button();
             this.btnThemXe = new Guna.UI2.WinForms.Guna2Button();
@@ -50,6 +45,11 @@
             this.txtSoghe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSuaXe = new Guna.UI2.WinForms.Guna2Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBienSo = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,8 @@
             // 
             // dgvXe
             // 
+            this.dgvXe.AllowUserToAddRows = false;
+            this.dgvXe.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvXe.BackgroundColor = System.Drawing.Color.Silver;
@@ -96,7 +98,9 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvXe.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvXe.GridColor = System.Drawing.Color.DarkGray;
+            this.dgvXe.MultiSelect = false;
             this.dgvXe.Name = "dgvXe";
+            this.dgvXe.ReadOnly = true;
             this.dgvXe.RowHeadersVisible = false;
             this.dgvXe.RowTemplate.Height = 30;
             this.dgvXe.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -112,7 +116,7 @@
             this.dgvXe.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvXe.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvXe.ThemeStyle.HeaderStyle.Height = 35;
-            this.dgvXe.ThemeStyle.ReadOnly = false;
+            this.dgvXe.ThemeStyle.ReadOnly = true;
             this.dgvXe.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvXe.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvXe.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,51 +124,7 @@
             this.dgvXe.ThemeStyle.RowsStyle.Height = 30;
             this.dgvXe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Mistral", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
-            // 
-            // cbSoXe
-            // 
-            this.cbSoXe.BackColor = System.Drawing.Color.Transparent;
-            this.cbSoXe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSoXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSoXe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSoXe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.cbSoXe, "cbSoXe");
-            this.cbSoXe.ForeColor = System.Drawing.Color.Black;
-            this.cbSoXe.Items.AddRange(new object[] {
-            resources.GetString("cbSoXe.Items"),
-            resources.GetString("cbSoXe.Items1"),
-            resources.GetString("cbSoXe.Items2"),
-            resources.GetString("cbSoXe.Items3"),
-            resources.GetString("cbSoXe.Items4"),
-            resources.GetString("cbSoXe.Items5"),
-            resources.GetString("cbSoXe.Items6"),
-            resources.GetString("cbSoXe.Items7"),
-            resources.GetString("cbSoXe.Items8"),
-            resources.GetString("cbSoXe.Items9"),
-            resources.GetString("cbSoXe.Items10")});
-            this.cbSoXe.Name = "cbSoXe";
+            this.dgvXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXe_CellClick);
             // 
             // guna2QLXe
             // 
@@ -188,6 +148,7 @@
             resources.ApplyResources(this.btnXoaXe, "btnXoaXe");
             this.btnXoaXe.ForeColor = System.Drawing.Color.Black;
             this.btnXoaXe.Name = "btnXoaXe";
+            this.btnXoaXe.Click += new System.EventHandler(this.btnXoaXe_Click);
             // 
             // btnThemXe
             // 
@@ -206,6 +167,7 @@
             resources.ApplyResources(this.btnThemXe, "btnThemXe");
             this.btnThemXe.ForeColor = System.Drawing.Color.Black;
             this.btnThemXe.Name = "btnThemXe";
+            this.btnThemXe.Click += new System.EventHandler(this.btnThemXe_Click);
             // 
             // label3
             // 
@@ -266,11 +228,59 @@
             resources.ApplyResources(this.btnSuaXe, "btnSuaXe");
             this.btnSuaXe.ForeColor = System.Drawing.Color.Black;
             this.btnSuaXe.Name = "btnSuaXe";
+            this.btnSuaXe.Click += new System.EventHandler(this.btnSuaXe_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MAXE";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Mistral", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TENXE";
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "BIENSO";
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SOGHE";
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // txtBienSo
+            // 
+            this.txtBienSo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBienSo.DefaultText = "";
+            this.txtBienSo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBienSo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBienSo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBienSo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBienSo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.txtBienSo, "txtBienSo");
+            this.txtBienSo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBienSo.Name = "txtBienSo";
+            this.txtBienSo.PasswordChar = '\0';
+            this.txtBienSo.PlaceholderText = "";
+            this.txtBienSo.SelectedText = "";
             // 
             // UserQuanLyXe
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtBienSo);
             this.Controls.Add(this.btnSuaXe);
             this.Controls.Add(this.txtSoghe);
             this.Controls.Add(this.label4);
@@ -278,11 +288,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThemXe);
             this.Controls.Add(this.btnXoaXe);
-            this.Controls.Add(this.cbSoXe);
             this.Controls.Add(this.dgvXe);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UserQuanLyXe";
+            this.Load += new System.EventHandler(this.UserQuanLyXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,7 +304,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView dgvXe;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSoXe;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLXe;
         private Guna.UI2.WinForms.Guna2Button btnXoaXe;
         private Guna.UI2.WinForms.Guna2Button btnThemXe;
@@ -307,5 +316,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2TextBox txtBienSo;
     }
 }
