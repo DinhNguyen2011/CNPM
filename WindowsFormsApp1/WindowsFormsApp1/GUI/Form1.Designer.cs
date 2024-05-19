@@ -68,7 +68,6 @@ namespace WindowsFormsApp1
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1530, 1100);
             this.guna2Panel1.TabIndex = 0;
-            //this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2Button5
             // 
@@ -239,7 +238,7 @@ namespace WindowsFormsApp1
             this.guna2PictureBox1.Location = new System.Drawing.Point(199, 406);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(374, 401);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(400, 400);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -268,7 +267,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(2070, 1362);
+            this.ClientSize = new System.Drawing.Size(2399, 1585);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

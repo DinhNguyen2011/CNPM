@@ -508,3 +508,13 @@ AS
 	DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: Lấy danh sách lịch trình			        */
+/*==============================================================*/
+
+create or alter proc DSLICHTRINH
+as 
+begin
+	 select * from CHUYENXE left join TUYENXE on CHUYENXE.MATUYEN = TUYENXE.MATUYEN
+end
