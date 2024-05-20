@@ -234,7 +234,7 @@
             "1B",
             "1C"});
             this.cbDiemDi.Location = new System.Drawing.Point(109, 264);
-            this.cbDiemDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDiemDi.Margin = new System.Windows.Forms.Padding(0);
             this.cbDiemDi.Name = "cbDiemDi";
             this.cbDiemDi.Size = new System.Drawing.Size(349, 46);
             this.cbDiemDi.TabIndex = 31;
@@ -257,7 +257,7 @@
             "1B",
             "1C"});
             this.cbDiemDen.Location = new System.Drawing.Point(715, 264);
-            this.cbDiemDen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDiemDen.Margin = new System.Windows.Forms.Padding(0);
             this.cbDiemDen.Name = "cbDiemDen";
             this.cbDiemDen.Size = new System.Drawing.Size(349, 46);
             this.cbDiemDen.TabIndex = 32;

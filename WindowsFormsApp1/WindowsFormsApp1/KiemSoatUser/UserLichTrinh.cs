@@ -75,8 +75,10 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             int a= cbDiemDi.SelectedIndex;
             int b= cbDiemDen.SelectedIndex;
-            cbDiemDi.SelectedIndex = b;
-            cbDiemDen.SelectedIndex = a;
+            if (cbDiemDi.Items.Count -1 >= b) cbDiemDi.SelectedIndex = b;
+            else cbDiemDi.SelectedIndex = -1;
+            if (cbDiemDen.Items.Count -1 >= a) cbDiemDen.SelectedIndex = a;
+            else cbDiemDen.SelectedIndex = -1;
         }
 
         private void dgvLichTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
