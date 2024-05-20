@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,14 +46,14 @@ namespace WindowsFormsApp1.KiemSoatUser
             {
                 if (diemden != "")
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && lt.Giodi == ngaydi.ToString());
                     if (dsTim.Count == 0)
                         MessageBox.Show(("Không có tuyến " + diemdi + " - " + diemden + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year), "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;
                 } 
                 else
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.Giodi == ngaydi.ToString());
                     if (dsTim.Count == 0)
                         MessageBox.Show("Không có tuyến đi từ " + diemdi + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year, "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;
@@ -69,6 +70,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             cbDiemDen.SelectedIndex = -1;
             cbDiemDen.StartIndex = -1;
             cbDiemDi.StartIndex = -1;
+            dtpkNgayDi.Value = new DateTime(2024,1,1);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -95,6 +97,11 @@ namespace WindowsFormsApp1.KiemSoatUser
                     DiemDen = Row.Cells[2].Value.ToString(),
                     Giatien = Convert.ToDouble(Row.Cells[5].Value)
                 };
+
+                cbDiemDi.SelectedIndex = cbDiemDi.Items.IndexOf(selected.DiemDi);
+                cbDiemDen.SelectedIndex = cbDiemDi.Items.IndexOf(selected.DiemDen);
+                dtpkNgayDi.Value = Convert.ToDateTime(selected.Giodi);
+
             }
        
         }

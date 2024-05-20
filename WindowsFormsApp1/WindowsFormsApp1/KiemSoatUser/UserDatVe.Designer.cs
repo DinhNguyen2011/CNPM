@@ -426,9 +426,9 @@
             this.guna2Button2.Location = new System.Drawing.Point(128, 267);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(195, 72);
+            this.guna2Button2.Size = new System.Drawing.Size(203, 72);
             this.guna2Button2.TabIndex = 48;
-            this.guna2Button2.Text = "  Tuyến xe";
+            this.guna2Button2.Text = "Tuyến xe";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button1
@@ -447,9 +447,9 @@
             this.guna2Button1.Location = new System.Drawing.Point(128, 420);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(181, 72);
+            this.guna2Button1.Size = new System.Drawing.Size(203, 72);
             this.guna2Button1.TabIndex = 49;
-            this.guna2Button1.Text = "Giờ đi";
+            this.guna2Button1.Text = "Thời gian đi";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button3
@@ -489,7 +489,7 @@
             this.guna2Button4.Location = new System.Drawing.Point(128, 565);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(181, 72);
+            this.guna2Button4.Size = new System.Drawing.Size(203, 72);
             this.guna2Button4.TabIndex = 51;
             this.guna2Button4.Text = " Số lượng";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

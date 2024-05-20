@@ -78,6 +78,7 @@
             // 
             this.guna2DateTimePicker2.BorderRadius = 20;
             this.guna2DateTimePicker2.Checked = true;
+            this.guna2DateTimePicker2.CustomFormat = "dd/MM/yyyy";
             this.guna2DateTimePicker2.FillColor = System.Drawing.Color.Aqua;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;

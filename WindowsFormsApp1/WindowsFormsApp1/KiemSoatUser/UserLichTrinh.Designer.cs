@@ -36,12 +36,6 @@
             this.btnTimCXe = new Guna.UI2.WinForms.Guna2Button();
             this.btnConvert = new Guna.UI2.WinForms.Guna2Button();
             this.dgvLichTrinh = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.MaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbDiemDen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpkNgayDi = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -50,6 +44,12 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new System.Windows.Forms.Label();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichTrinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.btnTimCXe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTimCXe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimCXe.ForeColor = System.Drawing.Color.Black;
-            this.btnTimCXe.Location = new System.Drawing.Point(1339, 448);
+            this.btnTimCXe.Location = new System.Drawing.Point(1338, 448);
             this.btnTimCXe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTimCXe.Name = "btnTimCXe";
             this.btnTimCXe.Size = new System.Drawing.Size(227, 69);
@@ -123,7 +123,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLichTrinh.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLichTrinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLichTrinh.Location = new System.Drawing.Point(54, 356);
+            this.dgvLichTrinh.Location = new System.Drawing.Point(65, 356);
             this.dgvLichTrinh.Margin = new System.Windows.Forms.Padding(0);
             this.dgvLichTrinh.Name = "dgvLichTrinh";
             this.dgvLichTrinh.ReadOnly = true;
@@ -138,7 +138,7 @@
             this.dgvLichTrinh.RowHeadersVisible = false;
             this.dgvLichTrinh.RowHeadersWidth = 62;
             this.dgvLichTrinh.RowTemplate.Height = 35;
-            this.dgvLichTrinh.Size = new System.Drawing.Size(1212, 449);
+            this.dgvLichTrinh.Size = new System.Drawing.Size(1236, 449);
             this.dgvLichTrinh.TabIndex = 30;
             this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -163,60 +163,6 @@
             this.dgvLichTrinh.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvLichTrinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichTrinh_CellClick);
             // 
-            // MaChuyen
-            // 
-            this.MaChuyen.DataPropertyName = "Ma";
-            this.MaChuyen.FillWeight = 68.18181F;
-            this.MaChuyen.HeaderText = "Mã";
-            this.MaChuyen.MinimumWidth = 20;
-            this.MaChuyen.Name = "MaChuyen";
-            this.MaChuyen.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Giodi";
-            this.Column1.FillWeight = 80.94294F;
-            this.Column1.HeaderText = "Giờ di";
-            this.Column1.MinimumWidth = 180;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Gioden";
-            this.Column2.FillWeight = 96.96277F;
-            this.Column2.HeaderText = "Giờ đến";
-            this.Column2.MinimumWidth = 180;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Diemdi";
-            this.Column3.FillWeight = 88.45177F;
-            this.Column3.HeaderText = "Điểm đi";
-            this.Column3.MinimumWidth = 140;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Diemden";
-            this.Column4.FillWeight = 102.5338F;
-            this.Column4.HeaderText = "Điểm đến";
-            this.Column4.MinimumWidth = 140;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Giatien";
-            this.Column5.FillWeight = 162.9268F;
-            this.Column5.HeaderText = "Giá tiền";
-            this.Column5.MinimumWidth = 120;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // cbDiemDi
             // 
             this.cbDiemDi.BackColor = System.Drawing.Color.Transparent;
@@ -226,7 +172,7 @@
             this.cbDiemDi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDiemDi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDiemDi.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbDiemDi.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDiemDi.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDiemDi.ForeColor = System.Drawing.Color.Black;
             this.cbDiemDi.ItemHeight = 40;
             this.cbDiemDi.Items.AddRange(new object[] {
@@ -249,7 +195,7 @@
             this.cbDiemDen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDiemDen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDiemDen.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cbDiemDen.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDiemDen.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDiemDen.ForeColor = System.Drawing.Color.Black;
             this.cbDiemDen.ItemHeight = 40;
             this.cbDiemDen.Items.AddRange(new object[] {
@@ -268,18 +214,19 @@
             this.dtpkNgayDi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dtpkNgayDi.BorderRadius = 20;
             this.dtpkNgayDi.Checked = true;
+            this.dtpkNgayDi.CustomFormat = "";
             this.dtpkNgayDi.FillColor = System.Drawing.Color.Aqua;
-            this.dtpkNgayDi.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkNgayDi.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkNgayDi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpkNgayDi.Location = new System.Drawing.Point(1265, 264);
             this.dtpkNgayDi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtpkNgayDi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpkNgayDi.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dtpkNgayDi.MinDate = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             this.dtpkNgayDi.Name = "dtpkNgayDi";
             this.dtpkNgayDi.Size = new System.Drawing.Size(304, 66);
             this.dtpkNgayDi.TabIndex = 35;
             this.dtpkNgayDi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dtpkNgayDi.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
+            this.dtpkNgayDi.Value = new System.DateTime(2024, 1, 1, 0, 0, 0, 0);
             // 
             // guna2Button2
             // 
@@ -372,6 +319,60 @@
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Giatien";
+            this.Column5.FillWeight = 162.9268F;
+            this.Column5.HeaderText = "Giá tiền";
+            this.Column5.MinimumWidth = 100;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Diemden";
+            this.Column4.FillWeight = 102.5338F;
+            this.Column4.HeaderText = "Điểm đến";
+            this.Column4.MinimumWidth = 140;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Diemdi";
+            this.Column3.FillWeight = 88.45177F;
+            this.Column3.HeaderText = "Điểm đi";
+            this.Column3.MinimumWidth = 140;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Gioden";
+            this.Column2.FillWeight = 96.96277F;
+            this.Column2.HeaderText = "Giờ đến";
+            this.Column2.MinimumWidth = 190;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Giodi";
+            this.Column1.FillWeight = 80.94294F;
+            this.Column1.HeaderText = "Giờ di";
+            this.Column1.MinimumWidth = 190;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // MaChuyen
+            // 
+            this.MaChuyen.DataPropertyName = "Ma";
+            this.MaChuyen.FillWeight = 68.18181F;
+            this.MaChuyen.HeaderText = "Mã";
+            this.MaChuyen.MinimumWidth = 20;
+            this.MaChuyen.Name = "MaChuyen";
+            this.MaChuyen.ReadOnly = true;
+            // 
             // UserLichTrinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -408,12 +409,12 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private System.Windows.Forms.Label btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaChuyen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label btnRefresh;
     }
 }
