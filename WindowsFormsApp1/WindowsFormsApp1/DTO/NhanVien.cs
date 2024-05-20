@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1.DTO
 {
@@ -22,6 +23,10 @@ namespace WindowsFormsApp1.DTO
         public string Sdt { get => sdt; set => sdt = value; }
         public string Email { get => email; set => email = value; }
         public int Maloainv { get => maloainv; set => maloainv = value; }
+        public string tenloainv
+        {
+            get => LoaiNVDAO.Instance.getTenLoaiByID(maloainv);
+        }
 
         public NhanVien(int manv, string tennv, string cMND, string sdt, string email, int maloainv)
         {

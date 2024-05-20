@@ -52,7 +52,7 @@ namespace WindowsFormsApp1.DAO
                 if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Trùng CMND'"))
                     MessageBox.Show("Trùng CCCD, không thể thêm", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    throw e;
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
@@ -80,9 +80,21 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
+        }
+        public List<NhanVien> timNhanVienTheoTen(string tennv)
+        {
+            List<NhanVien> list = new List<NhanVien>();
+            string query = "TIMNHANVIENTHEOTEN N'" + tennv + "'";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                NhanVien nv = new NhanVien(item);
+                list.Add(nv);
+            }
+            return list;
         }
     }
 }

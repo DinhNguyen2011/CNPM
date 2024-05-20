@@ -473,6 +473,16 @@ END
 
 GO
 /*==============================================================*/
+/* Stored procedure: Tìm nhân viên theo tên                     */
+/*==============================================================*/
+CREATE OR ALTER PROC TIMNHANVIENTHEOTEN @tennv nvarchar(30)
+AS
+BEGIN
+	select MANV, TENNV, CMND, SDT, EMAIL, MALOAINV from NHANVIEN where dbo.fuConvertToUnsign1(TENNV) like N'%' + dbo.fuConvertToUnsign1(@tennv) + '%'
+END
+
+GO
+/*==============================================================*/
 /* Stored procedure: Thêm nhân viên			                    */
 /*==============================================================*/
 CREATE OR ALTER PROC THEMNHANVIEN @tennv nvarchar(30), @cmnd nchar(20), @sdt nchar(20), @email nvarchar(20), @maloainv int
@@ -685,5 +695,4 @@ begin
 	 select DISTINCT DIEMDI FROM TUYENXE
 end
 
---Nghĩa: Thêm (SP) TIMTUYENXE, TIMKHACHHANGTHEOTEN, FindAccountByMaKH, TIMXE ở phía trên
-
+--Nghĩa: TIMNHANVIENTHEOTEN ở phía trên

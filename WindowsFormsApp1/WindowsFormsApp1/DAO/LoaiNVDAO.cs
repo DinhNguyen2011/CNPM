@@ -84,5 +84,19 @@ namespace WindowsFormsApp1.DAO
             }
             return result;
         }
+        public string getTenLoaiByID(int maloai)
+        {
+            string kq = "";
+            string query = "select TENLOAI from LOAINV where MALOAINV = " + maloai;
+            kq = DataProvider.Instance.ExcuteScalar(query).ToString();
+            return kq;
+        }
+        public int getIDByTenloai(string tenloai)
+        {
+            int maloai = -1;
+            string query = "select MALOAINV from LOAINV where TENLOAI = N'" + tenloai + "'" ;
+            maloai = (int)DataProvider.Instance.ExcuteScalar(query);
+            return maloai;
+        }
     }
 }
