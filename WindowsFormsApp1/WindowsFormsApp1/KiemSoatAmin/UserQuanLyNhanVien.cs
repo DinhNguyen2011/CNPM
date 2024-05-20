@@ -202,34 +202,5 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         #endregion
 
-        private void UserQuanLyNhanVien_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThemNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSuaNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnThemNV_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoaNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHienthi_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

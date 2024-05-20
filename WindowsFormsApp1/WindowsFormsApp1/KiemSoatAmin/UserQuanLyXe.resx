@@ -262,7 +262,7 @@
     <value>8, 16</value>
   </data>
   <data name="txttimxe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="txttimxe.Location" type="System.Drawing.Point, System.Drawing">
     <value>732, 95</value>
@@ -388,7 +388,7 @@
     <value>3</value>
   </data>
   <data name="txtBienSo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="txtBienSo.Location" type="System.Drawing.Point, System.Drawing">
     <value>1493, 194</value>
@@ -445,7 +445,7 @@
     <value>5</value>
   </data>
   <data name="txtSoghe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="txtSoghe.Location" type="System.Drawing.Point, System.Drawing">
     <value>1184, 304</value>
@@ -505,7 +505,7 @@
     <value>7</value>
   </data>
   <data name="txtTenXe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 10.8pt</value>
+    <value>Segoe UI, 9pt</value>
   </data>
   <data name="txtTenXe.Location" type="System.Drawing.Point, System.Drawing">
     <value>1184, 194</value>
