@@ -400,6 +400,5 @@
         private KiemSoatAmin.UserQuanLyTuyenXe userQuanLyTuyenXe2;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLTuyenxe;
         private KiemSoatAmin.UserQuanLyChuyenXe userQuanLyChuyenXe1;
-        private Guna.UI2.WinForms.Guna2Button btnQLVeXe;
-    }
+        private Guna.UI2.WinForms.Guna2Button btnQLVeXe;    }
 }

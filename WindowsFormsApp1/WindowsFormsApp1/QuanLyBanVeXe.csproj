@@ -113,6 +113,12 @@
     <Compile Include="KiemSoatAmin\UserQuanLyNhanVien.Designer.cs">
       <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyVeXe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KiemSoatAmin\UserQuanLyVeXe.Designer.cs">
+      <DependentUpon>UserQuanLyVeXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyXe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyNhanVien.resx">
       <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyVeXe.resx">
+      <DependentUpon>UserQuanLyVeXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyXe.dje-NE.resx">
       <DependentUpon>UserQuanLyXe.cs</DependentUpon>

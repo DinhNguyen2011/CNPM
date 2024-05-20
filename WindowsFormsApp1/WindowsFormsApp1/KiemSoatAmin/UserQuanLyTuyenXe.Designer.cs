@@ -89,11 +89,12 @@
             // 
             this.dgvVeXe.AllowUserToAddRows = false;
             this.dgvVeXe.AllowUserToDeleteRows = false;
+            this.dgvVeXe.AllowUserToResizeColumns = false;
+            this.dgvVeXe.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVeXe.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvVeXe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dgvVeXe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvVeXe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -109,9 +110,9 @@
             this.Column12,
             this.Column13,
             this.Column14});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -125,6 +126,7 @@
             this.dgvVeXe.ReadOnly = true;
             this.dgvVeXe.RowHeadersVisible = false;
             this.dgvVeXe.RowHeadersWidth = 51;
+            this.dgvVeXe.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVeXe.RowTemplate.Height = 30;
             this.dgvVeXe.Size = new System.Drawing.Size(1087, 364);
             this.dgvVeXe.TabIndex = 39;
@@ -266,7 +268,8 @@
             this.txtdiemdi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiemdi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiemdi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemdi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtdiemdi.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiemdi.ForeColor = System.Drawing.Color.Black;
             this.txtdiemdi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemdi.Location = new System.Drawing.Point(1177, 227);
             this.txtdiemdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -286,7 +289,8 @@
             this.txtdiemden.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiemden.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiemden.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiemden.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtdiemden.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdiemden.ForeColor = System.Drawing.Color.Black;
             this.txtdiemden.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiemden.Location = new System.Drawing.Point(1523, 227);
             this.txtdiemden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
