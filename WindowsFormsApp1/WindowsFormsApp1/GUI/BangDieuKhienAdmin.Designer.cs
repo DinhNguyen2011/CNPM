@@ -54,6 +54,8 @@
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2QLChuyenXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLTuyenxe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userQuanLyVeXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyVeXe();
+            this.guna2QLVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -122,12 +124,13 @@
             this.btnQLVeXe.FillColor = System.Drawing.Color.Yellow;
             this.btnQLVeXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLVeXe.ForeColor = System.Drawing.Color.Black;
-            this.btnQLVeXe.Location = new System.Drawing.Point(1600, 24);
-            this.btnQLVeXe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQLVeXe.Location = new System.Drawing.Point(1422, 19);
+            this.btnQLVeXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLVeXe.Name = "btnQLVeXe";
-            this.btnQLVeXe.Size = new System.Drawing.Size(255, 139);
+            this.btnQLVeXe.Size = new System.Drawing.Size(227, 111);
             this.btnQLVeXe.TabIndex = 6;
             this.btnQLVeXe.Text = "Quản Lý Vé Xe";
+            this.btnQLVeXe.Click += new System.EventHandler(this.btnQLVeXe_Click);
             // 
             // btnQLCX
             // 
@@ -237,6 +240,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.userQuanLyVeXe1);
             this.panel2.Controls.Add(this.userQuanLyNhanVien1);
             this.panel2.Controls.Add(this.userQuanLyKhachHang1);
             this.panel2.Controls.Add(this.userQuanLyTuyenXe2);
@@ -280,28 +284,28 @@
             // userQuanLyChuyenXe1
             // 
             this.userQuanLyChuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyChuyenXe1.Location = new System.Drawing.Point(-1, 21);
-            this.userQuanLyChuyenXe1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.userQuanLyChuyenXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyChuyenXe1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyChuyenXe1.Name = "userQuanLyChuyenXe1";
-            this.userQuanLyChuyenXe1.Size = new System.Drawing.Size(2051, 765);
+            this.userQuanLyChuyenXe1.Size = new System.Drawing.Size(1823, 612);
             this.userQuanLyChuyenXe1.TabIndex = 6;
             // 
             // userQuanLyTuyenXe1
             // 
             this.userQuanLyTuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(-1, 21);
-            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
-            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(2051, 765);
+            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1823, 612);
             this.userQuanLyTuyenXe1.TabIndex = 4;
             // 
             // userQuanLyXe1
             // 
             this.userQuanLyXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyXe1.Location = new System.Drawing.Point(-1, 21);
-            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.userQuanLyXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5);
             this.userQuanLyXe1.Name = "userQuanLyXe1";
-            this.userQuanLyXe1.Size = new System.Drawing.Size(2051, 765);
+            this.userQuanLyXe1.Size = new System.Drawing.Size(1823, 612);
             this.userQuanLyXe1.TabIndex = 3;
             this.userQuanLyXe1.Load += new System.EventHandler(this.userQuanLyXe1_Load);
             // 
@@ -347,6 +351,19 @@
             // guna2QLTuyenxe
             // 
             this.guna2QLTuyenxe.TargetControl = this;
+            // 
+            // userQuanLyVeXe1
+            // 
+            this.userQuanLyVeXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyVeXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyVeXe1.Name = "userQuanLyVeXe1";
+            this.userQuanLyVeXe1.Size = new System.Drawing.Size(1823, 739);
+            this.userQuanLyVeXe1.TabIndex = 7;
+            // 
+            // guna2QLVeXe
+            // 
+            this.guna2QLVeXe.BorderRadius = 30;
+            this.guna2QLVeXe.TargetControl = this.userQuanLyVeXe1;
             // 
             // BangDieuKhienAdmin
             // 
@@ -401,5 +418,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2QLTuyenxe;
         private KiemSoatAmin.UserQuanLyChuyenXe userQuanLyChuyenXe1;
         private Guna.UI2.WinForms.Guna2Button btnQLVeXe;
+        private KiemSoatAmin.UserQuanLyVeXe userQuanLyVeXe1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2QLVeXe;
     }
 }
