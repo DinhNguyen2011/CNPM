@@ -16,7 +16,14 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             InitializeComponent();
         }
+        #region Xử lý phụ
+        #endregion
 
+        #region Method
+
+        #endregion
+
+        #region Form Event
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
 
@@ -31,5 +38,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
 
         }
+        #endregion
+
     }
 }

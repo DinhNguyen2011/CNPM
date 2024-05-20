@@ -19,39 +19,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                Application.Exit();
-        }
-
-        private void btnDkiTK_Click(object sender, EventArgs e)
-        {
-            Form1 f= new Form1();
-            this.Hide();
-            f.Show();
-        }
-
-        private void txtTenDK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private bool DangKy(string tenkh, DateTime ngaysinh, string sdt, string email, string taikhoan, string matkhau)
-        {
-            return TaiKhoanDAO.Instance.Register(tenkh, ngaysinh, sdt, email, taikhoan, matkhau);
-        }
+        #region Xử lý phụ
         private bool isValidSoDienThoai(string sdt)
         {
             if (sdt.Length != 10)
                 return false;
-            if (sdt.StartsWith("0") == false) 
+            if (sdt.StartsWith("0") == false)
                 return false;
             foreach (char s in sdt)
             {
                 if (s < 48 || s > 57)
                     return false;
-            }    
+            }
             return true;
         }
         public bool isValidEmail(string email)
@@ -66,7 +45,31 @@ namespace WindowsFormsApp1
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             return regex.IsMatch(email);
         }
+        #endregion
 
+        #region Method
+        private bool DangKy(string tenkh, DateTime ngaysinh, string sdt, string email, string taikhoan, string matkhau)
+        {
+            return TaiKhoanDAO.Instance.Register(tenkh, ngaysinh, sdt, email, taikhoan, matkhau);
+        }
+        #endregion
+
+        #region Form Event
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
+        }
+        private void btnDkiTK_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.Show();
+        }
+        private void txtTenDK_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
             try
@@ -121,7 +124,6 @@ namespace WindowsFormsApp1
                     throw ex;
             }
         }
-
         private void txtSĐT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -130,5 +132,18 @@ namespace WindowsFormsApp1
             }
 
         }
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

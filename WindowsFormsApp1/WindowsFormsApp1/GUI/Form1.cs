@@ -18,24 +18,22 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
         }
-        
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                Application.Exit();
-        }
+        #region Xử lý phụ
+
+        #endregion
+
+        #region Method
         private bool login(string username, string password)
         {
             return TaiKhoanDAO.Instance.Login(username, password);
         }
-
         private void checkLogin()
         {
             string username = txtUseName.Text;
             string password = txtPw.Text;
             if (login(username, password))
             {
-                if (String.Compare(username,"admin",true) == 0)
+                if (String.Compare(username, "admin", true) == 0)
                 {
                     //lblError.Visible = false;
                     BangDieuKhienAdmin bdkAdmin = new BangDieuKhienAdmin();
@@ -52,14 +50,21 @@ namespace WindowsFormsApp1
             else lblError.Visible = true;
             txtPw.Clear();
         }
+        #endregion
+
+        #region Form Event
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                Application.Exit();
+        }
         private void txtLogin_Click(object sender, EventArgs e)
         {
-            checkLogin();            
+            checkLogin();
         }
-
         private void btnDkiTK_Click(object sender, EventArgs e)
         {
-            DangKiTaiKhoang dk=new DangKiTaiKhoang();   
+            DangKiTaiKhoang dk = new DangKiTaiKhoang();
             this.Hide();
             dk.Show();
         }
@@ -70,7 +75,6 @@ namespace WindowsFormsApp1
                 checkLogin();
             }
         }
-
         private void txtUseName_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -78,5 +82,17 @@ namespace WindowsFormsApp1
                 checkLogin();
             }
         }
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
     }
 }

@@ -200,8 +200,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     throw ex;
             }
         }
-        #endregion
-
         private void btnThemNV_Click(object sender, EventArgs e)
         {
 
@@ -216,5 +214,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
 
         }
+        #endregion
+
+
     }
 }

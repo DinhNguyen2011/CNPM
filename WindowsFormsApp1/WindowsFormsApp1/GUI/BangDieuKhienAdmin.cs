@@ -17,7 +17,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        #region Xử lý phụ
 
+        #endregion
+
+        #region Method
+
+        #endregion
+
+        #region Form Event
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -35,7 +43,6 @@ namespace WindowsFormsApp1
             userQuanLyVeXe1.Visible = false;
 
         }
-
         private void BangDieuKhienAdmin_Load(object sender, EventArgs e)
         {
             userQuanLyTuyenXe1.Visible = true;
@@ -46,7 +53,6 @@ namespace WindowsFormsApp1
             userQuanLyVeXe1.Visible = false;
             btnQLTuyenXe.PerformClick();
         }
-
         private void btnThongTinKH_Click(object sender, EventArgs e)
         {
             PnMovingad.Left = btnQLKH.Left + 60;
@@ -82,22 +88,19 @@ namespace WindowsFormsApp1
             userQuanLyKhachHang1.Visible = false;
             userQuanLyVeXe1.Visible = false;
         }
-
         private void userQuanLyXe1_Load(object sender, EventArgs e)
         {
-           
-        }
 
+        }
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất tài khoản?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            { 
+            {
                 Form1 f = new Form1();
                 this.Hide();
                 f.ShowDialog();
-            }    
+            }
         }
-
         private void btnMiniSize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -125,6 +128,8 @@ namespace WindowsFormsApp1
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
         }
+        #endregion
+
 
     }
 }

@@ -53,5 +53,17 @@ namespace WindowsFormsApp1.DAO
             }
             return result;
         }
+        public List<KhachHang> timKhachHangTheoTen(string tenkh)
+        {
+            List<KhachHang> list = new List<KhachHang>();
+            string query = "TIMKHACHHANGTHEOTEN N'" + tenkh +"'";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                KhachHang kh = new KhachHang(item);
+                list.Add(kh);
+            }
+            return list;
+        }
     }
 }

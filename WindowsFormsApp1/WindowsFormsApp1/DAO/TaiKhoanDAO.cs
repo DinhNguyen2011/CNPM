@@ -67,6 +67,16 @@ namespace WindowsFormsApp1.DAO
 
             return result > 0;
         }
-
+        public TaiKhoan findTaiKhoanByMaKH(KhachHang kh)
+        {
+            TaiKhoan tk = null;
+            string query = "FindAccountByMaKH @makh";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query, new object[] {kh.Makh});
+            foreach (DataRow item in result.Rows)
+            {
+                tk = new TaiKhoan(item);
+            }
+            return tk;
+        }
     }
 }

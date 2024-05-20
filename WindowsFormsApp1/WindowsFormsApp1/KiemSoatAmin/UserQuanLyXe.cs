@@ -20,15 +20,33 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             InitializeComponent();
         }
-
-        private void UserQuanLyXe_Load(object sender, EventArgs e)
-        {
-            LoadXe();
-        }
+        #region Xử lý phụ
         public void reset()
         {
             txtBienSo.Text = txtSoghe.Text = txtTenXe.Text = string.Empty;
         }
+        private string chuanHoaChuoi(String s)
+        {
+            s = s.Trim();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == ' ' && s[i + 1] == ' ')
+                {
+                    s = s.Remove(i + 1, 1);
+                    i--;
+                }
+            }
+            return s;
+        }
+        private string chuanHoaBienSo(string s)
+        {
+            s = s.Trim();
+            s = s.Replace(" ", "");
+            return s;
+        }
+        #endregion
+
+        #region Method
         public void LoadXe()
         {
             btnXoaXe.Enabled = false;
@@ -41,16 +59,15 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void themXe()
         {
-            string tenxe = txtTenXe.Text.Trim();
-            string bienso = txtBienSo.Text.Trim();
+            string tenxe = chuanHoaChuoi(txtTenXe.Text);
+            string bienso = chuanHoaBienSo(txtBienSo.Text);
             if (tenxe == "" || bienso == "" || txtSoghe.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }    
-            bienso = bienso.Replace(" ", "");
+            }
             int soghe = 0;
-            try 
+            try
             {
                 soghe = Convert.ToInt32(txtSoghe.Text);
                 Xe x = new Xe(tenxe, bienso, soghe);
@@ -62,7 +79,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 }
             }
             catch (Exception e)
-            {   
+            {
                 if (e.Message.StartsWith("Input string was not in a correct format"))
                     MessageBox.Show("Số ghế phải là kiểu dữ số nguyên", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -111,6 +128,31 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     throw e;
             }
         }
+        public void timXe()
+        {
+            reset();
+            btnXoaXe.Enabled = false;
+            btnSuaXe.Enabled = false;
+            btnThemXe.Enabled = false;
+            string bienso = chuanHoaBienSo(txttimxe.Text);
+            List<Xe> temp = new List<Xe>();
+            temp = XeDAO.Instance.TimXe(bienso);
+            if (temp.Count > 0)
+            {
+                listXe = temp;
+                dgvXe.DataSource = listXe;
+                dgvXe.Refresh();
+            }
+            else
+                MessageBox.Show("Không có chiếc xe mang biển số " + bienso, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
+
+        #region Form Event
+        private void UserQuanLyXe_Load(object sender, EventArgs e)
+        {
+            LoadXe();
+        }
         private void btnThemXe_Click(object sender, EventArgs e)
         {
             themXe();
@@ -124,7 +166,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         private void btnXoaXe_Click(object sender, EventArgs e)
         {
             string tenxe = listXe[index].Tenxe;
-            if (MessageBox.Show("Bạn có muốn xóa chiếc xe " + tenxe +"?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn xóa chiếc xe " + tenxe + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 xoaXe();
         }
         private void dgvXe_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -144,7 +186,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     index = indexRow;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 if (ex.Message.StartsWith("Index was out of range"))
                     MessageBox.Show("Đừng chọn linh tinh bạn nhé!!!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -152,5 +194,17 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     throw ex;
             }
         }
+        private void btntimxe_Click(object sender, EventArgs e)
+        {
+            timXe();
+        }
+        private void btnHienthi_Click(object sender, EventArgs e)
+        {
+            LoadXe();
+        }
+
+        #endregion
+
+
     }
 }

@@ -84,5 +84,17 @@ namespace WindowsFormsApp1.DAO
             }
             return result;
         }
+        public List<Xe> TimXe(string bienso)
+        {
+            List<Xe> list = new List<Xe>();
+            string query = "TIMXE '" + bienso + "'";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                Xe x = new Xe(item);
+                list.Add(x);
+            }
+            return list;
+        }
     }
 }

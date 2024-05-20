@@ -92,5 +92,18 @@ namespace WindowsFormsApp1.DAO
             }
             return list;
         }
+        public List<TuyenXe> timTuyenXe(string diemdi, string diemden)
+        {
+            List<TuyenXe> list = new List<TuyenXe>();
+            string query = "TIMTUYENXE N'" + diemdi + "', N'" + diemden + "'";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                TuyenXe t = new TuyenXe(item);
+                list.Add(t);
+            }
+            return list;
+        }
+        
     }
 }

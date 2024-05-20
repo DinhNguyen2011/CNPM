@@ -17,9 +17,18 @@ namespace WindowsFormsApp1.KiemSoatAmin
             InitializeComponent();
         }
 
+        #region Xử lý phụ
+        #endregion
+
+        #region Method
+        #endregion
+
+        #region Form Event
         private void UserQuanLyChuyenXe_Load(object sender, EventArgs e)
         {
 
         }
+        #endregion
+
     }
 }

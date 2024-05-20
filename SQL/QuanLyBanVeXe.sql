@@ -219,6 +219,17 @@ BEGIN
 END
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: Tìm tài khoản theo mã khách hàng           */
+/*==============================================================*/
+CREATE OR ALTER PROC FindAccountByMaKH @makh int
+AS 
+BEGIN
+	select MATK, ACCOUNT, MAKH from TAIKHOAN where MAKH = @makh
+END
+
+GO
 /*==============================================================*/
 /* Stored procedure: ĐĂNG KÝ	(Đăng ký tài khoản và thông tin)*/
 /*==============================================================*/
@@ -267,6 +278,16 @@ BEGIN
 END
 
 GO
+/*==============================================================*/
+/* Stored procedure: Tìm khách hàng theo tên	                */
+/*==============================================================*/
+CREATE OR ALTER PROC TIMKHACHHANGTHEOTEN @tenkh nvarchar(30)
+AS
+BEGIN
+	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG where dbo.fuConvertToUnsign1(TENKH) like N'%' + dbo.fuConvertToUnsign1(@tenkh) + '%'
+END
+
+GO
 
 /*==============================================================*/
 /* Stored procedure: Xóa Khách Hàng và tài khoản tương ứng      */
@@ -282,8 +303,6 @@ BEGIN
 END
 
 GO
-
-
 
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin khách hàng                   */
@@ -327,6 +346,15 @@ CREATE OR ALTER PROC XOATUYENXE @matuyen int
 AS 
 	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
 GO
+
+/*==============================================================*/
+/* Stored procedure: Tìm tuyến xe bằng điểm đi và điểm đến      */
+/*==============================================================*/
+CREATE OR ALTER PROC TIMTUYENXE @diemdi nvarchar(20), @diemden nvarchar(20)
+AS 
+	select MATUYEN, DIEMDI, DIEMDEN from TUYENXE where (dbo.fuConvertToUnsign1(DIEMDI) like N'%' + dbo.fuConvertToUnsign1(@diemdi) + '%') and (dbo.fuConvertToUnsign1(DIEMDEN) like N'%' + dbo.fuConvertToUnsign1(@diemden) + '%')
+GO
+
 
 /*==============================================================*/
 /* Stored procedure: Thêm chuyến xe			                    */
@@ -373,6 +401,18 @@ BEGIN
 END
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: Tìm xe theo biển số				                    */
+/*==============================================================*/
+CREATE OR ALTER PROC TIMXE @bienso nchar(20)
+AS
+BEGIN
+	select MAXE, TENXE, BIENSO, SOGHE from XE where BIENSO = @bienso
+END
+
+GO
+
 /*==============================================================*/
 /* Stored procedure: Thêm xe				                    */
 /*==============================================================*/
@@ -637,5 +677,5 @@ begin
 	 select DISTINCT DIEMDI FROM TUYENXE
 end
 
---Nghĩa: Thêm (SP) DSTAIKHOAN, DSTENLOAINV ở phía trên, chạy lại SP XOAKHACHHANG nha
+--Nghĩa: Thêm (SP) TIMTUYENXE, TIMKHACHHANGTHEOTEN, FindAccountByMaKH, TIMXE ở phía trên
 
