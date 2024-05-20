@@ -104,6 +104,33 @@ namespace WindowsFormsApp1.DAO
             }
             return list;
         }
-        
+        public List<string> getDSTenTuyenXe()
+        {
+            List<string> listTenTuyen = new List<string>();
+            List<TuyenXe> list = getDSTuyenXe();
+            foreach (var item in list)
+            {
+                string tentuyen = item.Diemdi + "-" + item.Diemden;
+                listTenTuyen.Add(tentuyen);
+            }
+            return listTenTuyen;
+        }
+        public string getTenTuyenXeByID(int ma)
+        {
+            string tentuyen = "";
+            string query = "select MATUYEN, DIEMDI, DIEMDEN from TUYENXE where MATUYEN = " + ma;
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            TuyenXe t = new TuyenXe(result.Rows[0]);
+            tentuyen = t.Diemdi + "-" + t.Diemden;
+            return tentuyen;
+        }
+        public int getIDByTuyenXe(string diemdi, string diemden)
+        {
+            int maloai = -1;
+            string query = "select MATUYEN from TUYENXE where DIEMDI = N'" +diemdi +"' and DIEMDEN = N'" + diemden +"'";
+            maloai = (int)DataProvider.Instance.ExcuteScalar(query);
+            return maloai;
+        }
+
     }
 }

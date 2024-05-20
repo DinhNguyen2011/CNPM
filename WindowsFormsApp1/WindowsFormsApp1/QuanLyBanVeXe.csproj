@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChuyenXeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiNVDAO.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\LichTrinhDAO.cs" />
     <Compile Include="DAO\XeDAO.cs" />
+    <Compile Include="DTO\ChuyenXe.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />

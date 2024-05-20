@@ -435,6 +435,7 @@ BEGIN
 END
 
 GO
+
 /*==============================================================*/
 /* Stored procedure: Thêm tuyến xe			                    */
 /*==============================================================*/
@@ -464,18 +465,39 @@ AS
 
 GO
 /*==============================================================*/
+/* Stored procedure: Tìm tuyến xe bằng mã tuyến			        */
+/*==============================================================*/
+CREATE OR ALTER PROC TimTuyenXeByID @ma int
+AS 
+	select MATUYEN, DIEMDI, DIEMDEN from TUYENXE where MATUYEN = @ma
+
+GO
+/*==============================================================*/
+/* Stored procedure: lấy danh sách chuyến xe                    */
+/*==============================================================*/
+CREATE OR ALTER PROC DSCHUYENXE
+AS 
+BEGIN
+	select MACHUYEN, TENCHUYEN, GIODI, GIODEN, GIAVE, MATUYEN, MATAIXE from CHUYENXE
+END
+
+GO
+
+
+/*==============================================================*/
 /* Stored procedure: Thêm chuyến xe			                    */
 /*==============================================================*/
-CREATE OR ALTER PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @matuyen int
+CREATE OR ALTER PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @mataixe int, @matuyen int
 AS 
 BEGIN
 	IF (not exists (SELECT * FROM CHUYENXE WHERE CHUYENXE.TENCHUYEN = @tenchuyen))
 	BEGIN
-		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATUYEN) VALUES (@tenchuyen, @giodi, @gioden, @giave, @matuyen)
+		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
 	END
 END
 
 GO
+
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin chuyến xe                    */
 /*==============================================================*/
@@ -570,6 +592,20 @@ BEGIN
 END
 
 GO
+
+/*==============================================================*/
+/* Stored procedure: lấy danh sách nhân viên là tài xế          */
+/*==============================================================*/
+CREATE OR ALTER PROC DSTAIXE
+AS
+BEGIN
+	select TENNV 
+	from NHANVIEN nv join LOAINV l on nv.MALOAINV = l.MALOAINV 
+	where dbo.fuConvertToUnsign1(l.TENLOAI) = dbo.fuConvertToUnsign1(N'tai xe')
+END
+
+GO
+
 /*==============================================================*/
 /* Stored procedure: Thêm nhân viên			                    */
 /*==============================================================*/
@@ -744,4 +780,9 @@ create or ALTER proc DSDIEMDI
 as 
 begin
 	 select DISTINCT DIEMDI FROM TUYENXE
+
 end
+
+GO
+
+-- Nghĩa thêm SP: DSTAIXE, TimTuyenXeByID, DSCHUYENXE, SỬA PROC THEMCHUYENXE

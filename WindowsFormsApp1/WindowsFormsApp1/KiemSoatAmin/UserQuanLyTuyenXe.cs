@@ -19,8 +19,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyTuyenXe()
         {
             InitializeComponent();
-            
         }
+       
         #region xử lý phụ
         public void reset()
         {

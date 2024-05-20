@@ -96,5 +96,31 @@ namespace WindowsFormsApp1.DAO
             }
             return list;
         }
+        public List<string> DSTaiXe()
+        {
+            List<string> list = new List<string>();
+            string query = "DSTAIXE";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                string taixe = item["tennv"].ToString();
+                list.Add(taixe);
+            }
+            return list;
+        }
+        public string getTenNVbyID(int ma)
+        {
+            string tennv = "";
+            string query = "select TENNV from NHANVIEN where MANV = " + ma;
+            tennv = DataProvider.Instance.ExcuteScalar(query).ToString();
+            return tennv;
+        }
+        public int getIDByTenNhanVien(string tennv) 
+        {
+            int id = -1;
+            string query = "select MANV from NHANVIEN where TENNV = N'" + tennv + "'";
+            id = (int)DataProvider.Instance.ExcuteScalar(query);
+            return id;
+        }
     }
 }
