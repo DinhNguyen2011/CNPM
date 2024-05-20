@@ -30,15 +30,7 @@ namespace WindowsFormsApp1.DAO
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             List<LichTrinh> list = new List<LichTrinh>();
             foreach (DataRow row in data.Rows)
-            {
-                int ma = Convert.ToInt32(row["MACHUYEN"]);
-                DateTime? giodi = Convert.ToDateTime(row["GIODI"]);
-                DateTime? gioden = Convert.ToDateTime(row["GIODEN"]);
-                string diemdi = row["DIEMDI"].ToString();
-                string diemden = row["DIEMDEN"].ToString();
-                double giatien = Convert.ToDouble(row["GIAVE"]);
-                list.Add(new LichTrinh(ma,giodi, gioden, diemdi,diemden , giatien));
-            }
+                list.Add(new LichTrinh(row));
             return list;
         }
     }

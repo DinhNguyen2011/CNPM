@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1
 {
     public partial class BangDieuKhien : Form
     {
         private int index = 0;
-        public BangDieuKhien()
+        private KhachHang user;
+        public BangDieuKhien(KhachHang user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -32,6 +35,7 @@ namespace WindowsFormsApp1
             userLichTrinh1.Visible = false;
             userThanhToan1.Visible = false;
             userChiTietVeXe1.Visible = false;
+            lbHello.Text = "Hello, " + user.Tenkh + " !!";
             chonLichTrinh();
         }
 
@@ -58,9 +62,11 @@ namespace WindowsFormsApp1
         }
 
 
-        private void chonThongTinVe()
+        private void chonThongTinVe(LichTrinh selected)
         {
             PnMoving.Left = btnChonChuyen.Left + 50;
+            if (selected != null ) userDatVe1.LtSelected = selected;
+            userDatVe1.setValue();
             userDatVe1.Visible = true;
             userDatVe1.BringToFront();
             btnXacNhanVe.BringToFront();
@@ -125,7 +131,7 @@ namespace WindowsFormsApp1
 
         private void btnChonVe_Click(object sender, EventArgs e)
         {
-            if (index > 0) chonThongTinVe();
+            if (index > 0) chonThongTinVe(null);
         }
 
         private void btnThongTinKH_Click(object sender, EventArgs e)
@@ -144,8 +150,17 @@ namespace WindowsFormsApp1
         }
         private void btnChonChuyen_Click(object sender, EventArgs e)
         {
-            index++;
-            chonThongTinVe();
+            LichTrinh selected = userLichTrinh1.Selected;
+            if (selected != null)
+            {
+                index++;
+                if (MessageBox.Show("Chuyến " + selected.DiemDi + " - " + selected.DiemDen + " vào lúc " + selected.Giodi, "Xác nhận lựa chọn", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    chonThongTinVe(selected);
+            }
+            else
+                MessageBox.Show("Vui lòng chọn chuyến đi !!", "Thông báo");
+
+            
         }
         private void btnXacNhanVe_Click(object sender, EventArgs e)
         {

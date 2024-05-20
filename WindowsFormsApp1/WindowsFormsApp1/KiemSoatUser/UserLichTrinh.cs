@@ -15,6 +15,9 @@ namespace WindowsFormsApp1.KiemSoatUser
     public partial class UserLichTrinh : UserControl
     {
         private List<LichTrinh> lichTrinhList = null;
+        private LichTrinh selected;
+        internal LichTrinh Selected { get => selected; }
+
         public UserLichTrinh()
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             cbDiemDen.DataSource = TuyenXeDAO.Instance.getDsDiemDen();
             cbDiemDi.SelectedIndex = -1;
             cbDiemDen.SelectedIndex = -1;
+            selected = null;
         }
 
         private void btnTimCXe_Click(object sender, EventArgs e)
@@ -41,14 +45,14 @@ namespace WindowsFormsApp1.KiemSoatUser
             {
                 if (diemden != "")
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && lt.Giodi.Value.Date == ngaydi.Date);
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
                     if (dsTim.Count == 0)
                         MessageBox.Show(("Không có tuyến " + diemdi + " - " + diemden + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year), "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;
                 } 
                 else
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.Giodi.Value.Date == ngaydi.Date);
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
                     if (dsTim.Count == 0)
                         MessageBox.Show("Không có tuyến đi từ " + diemdi + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year, "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;
@@ -75,6 +79,22 @@ namespace WindowsFormsApp1.KiemSoatUser
             cbDiemDen.SelectedIndex = a;
         }
 
-        
+        private void dgvLichTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow Row = dgvLichTrinh.Rows[e.RowIndex];
+                selected = new LichTrinh
+                {
+                    Ma = Convert.ToInt32(Row.Cells[0].Value),
+                    Giodi = Row.Cells[3].Value.ToString(),
+                    Gioden = Row.Cells[4].Value.ToString(),
+                    DiemDi = Row.Cells[1].Value.ToString(),
+                    DiemDen = Row.Cells[2].Value.ToString(),
+                    Giatien = Convert.ToDouble(Row.Cells[5].Value)
+                };
+            }
+       
+        }
     }
 }

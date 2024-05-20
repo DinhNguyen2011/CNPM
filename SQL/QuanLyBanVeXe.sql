@@ -209,6 +209,14 @@ BEGIN
 END
 
 GO
+
+create or alter proc GETKHACHHANG @taikhoan char(50)
+as
+begin
+	select KHACHHANG.MAKH, TENKH, NGAYSINH, SDT, EMAIL from KHACHHANG join TAIKHOAN on KHACHHANG.MAKH=TAIKHOAN.MAKH where TAIKHOAN.ACCOUNT=@taikhoan
+end
+
+GO
 /*==============================================================*/
 /* Stored procedure: Lấy danh sách tài khoản		            */
 /*==============================================================*/

@@ -54,6 +54,7 @@
             this.guna2ElipseThanhToan = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbHello = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(2061, 336);
+            this.btnClose.Location = new System.Drawing.Point(2061, 264);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 48);
@@ -87,7 +88,7 @@
             this.btnMiniSize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMiniSize.Location = new System.Drawing.Point(2003, 336);
+            this.btnMiniSize.Location = new System.Drawing.Point(2003, 264);
             this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMiniSize.Name = "btnMiniSize";
             this.btnMiniSize.Size = new System.Drawing.Size(45, 48);
@@ -367,7 +368,7 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.BorderThickness = 1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -377,13 +378,24 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(448, 336);
+            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button1.Location = new System.Drawing.Point(448, 264);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(70, 63);
+            this.guna2Button1.Size = new System.Drawing.Size(51, 48);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Click += new System.EventHandler(this.LogOut_Click);
+            // 
+            // lbHello
+            // 
+            this.lbHello.AutoSize = true;
+            this.lbHello.Font = new System.Drawing.Font("Segoe Print", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.ForeColor = System.Drawing.Color.Indigo;
+            this.lbHello.Location = new System.Drawing.Point(547, 262);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(366, 50);
+            this.lbHello.TabIndex = 7;
+            this.lbHello.Text = "Hello, Tên khách hàng !!";
             // 
             // BangDieuKhien
             // 
@@ -393,6 +405,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(2586, 1626);
             this.ControlBox = false;
+            this.Controls.Add(this.lbHello);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.PnMoving);
             this.Controls.Add(this.panel2);
@@ -410,6 +423,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -439,6 +453,7 @@
         private Guna.UI2.WinForms.Guna2Button btnXacNhanKH;
         private Guna.UI2.WinForms.Guna2Button btnChonVe;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label lbHello;
         // private KiemSoatUser.UserChiTietVeXe userCTVeXe1;
     }
 }

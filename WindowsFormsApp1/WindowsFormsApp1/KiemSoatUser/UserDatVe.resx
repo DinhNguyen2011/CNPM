@@ -127,7 +127,7 @@
   <data name="btnTang.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAANRJREFUaEPt1s0JwkAUBODVo1qbpdhDrMCD4MFaBMGGTAU6D3YgBERX9+etzAcD
+        DgAACw4BQL7hQQAAANRJREFUaEPt1s0JwkAUBODVo1qbpdhDrMCD4MFaBMGGTAU6D3YgBERX9+etzAcD
         JoKZSTwkiIiIiIj8pQWyi7HPXbHCR+QRc0aWSBfm5bsaYeVPCEtfY3hs37n9O83v/A3ZICvkEs9ZXD6J
         V+XJ9Yh35cnliE/Lk6sRqeXJxYhvy1PTEb+WpyYjcpWnqiNyl6cqI0qVp6IjSpenIiNqlaesI2qXp2wj
         Dgh/xN4o10gtdq3pW6x1STYiLcrTdMTdTqTaIgPSojzZtfeIdRERERERcSWEJ0tpdblQCbdWAAAAAElF
@@ -137,7 +137,7 @@
   <data name="btnGiam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAANlJREFUaEPt1s0JwlAcA/DqUXE1N9EhnMCD4MFdRHAiJ9BEDJSC6Kvv41/JDwJK
+        DgAACw4BQL7hQQAAANlJREFUaEPt1s0JwlAcA/DqUXE1N9EhnMCD4MFdRHAiJ9BEDJSC6Kvv41/JDwJK
         1ZfUSzszMzMzs5DWyA5ZPt+1wbPZgV2S3ZA7ckFajOCZPJsd2CXZHuGXW4zol2fYJdkMOSD6kSuyQkpb
         IGdE556QOTJK7RFZy0utEUXKS+kRRctLqRFVykvuEVXLS64RTcrLryOalpexI0KUl9QRocrLtyNClpdP
         I0KXl3cjJlFeOOKIqCyfKPtPlbzGz4Q2/CeU0Hd+aDhiUuWFI7bI5vXazMzMzOyvdN0Dgqx11LJl5tkA
@@ -147,7 +147,7 @@
   <data name="guna2Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAToAAABNCAYAAAA2EqiRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAEgpJREFUeF7tnXnUTfUax7ulgZLXFSIWqpdrKlMkolykpJRSIpo0kdQrQypRoizi
+        vgAADr4B6kKxwAAAEgpJREFUeF7tnXnUTfUax7ulgZLXFSIWqpdrKlMkolykpJRSIpo0kdQrQypRoizi
         ZsiQqes2KDJlupoHDZqUklRWUdFqRb2U0r7nu+/a7/qd53zP2b+z93HO+57z/PFZ613vfp7fc/b03Xv/
         fs/v+R1SWFjoKIqiZDMqdIqiZD0qdIqiZD0qdIqiZD0qdIqiZD0qdIqiZD0qdIqiZD0qdEmycMcO56lv
         vrFi8a5dtA1FUaL5759/0v+nChW6JJjw4ovOIYccYk3Z8uWdhdu307YURSl0lu/Z49w0frxT57TT6PZU

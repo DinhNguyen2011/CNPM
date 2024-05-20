@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.DAO;
+using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1
 {
@@ -42,7 +43,9 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    BangDieuKhien bangDieuKhien = new BangDieuKhien();
+                    DataRow row = DataProvider.Instance.ExcuteQuery("GETKHACHHANG @usenamer", new object[] { username }).Rows[0];
+                    KhachHang user = new KhachHang(row);  
+                    BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
                     this.Hide();
                     bangDieuKhien.ShowDialog();
                 }
