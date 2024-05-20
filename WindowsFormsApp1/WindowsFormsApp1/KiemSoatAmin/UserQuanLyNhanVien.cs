@@ -202,5 +202,19 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         #endregion
 
+        private void btnThemNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuaNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

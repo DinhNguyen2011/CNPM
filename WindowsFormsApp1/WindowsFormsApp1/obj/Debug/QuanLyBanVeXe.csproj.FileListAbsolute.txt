@@ -86,7 +86,6 @@ C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsAp
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien.resources
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe.resources
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe.resources
-C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserDatVe.resources
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserLichTrinh.resources
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserProfile.resources
 C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatUser.UserThanhToan.resources
