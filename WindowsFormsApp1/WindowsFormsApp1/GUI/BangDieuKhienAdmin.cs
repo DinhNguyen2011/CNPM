@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             userQuanLyNhanVien1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
+         //   userQuanLyVeXe1.Visible = false;
 
         }
 
@@ -42,6 +43,7 @@ namespace WindowsFormsApp1
             userQuanLyNhanVien1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
+          //  userQuanLyVeXe1.Visible = false;
             btnQLTuyenXe.PerformClick();
         }
 
@@ -54,6 +56,7 @@ namespace WindowsFormsApp1
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
             userQuanLyXe1.Visible = false;
+           // userQuanLyVeXe1.Visible = false;
         }
 
         private void btnLichTrinh_Click(object sender, EventArgs e)
@@ -65,6 +68,7 @@ namespace WindowsFormsApp1
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
+          //  userQuanLyVeXe1.Visible = false;
         }
 
         private void btnQLXe_Click(object sender, EventArgs e)
@@ -76,6 +80,7 @@ namespace WindowsFormsApp1
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
+          //  userQuanLyVeXe1.Visible = false;
         }
 
         private void userQuanLyXe1_Load(object sender, EventArgs e)
@@ -106,7 +111,19 @@ namespace WindowsFormsApp1
             userQuanLyNhanVien1.Visible = false;
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
+          //  userQuanLyVeXe1.Visible = false;
         }
 
+        private void btnQLVeXe_Click(object sender, EventArgs e)
+        {
+            PnMovingad.Left = btnQLVeXe.Left + 60;
+          //  userQuanLyVeXe1.Visible = true;
+          //  userQuanLyVeXe1.BringToFront();
+            userQuanLyChuyenXe1.Visible = false;
+            userQuanLyTuyenXe1.Visible = false;
+            userQuanLyNhanVien1.Visible = false;
+            userQuanLyKhachHang1.Visible = false;
+            userQuanLyXe1.Visible = false;
+        }
     }
 }

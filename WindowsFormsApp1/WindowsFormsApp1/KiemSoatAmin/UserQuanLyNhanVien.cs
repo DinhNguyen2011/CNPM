@@ -37,5 +37,15 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
 
         }
+
+        private void UserQuanLyNhanVien_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemNV_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

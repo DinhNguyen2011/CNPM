@@ -9,6 +9,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|c:\\\u0111\u1EA1i h\u1ECDc\\n\u0103m ba\\hkii\\\u0111\u1ED3 \u00E1n cnpm\\cnpm\\windowsformsapp1\\windowsformsapp1\\gui\\bangdieukhienadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhienadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|c:\\\u0111\u1EA1i h\u1ECDc\\n\u0103m ba\\hkii\\\u0111\u1ED3 \u00E1n cnpm\\cnpm\\windowsformsapp1\\windowsformsapp1\\kiemsoatamin\\userquanlyvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatamin\\userquanlyvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|c:\\\u0111\u1EA1i h\u1ECDc\\n\u0103m ba\\hkii\\\u0111\u1ED3 \u00E1n cnpm\\cnpm\\windowsformsapp1\\windowsformsapp1\\kiemsoatamin\\userquanlychuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatamin\\userquanlychuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|c:\\\u0111\u1EA1i h\u1ECDc\\n\u0103m ba\\hkii\\\u0111\u1ED3 \u00E1n cnpm\\cnpm\\windowsformsapp1\\windowsformsapp1\\kiemsoatamin\\userquanlyvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatamin\\userquanlyvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,9 +60,9 @@
               "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs",
               "ToolTip": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs",
               "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAASwGUAAAAMAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAkwHkAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T14:41:58.306Z",
+              "WhenOpened": "2024-05-19T19:27:16.281Z",
               "EditorCaption": ""
             },
             {
@@ -62,7 +74,44 @@
               "ToolTip": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T14:21:46.763Z",
+              "WhenOpened": "2024-05-19T19:27:13.525Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserQuanLyVeXe.cs",
+              "DocumentMoniker": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "ToolTip": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAArwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:11:18.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserQuanLyVeXe.cs [Design]",
+              "DocumentMoniker": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs",
+              "ToolTip": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyVeXe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T17:42:23.175Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserQuanLyChuyenXe.cs [Design]",
+              "DocumentMoniker": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyChuyenXe.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyChuyenXe.cs",
+              "ToolTip": "C:\\\u0110\u1EA1i h\u1ECDc\\N\u0103m ba\\HKII\\\u0110\u1ED3 \u00E1n CNPM\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyChuyenXe.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatAmin\\UserQuanLyChuyenXe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T16:09:56.136Z",
               "EditorCaption": " [Design]"
             }
           ]

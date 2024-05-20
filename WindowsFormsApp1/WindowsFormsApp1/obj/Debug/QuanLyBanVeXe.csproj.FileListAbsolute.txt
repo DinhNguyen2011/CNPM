@@ -131,3 +131,4 @@ E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\dje-NE\WindowsFormsApp1.reso
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QuanLyBanVeXe.csproj.CopyComplete
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 E:\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Đại học\Năm ba\HKII\Đồ án CNPM\CNPM\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.KiemSoatAmin.UserQuanLyVeXe.resources
