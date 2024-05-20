@@ -17,11 +17,13 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private LichTrinh ltSelected;
         private List<String> dsGhe;
-        private int num = 1;
+        private int slVe = 1;
         private int slVeDaChon = 0;
 
         public LichTrinh LtSelected {set => ltSelected = value; }
         public List<string> DanhSachGhe { get => dsGhe;}
+        public int SlVeDaChon { get => slVeDaChon;}
+        public int SlVe { get => slVe;}
 
         public btnInc()
         {
@@ -37,7 +39,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             {
                 txtTuyenXe.Text = ltSelected.DiemDi + " - " + ltSelected.DiemDen;
                 txtGioDi.Text = ltSelected.Giodi;
-                txtTongTien.Text = (num * ltSelected.Giatien).ToString()+ " vnđ";
+                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString()+ " vnđ";
             }
         }
         private void txtSoVe_KeyPress(object sender, KeyPressEventArgs e)
@@ -52,7 +54,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (txtSoVe.Text == "")
             {
-                num = 1;
+                slVe = 1;
                 txtTongTien.Text = ltSelected.Giatien.ToString() + " vnđ";
                 return;
             } 
@@ -61,38 +63,38 @@ namespace WindowsFormsApp1.KiemSoatUser
             if (sl < slVeDaChon)
             {
                 MessageBox.Show("Vui lòng hủy bớt ghế đã chọn", "Thông báo");
-                num = slVeDaChon;
-                txtSoVe.Text = num + "";
-                txtTongTien.Text = (num * ltSelected.Giatien).ToString() + " vnđ";
+                slVe = slVeDaChon;
+                txtSoVe.Text = slVe + "";
+                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
                 return;
             }
             if (sl > 24) sl = 24;
             if (sl == 0) sl = 1;
-            num = sl;
+            slVe = sl;
             txtSoVe.Text = sl + "";
             if (ltSelected != null) 
-                txtTongTien.Text = (num * ltSelected.Giatien).ToString() + " vnđ";
+                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            if (num < 24)
-                num++;
-            txtSoVe.Text = num + "";
-            txtTongTien.Text = (num *ltSelected.Giatien).ToString() + " vnđ";
+            if (slVe < 24)
+                slVe++;
+            txtSoVe.Text = slVe + "";
+            txtTongTien.Text = (slVe *ltSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            if (num == 1) return;
-            if (slVeDaChon == num )
+            if (slVe == 1) return;
+            if (slVeDaChon == slVe )
             {
                 MessageBox.Show("Vui lòng hủy bớt vé đã chọn", "Thông báo");
                 return;
             }
-            num--;
-            txtTongTien.Text = (num * ltSelected.Giatien).ToString() + " vnđ";
-            txtSoVe.Text = num + "";
+            slVe--;
+            txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
+            txtSoVe.Text = slVe + "";
         }
 
         private void txtSoVe_Leave(object sender, EventArgs e)
@@ -104,7 +106,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA1.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A1");
                 btnA1.BackColor = Color.Crimson;
@@ -123,7 +125,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             
             if (btnB1.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B1");
                 btnB1.BackColor = Color.Crimson;
@@ -140,7 +142,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC1.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C1");
                 btnC1.BackColor = Color.Crimson;
@@ -157,7 +159,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA2.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A2");
                 btnA2.BackColor = Color.Crimson;
@@ -174,7 +176,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnB2.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B2");
                 btnB2.BackColor = Color.Crimson;
@@ -191,7 +193,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC2.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C2");
                 btnC2.BackColor = Color.Crimson;
@@ -208,7 +210,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA3.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A3");
                 btnA3.BackColor = Color.Crimson;
@@ -225,7 +227,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnB3.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B3");
                 btnB3.BackColor = Color.Crimson;
@@ -242,7 +244,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC3.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C3");
                 btnC3.BackColor = Color.Crimson;
@@ -259,7 +261,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA4.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A4");
                 btnA4.BackColor = Color.Crimson;
@@ -276,7 +278,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnB4.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B4");
                 btnB4.BackColor = Color.Crimson;
@@ -293,7 +295,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC4.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C4");
                 btnC4.BackColor = Color.Crimson;
@@ -310,7 +312,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA5.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A5");
                 btnA5.BackColor = Color.Crimson;
@@ -327,7 +329,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnB5.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B5");
                 btnB5.BackColor = Color.Crimson;
@@ -344,7 +346,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC5.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C5");
                 btnC5.BackColor = Color.Crimson;
@@ -361,7 +363,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnA6.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("A6");
                 btnA6.BackColor = Color.Crimson;
@@ -378,7 +380,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnB6.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("B6");
                 btnB6.BackColor = Color.Crimson;
@@ -395,7 +397,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnC6.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("C6");
                 btnC6.BackColor = Color.Crimson;
@@ -412,7 +414,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD1.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D1");
                 btnD1.BackColor = Color.Crimson;
@@ -429,7 +431,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD3.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D3");
                 btnD3.BackColor = Color.Crimson;
@@ -446,7 +448,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD5.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D5");
                 btnD5.BackColor = Color.Crimson;
@@ -463,7 +465,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD2.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D2");
                 btnD2.BackColor = Color.Crimson;
@@ -480,7 +482,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD4.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D4");
                 btnD4.BackColor = Color.Crimson;
@@ -497,7 +499,7 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (btnD6.BackColor == Color.Cyan)
             {
-                if (slVeDaChon == num) return;
+                if (slVeDaChon == slVe) return;
                 slVeDaChon++;
                 dsGhe.Add("D6");
                 btnD6.BackColor = Color.Crimson;

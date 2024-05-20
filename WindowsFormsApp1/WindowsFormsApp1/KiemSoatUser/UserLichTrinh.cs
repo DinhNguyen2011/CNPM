@@ -46,14 +46,14 @@ namespace WindowsFormsApp1.KiemSoatUser
             {
                 if (diemden != "")
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && lt.Giodi == ngaydi.ToString());
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.DiemDen == diemden && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
                     if (dsTim.Count == 0)
                         MessageBox.Show(("Không có tuyến " + diemdi + " - " + diemden + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year), "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;
                 } 
                 else
                 {
-                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && lt.Giodi == ngaydi.ToString());
+                    List<LichTrinh> dsTim = lichTrinhList.FindAll(lt => lt.DiemDi == diemdi && Convert.ToDateTime(lt.Giodi).Date == ngaydi.Date);
                     if (dsTim.Count == 0)
                         MessageBox.Show("Không có tuyến đi từ " + diemdi + " vào ngày " + ngaydi.Day + "/" + ngaydi.Month + "/" + ngaydi.Year, "Thông báo");
                     else dgvLichTrinh.DataSource = dsTim;

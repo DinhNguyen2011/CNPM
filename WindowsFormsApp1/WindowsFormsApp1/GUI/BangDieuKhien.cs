@@ -15,6 +15,9 @@ namespace WindowsFormsApp1
     {
         private int index = 0;
         private KhachHang user;
+        private int slVe = 0;
+        private List<String> dsGhe = new List<string>();
+        private LichTrinh chuyendi = new LichTrinh();
         public BangDieuKhien(KhachHang user)
         {
             this.user = user;
@@ -75,9 +78,10 @@ namespace WindowsFormsApp1
         }
      
 
-        private void nhapThongTinKhachHang()
+        private void nhapThongTinKhachHang(KhachHang user)
         {
             PnMoving.Left = btnThongTinKH.Left + 55;
+            if (user != null) userProfile1.setValue(user);
             userProfile1.Visible = true;
             userProfile1.BringToFront();
             btnXacNhanKH.BringToFront();
@@ -136,7 +140,7 @@ namespace WindowsFormsApp1
 
         private void btnThongTinKH_Click(object sender, EventArgs e)
         {
-            if (index > 1) nhapThongTinKhachHang();
+            if (index > 1) nhapThongTinKhachHang(null);
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -155,7 +159,10 @@ namespace WindowsFormsApp1
             {
                 index++;
                 if (MessageBox.Show("Chuyến " + selected.DiemDi + " - " + selected.DiemDen + " vào lúc " + selected.Giodi, "Xác nhận lựa chọn", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    chuyendi = selected;
                     chonThongTinVe(selected);
+                }    
             }
             else
                 MessageBox.Show("Vui lòng chọn chuyến đi !!", "Thông báo");
@@ -164,14 +171,28 @@ namespace WindowsFormsApp1
         }
         private void btnXacNhanVe_Click(object sender, EventArgs e)
         {
-            index++;
-            nhapThongTinKhachHang();
+            int soVe = userDatVe1.SlVe;
+            int soVeDaChon = userDatVe1.SlVeDaChon;
+            if (soVe == soVeDaChon)
+            {
+                index++;
+                slVe = soVe;
+                dsGhe = userDatVe1.DanhSachGhe;
+                nhapThongTinKhachHang(user);
+            }
+            else MessageBox.Show("Vui lòng chọn thêm " + (soVe-soVeDaChon) + " ghế !!", "Thông báo");
+                
         }
 
         private void btnXacNhanKH_Click(object sender, EventArgs e)
         {
-            index++;
-            thanhToan();
+            KhachHang thongTinKhachHang = userProfile1.ThongTinChuVe;
+            if (thongTinKhachHang.Sdt.Length != 10 && thongTinKhachHang.Email != "")
+            {
+                index++;
+                thanhToan();
+            }
+            else MessageBox.Show("Vui nhập nhập đầy đủ thông tin liên lạc !!", "Thông báo");
         }
 
         
