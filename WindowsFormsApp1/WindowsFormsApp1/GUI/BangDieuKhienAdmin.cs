@@ -128,8 +128,7 @@ namespace WindowsFormsApp1
             userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
         }
+
         #endregion
-
-
     }
 }

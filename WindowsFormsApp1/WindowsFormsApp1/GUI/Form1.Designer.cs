@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.guna2Button5);
@@ -271,7 +272,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

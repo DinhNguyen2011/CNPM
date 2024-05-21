@@ -41,13 +41,6 @@
             this.btnQLTuyenXe = new Guna.UI2.WinForms.Guna2Button();
             this.PnMovingad = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userQuanLyVeXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyVeXe();
-            this.userQuanLyNhanVien1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien();
-            this.userQuanLyKhachHang1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang();
-            this.userQuanLyTuyenXe2 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
-            this.userQuanLyChuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe();
-            this.userQuanLyTuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
-            this.userQuanLyXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe();
             this.guna2QLadmin = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLKH = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLNV = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -56,6 +49,13 @@
             this.guna2QLChuyenXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLTuyenxe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2QLVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userQuanLyChuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyChuyenXe();
+            this.userQuanLyTuyenXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
+            this.userQuanLyXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyXe();
+            this.userQuanLyVeXe1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyVeXe();
+            this.userQuanLyNhanVien1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyNhanVien();
+            this.userQuanLyKhachHang1 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyKhachHang();
+            this.userQuanLyTuyenXe2 = new WindowsFormsApp1.KiemSoatAmin.UserQuanLyTuyenXe();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
             this.btnClose.Location = new System.Drawing.Point(1873, 9);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(59, 46);
             this.btnClose.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
             this.btnMiniSize.Location = new System.Drawing.Point(1808, 9);
-            this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMiniSize.Name = "btnMiniSize";
             this.btnMiniSize.Size = new System.Drawing.Size(59, 46);
             this.btnMiniSize.TabIndex = 2;
@@ -100,6 +100,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnQLVeXe);
             this.panel1.Controls.Add(this.btnQLCX);
@@ -108,13 +109,14 @@
             this.panel1.Controls.Add(this.btnQLNV);
             this.panel1.Controls.Add(this.btnQLTuyenXe);
             this.panel1.Location = new System.Drawing.Point(69, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1693, 159);
             this.panel1.TabIndex = 3;
             // 
             // btnQLVeXe
             // 
+            this.btnQLVeXe.Animated = true;
             this.btnQLVeXe.BorderRadius = 18;
             this.btnQLVeXe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLVeXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -125,7 +127,7 @@
             this.btnQLVeXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLVeXe.ForeColor = System.Drawing.Color.Black;
             this.btnQLVeXe.Location = new System.Drawing.Point(1421, 18);
-            this.btnQLVeXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLVeXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLVeXe.Name = "btnQLVeXe";
             this.btnQLVeXe.Size = new System.Drawing.Size(227, 111);
             this.btnQLVeXe.TabIndex = 6;
@@ -134,6 +136,7 @@
             // 
             // btnQLCX
             // 
+            this.btnQLCX.Animated = true;
             this.btnQLCX.BorderRadius = 18;
             this.btnQLCX.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLCX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -144,7 +147,7 @@
             this.btnQLCX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLCX.ForeColor = System.Drawing.Color.Black;
             this.btnQLCX.Location = new System.Drawing.Point(323, 18);
-            this.btnQLCX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLCX.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLCX.Name = "btnQLCX";
             this.btnQLCX.Size = new System.Drawing.Size(227, 111);
             this.btnQLCX.TabIndex = 5;
@@ -153,6 +156,7 @@
             // 
             // btnQLKH
             // 
+            this.btnQLKH.Animated = true;
             this.btnQLKH.BorderRadius = 18;
             this.btnQLKH.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLKH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -163,7 +167,7 @@
             this.btnQLKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLKH.ForeColor = System.Drawing.Color.Black;
             this.btnQLKH.Location = new System.Drawing.Point(597, 18);
-            this.btnQLKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLKH.Name = "btnQLKH";
             this.btnQLKH.Size = new System.Drawing.Size(227, 111);
             this.btnQLKH.TabIndex = 4;
@@ -172,6 +176,7 @@
             // 
             // btnQLXe
             // 
+            this.btnQLXe.Animated = true;
             this.btnQLXe.BorderRadius = 18;
             this.btnQLXe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLXe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -182,7 +187,7 @@
             this.btnQLXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLXe.ForeColor = System.Drawing.Color.Black;
             this.btnQLXe.Location = new System.Drawing.Point(876, 18);
-            this.btnQLXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLXe.Name = "btnQLXe";
             this.btnQLXe.Size = new System.Drawing.Size(227, 111);
             this.btnQLXe.TabIndex = 2;
@@ -191,6 +196,7 @@
             // 
             // btnQLNV
             // 
+            this.btnQLNV.Animated = true;
             this.btnQLNV.BorderRadius = 18;
             this.btnQLNV.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -201,7 +207,7 @@
             this.btnQLNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNV.ForeColor = System.Drawing.Color.Black;
             this.btnQLNV.Location = new System.Drawing.Point(1151, 18);
-            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(227, 111);
             this.btnQLNV.TabIndex = 1;
@@ -210,6 +216,7 @@
             // 
             // btnQLTuyenXe
             // 
+            this.btnQLTuyenXe.Animated = true;
             this.btnQLTuyenXe.BorderRadius = 18;
             this.btnQLTuyenXe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnQLTuyenXe.CustomBorderColor = System.Drawing.Color.White;
@@ -222,7 +229,7 @@
             this.btnQLTuyenXe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLTuyenXe.ForeColor = System.Drawing.Color.Black;
             this.btnQLTuyenXe.Location = new System.Drawing.Point(51, 18);
-            this.btnQLTuyenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQLTuyenXe.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLTuyenXe.Name = "btnQLTuyenXe";
             this.btnQLTuyenXe.Size = new System.Drawing.Size(227, 111);
             this.btnQLTuyenXe.TabIndex = 0;
@@ -233,7 +240,7 @@
             // 
             this.PnMovingad.BackColor = System.Drawing.Color.White;
             this.PnMovingad.Location = new System.Drawing.Point(136, 170);
-            this.PnMovingad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PnMovingad.Margin = new System.Windows.Forms.Padding(4);
             this.PnMovingad.Name = "PnMovingad";
             this.PnMovingad.Size = new System.Drawing.Size(200, 9);
             this.PnMovingad.TabIndex = 6;
@@ -248,75 +255,10 @@
             this.panel2.Controls.Add(this.userQuanLyKhachHang1);
             this.panel2.Controls.Add(this.userQuanLyTuyenXe2);
             this.panel2.Location = new System.Drawing.Point(69, 192);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1924, 774);
             this.panel2.TabIndex = 7;
-            // 
-            // userQuanLyVeXe1
-            // 
-            this.userQuanLyVeXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyVeXe1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyVeXe1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userQuanLyVeXe1.Name = "userQuanLyVeXe1";
-            this.userQuanLyVeXe1.Size = new System.Drawing.Size(1823, 738);
-            this.userQuanLyVeXe1.TabIndex = 7;
-            // 
-            // userQuanLyNhanVien1
-            // 
-            this.userQuanLyNhanVien1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyNhanVien1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyNhanVien1.Name = "userQuanLyNhanVien1";
-            this.userQuanLyNhanVien1.Size = new System.Drawing.Size(1823, 740);
-            this.userQuanLyNhanVien1.TabIndex = 2;
-            // 
-            // userQuanLyKhachHang1
-            // 
-            this.userQuanLyKhachHang1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyKhachHang1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyKhachHang1.Name = "userQuanLyKhachHang1";
-            this.userQuanLyKhachHang1.Size = new System.Drawing.Size(1823, 660);
-            this.userQuanLyKhachHang1.TabIndex = 1;
-            // 
-            // userQuanLyTuyenXe2
-            // 
-            this.userQuanLyTuyenXe2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyTuyenXe2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.userQuanLyTuyenXe2.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyTuyenXe2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyTuyenXe2.Name = "userQuanLyTuyenXe2";
-            this.userQuanLyTuyenXe2.Size = new System.Drawing.Size(1823, 612);
-            this.userQuanLyTuyenXe2.TabIndex = 5;
-            // 
-            // userQuanLyChuyenXe1
-            // 
-            this.userQuanLyChuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyChuyenXe1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyChuyenXe1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyChuyenXe1.Name = "userQuanLyChuyenXe1";
-            this.userQuanLyChuyenXe1.Size = new System.Drawing.Size(1823, 670);
-            this.userQuanLyChuyenXe1.TabIndex = 6;
-            // 
-            // userQuanLyTuyenXe1
-            // 
-            this.userQuanLyTuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
-            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1823, 612);
-            this.userQuanLyTuyenXe1.TabIndex = 4;
-            // 
-            // userQuanLyXe1
-            // 
-            this.userQuanLyXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.userQuanLyXe1.Location = new System.Drawing.Point(-1, 17);
-            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.userQuanLyXe1.Name = "userQuanLyXe1";
-            this.userQuanLyXe1.Size = new System.Drawing.Size(1823, 612);
-            this.userQuanLyXe1.TabIndex = 3;
-            this.userQuanLyXe1.Load += new System.EventHandler(this.userQuanLyXe1_Load);
             // 
             // guna2QLadmin
             // 
@@ -347,7 +289,7 @@
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLogOut.Location = new System.Drawing.Point(1873, 62);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(59, 46);
             this.btnLogOut.TabIndex = 8;
@@ -365,6 +307,71 @@
             // 
             this.guna2QLVeXe.TargetControl = this;
             // 
+            // userQuanLyChuyenXe1
+            // 
+            this.userQuanLyChuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyChuyenXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyChuyenXe1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyChuyenXe1.Name = "userQuanLyChuyenXe1";
+            this.userQuanLyChuyenXe1.Size = new System.Drawing.Size(1823, 670);
+            this.userQuanLyChuyenXe1.TabIndex = 6;
+            // 
+            // userQuanLyTuyenXe1
+            // 
+            this.userQuanLyTuyenXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyTuyenXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyTuyenXe1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyTuyenXe1.Name = "userQuanLyTuyenXe1";
+            this.userQuanLyTuyenXe1.Size = new System.Drawing.Size(1823, 612);
+            this.userQuanLyTuyenXe1.TabIndex = 4;
+            // 
+            // userQuanLyXe1
+            // 
+            this.userQuanLyXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyXe1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyXe1.Name = "userQuanLyXe1";
+            this.userQuanLyXe1.Size = new System.Drawing.Size(1823, 612);
+            this.userQuanLyXe1.TabIndex = 3;
+            this.userQuanLyXe1.Load += new System.EventHandler(this.userQuanLyXe1_Load);
+            // 
+            // userQuanLyVeXe1
+            // 
+            this.userQuanLyVeXe1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyVeXe1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyVeXe1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userQuanLyVeXe1.Name = "userQuanLyVeXe1";
+            this.userQuanLyVeXe1.Size = new System.Drawing.Size(1823, 738);
+            this.userQuanLyVeXe1.TabIndex = 7;
+            // 
+            // userQuanLyNhanVien1
+            // 
+            this.userQuanLyNhanVien1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyNhanVien1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyNhanVien1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyNhanVien1.Name = "userQuanLyNhanVien1";
+            this.userQuanLyNhanVien1.Size = new System.Drawing.Size(1823, 740);
+            this.userQuanLyNhanVien1.TabIndex = 2;
+            // 
+            // userQuanLyKhachHang1
+            // 
+            this.userQuanLyKhachHang1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyKhachHang1.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyKhachHang1.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyKhachHang1.Name = "userQuanLyKhachHang1";
+            this.userQuanLyKhachHang1.Size = new System.Drawing.Size(1823, 660);
+            this.userQuanLyKhachHang1.TabIndex = 1;
+            // 
+            // userQuanLyTuyenXe2
+            // 
+            this.userQuanLyTuyenXe2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.userQuanLyTuyenXe2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.userQuanLyTuyenXe2.Location = new System.Drawing.Point(-1, 17);
+            this.userQuanLyTuyenXe2.Margin = new System.Windows.Forms.Padding(5);
+            this.userQuanLyTuyenXe2.Name = "userQuanLyTuyenXe2";
+            this.userQuanLyTuyenXe2.Size = new System.Drawing.Size(1823, 612);
+            this.userQuanLyTuyenXe2.TabIndex = 5;
+            // 
             // BangDieuKhienAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -379,7 +386,7 @@
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BangDieuKhienAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý bán vé xe - Admin";

@@ -75,7 +75,7 @@
             this.guna2Panel1.Controls.Add(this.txtNhapLaiMK);
             this.guna2Panel1.Controls.Add(this.txtTenDK);
             this.guna2Panel1.Location = new System.Drawing.Point(428, 276);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1360, 880);
             this.guna2Panel1.TabIndex = 1;
@@ -222,7 +222,7 @@
             this.dtNS.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtNS.Location = new System.Drawing.Point(888, 631);
-            this.dtNS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtNS.Margin = new System.Windows.Forms.Padding(4);
             this.dtNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNS.Name = "dtNS";
@@ -295,7 +295,7 @@
             this.btnTrove.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrove.ForeColor = System.Drawing.Color.Black;
             this.btnTrove.Location = new System.Drawing.Point(1079, 754);
-            this.btnTrove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTrove.Margin = new System.Windows.Forms.Padding(4);
             this.btnTrove.Name = "btnTrove";
             this.btnTrove.Size = new System.Drawing.Size(226, 44);
             this.btnTrove.TabIndex = 9;
@@ -338,7 +338,7 @@
             this.btnDangKy.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btnDangKy.ForeColor = System.Drawing.Color.White;
             this.btnDangKy.Location = new System.Drawing.Point(653, 743);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(340, 55);
             this.btnDangKy.TabIndex = 8;
@@ -404,7 +404,8 @@
             this.ClientSize = new System.Drawing.Size(1726, 882);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DangKiTaiKhoang";
             this.Text = "DangKiTaiKhoang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

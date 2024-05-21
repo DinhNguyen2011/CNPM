@@ -57,6 +57,11 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             string diemdi = chuanHoaChuoi(txtdiemdi.Text);
             string diemden = chuanHoaChuoi(txtdiemden.Text);
+            if (diemdi == "" || diemden == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin!!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             TuyenXe tx = new TuyenXe(diemdi, diemden);
             if (TuyenXeDAO.Instance.themTuyenXe(tx) > 0)
             {
