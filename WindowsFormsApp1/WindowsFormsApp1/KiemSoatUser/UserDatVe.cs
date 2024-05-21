@@ -17,13 +17,15 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private LichTrinh lichTrinhSelected;
         private List<String> dsGhe;
+        private int max = 0;
         private int slVe = 1;
         private int slVeDaChon = 0;
 
         public LichTrinh LtSelected {set => lichTrinhSelected = value; }
-        public List<string> DanhSachGhe { get => dsGhe;}
+        public List<string> DanhSachGhe { get => dsGhe; set => dsGhe = value; }
         public int SlVeDaChon { get => slVeDaChon;}
         public int SlVe { get => slVe;}
+        public int Max {set => max = value; }
 
         public btnTam()
         {
@@ -41,6 +43,139 @@ namespace WindowsFormsApp1.KiemSoatUser
                 txtGioDi.Text = lichTrinhSelected.Giodi;
                 txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString()+ " vnđ";
             }
+
+            //enable ghế
+            foreach (string s in dsGhe)
+            {
+                if (s == "A1")
+                {
+                    btnA1.Enabled = false;
+                    btnA1.BackColor = Color.WhiteSmoke;
+                } 
+                    
+                else if (s == "A2")
+                {
+                    btnA2.Enabled = false;
+                    btnA2.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "A3")
+                {
+                    btnA3.Enabled = false;
+                    btnA3.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "A4")
+                {
+                    btnA4.Enabled = false;
+                    btnA4.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "A5")
+                {
+                    btnA5.Enabled = false;
+                    btnA5.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "A6")
+                {
+                    btnA6.Enabled = false;
+                    btnA6.BackColor = Color.WhiteSmoke;
+                }
+
+                else if (s == "B1")
+                {
+                    btnB1.Enabled = false;
+                    btnB1.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "B2")
+                {
+                    btnB2.Enabled = false;
+                    btnB2.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "B3")
+                {
+                    btnB3.Enabled = false;
+                    btnB3.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "B4")
+                {
+                    btnB4.Enabled = false;
+                    btnB4.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "B5")
+                {
+                    btnB5.Enabled = false;
+                    btnB5.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "B6")
+                {
+                    btnB6.Enabled = false;
+                    btnB6.BackColor = Color.WhiteSmoke;
+                }
+
+                else if (s == "C1")
+                {
+                    btnC1.Enabled = false;
+                    btnC1.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "C2")
+                {
+                    btnC2.Enabled = false;
+                    btnC2.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "C3")
+                {
+                    btnC3.Enabled = false;
+                    btnC3.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "C4")
+                {
+                    btnC4.Enabled = false;
+                    btnC4.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "C5")
+                {
+                    btnC5.Enabled = false;
+                    btnC5.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "C6")
+                {
+                    btnC6.Enabled = false;
+                    btnC6.BackColor = Color.WhiteSmoke;
+                }
+
+                else if (s == "D1")
+                {
+                    btnD1.Enabled = false;
+                    btnD1.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "D2")
+                {
+                    btnD2.Enabled = false;
+                    btnD2.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "D3")
+                {
+                    btnD3.Enabled = false;
+                    btnD3.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "D4")
+                {
+                    btnD4.Enabled = false;
+                    btnD4.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "D5")
+                {
+                    btnD5.Enabled = false;
+                    btnD5.BackColor = Color.WhiteSmoke;
+                }
+                else if (s == "D6")
+                {
+                    btnD6.Enabled = false;
+                    btnD6.BackColor = Color.WhiteSmoke;
+                }
+
+            }
+
+
+            dsGhe = new List<String>();
         }
         private void txtSoVe_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -60,7 +195,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             } 
                 
             int sl = Convert.ToInt32(txtSoVe.Text);
-            if (sl > 24) sl = 24;
+            if (sl > max) sl = max;
             if (sl == 0) sl = 1;
             slVe = sl;
             txtSoVe.Text = sl + "";
@@ -70,7 +205,7 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            if (slVe < 24)
+            if (slVe < max)
                 slVe++;
             txtSoVe.Text = slVe + "";
             txtTongTien.Text = (slVe *lichTrinhSelected.Giatien).ToString() + " vnđ";
@@ -108,7 +243,7 @@ namespace WindowsFormsApp1.KiemSoatUser
                 txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
                 return;
             }
-            if (sl > 24) sl = 24;
+            if (sl > max) sl = max;
             if (sl == 0) sl = 1;
             slVe = sl;
             txtSoVe.Text = sl + "";

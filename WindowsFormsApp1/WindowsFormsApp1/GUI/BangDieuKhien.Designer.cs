@@ -41,6 +41,7 @@
             this.btnChonChuyen = new Guna.UI2.WinForms.Guna2Button();
             this.PnMoving = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnThanhToan2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnXacNhanKH = new Guna.UI2.WinForms.Guna2Button();
             this.btnXacNhanVe = new Guna.UI2.WinForms.Guna2Button();
             this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
@@ -55,7 +56,6 @@
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lbHello = new System.Windows.Forms.Label();
-            this.btnThanhToan2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -237,7 +237,7 @@
             // PnMoving
             // 
             this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.PnMoving.Location = new System.Drawing.Point(486, 479);
+            this.PnMoving.Location = new System.Drawing.Point(592, 456);
             this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PnMoving.Name = "PnMoving";
             this.PnMoving.Size = new System.Drawing.Size(225, 11);
@@ -261,6 +261,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1658, 869);
             this.panel2.TabIndex = 3;
+            // 
+            // btnThanhToan2
+            // 
+            this.btnThanhToan2.BorderRadius = 18;
+            this.btnThanhToan2.BorderThickness = 2;
+            this.btnThanhToan2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThanhToan2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThanhToan2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThanhToan2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThanhToan2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan2.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan2.Location = new System.Drawing.Point(1143, 762);
+            this.btnThanhToan2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan2.Name = "btnThanhToan2";
+            this.btnThanhToan2.Size = new System.Drawing.Size(270, 69);
+            this.btnThanhToan2.TabIndex = 7;
+            this.btnThanhToan2.Text = "Thanh toán";
+            this.btnThanhToan2.Click += new System.EventHandler(this.btnThanhToan2_Click);
             // 
             // btnXacNhanKH
             // 
@@ -398,26 +418,6 @@
             this.lbHello.Size = new System.Drawing.Size(366, 50);
             this.lbHello.TabIndex = 7;
             this.lbHello.Text = "Hello, Tên khách hàng !!";
-            // 
-            // btnThanhToan2
-            // 
-            this.btnThanhToan2.BorderRadius = 18;
-            this.btnThanhToan2.BorderThickness = 2;
-            this.btnThanhToan2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnThanhToan2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThanhToan2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThanhToan2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThanhToan2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThanhToan2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnThanhToan2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan2.ForeColor = System.Drawing.Color.Black;
-            this.btnThanhToan2.Location = new System.Drawing.Point(1143, 762);
-            this.btnThanhToan2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnThanhToan2.Name = "btnThanhToan2";
-            this.btnThanhToan2.Size = new System.Drawing.Size(270, 69);
-            this.btnThanhToan2.TabIndex = 7;
-            this.btnThanhToan2.Text = "Thanh toán";
-            this.btnThanhToan2.Click += new System.EventHandler(this.btnThanhToan2_Click);
             // 
             // BangDieuKhien
             // 

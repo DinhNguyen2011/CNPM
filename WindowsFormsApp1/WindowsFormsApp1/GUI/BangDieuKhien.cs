@@ -17,14 +17,23 @@ namespace WindowsFormsApp1
     {
         private int index = 0;
         private int tabIndex = 0;
+        private KhachHang thongTinChuVe;
         private KhachHang user;
         private string ghiChu = "";
         private int slVe = 0;
         private List<String> dsGhe = new List<string>();
         private LichTrinh chuyendi = new LichTrinh();
-        public BangDieuKhien(KhachHang user)
+        public BangDieuKhien(KhachHang data)
         {
-            this.user = user;
+            this.user = data;
+            thongTinChuVe= new KhachHang();
+            thongTinChuVe.Makh=data.Makh;   
+            thongTinChuVe.Diachi=data.Diachi;
+            thongTinChuVe.Ngaysinh=data.Ngaysinh;
+            thongTinChuVe.Email=data.Email;
+            thongTinChuVe.Sdt=data.Sdt;
+            thongTinChuVe.Tenkh=data.Tenkh;
+            thongTinChuVe.Gioitinh=data.Gioitinh;
             InitializeComponent();
         }
 
@@ -42,7 +51,7 @@ namespace WindowsFormsApp1
             userLichTrinh1.Visible = false;
             userThanhToan1.Visible = false;
             userChiTietVeXe1.Visible = false;
-            lbHello.Text = "Hello, " + user.Tenkh + " !!";
+            lbHello.Text = "Hello, " + thongTinChuVe.Tenkh + " !!";
             chonLichTrinh();
         }
 
@@ -71,10 +80,29 @@ namespace WindowsFormsApp1
 
         private void chonThongTinVe(LichTrinh selected)
         {
+            
+            if (selected != null)
+            {
+                userDatVe1.LtSelected = selected;
+                List <String> danhSachGheDaChon = new List<String>();
+                DataProvider dtp = new DataProvider();
+                DataTable dt = new DataTable();
+                string query = "DSGHEDACHON @machuyen";
+                dt = dtp.ExcuteQuery(query, new object[] { selected.Ma });
+                foreach (DataRow row in dt.Rows)
+                    danhSachGheDaChon.Add(row[0].ToString().Trim());
+                if (danhSachGheDaChon.Count == 24)
+                {
+                    MessageBox.Show("Chuyến " + selected.DiemDi + " - " + selected.DiemDen + " vào lúc " + selected.Giodi + " đã hết vé, vui lòng chọn lại !!", "Thông báo");
+                    selected = null;
+                    return;
+                }    
+                userDatVe1.Max = 24- danhSachGheDaChon.Count;
+                userDatVe1.DanhSachGhe = danhSachGheDaChon;
+            }
             tabIndex = 1;
-            index = tabIndex ;
+            index = tabIndex;
             PnMoving.Left = btnChonChuyen.Left + 50;
-            if (selected != null ) userDatVe1.LtSelected = selected;
             userDatVe1.setValue();
             userDatVe1.Visible = true;
             userDatVe1.BringToFront();
@@ -116,7 +144,7 @@ namespace WindowsFormsApp1
             tabIndex = 3;
             index = tabIndex;
             PnMoving.Left = btnThanhToan.Left + 60;
-            if (check) userThanhToan1.setValue(user.Tenkh, dsGhe, chuyendi.DiemDi + " - " + chuyendi.DiemDen + " + " + chuyendi.Giodi);
+            if (check) userThanhToan1.setValue(thongTinChuVe.Tenkh, dsGhe, chuyendi.DiemDi + " - " + chuyendi.DiemDen + " + " + chuyendi.Giodi);
             userThanhToan1.Visible = true;
             userThanhToan1.BringToFront();
             btnThanhToan2.BringToFront();
@@ -156,7 +184,7 @@ namespace WindowsFormsApp1
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            if (tabIndex > 0)
+            if (tabIndex > 0 && tabIndex !=4)
             {
                 if (MessageBox.Show("Bạn sẽ phải bắt đầu lại từ bước này?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) != DialogResult.Yes)
                     return;
@@ -203,7 +231,9 @@ namespace WindowsFormsApp1
         }
         private void btnChonChuyen_Click(object sender, EventArgs e)
         {
+            
             LichTrinh selected = userLichTrinh1.Selected;
+            
             if (selected != null)
             {
                 if (MessageBox.Show("Chuyến " + selected.DiemDi + " - " + selected.DiemDen + " vào lúc " + selected.Giodi, "Xác nhận lựa chọn", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -226,7 +256,7 @@ namespace WindowsFormsApp1
                 slVe = soVe;
                 dsGhe = userDatVe1.DanhSachGhe;
                 dsGhe.Sort();
-                nhapThongTinKhachHang(user);
+                nhapThongTinKhachHang(thongTinChuVe);
             }
             else MessageBox.Show("Vui lòng chọn thêm " + (soVe-soVeDaChon) + " ghế !!", "Thông báo");
                 
@@ -235,6 +265,7 @@ namespace WindowsFormsApp1
         private void btnXacNhanKH_Click(object sender, EventArgs e)
         {
             KhachHang thongTinKhachHang = userProfile1.ThongTinChuVe;
+            ghiChu = userProfile1.GhiChu;
             if (chuanHoaSDT(thongTinKhachHang.Sdt)&&chuanHoaEmail(thongTinKhachHang.Email))
             {
                 thanhToan(true);
@@ -249,10 +280,13 @@ namespace WindowsFormsApp1
             foreach (string ghe in dsGhe)
             {
                 string query = "THEMVE @tenve , @ghichu , @machuyen , @makh , @ghe  , @trangthai ";
-                dtp.ExcuteQuery(query, new object[] { tenve, ghiChu, chuyendi.Ma, user.Makh, ghe, "Đang xác nhận" });
+                dtp.ExcuteQuery(query, new object[] { tenve, ghiChu, chuyendi.Ma, thongTinChuVe.Makh, ghe, "Đã thanh toán" });
             }
-            MessageBox.Show("Đã thêm vé thành công, đang chờ xác nhận", "Thông báo");
-
+            MessageBox.Show("Đã thêm vé thành công !!", "Thông báo");
+            this.Close();
+            BangDieuKhien newForm = new BangDieuKhien(user);
+            newForm.ShowDialog();
+            
         }
     }
 }

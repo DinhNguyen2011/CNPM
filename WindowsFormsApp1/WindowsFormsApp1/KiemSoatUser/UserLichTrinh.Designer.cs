@@ -127,7 +127,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLichTrinh.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLichTrinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvLichTrinh.Location = new System.Drawing.Point(65, 356);
+            this.dgvLichTrinh.Location = new System.Drawing.Point(31, 356);
             this.dgvLichTrinh.Margin = new System.Windows.Forms.Padding(0);
             this.dgvLichTrinh.MultiSelect = false;
             this.dgvLichTrinh.Name = "dgvLichTrinh";
@@ -143,7 +143,7 @@
             this.dgvLichTrinh.RowHeadersVisible = false;
             this.dgvLichTrinh.RowHeadersWidth = 62;
             this.dgvLichTrinh.RowTemplate.Height = 35;
-            this.dgvLichTrinh.Size = new System.Drawing.Size(1236, 449);
+            this.dgvLichTrinh.Size = new System.Drawing.Size(1270, 449);
             this.dgvLichTrinh.TabIndex = 30;
             this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvLichTrinh.ThemeStyle.AlternatingRowsStyle.Font = null;
