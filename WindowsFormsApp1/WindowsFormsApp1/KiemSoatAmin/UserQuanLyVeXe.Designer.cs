@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvVeXe = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,10 +68,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnTimVeXe = new Guna.UI2.WinForms.Guna2Button();
             this.btnHienthi = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTimKH = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2QLVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtvitrighe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietVeXe)).BeginInit();
@@ -95,20 +95,20 @@
             this.dgvVeXe.AllowUserToDeleteRows = false;
             this.dgvVeXe.AllowUserToResizeColumns = false;
             this.dgvVeXe.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvVeXe.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvVeXe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvVeXe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvVeXe.ColumnHeadersHeight = 35;
             this.dgvVeXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -116,14 +116,14 @@
             this.Column4,
             this.Column3,
             this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVeXe.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvVeXe.GridColor = System.Drawing.Color.Gray;
             this.dgvVeXe.Location = new System.Drawing.Point(40, 120);
             this.dgvVeXe.MultiSelect = false;
@@ -160,6 +160,7 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "MAVE";
             this.Column1.HeaderText = "Mã vé";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -167,6 +168,7 @@
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "TENVE";
             this.Column2.HeaderText = "Tên vé";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -174,6 +176,7 @@
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "TENKH";
             this.Column4.HeaderText = "Khách hàng";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
@@ -181,6 +184,7 @@
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "GHICHU";
             this.Column3.HeaderText = "Ghi chú";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -188,6 +192,7 @@
             // 
             // Column6
             // 
+            this.Column6.DataPropertyName = "MACTVX";
             this.Column6.HeaderText = "Mã CTVX";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -205,7 +210,7 @@
             this.txtTenVe.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtTenVe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenVe.Location = new System.Drawing.Point(892, 120);
-            this.txtTenVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenVe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenVe.Name = "txtTenVe";
             this.txtTenVe.PasswordChar = '\0';
             this.txtTenVe.PlaceholderText = "";
@@ -231,20 +236,20 @@
             this.dgvChiTietVeXe.AllowUserToDeleteRows = false;
             this.dgvChiTietVeXe.AllowUserToResizeColumns = false;
             this.dgvChiTietVeXe.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvChiTietVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvChiTietVeXe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvChiTietVeXe.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvChiTietVeXe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dgvChiTietVeXe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Goldenrod;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChiTietVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Goldenrod;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChiTietVeXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvChiTietVeXe.ColumnHeadersHeight = 35;
             this.dgvChiTietVeXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -255,14 +260,15 @@
             this.Column8,
             this.dataGridViewTextBoxColumn1,
             this.Column7});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvChiTietVeXe.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.NullValue = null;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvChiTietVeXe.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvChiTietVeXe.GridColor = System.Drawing.Color.Gray;
             this.dgvChiTietVeXe.Location = new System.Drawing.Point(40, 360);
             this.dgvChiTietVeXe.MultiSelect = false;
@@ -299,6 +305,7 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MACTVX";
             this.dataGridViewTextBoxColumn5.HeaderText = "Mã CTVX";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -306,6 +313,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "GIODI";
             this.dataGridViewTextBoxColumn2.HeaderText = "Giờ đi";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -313,6 +321,7 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GIODEN";
             this.dataGridViewTextBoxColumn3.HeaderText = "Giờ đến";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -320,6 +329,7 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "GIAVE";
             this.dataGridViewTextBoxColumn4.HeaderText = "Giá vé";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -327,6 +337,7 @@
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "TRANGTHAI";
             this.Column5.HeaderText = "Trạng thái";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
@@ -334,6 +345,7 @@
             // 
             // Column8
             // 
+            this.Column8.DataPropertyName = "VITRIGHE";
             this.Column8.HeaderText = "Vị trí ghế";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
@@ -341,6 +353,7 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MAVE";
             this.dataGridViewTextBoxColumn1.HeaderText = "Mã vé";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -348,6 +361,7 @@
             // 
             // Column7
             // 
+            this.Column7.DataPropertyName = "MAXE";
             this.Column7.HeaderText = "Mã xe";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
@@ -376,7 +390,7 @@
             this.txtTenKH.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtTenKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenKH.Location = new System.Drawing.Point(892, 198);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.PasswordChar = '\0';
             this.txtTenKH.PlaceholderText = "";
@@ -415,7 +429,7 @@
             this.txtghichu.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtghichu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtghichu.Location = new System.Drawing.Point(1129, 120);
-            this.txtghichu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtghichu.Margin = new System.Windows.Forms.Padding(2);
             this.txtghichu.Multiline = true;
             this.txtghichu.Name = "txtghichu";
             this.txtghichu.PasswordChar = '\0';
@@ -448,7 +462,7 @@
             this.txttrangthai.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txttrangthai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttrangthai.Location = new System.Drawing.Point(892, 442);
-            this.txttrangthai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txttrangthai.Margin = new System.Windows.Forms.Padding(2);
             this.txttrangthai.Name = "txttrangthai";
             this.txttrangthai.PasswordChar = '\0';
             this.txttrangthai.PlaceholderText = "";
@@ -480,7 +494,7 @@
             this.txtgiave.Font = new System.Drawing.Font("Times New Roman", 10.8F);
             this.txtgiave.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtgiave.Location = new System.Drawing.Point(1129, 360);
-            this.txtgiave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtgiave.Margin = new System.Windows.Forms.Padding(2);
             this.txtgiave.Name = "txtgiave";
             this.txtgiave.PasswordChar = '\0';
             this.txtgiave.PlaceholderText = "";
@@ -514,12 +528,12 @@
             // dtpgiodi
             // 
             this.dtpgiodi.Checked = true;
-            this.dtpgiodi.CustomFormat = "yyyy:MM:dd HH:mm";
+            this.dtpgiodi.CustomFormat = "yyyy-MM-dd HH:mm";
             this.dtpgiodi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtpgiodi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpgiodi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpgiodi.Location = new System.Drawing.Point(892, 280);
-            this.dtpgiodi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpgiodi.Margin = new System.Windows.Forms.Padding(2);
             this.dtpgiodi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpgiodi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpgiodi.Name = "dtpgiodi";
@@ -530,12 +544,12 @@
             // dtpgioden
             // 
             this.dtpgioden.Checked = true;
-            this.dtpgioden.CustomFormat = "yyyy:MM:dd HH:mm";
+            this.dtpgioden.CustomFormat = "yyyy-MM-dd HH:mm";
             this.dtpgioden.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtpgioden.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpgioden.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpgioden.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpgioden.Location = new System.Drawing.Point(1129, 280);
-            this.dtpgioden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpgioden.Margin = new System.Windows.Forms.Padding(2);
             this.dtpgioden.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpgioden.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpgioden.Name = "dtpgioden";
@@ -591,26 +605,25 @@
             this.btnHienthi.Text = "Hiển thị toàn bộ";
             this.btnHienthi.Click += new System.EventHandler(this.btnHienthi_Click);
             // 
-            // guna2TextBox1
+            // txtTimKH
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(526, 62);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Nhập tên KH";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(198, 41);
-            this.guna2TextBox1.TabIndex = 99;
+            this.txtTimKH.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKH.DefaultText = "";
+            this.txtTimKH.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKH.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKH.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKH.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKH.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtTimKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKH.Location = new System.Drawing.Point(526, 62);
+            this.txtTimKH.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKH.Name = "txtTimKH";
+            this.txtTimKH.PasswordChar = '\0';
+            this.txtTimKH.PlaceholderText = "Nhập tên KH";
+            this.txtTimKH.SelectedText = "";
+            this.txtTimKH.Size = new System.Drawing.Size(198, 41);
+            this.txtTimKH.TabIndex = 99;
             // 
             // label5
             // 
@@ -628,26 +641,26 @@
             this.guna2QLVeXe.BorderRadius = 30;
             this.guna2QLVeXe.TargetControl = this;
             // 
-            // guna2TextBox2
+            // txtvitrighe
             // 
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(892, 360);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.ReadOnly = true;
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(198, 41);
-            this.guna2TextBox2.TabIndex = 101;
+            this.txtvitrighe.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtvitrighe.DefaultText = "";
+            this.txtvitrighe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtvitrighe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtvitrighe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtvitrighe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtvitrighe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtvitrighe.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtvitrighe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtvitrighe.Location = new System.Drawing.Point(892, 360);
+            this.txtvitrighe.Margin = new System.Windows.Forms.Padding(2);
+            this.txtvitrighe.Name = "txtvitrighe";
+            this.txtvitrighe.PasswordChar = '\0';
+            this.txtvitrighe.PlaceholderText = "";
+            this.txtvitrighe.ReadOnly = true;
+            this.txtvitrighe.SelectedText = "";
+            this.txtvitrighe.Size = new System.Drawing.Size(198, 41);
+            this.txtvitrighe.TabIndex = 101;
             // 
             // label10
             // 
@@ -664,9 +677,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2TextBox2);
+            this.Controls.Add(this.txtvitrighe);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtTimKH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnHienthi);
             this.Controls.Add(this.btnTimVeXe);
@@ -688,9 +701,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvVeXe);
             this.Controls.Add(this.label7);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserQuanLyVeXe";
             this.Size = new System.Drawing.Size(1367, 600);
+            this.Load += new System.EventHandler(this.UserQuanLyVeXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeXe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietVeXe)).EndInit();
             this.ResumeLayout(false);
@@ -704,11 +718,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvVeXe;
         private Guna.UI2.WinForms.Guna2TextBox txtTenVe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2DataGridView dgvChiTietVeXe;
         private Guna.UI2.WinForms.Guna2TextBox txtTenKH;
         private System.Windows.Forms.Label label4;
@@ -725,9 +734,11 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnTimVeXe;
         private Guna.UI2.WinForms.Guna2Button btnHienthi;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKH;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLVeXe;
+        private Guna.UI2.WinForms.Guna2TextBox txtvitrighe;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -736,7 +747,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

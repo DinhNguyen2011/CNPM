@@ -19,6 +19,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyTuyenXe()
         {
             InitializeComponent();
+            dgvVeXe.AutoGenerateColumns = false;
         }
        
         #region xử lý phụ
@@ -45,7 +46,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Method
         public void LoadTuyenXe()
         {
-            dgvVeXe.AutoGenerateColumns = false;
+
             btnXoaTuyen.Enabled = false;
             btnThemTuyen.Enabled = true; ;
             listTuyenXe = TuyenXeDAO.Instance.getDSTuyenXe();

@@ -19,6 +19,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyXe()
         {
             InitializeComponent();
+            dgvXe.AutoGenerateColumns = false;
         }
         #region Xử lý phụ
         public void reset()
@@ -49,7 +50,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Method
         public void LoadXe()
         {
-            dgvXe.AutoGenerateColumns = false;
+
             btnXoaXe.Enabled = false;
             btnSuaXe.Enabled = false;
             btnThemXe.Enabled = true;

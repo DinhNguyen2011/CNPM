@@ -24,6 +24,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyNhanVien()
         {
             InitializeComponent();
+            dgvQLNV.AutoGenerateColumns = false;
+            dgvLoaiNV.AutoGenerateColumns = false;
         }
 
         #region xử lý phụ
@@ -101,7 +103,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
             btnXoaNV.Enabled = false;
             btnSuaNV.Enabled = false;
             txtCCCD.Enabled = true;
-            dgvQLNV.AutoGenerateColumns = false;
 
             listNhanVien = NhanVienDAO.Instance.getDSNhanVien();
             dgvQLNV.DataSource = listNhanVien;
@@ -207,7 +208,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadLoaiNV()
         {
-            dgvLoaiNV.AutoGenerateColumns = false;
             btnxoaloainv.Enabled = false;
             listLoaiNV = LoaiNVDAO.Instance.getDSLoaiNV();
             dgvLoaiNV.DataSource = listLoaiNV;

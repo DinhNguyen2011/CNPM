@@ -20,6 +20,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyKhachHang()
         {
             InitializeComponent();
+            dgvTimKH.AutoGenerateColumns = false;
+            dgvtaikhoan.AutoGenerateColumns = false;
         }
 
         #region Xử lý phụ
@@ -41,7 +43,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region method
         public void LoadKhachHang()
         {
-            dgvTimKH.AutoGenerateColumns = false;
             listKhachHang = new List<KhachHang>();
             btnXoaKH.Enabled = false;
             listKhachHang = KhachHangDAO.Instance.getDSKhachHang();
@@ -50,7 +51,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadTaiKhoan()
         {
-            dgvtaikhoan.AutoGenerateColumns = false;
             listTaiKhoan = new List<TaiKhoan>();
             btnXoaKH.Enabled = false;
             listTaiKhoan = TaiKhoanDAO.Instance.getDSTaiKhoan();
@@ -59,6 +59,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadData()
         {
+            btnXoaKH.Enabled=false;
             LoadKhachHang();
             LoadTaiKhoan();
         }
@@ -74,11 +75,11 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void timKhachHang() 
         {
+            btnXoaKH.Enabled = false;
             string tenkh = chuanHoaChuoi(txttimkh.Text);
             List<KhachHang> listFindKhachHang = KhachHangDAO.Instance.timKhachHangTheoTen(tenkh);
-            if (listFindKhachHang.Count != 0)
+            if (listFindKhachHang.Count > 0)
             {
-                btnXoaKH.Enabled = true;
                 dgvTimKH.DataSource = listFindKhachHang;
                 dgvTimKH.Refresh();
                 listKhachHang = listFindKhachHang;
@@ -95,7 +96,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                  }
                  dgvtaikhoan.DataSource = listFindAccount;
                  dgvtaikhoan.Refresh();
-
+                 listTaiKhoan = listFindAccount;
             }
             else
                 MessageBox.Show("Không tìm thấy khách hàng có tên " + tenkh, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

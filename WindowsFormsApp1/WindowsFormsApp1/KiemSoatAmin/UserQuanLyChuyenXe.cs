@@ -20,6 +20,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyChuyenXe()
         {
             InitializeComponent();
+            dgvChuyenXe.AutoGenerateColumns = false;
         }
 
         #region Xử lý phụ
@@ -50,7 +51,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void loadChuyenXe()
         {
 
-            dgvChuyenXe.AutoGenerateColumns = false;
             btnXoaChuyen.Enabled = false;
             btnSuaChuyen.Enabled = false;
             btnThemChuyen.Enabled = true;

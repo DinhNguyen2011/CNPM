@@ -68,5 +68,13 @@ namespace WindowsFormsApp1.DAO
             }
             return list;
         }
+        public string getTenKhachHangByID(int makh)
+        {
+            string kq = "";
+            string query = "select TENKH from KHACHHANG where MAKH = " + makh;
+            kq = DataProvider.Instance.ExcuteScalar(query).ToString();
+            return kq;
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.DAO;
 
 namespace WindowsFormsApp1.DTO
 {
@@ -22,6 +23,7 @@ namespace WindowsFormsApp1.DTO
         public int Mactvx { get => mactvx; set => mactvx = value; }
         public int Machuyen { get => machuyen; set => machuyen = value; }
         public int Makh { get => makh; set => makh = value; }
+        public string TenKH { get => KhachHangDAO.Instance.getTenKhachHangByID(makh); }
 
         public VeXe(int mave, string tenve, string ghichu, int mactvx, int machuyen, int makh)
         {
@@ -50,7 +52,7 @@ namespace WindowsFormsApp1.DTO
             this.mave = (int)row["mave"];
             this.tenve = row["tenve"].ToString();
             this.ghichu = row["ghichu"].ToString(); ;
-            this.mave = (int)row["mactvx"];
+            this.mactvx = (int)row["mactvx"];
             this.machuyen = (int)row["machuyen"];
             this.makh = (int)row["makh"];
         }

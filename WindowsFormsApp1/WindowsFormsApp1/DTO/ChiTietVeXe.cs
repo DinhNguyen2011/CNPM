@@ -59,7 +59,7 @@ namespace WindowsFormsApp1.DTO
             this.giodi = row["giodi"].ToString();
             this.gioden = row["gioden"].ToString();
             this.vitrighe = row["vitrighe"].ToString();
-            this.giave = Convert.ToDouble(row["giodi"]);
+            this.giave = Convert.ToDouble(row["giave"]);
             this.trangthai = row["trangthai"].ToString();
             this.maxe = (int)row["maxe"];
             this.mave = (int)row["mave"];

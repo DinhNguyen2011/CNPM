@@ -30,12 +30,20 @@ namespace WindowsFormsApp1.DAO
             List<ChiTietVeXe> list = new List<ChiTietVeXe>();
             string query = "DSCHITIETVEXE";
             DataTable result = DataProvider.Instance.ExcuteQuery(query);
-            foreach (DataRow item in result.Rows)
+             foreach (DataRow item in result.Rows)
             {
                 ChiTietVeXe ctvx = new ChiTietVeXe(item);
                 list.Add(ctvx);
             }
             return list;
+        }
+        public ChiTietVeXe TimCTVXBangMaVe(int mave)
+        {
+            ChiTietVeXe ctvx = null;
+            string query = "TimCTVXBangMaVe @mave";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query, new object[] { mave });
+            ctvx = new ChiTietVeXe(result.Rows[0]);
+            return ctvx;
         }
     }
 }
