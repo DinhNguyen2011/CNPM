@@ -44,6 +44,18 @@ create table NHANVIEN
 );
 
 /*==============================================================*/
+/* Table: XE                                                    */
+/*==============================================================*/
+create table XE 
+(
+   MAXE         int             identity(1,1) not null,
+   TENXE        nvarchar(50)    null,
+   BIENSO       nchar(20)       null,
+   SOGHE        int             null,
+   primary key (MAXE)
+);
+
+/*==============================================================*/
 /* Table: TUYENXE                                               */
 /*==============================================================*/
 create table TUYENXE 
@@ -66,6 +78,7 @@ create table CHUYENXE
    GIAVE        money           null,
    MATAIXE		INT				foreign key(MATAIXE)	references NHANVIEN(MANV),
    MATUYEN      int             foreign key(MATUYEN)	references TUYENXE(MATUYEN),
+   MAXE			int             foreign key(MAXE)	references XE(MAXE),
    primary key (MACHUYEN)
 );
 
@@ -89,23 +102,11 @@ create table VEXE
 (
    MAVE         int             identity(1,1) not null,
    TENVE        nvarchar(50)    null,
-   GHICHU       nvarchar(50)    null, 
+   GHICHU       nvarchar(200)    null, 
    MACTVX		int				null,
    MACHUYEN     int             foreign key(MACHUYEN)	references CHUYENXE(MACHUYEN),
    MAKH         int             foreign key(MAKH)		references KHACHHANG(MAKH),
    primary key (MAVE)
-);
-
-/*==============================================================*/
-/* Table: XE                                                    */
-/*==============================================================*/
-create table XE 
-(
-   MAXE         int             identity(1,1) not null,
-   TENXE        nvarchar(50)    null,
-   BIENSO       nchar(20)       null,
-   SOGHE        int             null,
-   primary key (MAXE)
 );
 
 /*==============================================================*/
@@ -493,14 +494,15 @@ GO
 /*==============================================================*/
 /* Stored procedure: Thêm chuyến xe			                    */
 /*==============================================================*/
-CREATE OR ALTER PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @mataixe int, @matuyen int
+CREATE OR ALTER PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, 
+@giave money, @mataixe int, @matuyen int, @maxe int
 AS 
 BEGIN
 	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'
 	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
 	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen)
-		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) 
-		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
+		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN, MAXE) 
+		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen, @maxe)
 	ELSE RETURN N'Chuyến đã tồn tại'
 END
 
