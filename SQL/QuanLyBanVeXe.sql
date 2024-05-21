@@ -404,10 +404,14 @@ CREATE OR ALTER PROC XOAKHACHHANG @makh int
 AS
 BEGIN
 	IF (exists (SELECT * FROM KHACHHANG k WHERE k.MAKH = @makh))
-	begin
-		DELETE FROM TAIKHOAN WHERE MAKH = @makh
-		DELETE FROM KHACHHANG WHERE MAKH = @makh
-	end
+	BEGIN
+		--DELETE CHITIETVEXE WHERE MAVE = (SELECT MAVE FROM VEXE WHERE MAKH = @makh)
+		--DELETE VEXE WHERE MAKH = @makh
+		IF exists (SELECT * FROM VEXE WHERE MAKH = @makh) 
+		RETURN N'Không thể xóa! Khách hàng đã đặt vé xe'
+		DELETE TAIKHOAN WHERE MAKH = @makh
+		DELETE KHACHHANG WHERE MAKH = @makh
+	END
 END
 
 GO
@@ -453,7 +457,9 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOATUYENXE @matuyen int
 AS 
-	DELETE TUYENXE WHERE TUYENXE.MATUYEN = @matuyen
+	IF exists (SELECT * FROM CHUYENXE WHERE MATUYEN = @matuyen)
+	RETURN N'Tuyến xe đang có chuyến hoạt động'
+	DELETE TUYENXE WHERE MATUYEN = @matuyen
 
 GO
 /*==============================================================*/
@@ -490,10 +496,12 @@ GO
 CREATE OR ALTER PROC THEMCHUYENXE @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money, @mataixe int, @matuyen int
 AS 
 BEGIN
-	IF (not exists (SELECT * FROM CHUYENXE WHERE CHUYENXE.TENCHUYEN = @tenchuyen))
-	BEGIN
-		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
-	END
+	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'
+	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
+	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen)
+		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) 
+		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
+	ELSE RETURN N'Chuyến đã tồn tại'
 END
 
 GO
@@ -501,11 +509,14 @@ GO
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin chuyến xe                    */
 /*==============================================================*/
-CREATE OR ALTER PROC SUATHONGTINCHUYENXE @machuyen int, @tenchuyen nvarchar(50), @giodi datetime, @gioden datetime, @giave money
+CREATE OR ALTER PROC SUATHONGTINCHUYENXE @machuyen int, @tenchuyen nvarchar(50), 
+@giodi datetime, @gioden datetime, @giave money, @mataixe int
 AS
 BEGIN
+	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'   -- Giờ đi bé hơn giờ hiện tại
+	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
 	UPDATE CHUYENXE
-	SET TENCHUYEN = @tenchuyen, GIODI = @giodi, GIODEN = @gioden, GIAVE = @giave
+	SET TENCHUYEN = @tenchuyen, GIODI = @giodi, GIODEN = @gioden, GIAVE = @giave, MATAIXE = @mataixe
 	WHERE MACHUYEN = @machuyen
 END
 
@@ -515,10 +526,13 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOACHUYENXE @machuyen int
 AS 
-	DELETE CHUYENXE WHERE CHUYENXE.MACHUYEN = @machuyen
+	IF not exists (SELECT * FROM VEXE WHERE MACHUYEN = @machuyen)
+		DELETE CHUYENXE WHERE MACHUYEN = @machuyen
+	ELSE RETURN N'Không thể xóa! Chuyến xe đã được đặt vé'
+
 GO
 /*==============================================================*/
-/* Stored procedure: Lấy danh sách xe				                    */
+/* Stored procedure: Lấy danh sách xe				            */
 /*==============================================================*/
 CREATE OR ALTER PROC DSXE
 AS
@@ -528,7 +542,7 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: Tìm xe theo biển số				                    */
+/* Stored procedure: Tìm xe theo biển số				        */
 /*==============================================================*/
 CREATE OR ALTER PROC TIMXE @bienso nchar(20)
 AS
@@ -547,8 +561,7 @@ BEGIN
 	BEGIN
 		INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES (@tenxe, @bienso, @soghe)
 	END
-	ELSE
-		RETURN N'Trùng biển số xe, không thể thêm'
+	ELSE RETURN N'Trùng biển số xe, không thể thêm'
 END
 
 GO
@@ -558,9 +571,10 @@ GO
 CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @soghe int
 AS
 BEGIN
-		UPDATE XE
-		SET TENXE=@tenxe, SOGHE = @soghe
-		WHERE MAXE = @maxe
+	IF exists (SELECT * FROM CHITIETVEXE WHERE MAXE = @maxe) RETURN N'Xe đang hoạt động'
+	UPDATE XE
+	SET TENXE=@tenxe, SOGHE = @soghe
+	WHERE MAXE = @maxe
 END
 
 GO
@@ -569,6 +583,8 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOAXE @maxe int
 AS 
+	IF exists (SELECT * FROM CHITIETVEXE WHERE MAXE = @maxe)
+	RETURN N'Xe đang hoạt động'
 	DELETE XE WHERE XE.MAXE = @maxe
 
 GO
@@ -588,7 +604,9 @@ GO
 CREATE OR ALTER PROC TIMNHANVIENTHEOTEN @tennv nvarchar(30)
 AS
 BEGIN
-	select MANV, TENNV, CMND, SDT, EMAIL, MALOAINV from NHANVIEN where dbo.fuConvertToUnsign1(TENNV) like N'%' + dbo.fuConvertToUnsign1(@tennv) + '%'
+	select MANV, TENNV, CMND, SDT, EMAIL, MALOAINV 
+	from NHANVIEN 
+	where dbo.fuConvertToUnsign1(TENNV) like N'%' + dbo.fuConvertToUnsign1(@tennv) + '%'
 END
 
 GO
@@ -612,12 +630,11 @@ GO
 CREATE OR ALTER PROC THEMNHANVIEN @tennv nvarchar(30), @cmnd nchar(20), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
-	IF (not exists (SELECT * FROM NHANVIEN WHERE NHANVIEN.CMND = @cmnd))
+	IF (not exists (SELECT * FROM NHANVIEN WHERE CMND = @cmnd))
 	BEGIN
 		INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES (@tennv,@cmnd,@sdt,@email,@maloainv)
 	END
-	ELSE
-		RETURN N'Trùng CMND'
+	ELSE RETURN N'Trùng CMND'
 END
 
 GO
@@ -627,14 +644,13 @@ GO
 CREATE OR ALTER PROC SUATHONGTINNV @manv int, @tennv nvarchar(30), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
-	IF (exists (SELECT * FROM LOAINV WHERE LOAINV.MALOAINV = @maloainv))
+	IF (exists (SELECT * FROM LOAINV WHERE MALOAINV = @maloainv))
 	BEGIN
 			UPDATE NHANVIEN
 			SET TENNV = @tennv, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
 			WHERE MANV = @manv
 	END
-	ELSE 
-			RETURN N'Loại NV không phù hợp'
+	ELSE RETURN N'Loại NV không phù hợp'
 END
 
 GO
@@ -643,11 +659,13 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOANHANVIEN @manv int
 AS 
-	DELETE NHANVIEN WHERE NHANVIEN.MANV = @manv
+	IF exists (SELECT * FROM CHUYENXE WHERE MATAIXE = @manv)
+	RETURN N'Không thể xóa! Nhân viên đã được phân công vào các chuyến xe'
+	DELETE NHANVIEN WHERE MANV = @manv
 
 GO
 /*==============================================================*/
-/* Stored procedure: Lấy danh sách loại nhân viên                    */
+/* Stored procedure: Lấy danh sách loại nhân viên               */
 /*==============================================================*/
 CREATE OR ALTER PROC DSLOAINV
 AS
@@ -657,7 +675,7 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: Lấy danh sách tên loại nhân viên                    */
+/* Stored procedure: Lấy danh sách tên loại nhân viên           */
 /*==============================================================*/
 CREATE OR ALTER PROC DSTENLOAINV
 AS
@@ -672,12 +690,9 @@ GO
 CREATE OR ALTER PROC THEMLOAINV @tenloai nvarchar(20)
 AS
 BEGIN
-	IF (not exists (SELECT * FROM LOAINV WHERE LOAINV.TENLOAI = @tenloai))
-	BEGIN
+	IF (not exists (SELECT * FROM LOAINV WHERE TENLOAI = @tenloai))
 		INSERT INTO LOAINV(TENLOAI) VALUES (@tenloai)
-	END
-	ELSE
-		RETURN N'Trùng loại nv'
+	ELSE RETURN N'Trùng loại nv'
 END
 
 GO
@@ -688,9 +703,9 @@ CREATE OR ALTER PROC XOALOAINV @maloainv int
 AS 
 BEGIN
 	IF (NOT EXISTS (SELECT * FROM NHANVIEN WHERE MALOAINV = @maloainv))
-		DELETE LOAINV WHERE LOAINV.MALOAINV = @maloainv
+		DELETE LOAINV WHERE MALOAINV = @maloainv
 	ELSE
-		RETURN N'Tồn tại nv thuộc loại cần xóa'
+		RETURN N'Tồn tại nhân viên thuộc loại cần xóa'
 END
 
 GO
@@ -706,7 +721,7 @@ end
 
 GO
 /*==============================================================*/
-/* Stored procedure: Hàm loại bỏ dấu tiếng Việt để tìm kiếm     */
+/* U_D_FUNCTION: Hàm loại bỏ dấu tiếng Việt để tìm kiếm     */
 /*==============================================================*/
 CREATE FUNCTION [dbo].[fuConvertToUnsign1]
 (
@@ -758,17 +773,6 @@ BEGIN
 END
 GO
 
--- NEW!!!! 19/5/2024 10:02pm xóa bảng tài xế và chi tiết tuyến xe + liên kết nhân viên với chuyến xe
-
---alter table chitietchuyenxe drop constraint FK__CHITIETCH__MATAI__5070F446
---drop table TAIXE
---alter table chitietchuyenxe drop constraint FK__CHITIETCH__MACHU__4E88ABD4
---alter table chitietchuyenxe drop constraint FK__CHITIETCHU__MANV__4F7CD00D
---ALTER table chuyenxe drop constraint MACTCX
---alter table chuyenxe drop column mactcx
---drop table CHITIETCHUYENXE
---alter table CHUYENXE ADD MATAIXE INT null
-
 create or ALTER proc DSDIEMDEN
 as 
 begin
@@ -787,3 +791,27 @@ end
 GO
 
 -- Nghĩa thêm SP: DSTAIXE, TimTuyenXeByID, DSCHUYENXE, SỬA PROC THEMCHUYENXE
+
+/*==============================================================*/
+/* Stored procedure: Hủy vé xe               			        */
+/*==============================================================*/
+CREATE OR ALTER PROC HUYVEXE @mave int 
+AS
+BEGIN
+	DELETE VEXE WHERE MAVE = @mave
+END
+
+GO
+/*==============================================================*/
+/* Stored procedure: Sửa chi tiết vé        			        */
+/*==============================================================*/
+CREATE OR ALTER PROC SUACHITIETVEXE @mave int, @giodi datetime, @gioden datetime,
+@vitrighe nvarchar(5), @giave money, @trangthai nvarchar(20)
+AS
+BEGIN
+	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'  
+	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
+	UPDATE CHITIETVEXE 
+	SET GIODI = @giodi, GIODEN = @gioden, VITRIGHE = @vitrighe, GIAVE = @giave, TRANGTHAI = @trangthai
+	WHERE MAVE = @mave
+END
