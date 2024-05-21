@@ -321,6 +321,9 @@ INSERT INTO CHITIETVEXE(GIODI,GIODEN,GIAVE,VITRIGHE,TRANGTHAI,MAXE,MAVE) VALUES
 ('2024-06-06 20:30','2024-06-07 22:30',500000,'3B',N'Thành công',7,1),
 ('2024-05-28 13:00','2024-05-28 13:00',700000,'2A',N'Thành công',12,2)
 
+UPDATE VEXE
+SET MACTVX = (SELECT MACTVX FROM CHITIETVEXE WHERE MAVE = VEXE.MAVE)
+
 GO
 /*==============================================================*/
 /* Stored procedure: DANGNHAP   (Đăng nhập tài khoản)           */
@@ -834,14 +837,22 @@ END
 
 go
 
-CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, @ghe char(2), @trangthai nvarchar(20)
+CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, 
+@ghe char(2), @trangthai nvarchar(20) 
 as 
 begin
 	insert into VEXE(TENVE, GHICHU, MACHUYEN, MAKH)
 	values (@tenve, @ghichu, @machuyen, @makh)
-	insert into CHITIETVEXE(GIODI, GIODEN, GIAVE, MAXE, TRANGTHAI, VITRIGHE)
-	select GIODI, GIODEN, GIAVE, MAXE, @trangthai,@ghe
-	from CHUYENXE
-	where MACHUYEN=@machuyen
+
+	DECLARE @MAVE INT
+	SELECT @MAVE = MAX(MAVE) FROM VEXE
+
+	insert into CHITIETVEXE(GIODI, GIODEN, GIAVE, MAXE, TRANGTHAI, VITRIGHE, MAVE)
+	SELECT GIODI, GIODEN, GIAVE, MAXE, @trangthai,@ghe,@MAVE
+	FROM CHUYENXE 
+	WHERE MACHUYEN = @MACHUYEN
+
+	UPDATE VEXE
+	SET MACTVX = (SELECT MACTVX FROM CHITIETVEXE WHERE MAVE = VEXE.MAVE)
+	WHERE MAVE = @MAVE
 end
-go
