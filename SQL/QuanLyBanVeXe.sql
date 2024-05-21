@@ -311,6 +311,16 @@ INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MAKH) VALUES
 ('contrai','3244185981728979115075721453575112',3),
 ('phat','3244185981728979115075721453575112',4)
 
+-- Vé xe
+INSERT INTO VEXE(TENVE,GHICHU,MACHUYEN,MAKH) VALUES
+(N'Vé xe QB đi TPHCM','toi bi say xe',41,4),
+(N'Vé xe di choi','',12,4)
+
+-- Chi tiết vé
+INSERT INTO CHITIETVEXE(GIODI,GIODEN,GIAVE,VITRIGHE,TRANGTHAI,MAXE,MAVE) VALUES
+('2024-06-06 20:30','2024-06-07 22:30',500000,'3B',N'Thành công',7,1),
+('2024-05-28 13:00','2024-05-28 13:00',700000,'2A',N'Thành công',12,2)
+
 GO
 /*==============================================================*/
 /* Stored procedure: DANGNHAP   (Đăng nhập tài khoản)           */
