@@ -211,7 +211,7 @@
             // txtTenXe
             // 
             this.txtTenXe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenXe.DefaultText = "";
+            this.txtTenXe.DefaultText = "24";
             this.txtTenXe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenXe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenXe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -238,6 +238,7 @@
             this.txtSoghe.Name = "txtSoghe";
             this.txtSoghe.PasswordChar = '\0';
             this.txtSoghe.PlaceholderText = "Nhập số ghê";
+            this.txtSoghe.ReadOnly = true;
             this.txtSoghe.SelectedText = "";
             // 
             // label4

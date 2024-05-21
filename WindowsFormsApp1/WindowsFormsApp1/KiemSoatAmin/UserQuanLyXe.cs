@@ -16,15 +16,17 @@ namespace WindowsFormsApp1.KiemSoatAmin
     {
         private List<Xe> listXe;
         private int index = -1;
+        private const int SOLUONGGHE = 24;
         public UserQuanLyXe()
         {
             InitializeComponent();
             dgvXe.AutoGenerateColumns = false;
+            txtSoghe.Text = SOLUONGGHE.ToString();
         }
         #region Xử lý phụ
         public void reset()
         {
-            txtBienSo.Text = txtSoghe.Text = txtTenXe.Text = string.Empty;
+            txtBienSo.Text = txtTenXe.Text = string.Empty;
         }
         private string chuanHoaChuoi(String s)
         {
@@ -54,7 +56,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             btnXoaXe.Enabled = false;
             btnSuaXe.Enabled = false;
             btnThemXe.Enabled = true;
-            txtBienSo.Enabled = true;
+            txtBienSo.ReadOnly = false;
             listXe = XeDAO.Instance.getDSXe();
             dgvXe.DataSource = listXe;
             dgvXe.Refresh();
@@ -64,16 +66,14 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             string tenxe = chuanHoaChuoi(txtTenXe.Text);
             string bienso = chuanHoaBienSo(txtBienSo.Text);
-            if (tenxe == "" || bienso == "" || txtSoghe.Text == "")
+            if (tenxe == "" || bienso == "")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int soghe = 0;
             try
             {
-                soghe = Convert.ToInt32(txtSoghe.Text);
-                Xe x = new Xe(tenxe, bienso, soghe);
+                Xe x = new Xe(tenxe, bienso, SOLUONGGHE);
                 if (XeDAO.Instance.themXe(x) > 0)
                 {
                     LoadXe();
@@ -83,10 +83,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             }
             catch (Exception e)
             {
-                if (e.Message.StartsWith("Input string was not in a correct format"))
-                    MessageBox.Show("Số ghế phải là kiểu dữ số nguyên", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                    throw e;
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void xoaXe()
@@ -102,20 +99,15 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void suaXe()
         {
             string tenxe = txtTenXe.Text.Trim();
-            string bienso = txtBienSo.Text.Trim();
-            if (tenxe == "" || bienso == "" || txtSoghe.Text == "")
+            if (tenxe == "")
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên xe mới", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            bienso = bienso.Replace(" ", "");
-            int soghe = 0;
             try
             {
-                soghe = Convert.ToInt32(txtSoghe.Text);
                 Xe x = listXe[index];
                 x.Tenxe = tenxe;
-                x.Soghe = soghe;
                 if (XeDAO.Instance.suaXe(x) > 0)
                 {
                     LoadXe();
@@ -125,10 +117,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             }
             catch (Exception e)
             {
-                if (e.Message.StartsWith("Input string was not in a correct format"))
-                    MessageBox.Show("Số ghế phải là kiểu dữ số nguyên", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                    throw e;
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void timXe()
@@ -182,7 +171,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     btnXoaXe.Enabled = true;
                     btnSuaXe.Enabled = true;
                     btnThemXe.Enabled = false;
-                    txtBienSo.Enabled = false;
+                    txtBienSo.ReadOnly = true;
                     Xe x = listXe[indexRow];
                     txtTenXe.Text = x.Tenxe;
                     txtBienSo.Text = x.Bienso;

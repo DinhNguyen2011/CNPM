@@ -148,6 +148,8 @@ create table TAIKHOAN
 --alter table CHUYENXE			add constraint MATUYEN	foreign key(MATUYEN)	references TUYENXE(MATUYEN)
 
 ALTER TABLE vexe ADD CONSTRAINT  MACTVX FOREIGN KEY(MACTVX) REFERENCES chitietvexe(MACTVX) 
+ALTER TABLE XE ADD CONSTRAINT DF_SOLUONGGHE DEFAULT 24 FOR SOGHE  --Mặc định số lượng ghế là 24
+
 
 -- XÓA DỮ LIỆU TRONG CÁC BẢNG
 delete from CHUYENXE
@@ -225,21 +227,21 @@ INSERT INTO TUYENXE(DIEMDI,DIEMDEN) VALUES
 (N'Đà Lạt',N'TP Hồ Chí Minh')
 
 -- Xe
-INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES
-('Limousine A','59B-663.99',24),
-('Limousine B','59B-567.11',24),
-('Limousine C','59B-513.22',24),
-('Limousine D','60B-817.33',24),
-('Limousine E','60B-123.45',24),
-('Limousine F','60B-384.44',24),
-('Limousine G','60B-660.55',24),
-('Limousine H','60B-943.66',24),
-('Limousine I','60B-753.77',24),
-('Limousine J','73B-268.88',24),
-('Limousine K','73B-805.99',24),
-('Limousine K','73B-741.11',24),
-('Limousine L','73B-141.22',24),
-('Limousine M','59B-950.33',24)
+INSERT INTO XE(TENXE,BIENSO) VALUES
+('Limousine A','59B-663.99'),
+('Limousine B','59B-567.11'),
+('Limousine C','59B-513.22'),
+('Limousine D','60B-817.33'),
+('Limousine E','60B-123.45'),
+('Limousine F','60B-384.44'),
+('Limousine G','60B-660.55'),
+('Limousine H','60B-943.66'),
+('Limousine I','60B-753.77'),
+('Limousine J','73B-268.88'),
+('Limousine K','73B-805.99'),
+('Limousine K','73B-741.11'),
+('Limousine L','73B-141.22'),
+('Limousine M','59B-950.33')
 
 -- Chuyến xe
 INSERT INTO CHUYENXE(TENCHUYEN,GIODI,GIODEN,GIAVE,MATAIXE,MATUYEN,MAXE) VALUES
@@ -573,12 +575,12 @@ GO
 /*==============================================================*/
 /* Stored procedure: Thêm xe				                    */
 /*==============================================================*/
-CREATE OR ALTER PROC THEMXE @tenxe nvarchar(50), @bienso nchar(20), @soghe int
+CREATE OR ALTER PROC THEMXE @tenxe nvarchar(50), @bienso nchar(20)
 AS 
 BEGIN
 	IF (not exists (SELECT * FROM XE WHERE XE.BIENSO = @bienso))
 	BEGIN
-		INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES (@tenxe, @bienso, @soghe)
+		INSERT INTO XE(TENXE,BIENSO) VALUES (@tenxe, @bienso)
 	END
 	ELSE RETURN N'Trùng biển số xe, không thể thêm'
 END
@@ -587,12 +589,12 @@ GO
 /*==============================================================*/
 /* Stored procedure: Sửa thông tin xe				            */
 /*==============================================================*/
-CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50), @soghe int
+CREATE OR ALTER PROC SUATHONGTINXE @maxe int, @tenxe nvarchar(50)
 AS
 BEGIN
 	IF exists (SELECT * FROM CHITIETVEXE WHERE MAXE = @maxe) RETURN N'Xe đang hoạt động'
 	UPDATE XE
-	SET TENXE=@tenxe, SOGHE = @soghe
+	SET TENXE=@tenxe
 	WHERE MAXE = @maxe
 END
 
@@ -741,7 +743,7 @@ end
 
 GO
 /*==============================================================*/
-/* U_D_FUNCTION: Hàm loại bỏ dấu tiếng Việt để tìm kiếm     */
+/* U_D_FUNCTION: Hàm loại bỏ dấu tiếng Việt để tìm kiếm			*/
 /*==============================================================*/
 CREATE FUNCTION [dbo].[fuConvertToUnsign1]
 (
@@ -885,3 +887,4 @@ BEGIN
 	WHERE MACHUYEN=@machuyen
 END
 
+GO
