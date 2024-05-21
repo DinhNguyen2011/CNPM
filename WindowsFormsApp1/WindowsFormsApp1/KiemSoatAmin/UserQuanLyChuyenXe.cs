@@ -237,8 +237,27 @@ namespace WindowsFormsApp1.KiemSoatAmin
             timTuyenXe();
         }
 
+
         #endregion
 
+        private void cmbtuyenxe_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbtaixe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
