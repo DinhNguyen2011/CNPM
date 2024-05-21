@@ -410,7 +410,6 @@
         private Guna.UI2.WinForms.Guna2Panel PnMovingad;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLadmin;
-        private KiemSoatAmin.UserQuanLyTuyenXe userQuanLyBanVe1;
         private KiemSoatAmin.UserQuanLyKhachHang userQuanLyKhachHang1;
         private Guna.UI2.WinForms.Guna2Elipse guna2QLKH;
         private KiemSoatAmin.UserQuanLyNhanVien userQuanLyNhanVien1;

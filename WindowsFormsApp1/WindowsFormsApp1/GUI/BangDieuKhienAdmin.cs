@@ -11,6 +11,7 @@ using WindowsFormsApp1.KiemSoatAmin;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class BangDieuKhienAdmin : Form
     {
         public BangDieuKhienAdmin()

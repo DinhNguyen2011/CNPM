@@ -163,6 +163,8 @@ namespace WindowsFormsApp1
         private void kiemTraVe()
         {
             tabIndex = 4;
+            userChiTietVeXe1.User = user;
+            userChiTietVeXe1.setValue();
             PnMoving.Left = btnKiemTraVe.Left + 60;
             userChiTietVeXe1.Visible = true;
             userChiTietVeXe1.BringToFront();
