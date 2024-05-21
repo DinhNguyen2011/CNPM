@@ -226,19 +226,20 @@ INSERT INTO TUYENXE(DIEMDI,DIEMDEN) VALUES
 
 -- Xe
 INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES
-('Limousine 40A','59B-663.99',40),
-('Limousine 40A','59B-567.11',40),
-('Limousine 40A','59B-513.22',40),
-('Limousine 40A','60B-817.33',40),
-('Limousine 40A','60B-384.44',40),
-('Limousine 40B','60B-660.55',40),
-('Limousine 40B','60B-943.66',40),
-('Limousine 40B','60B-753.77',40),
-('Limousine 42A','73B-268.88',42),
-('Limousine 42A','73B-805.99',42),
-('Limousine 42A','73B-741.11',42),
-('Limousine 42B','73B-141.22',42),
-('Limousine 42B','59B-950.33',42)
+('Limousine A','59B-663.99',24),
+('Limousine B','59B-567.11',24),
+('Limousine C','59B-513.22',24),
+('Limousine D','60B-817.33',24),
+('Limousine E','60B-123.45',24),
+('Limousine F','60B-384.44',24),
+('Limousine G','60B-660.55',24),
+('Limousine H','60B-943.66',24),
+('Limousine I','60B-753.77',24),
+('Limousine J','73B-268.88',24),
+('Limousine K','73B-805.99',24),
+('Limousine K','73B-741.11',24),
+('Limousine L','73B-141.22',24),
+('Limousine M','59B-950.33',24)
 
 -- Chuyến xe
 INSERT INTO CHUYENXE(TENCHUYEN,GIODI,GIODEN,GIAVE,MATAIXE,MATUYEN,MAXE) VALUES
@@ -873,4 +874,6 @@ BEGIN
 END
 
 GO
-
+select * from CHITIETVEXE
+select * from VEXE
+select * from xe
