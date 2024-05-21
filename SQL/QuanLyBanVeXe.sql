@@ -502,9 +502,9 @@ AS
 BEGIN
 	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'
 	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
-	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen)
-		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN, MAXE) 
-		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen, @maxe)
+	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen AND MATAIXE = @mataixe)
+		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) 
+		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
 	ELSE RETURN N'Chuyến đã tồn tại'
 END
 

@@ -36,7 +36,6 @@ namespace WindowsFormsApp1
             {
                 if (String.Compare(username, "admin", true) == 0)
                 {
-                    //lblError.Visible = false;
                     BangDieuKhienAdmin bdkAdmin = new BangDieuKhienAdmin();
                     this.Hide();
                     bdkAdmin.ShowDialog();

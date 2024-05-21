@@ -25,10 +25,11 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Xử lý phụ
         public void reset()
         {
-            txttenchuyen.Text = txtgiave.Text;
-            dtpgiodi.Value = dtpgioden.Value = DateTime.Now;
+            txttenchuyen.Text = txtgiave.Text = "";
+            dtpgiodi.Value = dtpgioden.Value = dtpTimGioDi.Value = DateTime.Now;
             cmbtaixe.SelectedIndex = 0;
             cmbtuyenxe.SelectedIndex = 0;
+            cmbTimTuyenXe.SelectedIndex = 0;
             txttenchuyen.Focus();
         }
         public string chuanHoaChuoi(String s)
@@ -50,10 +51,11 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void loadChuyenXe()
         {
 
-
-            btnXoaChuyen.Enabled = false;
-            btnThemChuyen.Enabled = true; ;
             dgvChuyenXe.AutoGenerateColumns = false;
+            btnXoaChuyen.Enabled = false;
+            btnSuaChuyen.Enabled = false;
+            btnThemChuyen.Enabled = true;
+            cmbtuyenxe.Enabled = true;
 
             listChuyenXe = ChuyenXeDAO.Instance.getDSChuyenXe();
             dgvChuyenXe.DataSource = listChuyenXe;
@@ -61,6 +63,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
 
             cmbtuyenxe.DataSource = TuyenXeDAO.Instance.getDSTenTuyenXe();
             cmbtaixe.DataSource = NhanVienDAO.Instance.DSTaiXe();
+
+            cmbTimTuyenXe.DataSource = TuyenXeDAO.Instance.getDSTenTuyenXe();
 
             reset();
         }
@@ -72,9 +76,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (DateTime.Compare(dtpgioden.Value,dtpgiodi.Value) > 0)
-            {
-                try
+            try
                 {
                     double giave = 0;
                     giave = Convert.ToDouble(txtgiave.Text);
@@ -96,18 +98,81 @@ namespace WindowsFormsApp1.KiemSoatAmin
                         loadChuyenXe();
                         MessageBox.Show("Thêm chuyến xe mới thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                }
-                catch (Exception e)
+            }
+            catch (Exception e)
+            {
+                if (e.Message.StartsWith("Input string was not in a correct format"))
+                    MessageBox.Show("Giá vé phải là kiểu dữ số", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        public void xoaChuyenXe()
+        {
+            ChuyenXe c = listChuyenXe[index];
+            if (ChuyenXeDAO.Instance.xoaChuyenXe(c.Machuyen) > 0)
+            {
+                loadChuyenXe();
+                reset();
+                MessageBox.Show("Đã xóa tuyến xe vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void suaChuyenXe()
+        {
+            txttenchuyen.Text = chuanHoaChuoi(txttenchuyen.Text);
+            if (txttenchuyen.Text == "" || txtgiave.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            try
+            {
+                ChuyenXe c = listChuyenXe[index];
+                c.Tenchuyen = txttenchuyen.Text;
+                c.Giave = Convert.ToDouble(txtgiave.Text);
+
+                c.Giodi = dtpgiodi.Value.ToString();
+                c.Gioden = dtpgioden.Value.ToString();
+
+                c.Mataixe = NhanVienDAO.Instance.getIDByTenNhanVien(cmbtaixe.SelectedValue.ToString());
+
+                if (ChuyenXeDAO.Instance.suaChuyenXe(c) > 0)
                 {
-                    if (e.Message.StartsWith("Input string was not in a correct format"))
-                        MessageBox.Show("Giá vé phải là kiểu dữ số", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                        MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    loadChuyenXe();
+                    MessageBox.Show("Đã sửa thông tin chuyến xe.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
-                MessageBox.Show("Thời gian đến không được nhỏ hơn hoặc bằng thời gian đi", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception e)
+            {
+                if (e.Message.StartsWith("Input string was not in a correct format"))
+                    MessageBox.Show("Giá vé phải là kiểu dữ số", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+        public void timTuyenXe()
+        {
+            string tentuyenxe = cmbTimTuyenXe.SelectedValue.ToString();
+            string[] arr = tentuyenxe.Split('-');
+            string diemdi = arr[0].Trim();
+            string diemden = arr[1].Trim();
+            int matuyen = TuyenXeDAO.Instance.getIDByTuyenXe(diemdi, diemden);
 
+            string giodi = dtpTimGioDi.Value.ToString("yyyy-MM-dd HH:mm");
+
+            List<ChuyenXe> listFindChuyenXe = ChuyenXeDAO.Instance.Tim_DSChuyenXe_TheoGioDi_TenTuyen(giodi,matuyen);
+            if (listFindChuyenXe.Count != 0)
+            {
+                //btnXoaNV.Enabled = true;
+                dgvChuyenXe.DataSource = listFindChuyenXe;
+                dgvChuyenXe.Refresh();
+                listChuyenXe = listFindChuyenXe;
+            }
+            else
+                MessageBox.Show("Không tìm thấy tuyến xe " + diemdi+"-"+diemden+" khởi hành lúc "+giodi, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -124,6 +189,9 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 if (indexRow > -1)
                 {
                     btnXoaChuyen.Enabled = true;
+                    btnSuaChuyen.Enabled = true;
+                    cmbtuyenxe.Enabled = false;
+                    btnThemChuyen.Enabled = false;
                     ChuyenXe c = listChuyenXe[indexRow];
                     txttenchuyen.Text = c.Tenchuyen;
                     txtgiave.Text = c.Giave.ToString();
@@ -153,8 +221,24 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
             themchuyenxe();
         }
+        private void btnXoaChuyen_Click(object sender, EventArgs e)
+        {
+            string tenchuyen = listChuyenXe[index].Tenchuyen;
+            int machuyen = listChuyenXe[index].Machuyen;
+            if (MessageBox.Show("Bạn có muốn xóa chuyến " + tenchuyen + " có mã chuyến là " + machuyen+ " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                xoaChuyenXe();
+        }
+        private void btnSuaChuyen_Click(object sender, EventArgs e)
+        {
+            suaChuyenXe();
+        }
+        private void btntimchuyen_Click(object sender, EventArgs e)
+        {
+            timTuyenXe();
+        }
 
         #endregion
+
 
     }
 }
