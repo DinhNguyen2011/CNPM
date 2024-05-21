@@ -53,6 +53,15 @@ namespace WindowsFormsApp1
             userChiTietVeXe1.Visible = false;
             lbHello.Text = "Hello, " + thongTinChuVe.Tenkh + " !!";
             chonLichTrinh();
+            CenterForm();
+        }
+
+        private void CenterForm()
+        {
+            guna2Panel1.Location = new Point(
+            ClientSize.Width / 2 - guna2Panel1.Size.Width / 2,
+            ClientSize.Height / 2 - guna2Panel1.Size.Height / 2);
+            guna2Panel1.Anchor = AnchorStyles.None;
         }
 
         private void resetColorOfTitlePage()

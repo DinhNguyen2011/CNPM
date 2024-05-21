@@ -56,8 +56,10 @@
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lbHello = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -71,10 +73,10 @@
             this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(2061, 264);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(1497, 15);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 48);
+            this.btnClose.Size = new System.Drawing.Size(40, 38);
             this.btnClose.TabIndex = 0;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -89,10 +91,10 @@
             this.btnMiniSize.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMiniSize.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniSize.Image")));
             this.btnMiniSize.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnMiniSize.Location = new System.Drawing.Point(2003, 264);
-            this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMiniSize.Location = new System.Drawing.Point(1445, 15);
+            this.btnMiniSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMiniSize.Name = "btnMiniSize";
-            this.btnMiniSize.Size = new System.Drawing.Size(45, 48);
+            this.btnMiniSize.Size = new System.Drawing.Size(40, 38);
             this.btnMiniSize.TabIndex = 1;
             // 
             // panel1
@@ -105,10 +107,10 @@
             this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Controls.Add(this.btnTrangChu);
             this.panel1.ForeColor = System.Drawing.Color.Coral;
-            this.panel1.Location = new System.Drawing.Point(556, 336);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(159, 73);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1362, 110);
+            this.panel1.Size = new System.Drawing.Size(1211, 88);
             this.panel1.TabIndex = 2;
             // 
             // btnChonVe
@@ -123,10 +125,10 @@
             this.btnChonVe.FillColor = System.Drawing.Color.Cyan;
             this.btnChonVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChonVe.ForeColor = System.Drawing.Color.White;
-            this.btnChonVe.Location = new System.Drawing.Point(300, 20);
-            this.btnChonVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChonVe.Location = new System.Drawing.Point(267, 16);
+            this.btnChonVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChonVe.Name = "btnChonVe";
-            this.btnChonVe.Size = new System.Drawing.Size(230, 69);
+            this.btnChonVe.Size = new System.Drawing.Size(204, 55);
             this.btnChonVe.TabIndex = 5;
             this.btnChonVe.Text = "Chọn vé";
             this.btnChonVe.Click += new System.EventHandler(this.btnChonVe_Click);
@@ -143,10 +145,10 @@
             this.btnThongTinKH.FillColor = System.Drawing.Color.Cyan;
             this.btnThongTinKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongTinKH.ForeColor = System.Drawing.Color.White;
-            this.btnThongTinKH.Location = new System.Drawing.Point(566, 20);
-            this.btnThongTinKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThongTinKH.Location = new System.Drawing.Point(503, 16);
+            this.btnThongTinKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongTinKH.Name = "btnThongTinKH";
-            this.btnThongTinKH.Size = new System.Drawing.Size(230, 69);
+            this.btnThongTinKH.Size = new System.Drawing.Size(204, 55);
             this.btnThongTinKH.TabIndex = 4;
             this.btnThongTinKH.Text = "Điền thông tin";
             this.btnThongTinKH.Click += new System.EventHandler(this.btnThongTinKH_Click);
@@ -163,10 +165,10 @@
             this.btnKiemTraVe.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnKiemTraVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKiemTraVe.ForeColor = System.Drawing.Color.White;
-            this.btnKiemTraVe.Location = new System.Drawing.Point(1097, 20);
-            this.btnKiemTraVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnKiemTraVe.Location = new System.Drawing.Point(975, 16);
+            this.btnKiemTraVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKiemTraVe.Name = "btnKiemTraVe";
-            this.btnKiemTraVe.Size = new System.Drawing.Size(230, 69);
+            this.btnKiemTraVe.Size = new System.Drawing.Size(204, 55);
             this.btnKiemTraVe.TabIndex = 3;
             this.btnKiemTraVe.Text = "Kiểm tra vé";
             this.btnKiemTraVe.Click += new System.EventHandler(this.btnKiemTraVe_Click);
@@ -183,10 +185,10 @@
             this.btnThanhToan.FillColor = System.Drawing.Color.Cyan;
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(831, 20);
-            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan.Location = new System.Drawing.Point(739, 16);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(230, 69);
+            this.btnThanhToan.Size = new System.Drawing.Size(204, 55);
             this.btnThanhToan.TabIndex = 2;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -203,10 +205,10 @@
             this.btnTrangChu.FillColor = System.Drawing.Color.Cyan;
             this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.Location = new System.Drawing.Point(35, 20);
-            this.btnTrangChu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTrangChu.Location = new System.Drawing.Point(31, 16);
+            this.btnTrangChu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Size = new System.Drawing.Size(230, 69);
+            this.btnTrangChu.Size = new System.Drawing.Size(204, 55);
             this.btnTrangChu.TabIndex = 1;
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
@@ -226,10 +228,10 @@
             this.btnChonChuyen.FocusedColor = System.Drawing.Color.White;
             this.btnChonChuyen.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnChonChuyen.ForeColor = System.Drawing.Color.Black;
-            this.btnChonChuyen.Location = new System.Drawing.Point(1361, 644);
-            this.btnChonChuyen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChonChuyen.Location = new System.Drawing.Point(1210, 515);
+            this.btnChonChuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChonChuyen.Name = "btnChonChuyen";
-            this.btnChonChuyen.Size = new System.Drawing.Size(227, 69);
+            this.btnChonChuyen.Size = new System.Drawing.Size(202, 55);
             this.btnChonChuyen.TabIndex = 5;
             this.btnChonChuyen.Text = "Chọn chuyến";
             this.btnChonChuyen.Click += new System.EventHandler(this.btnChonChuyen_Click);
@@ -237,10 +239,10 @@
             // PnMoving
             // 
             this.PnMoving.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.PnMoving.Location = new System.Drawing.Point(592, 456);
-            this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PnMoving.Location = new System.Drawing.Point(191, 169);
+            this.PnMoving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PnMoving.Name = "PnMoving";
-            this.PnMoving.Size = new System.Drawing.Size(225, 11);
+            this.PnMoving.Size = new System.Drawing.Size(200, 9);
             this.PnMoving.TabIndex = 5;
             // 
             // panel2
@@ -256,10 +258,10 @@
             this.panel2.Controls.Add(this.userThanhToan1);
             this.panel2.Controls.Add(this.btnChonChuyen);
             this.panel2.Controls.Add(this.userDatVe1);
-            this.panel2.Location = new System.Drawing.Point(448, 499);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(39, 199);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1658, 869);
+            this.panel2.Size = new System.Drawing.Size(1474, 696);
             this.panel2.TabIndex = 3;
             // 
             // btnThanhToan2
@@ -274,10 +276,10 @@
             this.btnThanhToan2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThanhToan2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan2.ForeColor = System.Drawing.Color.Black;
-            this.btnThanhToan2.Location = new System.Drawing.Point(1143, 762);
-            this.btnThanhToan2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan2.Location = new System.Drawing.Point(1016, 610);
+            this.btnThanhToan2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThanhToan2.Name = "btnThanhToan2";
-            this.btnThanhToan2.Size = new System.Drawing.Size(270, 69);
+            this.btnThanhToan2.Size = new System.Drawing.Size(240, 55);
             this.btnThanhToan2.TabIndex = 7;
             this.btnThanhToan2.Text = "Thanh toán";
             this.btnThanhToan2.Click += new System.EventHandler(this.btnThanhToan2_Click);
@@ -294,10 +296,10 @@
             this.btnXacNhanKH.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXacNhanKH.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhanKH.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhanKH.Location = new System.Drawing.Point(1112, 710);
-            this.btnXacNhanKH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXacNhanKH.Location = new System.Drawing.Point(988, 568);
+            this.btnXacNhanKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXacNhanKH.Name = "btnXacNhanKH";
-            this.btnXacNhanKH.Size = new System.Drawing.Size(270, 69);
+            this.btnXacNhanKH.Size = new System.Drawing.Size(240, 55);
             this.btnXacNhanKH.TabIndex = 6;
             this.btnXacNhanKH.Text = "Xác nhận";
             this.btnXacNhanKH.Click += new System.EventHandler(this.btnXacNhanKH_Click);
@@ -314,10 +316,10 @@
             this.btnXacNhanVe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXacNhanVe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhanVe.ForeColor = System.Drawing.Color.Black;
-            this.btnXacNhanVe.Location = new System.Drawing.Point(1349, 37);
-            this.btnXacNhanVe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXacNhanVe.Location = new System.Drawing.Point(1199, 30);
+            this.btnXacNhanVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXacNhanVe.Name = "btnXacNhanVe";
-            this.btnXacNhanVe.Size = new System.Drawing.Size(270, 69);
+            this.btnXacNhanVe.Size = new System.Drawing.Size(240, 55);
             this.btnXacNhanVe.TabIndex = 5;
             this.btnXacNhanVe.Text = "Đặt vé";
             this.btnXacNhanVe.Click += new System.EventHandler(this.btnXacNhanVe_Click);
@@ -326,46 +328,46 @@
             // 
             this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.userLichTrinh1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userLichTrinh1.Location = new System.Drawing.Point(22, 22);
+            this.userLichTrinh1.Location = new System.Drawing.Point(20, 18);
             this.userLichTrinh1.Margin = new System.Windows.Forms.Padding(0);
             this.userLichTrinh1.Name = "userLichTrinh1";
-            this.userLichTrinh1.Size = new System.Drawing.Size(1597, 820);
+            this.userLichTrinh1.Size = new System.Drawing.Size(1420, 656);
             this.userLichTrinh1.TabIndex = 2;
             // 
             // userProfile1
             // 
             this.userProfile1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userProfile1.Location = new System.Drawing.Point(22, 22);
-            this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userProfile1.Location = new System.Drawing.Point(20, 18);
+            this.userProfile1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userProfile1.Name = "userProfile1";
-            this.userProfile1.Size = new System.Drawing.Size(1600, 820);
+            this.userProfile1.Size = new System.Drawing.Size(1422, 656);
             this.userProfile1.TabIndex = 1;
             // 
             // userChiTietVeXe1
             // 
             this.userChiTietVeXe1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userChiTietVeXe1.Location = new System.Drawing.Point(22, 22);
-            this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userChiTietVeXe1.Location = new System.Drawing.Point(20, 18);
+            this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userChiTietVeXe1.Name = "userChiTietVeXe1";
-            this.userChiTietVeXe1.Size = new System.Drawing.Size(1600, 820);
+            this.userChiTietVeXe1.Size = new System.Drawing.Size(1422, 656);
             this.userChiTietVeXe1.TabIndex = 4;
             // 
             // userThanhToan1
             // 
             this.userThanhToan1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userThanhToan1.Location = new System.Drawing.Point(22, 22);
-            this.userThanhToan1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userThanhToan1.Location = new System.Drawing.Point(20, 18);
+            this.userThanhToan1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userThanhToan1.Name = "userThanhToan1";
-            this.userThanhToan1.Size = new System.Drawing.Size(1600, 820);
+            this.userThanhToan1.Size = new System.Drawing.Size(1422, 656);
             this.userThanhToan1.TabIndex = 3;
             // 
             // userDatVe1
             // 
             this.userDatVe1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userDatVe1.Location = new System.Drawing.Point(22, 22);
-            this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userDatVe1.Location = new System.Drawing.Point(20, 18);
+            this.userDatVe1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userDatVe1.Name = "userDatVe1";
-            this.userDatVe1.Size = new System.Drawing.Size(1600, 820);
+            this.userDatVe1.Size = new System.Drawing.Size(1422, 656);
             this.userDatVe1.TabIndex = 0;
             // 
             // guna2ElipseDatVe
@@ -401,10 +403,10 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(448, 264);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button1.Location = new System.Drawing.Point(63, 15);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(51, 48);
+            this.guna2Button1.Size = new System.Drawing.Size(45, 38);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Click += new System.EventHandler(this.LogOut_Click);
             // 
@@ -413,30 +415,38 @@
             this.lbHello.AutoSize = true;
             this.lbHello.Font = new System.Drawing.Font("Segoe Print", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHello.ForeColor = System.Drawing.Color.Indigo;
-            this.lbHello.Location = new System.Drawing.Point(547, 262);
+            this.lbHello.Location = new System.Drawing.Point(151, 14);
             this.lbHello.Name = "lbHello";
-            this.lbHello.Size = new System.Drawing.Size(366, 50);
+            this.lbHello.Size = new System.Drawing.Size(315, 43);
             this.lbHello.TabIndex = 7;
             this.lbHello.Text = "Hello, Tên khách hàng !!";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.lbHello);
+            this.guna2Panel1.Controls.Add(this.panel2);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.PnMoving);
+            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.Controls.Add(this.btnMiniSize);
+            this.guna2Panel1.Controls.Add(this.btnClose);
+            this.guna2Panel1.Location = new System.Drawing.Point(202, 30);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1558, 910);
+            this.guna2Panel1.TabIndex = 8;
+            // 
             // BangDieuKhien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(2586, 1626);
+            this.ClientSize = new System.Drawing.Size(1900, 1102);
             this.ControlBox = false;
-            this.Controls.Add(this.lbHello);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.PnMoving);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnMiniSize);
-            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BangDieuKhien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt vé xe";
@@ -444,8 +454,9 @@
             this.Load += new System.EventHandler(this.BangDieuKhien_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -477,6 +488,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label lbHello;
         private Guna.UI2.WinForms.Guna2Button btnThanhToan2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         // private KiemSoatUser.UserChiTietVeXe userCTVeXe1;
     }
 }
