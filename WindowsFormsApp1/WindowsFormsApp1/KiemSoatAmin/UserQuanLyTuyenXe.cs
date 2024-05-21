@@ -52,6 +52,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             listTuyenXe = TuyenXeDAO.Instance.getDSTuyenXe();
             dgvVeXe.DataSource = listTuyenXe;
             dgvVeXe.Refresh();
+            reset();
         }
         public void themTuyenXe()
         {
