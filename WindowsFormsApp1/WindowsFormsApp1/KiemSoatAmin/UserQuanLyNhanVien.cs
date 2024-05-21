@@ -191,11 +191,13 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void timNhanVien() 
         {
+            btnThemNV.Enabled = true;
+            btnXoaNV.Enabled = false;
+            btnSuaNV.Enabled=false;
             string tennv = chuanHoaChuoi(txttimnv.Text);
             List<NhanVien> listFindNhanVien = NhanVienDAO.Instance.timNhanVienTheoTen(tennv);
             if (listFindNhanVien.Count != 0)
             {
-                //btnXoaNV.Enabled = true;
                 dgvQLNV.DataSource = listFindNhanVien;
                 dgvQLNV.Refresh();
                 listNhanVien = listFindNhanVien;

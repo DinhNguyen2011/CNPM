@@ -180,7 +180,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 {
                     btnXoaXe.Enabled = true;
                     btnSuaXe.Enabled = true;
-                    btntimxe.Enabled = false;
+                    btnThemXe.Enabled = false;
                     txtBienSo.Enabled = false;
                     Xe x = listXe[indexRow];
                     txtTenXe.Text = x.Tenxe;
