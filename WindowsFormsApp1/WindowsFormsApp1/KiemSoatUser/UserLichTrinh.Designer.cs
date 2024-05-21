@@ -36,6 +36,12 @@
             this.btnTimCXe = new Guna.UI2.WinForms.Guna2Button();
             this.btnConvert = new Guna.UI2.WinForms.Guna2Button();
             this.dgvLichTrinh = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDiemDi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbDiemDen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpkNgayDi = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -44,12 +50,6 @@
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnRefresh = new System.Windows.Forms.Label();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaChuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichTrinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,10 @@
             // 
             // dgvLichTrinh
             // 
+            this.dgvLichTrinh.AllowUserToAddRows = false;
+            this.dgvLichTrinh.AllowUserToDeleteRows = false;
+            this.dgvLichTrinh.AllowUserToResizeColumns = false;
+            this.dgvLichTrinh.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvLichTrinh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLichTrinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -125,6 +129,7 @@
             this.dgvLichTrinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLichTrinh.Location = new System.Drawing.Point(65, 356);
             this.dgvLichTrinh.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvLichTrinh.MultiSelect = false;
             this.dgvLichTrinh.Name = "dgvLichTrinh";
             this.dgvLichTrinh.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -162,6 +167,60 @@
             this.dgvLichTrinh.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvLichTrinh.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvLichTrinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichTrinh_CellClick);
+            // 
+            // MaChuyen
+            // 
+            this.MaChuyen.DataPropertyName = "Ma";
+            this.MaChuyen.FillWeight = 68.18181F;
+            this.MaChuyen.HeaderText = "Mã";
+            this.MaChuyen.MinimumWidth = 20;
+            this.MaChuyen.Name = "MaChuyen";
+            this.MaChuyen.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Giodi";
+            this.Column1.FillWeight = 80.94294F;
+            this.Column1.HeaderText = "Giờ di";
+            this.Column1.MinimumWidth = 190;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Gioden";
+            this.Column2.FillWeight = 96.96277F;
+            this.Column2.HeaderText = "Giờ đến";
+            this.Column2.MinimumWidth = 190;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Diemdi";
+            this.Column3.FillWeight = 88.45177F;
+            this.Column3.HeaderText = "Điểm đi";
+            this.Column3.MinimumWidth = 140;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Diemden";
+            this.Column4.FillWeight = 102.5338F;
+            this.Column4.HeaderText = "Điểm đến";
+            this.Column4.MinimumWidth = 140;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Giatien";
+            this.Column5.FillWeight = 162.9268F;
+            this.Column5.HeaderText = "Giá tiền";
+            this.Column5.MinimumWidth = 100;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // cbDiemDi
             // 
@@ -318,60 +377,6 @@
             this.btnRefresh.TabIndex = 42;
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Giatien";
-            this.Column5.FillWeight = 162.9268F;
-            this.Column5.HeaderText = "Giá tiền";
-            this.Column5.MinimumWidth = 100;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Diemden";
-            this.Column4.FillWeight = 102.5338F;
-            this.Column4.HeaderText = "Điểm đến";
-            this.Column4.MinimumWidth = 140;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Diemdi";
-            this.Column3.FillWeight = 88.45177F;
-            this.Column3.HeaderText = "Điểm đi";
-            this.Column3.MinimumWidth = 140;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Gioden";
-            this.Column2.FillWeight = 96.96277F;
-            this.Column2.HeaderText = "Giờ đến";
-            this.Column2.MinimumWidth = 190;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Giodi";
-            this.Column1.FillWeight = 80.94294F;
-            this.Column1.HeaderText = "Giờ di";
-            this.Column1.MinimumWidth = 190;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // MaChuyen
-            // 
-            this.MaChuyen.DataPropertyName = "Ma";
-            this.MaChuyen.FillWeight = 68.18181F;
-            this.MaChuyen.HeaderText = "Mã";
-            this.MaChuyen.MinimumWidth = 20;
-            this.MaChuyen.Name = "MaChuyen";
-            this.MaChuyen.ReadOnly = true;
             // 
             // UserLichTrinh
             // 

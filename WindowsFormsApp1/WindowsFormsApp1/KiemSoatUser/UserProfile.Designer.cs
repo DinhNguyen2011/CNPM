@@ -47,6 +47,8 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtGhichu = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // txtTen
@@ -77,7 +79,7 @@
             // 
             this.rdbtNam.AutoSize = true;
             this.rdbtNam.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbtNam.Location = new System.Drawing.Point(304, 570);
+            this.rdbtNam.Location = new System.Drawing.Point(304, 703);
             this.rdbtNam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rdbtNam.Name = "rdbtNam";
             this.rdbtNam.Size = new System.Drawing.Size(105, 42);
@@ -91,7 +93,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(525, 570);
+            this.radioButton2.Location = new System.Drawing.Point(525, 703);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(83, 42);
@@ -260,7 +262,7 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(183, 72);
             this.guna2Button1.TabIndex = 42;
-            this.guna2Button1.Text = " Địa chỉ";
+            this.guna2Button1.Text = "Địa chỉ";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2Button4
@@ -339,7 +341,7 @@
             this.guna2Button8.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.Location = new System.Drawing.Point(49, 553);
+            this.guna2Button8.Location = new System.Drawing.Point(49, 686);
             this.guna2Button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(183, 72);
@@ -347,11 +349,59 @@
             this.guna2Button8.Text = " Giới tính";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderColor = System.Drawing.Color.White;
+            this.guna2Button3.BorderRadius = 18;
+            this.guna2Button3.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(49, 531);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(183, 72);
+            this.guna2Button3.TabIndex = 49;
+            this.guna2Button3.Text = " Ghi chú";
+            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtGhichu
+            // 
+            this.txtGhichu.BorderColor = System.Drawing.Color.Black;
+            this.txtGhichu.BorderRadius = 20;
+            this.txtGhichu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGhichu.DefaultText = "";
+            this.txtGhichu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGhichu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGhichu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGhichu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGhichu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGhichu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGhichu.ForeColor = System.Drawing.Color.Black;
+            this.txtGhichu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGhichu.Location = new System.Drawing.Point(304, 531);
+            this.txtGhichu.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtGhichu.MaxLength = 50;
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.PasswordChar = '\0';
+            this.txtGhichu.PlaceholderText = "Ghi chú";
+            this.txtGhichu.SelectedText = "";
+            this.txtGhichu.Size = new System.Drawing.Size(504, 72);
+            this.txtGhichu.TabIndex = 48;
+            this.txtGhichu.Leave += new System.EventHandler(this.txtGhichu_Leave);
+            // 
             // UserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.txtGhichu);
             this.Controls.Add(this.guna2Button8);
             this.Controls.Add(this.rdbtNam);
             this.Controls.Add(this.radioButton2);
@@ -392,5 +442,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2TextBox txtGhichu;
     }
 }

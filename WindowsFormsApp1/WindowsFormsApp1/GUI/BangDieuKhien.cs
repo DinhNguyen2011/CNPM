@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1
@@ -17,6 +18,7 @@ namespace WindowsFormsApp1
         private int index = 0;
         private int tabIndex = 0;
         private KhachHang user;
+        private string ghiChu = "";
         private int slVe = 0;
         private List<String> dsGhe = new List<string>();
         private LichTrinh chuyendi = new LichTrinh();
@@ -110,12 +112,14 @@ namespace WindowsFormsApp1
 
         private void thanhToan(bool check)
         {
+            
             tabIndex = 3;
             index = tabIndex;
             PnMoving.Left = btnThanhToan.Left + 60;
             if (check) userThanhToan1.setValue(user.Tenkh, dsGhe, chuyendi.DiemDi + " - " + chuyendi.DiemDen + " + " + chuyendi.Giodi);
             userThanhToan1.Visible = true;
             userThanhToan1.BringToFront();
+            btnThanhToan2.BringToFront();
             resetColorOfTitlePage();
             btnThanhToan.FillColor = Color.FromArgb(0, 192, 0);
         }
@@ -238,6 +242,17 @@ namespace WindowsFormsApp1
             else MessageBox.Show("Thông tin liên lạc không hợp lệ !!", "Thông báo");
         }
 
-        
+        private void btnThanhToan2_Click(object sender, EventArgs e)
+        {
+            DataProvider dtp = new DataProvider();
+            string tenve = chuyendi.DiemDi + " - " + chuyendi.DiemDen;
+            foreach (string ghe in dsGhe)
+            {
+                string query = "THEMVE @tenve , @ghichu , @machuyen , @makh , @ghe  , @trangthai ";
+                dtp.ExcuteQuery(query, new object[] { tenve, ghiChu, chuyendi.Ma, user.Makh, ghe, "Đang xác nhận" });
+            }
+            MessageBox.Show("Đã thêm vé thành công, đang chờ xác nhận", "Thông báo");
+
+        }
     }
 }

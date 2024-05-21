@@ -300,7 +300,7 @@ INSERT INTO XE(TENXE,BIENSO,SOGHE) VALUES
 INSERT INTO KHACHHANG(TENKH,NGAYSINH,SDT,EMAIL) VALUES
 (N'Dương Minh Hiển','1992-02-23','0889092010','zzzz@gmail.com'),
 (N'Ngô Quang Thủy','1983-12-13','0475655816','haiya@gmail.com'),
-(N'Trần Minh Dương','1975-04-21','0486596073','kungfupanther@gmail.com')
+(N'Trần Minh Dương','1975-04-21','0486596073','kungfupanther@gmail.com'),
 (N'Trương Quang Phát','2003-08-31','0856596073','phatdeptraicute@gmail.com')
 
 -- Tài khoản				  
@@ -502,9 +502,9 @@ AS
 BEGIN
 	IF (@giodi < GETDATE()) RETURN N'Giờ đi không hợp lệ'
 	IF (@giodi >= @gioden) RETURN N'Giờ đến không được bé hơn hoặc bằng giờ đi'
-	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen AND MATAIXE = @mataixe)
-		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN) 
-		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen)
+	IF not exists (SELECT * FROM CHUYENXE WHERE GIODI = @giodi AND GIODEN = @gioden AND MATUYEN = @matuyen)
+		INSERT INTO CHUYENXE(TENCHUYEN, GIODI, GIODEN, GIAVE, MATAIXE, MATUYEN, MAXE) 
+		VALUES (@tenchuyen, @giodi, @gioden, @giave, @mataixe, @matuyen, @maxe)
 	ELSE RETURN N'Chuyến đã tồn tại'
 END
 
@@ -803,6 +803,7 @@ CREATE OR ALTER PROC HUYVEXE @mave int
 AS
 BEGIN
 	DELETE VEXE WHERE MAVE = @mave
+	DELETE CHITIETVEXE WHERE MACTVX = @mave
 END
 
 GO
@@ -819,3 +820,16 @@ BEGIN
 	SET GIODI = @giodi, GIODEN = @gioden, VITRIGHE = @vitrighe, GIAVE = @giave, TRANGTHAI = @trangthai
 	WHERE MAVE = @mave
 END
+
+CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, @ghe char(2), @trangthai nvarchar(20)
+as 
+begin
+	insert into VEXE(TENVE, GHICHU, MACHUYEN, MAKH)
+	values (@tenve, @ghichu, @machuyen, @makh)
+	insert into CHITIETVEXE(GIODI, GIODEN, GIAVE, MAXE, TRANGTHAI, VITRIGHE)
+	select GIODI, GIODEN, GIAVE, MAXE, @trangthai,@ghe
+	from CHUYENXE
+	where MACHUYEN=@machuyen
+end
+go
+

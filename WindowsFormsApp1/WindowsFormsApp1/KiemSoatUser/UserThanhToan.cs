@@ -37,5 +37,6 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             txtNganhang.Text = cbNganHang.SelectedItem.ToString();
         }
+
     }
 }

@@ -43,6 +43,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnXacNhanKH = new Guna.UI2.WinForms.Guna2Button();
             this.btnXacNhanVe = new Guna.UI2.WinForms.Guna2Button();
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.btnTam();
             this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -50,11 +55,7 @@
             this.guna2ElipseCTVeXe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lbHello = new System.Windows.Forms.Label();
-            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
-            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
-            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
-            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
-            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.btnTam();
+            this.btnThanhToan2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -246,6 +247,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnThanhToan2);
             this.panel2.Controls.Add(this.btnXacNhanKH);
             this.panel2.Controls.Add(this.btnXacNhanVe);
             this.panel2.Controls.Add(this.userLichTrinh1);
@@ -300,6 +302,52 @@
             this.btnXacNhanVe.Text = "Đặt vé";
             this.btnXacNhanVe.Click += new System.EventHandler(this.btnXacNhanVe_Click);
             // 
+            // userLichTrinh1
+            // 
+            this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.userLichTrinh1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userLichTrinh1.Location = new System.Drawing.Point(22, 22);
+            this.userLichTrinh1.Margin = new System.Windows.Forms.Padding(0);
+            this.userLichTrinh1.Name = "userLichTrinh1";
+            this.userLichTrinh1.Size = new System.Drawing.Size(1597, 820);
+            this.userLichTrinh1.TabIndex = 2;
+            // 
+            // userProfile1
+            // 
+            this.userProfile1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userProfile1.Location = new System.Drawing.Point(22, 22);
+            this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(1600, 820);
+            this.userProfile1.TabIndex = 1;
+            // 
+            // userChiTietVeXe1
+            // 
+            this.userChiTietVeXe1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userChiTietVeXe1.Location = new System.Drawing.Point(22, 22);
+            this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
+            this.userChiTietVeXe1.Size = new System.Drawing.Size(1600, 820);
+            this.userChiTietVeXe1.TabIndex = 4;
+            // 
+            // userThanhToan1
+            // 
+            this.userThanhToan1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userThanhToan1.Location = new System.Drawing.Point(22, 22);
+            this.userThanhToan1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userThanhToan1.Name = "userThanhToan1";
+            this.userThanhToan1.Size = new System.Drawing.Size(1600, 820);
+            this.userThanhToan1.TabIndex = 3;
+            // 
+            // userDatVe1
+            // 
+            this.userDatVe1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.userDatVe1.Location = new System.Drawing.Point(22, 22);
+            this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userDatVe1.Name = "userDatVe1";
+            this.userDatVe1.Size = new System.Drawing.Size(1600, 820);
+            this.userDatVe1.TabIndex = 0;
+            // 
             // guna2ElipseDatVe
             // 
             this.guna2ElipseDatVe.TargetControl = this;
@@ -351,51 +399,25 @@
             this.lbHello.TabIndex = 7;
             this.lbHello.Text = "Hello, Tên khách hàng !!";
             // 
-            // userLichTrinh1
+            // btnThanhToan2
             // 
-            this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.userLichTrinh1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userLichTrinh1.Location = new System.Drawing.Point(22, 22);
-            this.userLichTrinh1.Margin = new System.Windows.Forms.Padding(0);
-            this.userLichTrinh1.Name = "userLichTrinh1";
-            this.userLichTrinh1.Size = new System.Drawing.Size(1597, 820);
-            this.userLichTrinh1.TabIndex = 2;
-            // 
-            // userProfile1
-            // 
-            this.userProfile1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userProfile1.Location = new System.Drawing.Point(22, 22);
-            this.userProfile1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.userProfile1.Name = "userProfile1";
-            this.userProfile1.Size = new System.Drawing.Size(1600, 820);
-            this.userProfile1.TabIndex = 1;
-            // 
-            // userChiTietVeXe1
-            // 
-            this.userChiTietVeXe1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userChiTietVeXe1.Location = new System.Drawing.Point(22, 22);
-            this.userChiTietVeXe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.userChiTietVeXe1.Name = "userChiTietVeXe1";
-            this.userChiTietVeXe1.Size = new System.Drawing.Size(1600, 820);
-            this.userChiTietVeXe1.TabIndex = 4;
-            // 
-            // userThanhToan1
-            // 
-            this.userThanhToan1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userThanhToan1.Location = new System.Drawing.Point(22, 22);
-            this.userThanhToan1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.userThanhToan1.Name = "userThanhToan1";
-            this.userThanhToan1.Size = new System.Drawing.Size(1600, 820);
-            this.userThanhToan1.TabIndex = 3;
-            // 
-            // userDatVe1
-            // 
-            this.userDatVe1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.userDatVe1.Location = new System.Drawing.Point(22, 22);
-            this.userDatVe1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.userDatVe1.Name = "userDatVe1";
-            this.userDatVe1.Size = new System.Drawing.Size(1600, 820);
-            this.userDatVe1.TabIndex = 0;
+            this.btnThanhToan2.BorderRadius = 18;
+            this.btnThanhToan2.BorderThickness = 2;
+            this.btnThanhToan2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThanhToan2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThanhToan2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThanhToan2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThanhToan2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan2.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan2.Location = new System.Drawing.Point(1143, 762);
+            this.btnThanhToan2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThanhToan2.Name = "btnThanhToan2";
+            this.btnThanhToan2.Size = new System.Drawing.Size(270, 69);
+            this.btnThanhToan2.TabIndex = 7;
+            this.btnThanhToan2.Text = "Thanh toán";
+            this.btnThanhToan2.Click += new System.EventHandler(this.btnThanhToan2_Click);
             // 
             // BangDieuKhien
             // 
@@ -454,6 +476,7 @@
         private Guna.UI2.WinForms.Guna2Button btnChonVe;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label lbHello;
+        private Guna.UI2.WinForms.Guna2Button btnThanhToan2;
         // private KiemSoatUser.UserChiTietVeXe userCTVeXe1;
     }
 }

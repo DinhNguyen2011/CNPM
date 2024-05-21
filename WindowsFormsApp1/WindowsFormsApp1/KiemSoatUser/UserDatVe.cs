@@ -528,9 +528,7 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private void btnInc_Click(object sender, EventArgs e)
         {
-            hiddenButton.Visible = true;
-            hiddenButton.Focus();
-            hiddenButton.Visible = false;
+            btnA1.Focus();
         }
     }
 }

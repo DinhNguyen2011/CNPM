@@ -67,7 +67,6 @@
             this.txtTuyenXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGioDi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.hiddenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -683,21 +682,11 @@
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTongTien.TextChanged += new System.EventHandler(this.txtSoVe_TextChanged);
             // 
-            // hiddenButton
-            // 
-            this.hiddenButton.Location = new System.Drawing.Point(822, 187);
-            this.hiddenButton.Name = "hiddenButton";
-            this.hiddenButton.Size = new System.Drawing.Size(75, 23);
-            this.hiddenButton.TabIndex = 65;
-            this.hiddenButton.UseVisualStyleBackColor = true;
-            this.hiddenButton.Visible = false;
-            // 
             // btnTam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Controls.Add(this.hiddenButton);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtGioDi);
             this.Controls.Add(this.txtTuyenXe);
@@ -780,6 +769,5 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGioDi;
         private Guna.UI2.WinForms.Guna2TextBox txtTuyenXe;
         private Guna.UI2.WinForms.Guna2TextBox txtSoVe;
-        private System.Windows.Forms.Button hiddenButton;
     }
 }

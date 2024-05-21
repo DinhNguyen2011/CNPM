@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.KiemSoatUser
     {
 
         private KhachHang thongTinChuVe;
+        private string ghiChu = "";
         public UserProfile()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace WindowsFormsApp1.KiemSoatUser
         }
 
         public KhachHang ThongTinChuVe { get => thongTinChuVe;}
+        public string GhiChu { get => ghiChu;}
+
         private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -76,6 +79,11 @@ namespace WindowsFormsApp1.KiemSoatUser
         private void rdbtNam_CheckedChanged(object sender, EventArgs e)
         {
             thongTinChuVe.Gioitinh = "Nam";
+        }
+
+        private void txtGhichu_Leave(object sender, EventArgs e)
+        {
+            ghiChu = txtGhichu.Text;
         }
     }
 }
