@@ -84,17 +84,24 @@ namespace WindowsFormsApp1
                 checkLogin();
             }
         }
+
+
+
+
+
+
+
+
+
+
         #endregion
 
-
-
-
-
-
-
-
-
-
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            guna2Panel1.Location = new Point(
+            this.ClientSize.Width / 2 - guna2Panel1.Size.Width / 2,
+            this.ClientSize.Height / 2 - guna2Panel1.Size.Height / 2);
+            guna2Panel1.Anchor = AnchorStyles.None;
+        }
     }
 }

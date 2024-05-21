@@ -823,6 +823,8 @@ BEGIN
 	WHERE MAVE = @mave
 END
 
+go
+
 CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, @ghe char(2), @trangthai nvarchar(20)
 as 
 begin
