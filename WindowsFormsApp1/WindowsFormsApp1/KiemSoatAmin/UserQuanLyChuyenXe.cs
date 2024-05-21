@@ -26,10 +26,9 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void reset()
         {
             txttenchuyen.Text = txtgiave.Text = "";
-            dtpgiodi.Value = dtpgioden.Value = dtpTimGioDi.Value = DateTime.Now;
+            dtpgiodi.Value = dtpgioden.Value  = DateTime.Now;
             cmbtaixe.SelectedIndex = 0;
             cmbtuyenxe.SelectedIndex = 0;
-            cmbTimTuyenXe.SelectedIndex = 0;
             txttenchuyen.Focus();
         }
         public string chuanHoaChuoi(String s)
@@ -81,8 +80,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     double giave = 0;
                     giave = Convert.ToDouble(txtgiave.Text);
 
-                    string giodi = dtpgiodi.Value.ToString();
-                    string gioden = dtpgioden.Value.ToString();
+                    string giodi = dtpgiodi.Value.ToString("yyyy-MM-dd HH:mm");
+                    string gioden = dtpgioden.Value.ToString("yyyy-MM-dd HH:mm");
 
                     int mataixe = NhanVienDAO.Instance.getIDByTenNhanVien(cmbtaixe.SelectedValue.ToString());
                     int maxe = XeDAO.Instance.getIDByBienSo(cmbbienso.SelectedValue.ToString());
@@ -103,7 +102,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             catch (Exception e)
             {
                 if (e.Message.StartsWith("Input string was not in a correct format"))
-                    MessageBox.Show("Giá vé phải là kiểu dữ số", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Giá vé phải là kiểu dữ liệu số", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -134,8 +133,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 c.Tenchuyen = txttenchuyen.Text;
                 c.Giave = Convert.ToDouble(txtgiave.Text);
 
-                c.Giodi = dtpgiodi.Value.ToString();
-                c.Gioden = dtpgioden.Value.ToString();
+                c.Giodi = dtpgiodi.Value.ToString("yyyy-MM-dd HH:mm");
+                c.Gioden = dtpgioden.Value.ToString("yyyy-MM-dd HH:mm");
 
                 c.Mataixe = NhanVienDAO.Instance.getIDByTenNhanVien(cmbtaixe.SelectedValue.ToString());
                 c.Maxe = XeDAO.Instance.getIDByBienSo(cmbbienso.SelectedValue.ToString());
@@ -157,6 +156,8 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void timTuyenXe()
         {
+            btnSuaChuyen.Enabled = false;
+            btnXoaChuyen.Enabled = false;
             string tentuyenxe = cmbTimTuyenXe.SelectedValue.ToString();
             string[] arr = tentuyenxe.Split('-');
             string diemdi = arr[0].Trim();

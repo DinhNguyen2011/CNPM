@@ -132,19 +132,6 @@ namespace WindowsFormsApp1
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-        #endregion
-
         private void DangKiTaiKhoang_Load(object sender, EventArgs e)
         {
             guna2Panel1.Location = new Point(
@@ -152,5 +139,10 @@ namespace WindowsFormsApp1
             this.ClientSize.Height / 2 - guna2Panel1.Size.Height / 2);
             guna2Panel1.Anchor = AnchorStyles.None;
         }
+
+
+        #endregion
+
+
     }
 }

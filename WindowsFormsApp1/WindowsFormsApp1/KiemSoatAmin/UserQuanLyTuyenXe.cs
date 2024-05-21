@@ -45,6 +45,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Method
         public void LoadTuyenXe()
         {
+            dgvVeXe.AutoGenerateColumns = false;
             btnXoaTuyen.Enabled = false;
             btnThemTuyen.Enabled = true; ;
             listTuyenXe = TuyenXeDAO.Instance.getDSTuyenXe();

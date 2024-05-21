@@ -105,10 +105,6 @@ namespace WindowsFormsApp1.DAO
                 {
                     MessageBox.Show("Thời gian đến không được nhỏ hơn hoặc bằng thời gian đi", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Chuyến đã tồn tại'"))
-                {
-                    MessageBox.Show("Chuyến xe đã tồn tại", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
                 else
                     MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

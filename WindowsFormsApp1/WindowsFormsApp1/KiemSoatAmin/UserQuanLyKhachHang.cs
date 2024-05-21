@@ -41,6 +41,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region method
         public void LoadKhachHang()
         {
+            dgvTimKH.AutoGenerateColumns = false;
             listKhachHang = new List<KhachHang>();
             btnXoaKH.Enabled = false;
             listKhachHang = KhachHangDAO.Instance.getDSKhachHang();
@@ -49,6 +50,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadTaiKhoan()
         {
+            dgvtaikhoan.AutoGenerateColumns = false;
             listTaiKhoan = new List<TaiKhoan>();
             btnXoaKH.Enabled = false;
             listTaiKhoan = TaiKhoanDAO.Instance.getDSTaiKhoan();

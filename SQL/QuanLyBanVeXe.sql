@@ -835,4 +835,3 @@ begin
 	where MACHUYEN=@machuyen
 end
 go
-

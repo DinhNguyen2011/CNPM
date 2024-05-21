@@ -52,7 +52,7 @@ namespace WindowsFormsApp1.DAO
                 if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Trùng biển số xe, không thể thêm' "))
                     MessageBox.Show("Trùng biển số xe, không thể thêm", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    throw e;
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
@@ -66,7 +66,10 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Xe đang hoạt động'"))
+                    MessageBox.Show("Xe đang hoạt động", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
@@ -80,7 +83,10 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Xe đang hoạt động'"))
+                    MessageBox.Show("Xe đang hoạt động", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }

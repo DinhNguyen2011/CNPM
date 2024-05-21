@@ -49,8 +49,10 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Method
         public void LoadXe()
         {
+            dgvXe.AutoGenerateColumns = false;
             btnXoaXe.Enabled = false;
             btnSuaXe.Enabled = false;
+            btnThemXe.Enabled = true;
             txtBienSo.Enabled = true;
             listXe = XeDAO.Instance.getDSXe();
             dgvXe.DataSource = listXe;
@@ -178,6 +180,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 {
                     btnXoaXe.Enabled = true;
                     btnSuaXe.Enabled = true;
+                    btntimxe.Enabled = false;
                     txtBienSo.Enabled = false;
                     Xe x = listXe[indexRow];
                     txtTenXe.Text = x.Tenxe;

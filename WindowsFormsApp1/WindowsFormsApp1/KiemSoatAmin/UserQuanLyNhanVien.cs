@@ -205,6 +205,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         public void LoadLoaiNV()
         {
+            dgvLoaiNV.AutoGenerateColumns = false;
             btnxoaloainv.Enabled = false;
             listLoaiNV = LoaiNVDAO.Instance.getDSLoaiNV();
             dgvLoaiNV.DataSource = listLoaiNV;

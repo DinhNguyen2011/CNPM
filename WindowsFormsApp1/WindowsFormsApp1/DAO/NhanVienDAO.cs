@@ -66,7 +66,11 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Không thể xóa! Nhân viên đã được phân công vào các chuyến xe'"))
+                    MessageBox.Show("Không thể xóa! Nhân viên đã được phân công vào các chuyến xe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
@@ -80,7 +84,10 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Loại NV không phù hợp'"))
+                    MessageBox.Show("Loại NV không phù hợp", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }

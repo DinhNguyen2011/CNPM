@@ -67,7 +67,10 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tuyến xe đang có chuyến hoạt động'"))
+                    MessageBox.Show("Tuyến xe đang có chuyến hoạt động", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }
