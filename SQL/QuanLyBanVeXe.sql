@@ -819,10 +819,9 @@ AS
 BEGIN
 	UPDATE VEXE SET MACTVX = NULL WHERE MAVE = @mave
 	DELETE CHITIETVEXE WHERE MAVE = @mave
-	--DELETE VEXE WHERE MAVE = @mave
+	DELETE VEXE WHERE MAVE = @mave
 	
 END
-EXEC HUYVEXE 2
 GO
 
 CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, 
