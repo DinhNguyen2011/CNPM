@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.DTO;
@@ -14,6 +15,7 @@ namespace WindowsFormsApp1
     public partial class BangDieuKhien : Form
     {
         private int index = 0;
+        private int tabIndex = 0;
         private KhachHang user;
         private int slVe = 0;
         private List<String> dsGhe = new List<string>();
@@ -67,6 +69,8 @@ namespace WindowsFormsApp1
 
         private void chonThongTinVe(LichTrinh selected)
         {
+            tabIndex = 1;
+            index = tabIndex ;
             PnMoving.Left = btnChonChuyen.Left + 50;
             if (selected != null ) userDatVe1.LtSelected = selected;
             userDatVe1.setValue();
@@ -80,6 +84,8 @@ namespace WindowsFormsApp1
 
         private void nhapThongTinKhachHang(KhachHang user)
         {
+            tabIndex = 2;
+            index = tabIndex;
             PnMoving.Left = btnThongTinKH.Left + 55;
             if (user != null) userProfile1.setValue(user);
             userProfile1.Visible = true;
@@ -91,6 +97,8 @@ namespace WindowsFormsApp1
         
         private void chonLichTrinh()
         {
+            tabIndex = 0;
+            index = tabIndex;
             PnMoving.Left=btnTrangChu.Left + 60;
             userLichTrinh1.Visible=true;
             userLichTrinh1.BringToFront();
@@ -100,9 +108,12 @@ namespace WindowsFormsApp1
         }
        
 
-        private void thanhToan()
+        private void thanhToan(bool check)
         {
+            tabIndex = 3;
+            index = tabIndex;
             PnMoving.Left = btnThanhToan.Left + 60;
+            if (check) userThanhToan1.setValue(user.Tenkh, dsGhe, chuyendi.DiemDi + " - " + chuyendi.DiemDen + " + " + chuyendi.Giodi);
             userThanhToan1.Visible = true;
             userThanhToan1.BringToFront();
             resetColorOfTitlePage();
@@ -110,6 +121,7 @@ namespace WindowsFormsApp1
         }
         private void kiemTraVe()
         {
+            tabIndex = 4;
             PnMoving.Left = btnKiemTraVe.Left + 60;
             userChiTietVeXe1.Visible = true;
             userChiTietVeXe1.BringToFront();
@@ -117,7 +129,17 @@ namespace WindowsFormsApp1
             btnKiemTraVe.FillColor = Color.FromArgb(0, 192, 0);
         }
         
+        private bool chuanHoaSDT(string sdt)
+        {
+            return sdt.StartsWith("0") && sdt.Length == 10;
+        }
 
+        private bool chuanHoaEmail(string email)
+        {
+            email = email.Trim();
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
         private void LogOut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -130,22 +152,45 @@ namespace WindowsFormsApp1
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
+            if (tabIndex > 0)
+            {
+                if (MessageBox.Show("Bạn sẽ phải bắt đầu lại từ bước này?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) != DialogResult.Yes)
+                    return;
+            }
             chonLichTrinh();
         }
 
         private void btnChonVe_Click(object sender, EventArgs e)
         {
-            if (index > 0) chonThongTinVe(null);
+            if (index < 1) return;
+            if (tabIndex == 4) chonThongTinVe(null);
+            if (tabIndex>1)
+            {
+                if (MessageBox.Show("Bạn sẽ phải bắt đầu lại từ bước này?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    chonThongTinVe(null);
+            }    
         }
 
         private void btnThongTinKH_Click(object sender, EventArgs e)
         {
-            if (index > 1) nhapThongTinKhachHang(null);
+            if (index < 2) return;
+            if (tabIndex == 4) nhapThongTinKhachHang(null);
+            if (tabIndex > 2)
+            {
+                if (MessageBox.Show("Bạn sẽ phải bắt đầu lại từ bước này?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    nhapThongTinKhachHang(null);
+            }
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            if (index > 2) thanhToan();
+            if (index < 3) return;
+            if (tabIndex == 4) thanhToan(false);
+            if (tabIndex > 3)
+            {
+                if (MessageBox.Show("Bạn sẽ phải bắt đầu lại từ bước này?", "Xác nhận thay đổi", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    thanhToan(false);
+            }
         }
 
         private void btnKiemTraVe_Click(object sender, EventArgs e)
@@ -157,7 +202,6 @@ namespace WindowsFormsApp1
             LichTrinh selected = userLichTrinh1.Selected;
             if (selected != null)
             {
-                index++;
                 if (MessageBox.Show("Chuyến " + selected.DiemDi + " - " + selected.DiemDen + " vào lúc " + selected.Giodi, "Xác nhận lựa chọn", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     chuyendi = selected;
@@ -175,9 +219,9 @@ namespace WindowsFormsApp1
             int soVeDaChon = userDatVe1.SlVeDaChon;
             if (soVe == soVeDaChon)
             {
-                index++;
                 slVe = soVe;
                 dsGhe = userDatVe1.DanhSachGhe;
+                dsGhe.Sort();
                 nhapThongTinKhachHang(user);
             }
             else MessageBox.Show("Vui lòng chọn thêm " + (soVe-soVeDaChon) + " ghế !!", "Thông báo");
@@ -187,12 +231,11 @@ namespace WindowsFormsApp1
         private void btnXacNhanKH_Click(object sender, EventArgs e)
         {
             KhachHang thongTinKhachHang = userProfile1.ThongTinChuVe;
-            if (thongTinKhachHang.Sdt.Length != 10 && thongTinKhachHang.Email != "")
+            if (chuanHoaSDT(thongTinKhachHang.Sdt)&&chuanHoaEmail(thongTinKhachHang.Email))
             {
-                index++;
-                thanhToan();
+                thanhToan(true);
             }
-            else MessageBox.Show("Vui nhập nhập đầy đủ thông tin liên lạc !!", "Thông báo");
+            else MessageBox.Show("Thông tin liên lạc không hợp lệ !!", "Thông báo");
         }
 
         

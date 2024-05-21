@@ -12,22 +12,22 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1.KiemSoatUser
 {
-    public partial class btnInc : UserControl
+    public partial class btnTam : UserControl
     {
 
-        private LichTrinh ltSelected;
+        private LichTrinh lichTrinhSelected;
         private List<String> dsGhe;
         private int slVe = 1;
         private int slVeDaChon = 0;
 
-        public LichTrinh LtSelected {set => ltSelected = value; }
+        public LichTrinh LtSelected {set => lichTrinhSelected = value; }
         public List<string> DanhSachGhe { get => dsGhe;}
         public int SlVeDaChon { get => slVeDaChon;}
         public int SlVe { get => slVe;}
 
-        public btnInc()
+        public btnTam()
         {
-            ltSelected = null;
+            lichTrinhSelected = null;
             dsGhe = new List<String>();
             InitializeComponent();
             txtSoVe.Text = "1";
@@ -35,11 +35,11 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         public void setValue()
         {
-            if (ltSelected != null)
+            if (lichTrinhSelected != null)
             {
-                txtTuyenXe.Text = ltSelected.DiemDi + " - " + ltSelected.DiemDen;
-                txtGioDi.Text = ltSelected.Giodi;
-                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString()+ " vnđ";
+                txtTuyenXe.Text = lichTrinhSelected.DiemDi + " - " + lichTrinhSelected.DiemDen;
+                txtGioDi.Text = lichTrinhSelected.Giodi;
+                txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString()+ " vnđ";
             }
         }
         private void txtSoVe_KeyPress(object sender, KeyPressEventArgs e)
@@ -55,25 +55,17 @@ namespace WindowsFormsApp1.KiemSoatUser
             if (txtSoVe.Text == "")
             {
                 slVe = 1;
-                txtTongTien.Text = ltSelected.Giatien.ToString() + " vnđ";
+                txtTongTien.Text = lichTrinhSelected.Giatien.ToString() + " vnđ";
                 return;
             } 
                 
             int sl = Convert.ToInt32(txtSoVe.Text);
-            if (sl < slVeDaChon)
-            {
-                MessageBox.Show("Vui lòng hủy bớt ghế đã chọn", "Thông báo");
-                slVe = slVeDaChon;
-                txtSoVe.Text = slVe + "";
-                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
-                return;
-            }
             if (sl > 24) sl = 24;
             if (sl == 0) sl = 1;
             slVe = sl;
             txtSoVe.Text = sl + "";
-            if (ltSelected != null) 
-                txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
+            if (lichTrinhSelected!=null)
+                txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnTang_Click(object sender, EventArgs e)
@@ -81,7 +73,7 @@ namespace WindowsFormsApp1.KiemSoatUser
             if (slVe < 24)
                 slVe++;
             txtSoVe.Text = slVe + "";
-            txtTongTien.Text = (slVe *ltSelected.Giatien).ToString() + " vnđ";
+            txtTongTien.Text = (slVe *lichTrinhSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnGiam_Click(object sender, EventArgs e)
@@ -93,13 +85,35 @@ namespace WindowsFormsApp1.KiemSoatUser
                 return;
             }
             slVe--;
-            txtTongTien.Text = (slVe * ltSelected.Giatien).ToString() + " vnđ";
+            txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
             txtSoVe.Text = slVe + "";
         }
 
         private void txtSoVe_Leave(object sender, EventArgs e)
         {
-            if (txtSoVe.Text == "") txtSoVe.Text = "1";
+            if (txtSoVe.Text == "")
+            {
+                txtSoVe.Text = "1";
+                slVe = 1;
+                txtTongTien.Text = lichTrinhSelected.Giatien.ToString() + " vnđ";
+                return;
+            }
+
+            int sl = Convert.ToInt32(txtSoVe.Text);
+            if (sl < slVeDaChon)
+            {
+                MessageBox.Show("Vui lòng hủy bớt ghế đã chọn", "Thông báo");
+                slVe = slVeDaChon;
+                txtSoVe.Text = slVe + "";
+                txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
+                return;
+            }
+            if (sl > 24) sl = 24;
+            if (sl == 0) sl = 1;
+            slVe = sl;
+            txtSoVe.Text = sl + "";
+            if (lichTrinhSelected != null)
+                txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnA1_Click(object sender, EventArgs e)
@@ -512,6 +526,11 @@ namespace WindowsFormsApp1.KiemSoatUser
             }
         }
 
-        
+        private void btnInc_Click(object sender, EventArgs e)
+        {
+            hiddenButton.Visible = true;
+            hiddenButton.Focus();
+            hiddenButton.Visible = false;
+        }
     }
 }

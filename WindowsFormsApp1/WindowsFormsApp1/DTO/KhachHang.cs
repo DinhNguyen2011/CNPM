@@ -38,7 +38,7 @@ namespace WindowsFormsApp1.DTO
             this.makh = (int)row["makh"];
             this.tenkh = row["tenkh"].ToString();
             this.ngaysinh = (DateTime?)row["ngaysinh"];
-            this.sdt = row["sdt"].ToString();
+            this.sdt = row["sdt"].ToString().Trim();
             this.email = row["email"].ToString();
         }
         public KhachHang()

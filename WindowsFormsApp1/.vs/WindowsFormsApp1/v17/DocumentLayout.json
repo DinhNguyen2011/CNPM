@@ -3,52 +3,8 @@
   "WorkspaceRootPath": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|d:\\hoctap\\cnpm\\windowsformsapp1\\windowsformsapp1\\gui\\bangdieukhien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|d:\\hoctap\\cnpm\\windowsformsapp1\\windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userchitietvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userchitietvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\dto\\lichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\dto\\lichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|d:\\hoctap\\cnpm\\windowsformsapp1\\windowsformsapp1\\kiemsoatuser\\userdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\gui\\bangdieukhienadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhienadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\gui\\bangdieukhien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userdatve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -59,8 +15,44 @@
       "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\dto\\tuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\dto\\tuyenxe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userlichtrinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userdatve.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userdatve.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\gui\\bangdieukhien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\gui\\bangdieukhien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|D:\\HocTap\\CNPM\\WindowsFormsApp1\\windowsformsapp1\\kiemsoatuser\\userchitietvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{713374A9-AF75-4AE5-8BF5-DC4DCFEDAF41}|WindowsFormsApp1\\QuanLyBanVeXe.csproj|solutionrelative:windowsformsapp1\\kiemsoatuser\\userchitietvexe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,45 +86,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "UserDatVe.Designer.cs",
+              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.Designer.cs",
+              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.Designer.cs",
+              "ViewState": "AQIAAFsCAAAAAAAAAAAAAFwCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T06:45:25.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T23:06:37.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T23:06:37.234Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserProfile.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserProfile.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:17:49.877Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-21T05:37:30.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LichTrinh.cs",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DTO\\LichTrinh.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\DTO\\LichTrinh.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DTO\\LichTrinh.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\DTO\\LichTrinh.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAA0AAAA",
+              "DocumentIndex": 3,
+              "Title": "TuyenXe.cs",
+              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DTO\\TuyenXe.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\DTO\\TuyenXe.cs",
+              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DTO\\TuyenXe.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\DTO\\TuyenXe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T20:46:30.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-21T04:26:56.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
+              "Title": "UserThanhToan.cs",
+              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
+              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T03:51:44.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UserThanhToan.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserThanhToan.cs",
@@ -143,19 +157,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "UserChiTietVeXe.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserChiTietVeXe.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserChiTietVeXe.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserChiTietVeXe.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserChiTietVeXe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T20:32:01.069Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-20T20:32:01.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
@@ -163,108 +176,59 @@
               "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T17:34:25.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-20T17:34:25.955Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BangDieuKhienAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhienAdmin.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "BangDieuKhien.cs",
+              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
+              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
+              "ViewState": "AQIAAM8AAAAAAAAAAADgv98AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T12:16:32.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DataProvider.cs",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DAO\\DataProvider.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\DAO\\DataProvider.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\DAO\\DataProvider.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\DAO\\DataProvider.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAswDAAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T12:04:49.092Z"
+              "WhenOpened": "2024-05-20T10:02:31.595Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserLichTrinh.cs",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAADwv2EAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:43:58.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "UserLichTrinh.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserLichTrinh.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:43:48.615Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-20T11:43:48.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BangDieuKhien.Designer.cs",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhien.Designer.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhien.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T11:00:18.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "UserDatVe.cs",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAnAAAA",
+              "ViewState": "AQIAAAUCAAAAAAAAAAAAABQCAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:53:58.994Z"
+              "WhenOpened": "2024-05-20T10:53:58.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "UserDatVe.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs",
               "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp1\\KiemSoatUser\\UserDatVe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:53:55.609Z"
+              "WhenOpened": "2024-05-20T10:53:55.609Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BangDieuKhien.cs",
-              "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
-              "ToolTip": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAALMAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T10:02:31.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "BangDieuKhien.cs [Design]",
               "DocumentMoniker": "D:\\HocTap\\CNPM\\WindowsFormsApp1\\WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\GUI\\BangDieuKhien.cs",
