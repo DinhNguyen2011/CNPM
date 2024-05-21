@@ -77,7 +77,7 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tồn tại nv thuộc loại cần xóa' "))
+                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tồn tại nhân viên thuộc loại cần xóa' "))
                     MessageBox.Show("Tồn tại nhân viên thuộc loại này, không thể xóa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     throw e;

@@ -84,6 +84,18 @@ namespace WindowsFormsApp1.DAO
             }
             return result;
         }
+        public List<string> DSBienSo()
+        {
+            List<string> list = new List<string>();
+            string query = "select BIENSO from XE";
+            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in result.Rows)
+            {
+                string bienso = item["bienso"].ToString();
+                list.Add(bienso);
+            }
+            return list;
+        }
         public List<Xe> TimXe(string bienso)
         {
             List<Xe> list = new List<Xe>();
@@ -95,6 +107,20 @@ namespace WindowsFormsApp1.DAO
                 list.Add(x);
             }
             return list;
+        }
+        public string getBienSoByID(int ma)
+        {
+            string bienso = "";
+            string query = "select BIENSO  from xe where MAXE = " + ma;
+            bienso = DataProvider.Instance.ExcuteScalar(query).ToString();
+            return bienso;
+        }
+        public int getIDByBienSo(string bienso)
+        {
+            int maxe = -1;
+            string query = "select MAXE  from xe where BIENSO = N'" + bienso+"'";
+            maxe = (int)DataProvider.Instance.ExcuteScalar(query);
+            return maxe;
         }
     }
 }

@@ -63,7 +63,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
 
             cmbtuyenxe.DataSource = TuyenXeDAO.Instance.getDSTenTuyenXe();
             cmbtaixe.DataSource = NhanVienDAO.Instance.DSTaiXe();
-
+            cmbbienso.DataSource = XeDAO.Instance.DSBienSo();
             cmbTimTuyenXe.DataSource = TuyenXeDAO.Instance.getDSTenTuyenXe();
 
             reset();
@@ -85,6 +85,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     string gioden = dtpgioden.Value.ToString();
 
                     int mataixe = NhanVienDAO.Instance.getIDByTenNhanVien(cmbtaixe.SelectedValue.ToString());
+                    int maxe = XeDAO.Instance.getIDByBienSo(cmbbienso.SelectedValue.ToString());
 
                     string tentuyenxe = cmbtuyenxe.SelectedValue.ToString();
                     string[] arr = tentuyenxe.Split('-');
@@ -92,7 +93,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     string diemden = arr[1].Trim();
                     int matuyen = TuyenXeDAO.Instance.getIDByTuyenXe(diemdi, diemden);
 
-                    ChuyenXe c = new ChuyenXe(tenchuyen,giodi,gioden,giave,matuyen,mataixe);
+                    ChuyenXe c = new ChuyenXe(tenchuyen,giodi,gioden,giave,matuyen,mataixe,maxe);
                     if (ChuyenXeDAO.Instance.themChuyenXe(c) > 0)
                     {
                         loadChuyenXe();
@@ -137,6 +138,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 c.Gioden = dtpgioden.Value.ToString();
 
                 c.Mataixe = NhanVienDAO.Instance.getIDByTenNhanVien(cmbtaixe.SelectedValue.ToString());
+                c.Maxe = XeDAO.Instance.getIDByBienSo(cmbbienso.SelectedValue.ToString());
 
                 if (ChuyenXeDAO.Instance.suaChuyenXe(c) > 0)
                 {
@@ -199,6 +201,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     dtpgioden.Value = Convert.ToDateTime(c.Gioden);
                     cmbtuyenxe.Text = TuyenXeDAO.Instance.getTenTuyenXeByID(c.Matuyen);
                     cmbtaixe.Text = NhanVienDAO.Instance.getTenNVbyID(c.Mataixe);
+                    cmbbienso.Text = XeDAO.Instance.getBienSoByID(c.Maxe);
 
                     index = indexRow;
                 }

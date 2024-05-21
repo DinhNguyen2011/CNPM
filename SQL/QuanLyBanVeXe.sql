@@ -487,7 +487,7 @@ GO
 CREATE OR ALTER PROC DSCHUYENXE
 AS 
 BEGIN
-	select MACHUYEN, TENCHUYEN, GIODI, GIODEN, GIAVE, MATUYEN, MATAIXE from CHUYENXE
+	select * from CHUYENXE
 END
 
 GO
@@ -796,7 +796,6 @@ end
 
 GO
 
--- Nghĩa thêm SP: DSTAIXE, TimTuyenXeByID, DSCHUYENXE, SỬA PROC THEMCHUYENXE
 
 /*==============================================================*/
 /* Stored procedure: Hủy vé xe               			        */

@@ -45,8 +45,8 @@ namespace WindowsFormsApp1.DAO
             int result = 0;
             try
             {
-                string query = "THEMCHUYENXE @tenchuyen , @giodi , @gioden , @giave , @mataixe , @matuyen";
-                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { c.Tenchuyen, c.Giodi, c.Gioden, c.Giave, c.Mataixe, c.Matuyen });
+                string query = "THEMCHUYENXE @tenchuyen , @giodi , @gioden , @giave , @mataixe , @matuyen , @maxe";
+                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { c.Tenchuyen, c.Giodi, c.Gioden, c.Giave, c.Mataixe, c.Matuyen, c.Maxe });
             }
             catch (Exception e)
             {
@@ -92,8 +92,8 @@ namespace WindowsFormsApp1.DAO
             int result = 0;
             try
             {
-                string query = "SUATHONGTINCHUYENXE @machuyen , @tenchuyen , @giodi , @gioden , @giave , @mataixe";
-                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { c.Machuyen, c.Tenchuyen, c.Giodi, c.Gioden, c.Giave, c.Mataixe });
+                string query = "SUATHONGTINCHUYENXE @machuyen , @tenchuyen , @giodi , @gioden , @giave , @mataixe , @maxe";
+                result = DataProvider.Instance.ExcuteNonQuery(query, new object[] { c.Machuyen, c.Tenchuyen, c.Giodi, c.Gioden, c.Giave, c.Mataixe, c.Maxe });
             }
             catch (SqlException e)
             {
