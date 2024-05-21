@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public UserQuanLyVeXe()
         {
             InitializeComponent();
+            
         }
         #region Xử lý phụ
         #endregion
@@ -28,17 +29,30 @@ namespace WindowsFormsApp1.KiemSoatAmin
         {
 
         }
-
-        private void btnSuaVexe_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnXoaVeXe_Click(object sender, EventArgs e)
         {
 
         }
-        #endregion
 
+        private void btnHienthi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimVeXe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvChiTietVeXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvVeXe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
