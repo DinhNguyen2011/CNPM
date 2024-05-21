@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.KiemSoatUser
 {
-    partial class btnInc
+    partial class btnTam
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnInc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnTam));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnA1 = new System.Windows.Forms.Button();
             this.btnB1 = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@
             this.txtTuyenXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGioDi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.hiddenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -79,7 +80,7 @@
             this.btnA1.BackColor = System.Drawing.Color.Cyan;
             this.btnA1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA1.ForeColor = System.Drawing.Color.Black;
-            this.btnA1.Location = new System.Drawing.Point(891, 235);
+            this.btnA1.Location = new System.Drawing.Point(980, 258);
             this.btnA1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA1.Name = "btnA1";
             this.btnA1.Size = new System.Drawing.Size(150, 50);
@@ -93,7 +94,7 @@
             this.btnB1.BackColor = System.Drawing.Color.Cyan;
             this.btnB1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB1.ForeColor = System.Drawing.Color.Black;
-            this.btnB1.Location = new System.Drawing.Point(1057, 234);
+            this.btnB1.Location = new System.Drawing.Point(1146, 257);
             this.btnB1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB1.Name = "btnB1";
             this.btnB1.Size = new System.Drawing.Size(150, 50);
@@ -107,7 +108,7 @@
             this.btnA2.BackColor = System.Drawing.Color.Cyan;
             this.btnA2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA2.ForeColor = System.Drawing.Color.Black;
-            this.btnA2.Location = new System.Drawing.Point(891, 304);
+            this.btnA2.Location = new System.Drawing.Point(980, 327);
             this.btnA2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA2.Name = "btnA2";
             this.btnA2.Size = new System.Drawing.Size(150, 50);
@@ -121,7 +122,7 @@
             this.btnC1.BackColor = System.Drawing.Color.Cyan;
             this.btnC1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC1.ForeColor = System.Drawing.Color.Black;
-            this.btnC1.Location = new System.Drawing.Point(1224, 235);
+            this.btnC1.Location = new System.Drawing.Point(1313, 258);
             this.btnC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC1.Name = "btnC1";
             this.btnC1.Size = new System.Drawing.Size(150, 50);
@@ -135,7 +136,7 @@
             this.btnB2.BackColor = System.Drawing.Color.Cyan;
             this.btnB2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB2.ForeColor = System.Drawing.Color.Black;
-            this.btnB2.Location = new System.Drawing.Point(1057, 304);
+            this.btnB2.Location = new System.Drawing.Point(1146, 327);
             this.btnB2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB2.Name = "btnB2";
             this.btnB2.Size = new System.Drawing.Size(150, 50);
@@ -149,7 +150,7 @@
             this.btnA3.BackColor = System.Drawing.Color.Cyan;
             this.btnA3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA3.ForeColor = System.Drawing.Color.Black;
-            this.btnA3.Location = new System.Drawing.Point(891, 373);
+            this.btnA3.Location = new System.Drawing.Point(980, 396);
             this.btnA3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA3.Name = "btnA3";
             this.btnA3.Size = new System.Drawing.Size(150, 50);
@@ -163,7 +164,7 @@
             this.btnB3.BackColor = System.Drawing.Color.Cyan;
             this.btnB3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB3.ForeColor = System.Drawing.Color.Black;
-            this.btnB3.Location = new System.Drawing.Point(1057, 373);
+            this.btnB3.Location = new System.Drawing.Point(1146, 396);
             this.btnB3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB3.Name = "btnB3";
             this.btnB3.Size = new System.Drawing.Size(150, 50);
@@ -177,7 +178,7 @@
             this.btnA4.BackColor = System.Drawing.Color.Cyan;
             this.btnA4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA4.ForeColor = System.Drawing.Color.Black;
-            this.btnA4.Location = new System.Drawing.Point(891, 443);
+            this.btnA4.Location = new System.Drawing.Point(980, 466);
             this.btnA4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA4.Name = "btnA4";
             this.btnA4.Size = new System.Drawing.Size(150, 50);
@@ -191,7 +192,7 @@
             this.btnB4.BackColor = System.Drawing.Color.Cyan;
             this.btnB4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB4.ForeColor = System.Drawing.Color.Black;
-            this.btnB4.Location = new System.Drawing.Point(1057, 443);
+            this.btnB4.Location = new System.Drawing.Point(1146, 466);
             this.btnB4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB4.Name = "btnB4";
             this.btnB4.Size = new System.Drawing.Size(150, 50);
@@ -205,7 +206,7 @@
             this.btnA5.BackColor = System.Drawing.Color.Cyan;
             this.btnA5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA5.ForeColor = System.Drawing.Color.Black;
-            this.btnA5.Location = new System.Drawing.Point(891, 516);
+            this.btnA5.Location = new System.Drawing.Point(980, 539);
             this.btnA5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA5.Name = "btnA5";
             this.btnA5.Size = new System.Drawing.Size(150, 50);
@@ -219,7 +220,7 @@
             this.btnB5.BackColor = System.Drawing.Color.Cyan;
             this.btnB5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB5.ForeColor = System.Drawing.Color.Black;
-            this.btnB5.Location = new System.Drawing.Point(1057, 516);
+            this.btnB5.Location = new System.Drawing.Point(1146, 539);
             this.btnB5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB5.Name = "btnB5";
             this.btnB5.Size = new System.Drawing.Size(150, 50);
@@ -233,7 +234,7 @@
             this.btnC2.BackColor = System.Drawing.Color.Cyan;
             this.btnC2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC2.ForeColor = System.Drawing.Color.Black;
-            this.btnC2.Location = new System.Drawing.Point(1224, 304);
+            this.btnC2.Location = new System.Drawing.Point(1313, 327);
             this.btnC2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC2.Name = "btnC2";
             this.btnC2.Size = new System.Drawing.Size(150, 50);
@@ -247,7 +248,7 @@
             this.btnC3.BackColor = System.Drawing.Color.Cyan;
             this.btnC3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC3.ForeColor = System.Drawing.Color.Black;
-            this.btnC3.Location = new System.Drawing.Point(1224, 374);
+            this.btnC3.Location = new System.Drawing.Point(1313, 397);
             this.btnC3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC3.Name = "btnC3";
             this.btnC3.Size = new System.Drawing.Size(150, 50);
@@ -261,7 +262,7 @@
             this.btnC4.BackColor = System.Drawing.Color.Cyan;
             this.btnC4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC4.ForeColor = System.Drawing.Color.Black;
-            this.btnC4.Location = new System.Drawing.Point(1224, 444);
+            this.btnC4.Location = new System.Drawing.Point(1313, 467);
             this.btnC4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC4.Name = "btnC4";
             this.btnC4.Size = new System.Drawing.Size(150, 50);
@@ -275,7 +276,7 @@
             this.btnC5.BackColor = System.Drawing.Color.Cyan;
             this.btnC5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC5.ForeColor = System.Drawing.Color.Black;
-            this.btnC5.Location = new System.Drawing.Point(1224, 517);
+            this.btnC5.Location = new System.Drawing.Point(1313, 540);
             this.btnC5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC5.Name = "btnC5";
             this.btnC5.Size = new System.Drawing.Size(150, 50);
@@ -289,7 +290,7 @@
             this.btnA6.BackColor = System.Drawing.Color.Cyan;
             this.btnA6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA6.ForeColor = System.Drawing.Color.Black;
-            this.btnA6.Location = new System.Drawing.Point(891, 588);
+            this.btnA6.Location = new System.Drawing.Point(980, 611);
             this.btnA6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnA6.Name = "btnA6";
             this.btnA6.Size = new System.Drawing.Size(150, 50);
@@ -303,7 +304,7 @@
             this.btnB6.BackColor = System.Drawing.Color.Cyan;
             this.btnB6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB6.ForeColor = System.Drawing.Color.Black;
-            this.btnB6.Location = new System.Drawing.Point(1057, 588);
+            this.btnB6.Location = new System.Drawing.Point(1146, 611);
             this.btnB6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnB6.Name = "btnB6";
             this.btnB6.Size = new System.Drawing.Size(150, 50);
@@ -317,7 +318,7 @@
             this.btnC6.BackColor = System.Drawing.Color.Cyan;
             this.btnC6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC6.ForeColor = System.Drawing.Color.Black;
-            this.btnC6.Location = new System.Drawing.Point(1224, 589);
+            this.btnC6.Location = new System.Drawing.Point(1313, 612);
             this.btnC6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnC6.Name = "btnC6";
             this.btnC6.Size = new System.Drawing.Size(150, 50);
@@ -331,7 +332,7 @@
             this.btnD1.BackColor = System.Drawing.Color.Cyan;
             this.btnD1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD1.ForeColor = System.Drawing.Color.Black;
-            this.btnD1.Location = new System.Drawing.Point(891, 663);
+            this.btnD1.Location = new System.Drawing.Point(980, 686);
             this.btnD1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD1.Name = "btnD1";
             this.btnD1.Size = new System.Drawing.Size(150, 50);
@@ -345,7 +346,7 @@
             this.btnD2.BackColor = System.Drawing.Color.Cyan;
             this.btnD2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD2.ForeColor = System.Drawing.Color.Black;
-            this.btnD2.Location = new System.Drawing.Point(891, 727);
+            this.btnD2.Location = new System.Drawing.Point(980, 750);
             this.btnD2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD2.Name = "btnD2";
             this.btnD2.Size = new System.Drawing.Size(150, 50);
@@ -359,7 +360,7 @@
             this.btnD3.BackColor = System.Drawing.Color.Cyan;
             this.btnD3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD3.ForeColor = System.Drawing.Color.Black;
-            this.btnD3.Location = new System.Drawing.Point(1057, 663);
+            this.btnD3.Location = new System.Drawing.Point(1146, 686);
             this.btnD3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD3.Name = "btnD3";
             this.btnD3.Size = new System.Drawing.Size(150, 50);
@@ -373,7 +374,7 @@
             this.btnD5.BackColor = System.Drawing.Color.Cyan;
             this.btnD5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD5.ForeColor = System.Drawing.Color.Black;
-            this.btnD5.Location = new System.Drawing.Point(1224, 664);
+            this.btnD5.Location = new System.Drawing.Point(1313, 687);
             this.btnD5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD5.Name = "btnD5";
             this.btnD5.Size = new System.Drawing.Size(150, 50);
@@ -387,7 +388,7 @@
             this.btnD4.BackColor = System.Drawing.Color.Cyan;
             this.btnD4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD4.ForeColor = System.Drawing.Color.Black;
-            this.btnD4.Location = new System.Drawing.Point(1057, 728);
+            this.btnD4.Location = new System.Drawing.Point(1146, 751);
             this.btnD4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD4.Name = "btnD4";
             this.btnD4.Size = new System.Drawing.Size(150, 50);
@@ -401,7 +402,7 @@
             this.btnD6.BackColor = System.Drawing.Color.Cyan;
             this.btnD6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD6.ForeColor = System.Drawing.Color.Black;
-            this.btnD6.Location = new System.Drawing.Point(1224, 729);
+            this.btnD6.Location = new System.Drawing.Point(1313, 752);
             this.btnD6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnD6.Name = "btnD6";
             this.btnD6.Size = new System.Drawing.Size(150, 50);
@@ -507,7 +508,7 @@
             this.guna2Button7.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.Location = new System.Drawing.Point(1050, 146);
+            this.guna2Button7.Location = new System.Drawing.Point(1139, 169);
             this.guna2Button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(167, 58);
@@ -627,7 +628,7 @@
             this.txtTuyenXe.PlaceholderText = "";
             this.txtTuyenXe.ReadOnly = true;
             this.txtTuyenXe.SelectedText = "";
-            this.txtTuyenXe.Size = new System.Drawing.Size(435, 72);
+            this.txtTuyenXe.Size = new System.Drawing.Size(471, 72);
             this.txtTuyenXe.TabIndex = 62;
             this.txtTuyenXe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -680,12 +681,23 @@
             this.txtTongTien.Size = new System.Drawing.Size(357, 72);
             this.txtTongTien.TabIndex = 64;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTongTien.TextChanged += new System.EventHandler(this.txtSoVe_TextChanged);
             // 
-            // btnInc
+            // hiddenButton
+            // 
+            this.hiddenButton.Location = new System.Drawing.Point(822, 187);
+            this.hiddenButton.Name = "hiddenButton";
+            this.hiddenButton.Size = new System.Drawing.Size(75, 23);
+            this.hiddenButton.TabIndex = 65;
+            this.hiddenButton.UseVisualStyleBackColor = true;
+            this.hiddenButton.Visible = false;
+            // 
+            // btnTam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.hiddenButton);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.txtGioDi);
             this.Controls.Add(this.txtTuyenXe);
@@ -723,8 +735,9 @@
             this.Controls.Add(this.btnB1);
             this.Controls.Add(this.btnA1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "btnInc";
+            this.Name = "btnTam";
             this.Size = new System.Drawing.Size(1600, 820);
+            this.Click += new System.EventHandler(this.btnInc_Click);
             this.ResumeLayout(false);
 
         }
@@ -767,5 +780,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGioDi;
         private Guna.UI2.WinForms.Guna2TextBox txtTuyenXe;
         private Guna.UI2.WinForms.Guna2TextBox txtSoVe;
+        private System.Windows.Forms.Button hiddenButton;
     }
 }

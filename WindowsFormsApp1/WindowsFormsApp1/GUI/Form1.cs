@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     DataRow row = DataProvider.Instance.ExcuteQuery("GETKHACHHANG @usenamer", new object[] { username }).Rows[0];
-                    KhachHang user = new KhachHang(row);  
+                    KhachHang user = new KhachHang(row);
                     BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
                     this.Hide();
                     bangDieuKhien.ShowDialog();
