@@ -70,6 +70,7 @@
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\TuyenXe.cs" />
     <Compile Include="DTO\VeXe.cs" />
+    <Compile Include="DTO\VeXeTam.cs" />
     <Compile Include="DTO\Xe.cs" />
     <Compile Include="GUI\BangDieuKhien.cs">
       <SubType>Form</SubType>
@@ -94,6 +95,12 @@
     </Compile>
     <Compile Include="GUI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormHienThiVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormHienThiVe.Designer.cs">
+      <DependentUpon>FormHienThiVe.cs</DependentUpon>
     </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyTuyenXe.cs">
       <SubType>UserControl</SubType>
@@ -174,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormHienThiVe.resx">
+      <DependentUpon>FormHienThiVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyTuyenXe.resx">
       <DependentUpon>UserQuanLyTuyenXe.cs</DependentUpon>

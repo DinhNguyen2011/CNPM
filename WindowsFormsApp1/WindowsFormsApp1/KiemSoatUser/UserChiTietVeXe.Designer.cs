@@ -38,6 +38,7 @@
             this.btnChiTietVe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvChiTietveXe = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietveXe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.btnChiTietVe.Size = new System.Drawing.Size(270, 69);
             this.btnChiTietVe.TabIndex = 30;
             this.btnChiTietVe.Text = "Xem Chi Tiết Vé";
+            this.btnChiTietVe.Click += new System.EventHandler(this.btnChiTietVe_Click);
             // 
             // guna2Elipse1
             // 
@@ -153,6 +154,26 @@
             this.dgvChiTietveXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvChiTietveXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietveXe_CellClick);
             // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderRadius = 18;
+            this.guna2Button5.BorderThickness = 2;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.Empty;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
+            this.guna2Button5.ImageSize = new System.Drawing.Size(185, 60);
+            this.guna2Button5.Location = new System.Drawing.Point(77, 40);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(519, 115);
+            this.guna2Button5.TabIndex = 42;
+            // 
             // Column6
             // 
             this.Column6.DataPropertyName = "ma";
@@ -164,7 +185,7 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "nguoiDat";
-            this.Column1.HeaderText = "Tên chủ vé";
+            this.Column1.HeaderText = "Người đặt";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -209,26 +230,6 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderRadius = 18;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Empty;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageSize = new System.Drawing.Size(185, 60);
-            this.guna2Button5.Location = new System.Drawing.Point(77, 40);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(519, 115);
-            this.guna2Button5.TabIndex = 42;
-            // 
             // UserChiTietVeXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -249,6 +250,7 @@
         private Guna.UI2.WinForms.Guna2Button btnChiTietVe;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvChiTietveXe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -256,6 +258,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvChiTietveXe;
     }
 }

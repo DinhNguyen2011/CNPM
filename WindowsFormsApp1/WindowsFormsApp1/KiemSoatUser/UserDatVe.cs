@@ -205,23 +205,25 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            if (slVe < max)
-                slVe++;
+            if (slVe == max) return;
+            slVe++;
             txtSoVe.Text = slVe + "";
             txtTongTien.Text = (slVe *lichTrinhSelected.Giatien).ToString() + " vnđ";
         }
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Số lượng vé hiện tại" + slVe);
             if (slVe == 1) return;
             if (slVeDaChon == slVe )
             {
                 MessageBox.Show("Vui lòng hủy bớt vé đã chọn", "Thông báo");
                 return;
             }
+
             slVe--;
-            txtTongTien.Text = (slVe * lichTrinhSelected.Giatien).ToString() + " vnđ";
             txtSoVe.Text = slVe + "";
+            txtTongTien.Text = (slVe * lichTrinhSelected.Giatien) + " vnđ";
         }
 
         private void txtSoVe_Leave(object sender, EventArgs e)

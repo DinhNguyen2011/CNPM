@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.DAO;
 using WindowsFormsApp1.DTO;
+using WindowsFormsApp1.GUI;
 
 namespace WindowsFormsApp1.KiemSoatUser
 {
@@ -18,6 +19,7 @@ namespace WindowsFormsApp1.KiemSoatUser
     {
 
         private KhachHang user;
+        private VeXeTam veXeTam = null;
         public UserChiTietVeXe()
         {
             user = new KhachHang();
@@ -42,11 +44,7 @@ namespace WindowsFormsApp1.KiemSoatUser
                 list.Add(new VeXeTam( ma, nguoiDat, sdt, giodi, tuyen, ghe, xe ));
             }
             
-            foreach (VeXeTam vexetam in list)
-            {
-                
-                //MessageBox.Show(vexetam.ma + vexetam.nguoiDat + vexetam.sdt + vexetam.giodi+ vexetam.tuyen+ vexetam.ghe+ vexetam.xe);
-            }    
+           
             dgvChiTietveXe.DataSource = list;
         }
 
@@ -54,37 +52,29 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             if (e.RowIndex >= 0)
             {
-                int ma = Convert.ToInt32(dgvChiTietveXe.Rows[e.RowIndex].Cells[0]);
+                int ma = Convert.ToInt32(dgvChiTietveXe.Rows[e.RowIndex].Cells[0].Value);
                 string nguoiDat = dgvChiTietveXe.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string sdt = dgvChiTietveXe.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string giodi = dgvChiTietveXe.Rows[e.RowIndex].Cells[3].Value.ToString();
                 string tuyen = dgvChiTietveXe.Rows[e.RowIndex].Cells[4].Value.ToString();
-                string ghe = dgvChiTietveXe.Rows[e.RowIndex].Cells[5].Value.ToString();
-                string xe = dgvChiTietveXe.Rows[e.RowIndex].Cells[6].Value.ToString();
-                MessageBox.Show( ma+ nguoiDat + sdt + giodi + tuyen + ghe + xe);
+                string ghe = dgvChiTietveXe.Rows[e.RowIndex].Cells[5].Value.ToString().Trim();
+                string xe = dgvChiTietveXe.Rows[e.RowIndex].Cells[6].Value.ToString().Trim();
+                veXeTam = new VeXeTam( ma, nguoiDat , sdt , giodi , tuyen , ghe , xe);
             }
         }
-    }
 
-    internal class VeXeTam
-    {
-        public int ma;
-        public string nguoiDat;
-        public string sdt;
-        public string giodi;
-        public string tuyen;
-        public string ghe;
-        public string xe;
-
-        public VeXeTam(int ma, string nguoiDat, string sdt, string giodi, string tuyen, string ghe, string xe)
+        private void btnChiTietVe_Click(object sender, EventArgs e)
         {
-            this.ma = ma;
-            this.nguoiDat = nguoiDat;
-            this.sdt = sdt;
-            this.giodi = giodi;
-            this.tuyen = tuyen;
-            this.ghe = ghe;
-            this.xe = xe;
+            if (veXeTam == null)
+            {
+                MessageBox.Show("Vui lòng chọn vé !!", "Thông báo");
+                return;
+            } 
+                
+            FormHienThiVe ht = new FormHienThiVe(veXeTam);
+            ht.ShowDialog();
         }
     }
+
+    
 }
