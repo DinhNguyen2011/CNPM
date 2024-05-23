@@ -15,8 +15,9 @@ namespace WindowsFormsApp1.DTO
         private string tuyen;
         private string ghe;
         private string xe;
+        private string trangthai;
 
-        public VeXeTam(int ma, string nguoiDat, string sdt, string giodi, string tuyen, string ghe, string xe)
+        public VeXeTam(int ma, string nguoiDat, string sdt, string giodi, string tuyen, string ghe, string xe, string trangthai)
         {
             this.ma = ma;
             this.nguoiDat = nguoiDat;
@@ -25,6 +26,7 @@ namespace WindowsFormsApp1.DTO
             this.tuyen = tuyen;
             this.ghe = ghe;
             this.xe = xe;
+            this.trangthai = trangthai;
         }
 
         public int Ma { get => ma; set => ma = value; }
@@ -34,5 +36,6 @@ namespace WindowsFormsApp1.DTO
         public string Tuyen { get => tuyen; set => tuyen = value; }
         public string Ghe { get => ghe; set => ghe = value; }
         public string Xe { get => xe; set => xe = value; }
+        public string Trangthai { get => trangthai; set => trangthai = value; }
     }
 }

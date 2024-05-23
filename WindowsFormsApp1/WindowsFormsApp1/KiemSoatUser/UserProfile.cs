@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.DTO;
@@ -14,76 +15,86 @@ namespace WindowsFormsApp1.KiemSoatUser
     public partial class UserProfile : UserControl
     {
 
-        //private KhachHang thongTinChuVe;
-        //private string ghiChu = "";
-        //public UserProfile()
-        //{
-        //    InitializeComponent();
-        //    thongTinChuVe = new KhachHang();
-        //    rdbtNam.Checked = true;
-        //}
+        private KhachHang custumer;
+        
+        public UserProfile()
+        {
+            InitializeComponent();
+            custumer = new KhachHang();
+            rdbtNam.Checked = true;
+        }
 
-        //public void setValue(KhachHang user)
-        //{
-        //    thongTinChuVe = user;
-        //    txtTen.Text = user.Tenkh;
-        //    txtEmail.Text = user.Email;
-        //    txtSDT.Text = user.Sdt;
-        //    if (user.Ngaysinh != null)
-        //        dtpkNgaySinh.Value = user.Ngaysinh.Value;
-            
-        //}
+        public KhachHang Custumer { get => custumer; }
 
-        //public KhachHang ThongTinChuVe { get => thongTinChuVe;}
-        //public string GhiChu { get => ghiChu;}
+        private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
-        //private void txtSdt_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
+        private bool chuanHoaSDT(string sdt)
+        {
+            return sdt.StartsWith("0") && sdt.Length == 10;
+        }
 
-        //private void txtDiaChi_Leave(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Diachi = txtDiaChi.Text;
-        //}
+        private bool chuanHoaEmail(string email)
+        {
+            email = email.Trim();
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
 
-        //private void txtTen_Leave(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Tenkh = txtTen.Text;
-        //}
+        private void txtDiaChi_Leave(object sender, EventArgs e)
+        {
+            custumer.Diachi = txtDiaChi.Text;
+        }
 
-        //private void txtEmail_Leave(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Email = txtEmail.Text;    
-        //}
+        private void txtTen_Leave(object sender, EventArgs e)
+        {
+            custumer.Tenkh = txtTen.Text;
+        }
 
-        //private void txtSDT_Leave(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Sdt = txtSDT.Text;
-        //}
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (!chuanHoaEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email không hợp lệ !!", "Thông báo");
+                txtEmail.Focus();
+            }    
+            else custumer.Email = txtEmail.Text;
+        }
 
-        //private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Gioitinh = "Nữ";
-        //}
+        private void txtSDT_Leave(object sender, EventArgs e)
+        {
+            if (!chuanHoaSDT(txtSDT.Text))
+            {
+                MessageBox.Show("SĐT không hợp lệ !!", "Thông báo");
+                txtSDT.Focus();
+            }    
+            else custumer.Sdt = txtSDT.Text;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            custumer.Gioitinh = "Nữ";
+        }
 
 
-        //private void dtpkNgaySinh_ValueChanged(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Ngaysinh=dtpkNgaySinh.Value;
-        //}
+        private void dtpkNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+            custumer.Ngaysinh = dtpkNgaySinh.Value;
+        }
 
-        //private void rdbtNam_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    thongTinChuVe.Gioitinh = "Nam";
-        //}
+        private void rdbtNam_CheckedChanged(object sender, EventArgs e)
+        {
+            custumer.Gioitinh = "Nam";
+        }
 
-        //private void txtGhichu_Leave(object sender, EventArgs e)
-        //{
-        //    ghiChu = txtGhichu.Text;
-        //}
+        private void txtGhichu_Leave(object sender, EventArgs e)
+        {
+            custumer.Ghichu = txtGhichu.Text;
+        }
     }
 }

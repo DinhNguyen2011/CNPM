@@ -610,7 +610,7 @@ BEGIN
 END
 
 GO
-select * from NHANVIEN
+
 /*==============================================================*/
 /* Stored procedure: Xóa nhân viên			                    */
 /*==============================================================*/
@@ -781,12 +781,12 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50),@tenkh nvarchar(50), @sdtkh nvarchar(10), @machuyen int, @makh int, 
+CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50),@tenkh nvarchar(50), @sdtkh nvarchar(10), @machuyen int, @manv int, 
 @ghe char(2), @trangthai nvarchar(20) 
 as 
 begin
 	insert into VEXE(TENVE, GHICHU,TENKH,SDTKH, MACHUYEN, MANV)
-	values (@tenve, @ghichu,@tenkh,@sdtkh, @machuyen, @makh)
+	values (@tenve, @ghichu,@tenkh,@sdtkh, @machuyen, @manv)
 
 	DECLARE @MAVE INT
 	SELECT @MAVE = MAX(MAVE) FROM VEXE
@@ -801,6 +801,8 @@ begin
 	WHERE MAVE = @MAVE
 end
 go
+
+
 
 CREATE OR ALTER PROC DSVEXE
 AS 
@@ -843,6 +845,15 @@ BEGIN
 END
 GO
 
+create or alter proc GETNHANVIEN @username char(50)
+as
+begin
+	select NHANVIEN.MANV, TENNV, CMND, SDT, EMAIL, MALOAINV 
+	from NHANVIEN join TAIKHOAN on NHANVIEN.MANV=TAIKHOAN.MANV
+	where ACCOUNT=@username
+end
+go
+
 --CREATE OR ALTER PROC TIMTHONGTINVETHEOKHACHHANG @makh int
 --AS
 --BEGIN
@@ -851,4 +862,5 @@ GO
 --	WHERE MAKH=@makh
 --END
 --GO
+
 

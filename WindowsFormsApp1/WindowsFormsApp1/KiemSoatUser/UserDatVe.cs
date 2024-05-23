@@ -213,7 +213,6 @@ namespace WindowsFormsApp1.KiemSoatUser
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Số lượng vé hiện tại" + slVe);
             if (slVe == 1) return;
             if (slVeDaChon == slVe )
             {

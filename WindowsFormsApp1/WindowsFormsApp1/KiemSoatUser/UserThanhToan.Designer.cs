@@ -337,7 +337,6 @@
             this.txtNganhang.Name = "txtNganhang";
             this.txtNganhang.Size = new System.Drawing.Size(459, 63);
             this.txtNganhang.TabIndex = 53;
-            this.txtNganhang.Text = "BIDV";
             this.txtNganhang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtChinhanh
@@ -348,7 +347,7 @@
             this.txtChinhanh.Name = "txtChinhanh";
             this.txtChinhanh.Size = new System.Drawing.Size(459, 63);
             this.txtChinhanh.TabIndex = 54;
-            this.txtChinhanh.Text = "ĐẠI HỌC CÔNG NGHỆ SÀI GÒN";
+            this.txtChinhanh.Text = "CHI NHANH SÀI GÒN";
             this.txtChinhanh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSTK
@@ -359,7 +358,6 @@
             this.txtSTK.Name = "txtSTK";
             this.txtSTK.Size = new System.Drawing.Size(459, 63);
             this.txtSTK.TabIndex = 54;
-            this.txtSTK.Text = "5311107852";
             this.txtSTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNguoinhan
@@ -381,7 +379,6 @@
             this.txtNoidung.Name = "txtNoidung";
             this.txtNoidung.Size = new System.Drawing.Size(499, 194);
             this.txtNoidung.TabIndex = 54;
-            this.txtNoidung.Text = resources.GetString("txtNoidung.Text");
             this.txtNoidung.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UserThanhToan

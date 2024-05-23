@@ -40,14 +40,14 @@ namespace WindowsFormsApp1
                     this.Hide();
                     bdkAdmin.ShowDialog();
                 }
-                //else
-                //{
-                //    DataRow row = DataProvider.Instance.ExcuteQuery("GETKHACHHANG @usename", new object[] { username }).Rows[0];
-                //    KhachHang user = new KhachHang(row);
-                //    BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
-                //    this.Hide();
-                //    bangDieuKhien.ShowDialog();
-                //}
+                else
+                {
+                    DataRow row = DataProvider.Instance.ExcuteQuery("GETNHANVIEN @usenamer", new object[] { username }).Rows[0];
+                    NhanVien user = new NhanVien(row);
+                    BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
+                    this.Hide();
+                    bangDieuKhien.ShowDialog();
+                }
             }
             else lblError.Visible = true;
             txtPw.Clear();

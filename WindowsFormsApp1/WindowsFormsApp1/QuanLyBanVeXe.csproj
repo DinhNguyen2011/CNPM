@@ -61,6 +61,7 @@
     <Compile Include="DAO\XeDAO.cs" />
     <Compile Include="DTO\ChiTietVeXe.cs" />
     <Compile Include="DTO\ChuyenXe.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />
     <Compile Include="DTO\LoaiNV.cs" />
