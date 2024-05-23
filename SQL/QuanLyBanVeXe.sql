@@ -83,29 +83,18 @@ create table CHUYENXE
 );
 
 /*==============================================================*/
-/* Table: KHACHHANG                                             */
-/*==============================================================*/
-create table KHACHHANG 
-(
-   MAKH         int             identity(1,1) not null,
-   TENKH        nvarchar(30)    null,
-   NGAYSINH     datetime        null,
-   SDT          nchar(20)       null,
-   EMAIL		nvarchar(50)		null
-   primary key (MAKH)
-);
-
-/*==============================================================*/
 /* Table: VEXE                                                  */
 /*==============================================================*/
 create table VEXE 
 (
    MAVE         int             identity(1,1) not null,
    TENVE        nvarchar(50)    null,
-   GHICHU       nvarchar(200)    null, 
+   GHICHU       nvarchar(200)   null,
+   TENKH		nvarchar(50)	null,
+   SDTKH		nvarchar(10)	null,
    MACTVX		int				null,
    MACHUYEN     int             foreign key(MACHUYEN)	references CHUYENXE(MACHUYEN),
-   MAKH         int             foreign key(MAKH)		references KHACHHANG(MAKH),
+   MANV         int             foreign key(MANV)		references NHANVIEN(MANV),
    primary key (MAVE)
 );
 
@@ -133,21 +122,11 @@ create table TAIKHOAN
    MATK			int				identity(1,1) not null,
    ACCOUNT		char(50)		null,
    PASSWORD		char(50)		null,
-   MAKH			int				foreign key(MAKH)		references KHACHHANG(MAKH)
+   MANV			int				foreign key(MANV)		references NHANVIEN(MANV)
    primary key (MATK)
 )
 
---alter table CHITIETCHUYENXE	add constraint MANV		foreign key(MANV)		references NHANVIEN(MANV)
---alter table CHITIETCHUYENXE	add constraint MATAIXE	foreign key(MATAIXE)	references TAIXE(MATAIXE)
---alter table CHITIETCHUYENXE	add constraint MACHUYEN foreign key(MACHUYEN)	references CHUYENXE(MACHUYEN)
---alter table CHITIETVEXE		add constraint MAXE		foreign key(MAXE)		references XE(MAXE)
---alter table CHITIETVEXE		add constraint MAVE		foreign key(MAVE)		references VEXE(MAVE)
---alter table VEXE				add constraint MAKH		foreign key(MAKH)		references KHACHHANG(MAKH)
---alter table VEXE				add constraint MACHUYEN foreign key(MACHUYEN)	references CHUYENXE(MACHUYEN)
---alter table NHANVIEN			add constraint MALOAINV	foreign key(MALOAINV)	references LOAINV(MALOAINV)
---alter table CHUYENXE			add constraint MATUYEN	foreign key(MATUYEN)	references TUYENXE(MATUYEN)
-
-ALTER TABLE vexe ADD CONSTRAINT  MACTVX FOREIGN KEY(MACTVX) REFERENCES chitietvexe(MACTVX) 
+ALTER TABLE VEXE ADD CONSTRAINT  MACTVX FOREIGN KEY(MACTVX) REFERENCES chitietvexe(MACTVX) 
 ALTER TABLE XE ADD CONSTRAINT DF_SOLUONGGHE DEFAULT 24 FOR SOGHE  --Mặc định số lượng ghế là 24
 
 
@@ -158,7 +137,6 @@ delete from XE
 delete from NHANVIEN
 delete from LOAINV
 delete from TAIKHOAN where ACCOUNT <> 'admin'
-delete from KHACHHANG
 delete from VEXE
 delete from CHITIETVEXE
 
@@ -169,17 +147,16 @@ DBCC CHECKIDENT (XE, RESEED, 1)
 DBCC CHECKIDENT (NHANVIEN, RESEED, 1)
 DBCC CHECKIDENT (LOAINV, RESEED, 1)
 DBCC CHECKIDENT (TAIKHOAN, RESEED, 1)
-DBCC CHECKIDENT (KHACHHANG, RESEED, 1)
 DBCC CHECKIDENT (VEXE, RESEED, 1)
 DBCC CHECKIDENT (CHITIETVEXE, RESEED, 1)
 
 -- THÊM MỚI DỮ LIỆU
 -- Loại nhân viên
-INSERT INTO LOAINV(TENLOAI) VALUES (N'Nhân viên hỗ trợ')
-INSERT INTO LOAINV(TENLOAI) VALUES (N'Quản lý chuyến xe')
-INSERT INTO LOAINV(TENLOAI) VALUES (N'Nhân viên soát vé')
-INSERT INTO LOAINV(TENLOAI) VALUES (N'Nhân viên an ninh')
-INSERT INTO LOAINV(TENLOAI) VALUES (N'Tài xế')
+INSERT INTO LOAINV(TENLOAI) VALUES 
+(N'Tài xế'),
+(N'Nhân viên bán vé'),
+(N'Phụ xe'),
+(N'Nhân viên an ninh')
 
 -- Nhân viên
 INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES 
@@ -201,19 +178,19 @@ INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES
 (N'Nguyễn Thị Kim Hào',		'355340382995','0591965549','viprogamer@gmail.com',4),
 (N'Dương Thị Mỹ Trinh',		'219432451880','0973237929','hocngunhatlop@gmail.com',4),
 (N'Trần Nhật Thy',			'261688085552','0924281102','songvui@gmail.com',4),
-(N'Nguyễn Ngọc Qúi',		'532160149431','0408264651','khoctronglong@gmail.com',5),
-(N'Đặng Thị Thanh Trúc',	'112627308407','0912359649','gacon@gmail.com',5),
-(N'Đinh Trọng Tùng Sơn',	'897326565876','0810715550','vitcon@gmail.com',5),
-(N'Lê Khả Mạnh',			'555244745867','0676320204','mamama@gmail.com',5),
-(N'Phạm Nữ Huỳnh Thương',	'899143617169','0359405152','truiui@gmail.com',5),
-(N'Phan Ngọc Hạnh Như',		'947513456093','0220345205','werrwer@gmail.com',5),
-(N'Hoàng Hồng Nhung',		'998411617829','0349705574','hayyy@gmail.com',5),
-(N'Nguyễn Viết Hải Vương',	'787496000333','0148990215','dangcap@gmail.com',5),
-(N'Lê Thị Ánh Vy',			'927955961131','0303213054','yasuo1@gmail.com',5),
-(N'Hoàng Thị Hường',		'588800818094','0589683433','giday2@gmail.com',5),
-(N'Cao Huy Tấn Lộc',		'498925300928','0196984614','hmmmmmm@gmail.com',5),
-(N'Nguyễn Phương Thùy',		'869168912605','0346178649','concung@gmail.com',5),
-(N'Nguyễn Đức Sâm',			'371410281646','0741152496','hocbaitoiqua@gmail.com',5)
+(N'Nguyễn Ngọc Qúi',		'532160149431','0408264651','khoctronglong@gmail.com',1),
+(N'Đặng Thị Thanh Trúc',	'112627308407','0912359649','gacon@gmail.com',1),
+(N'Đinh Trọng Tùng Sơn',	'897326565876','0810715550','vitcon@gmail.com',1),
+(N'Lê Khả Mạnh',			'555244745867','0676320204','mamama@gmail.com',1),
+(N'Phạm Nữ Huỳnh Thương',	'899143617169','0359405152','truiui@gmail.com',1),
+(N'Phan Ngọc Hạnh Như',		'947513456093','0220345205','werrwer@gmail.com',1),
+(N'Hoàng Hồng Nhung',		'998411617829','0349705574','hayyy@gmail.com',1),
+(N'Nguyễn Viết Hải Vương',	'787496000333','0148990215','dangcap@gmail.com',1),
+(N'Lê Thị Ánh Vy',			'927955961131','0303213054','yasuo1@gmail.com',1),
+(N'Hoàng Thị Hường',		'588800818094','0589683433','giday2@gmail.com',1),
+(N'Cao Huy Tấn Lộc',		'498925300928','0196984614','hmmmmmm@gmail.com',1),
+(N'Nguyễn Phương Thùy',		'869168912605','0346178649','concung@gmail.com',1),
+(N'Nguyễn Đức Sâm',			'371410281646','0741152496','hocbaitoiqua@gmail.com',1)
 
 -- Tuyến xe
 INSERT INTO TUYENXE(DIEMDI,DIEMDEN) VALUES 
@@ -299,23 +276,16 @@ INSERT INTO CHUYENXE(TENCHUYEN,GIODI,GIODEN,GIAVE,MATAIXE,MATUYEN,MAXE) VALUES
 (N'Chuyến Đà Lạt-TPHCM 1','2024-05-25 00:00','2024-05-25 08:00',300000,29,8,6),
 (N'Chuyến Đà Lạt-TPHCM 2','2024-05-26 00:00','2024-05-26 08:00',300000,31,8,7)
 
--- Khách hàng 
-INSERT INTO KHACHHANG(TENKH,NGAYSINH,SDT,EMAIL) VALUES
-(N'Dương Minh Hiển','1992-02-23','0889092010','zzzz@gmail.com'),
-(N'Ngô Quang Thủy','1983-12-13','0475655816','haiya@gmail.com'),
-(N'Trần Minh Dương','1975-04-21','0486596073','kungfupanther@gmail.com'),
-(N'Trương Quang Phát','2003-08-31','0856596073','phatdeptraicute@gmail.com')
-
 -- Tài khoản				  
-INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD) VALUES ('admin','2251022057731868917119086224872421513662')
-INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MAKH) VALUES
+INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD) VALUES ('admin','2251022057731868917119086224872421513662') --pass la 123456
+INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MANV) VALUES
 ('yasuovippro','3244185981728979115075721453575112',1), --pass la 123
 ('toibidien','3244185981728979115075721453575112',2),
 ('contrai','3244185981728979115075721453575112',3),
 ('phat','3244185981728979115075721453575112',4)
 
 -- Vé xe
-INSERT INTO VEXE(TENVE,GHICHU,MACHUYEN,MAKH) VALUES
+INSERT INTO VEXE(TENVE,GHICHU,MACHUYEN,MANV) VALUES
 (N'Vé xe QB đi TPHCM','toi bi say xe',41,4),
 (N'Vé xe di choi','',12,3)
 
@@ -339,11 +309,11 @@ END
 
 GO
 
-create or alter proc GETKHACHHANG @taikhoan char(50)
-as
-begin
-	select KHACHHANG.MAKH, TENKH, NGAYSINH, SDT, EMAIL from KHACHHANG join TAIKHOAN on KHACHHANG.MAKH=TAIKHOAN.MAKH where TAIKHOAN.ACCOUNT=@taikhoan
-end
+--create or alter proc GETNHANVIEN @taikhoan char(50)
+--as
+--begin
+--	select KHACHHANG.MAKH, TENKH, NGAYSINH, SDT, EMAIL from KHACHHANG join TAIKHOAN on KHACHHANG.MAKH=TAIKHOAN.MAKH where TAIKHOAN.ACCOUNT=@taikhoan
+--end
 
 GO
 /*==============================================================*/
@@ -352,7 +322,7 @@ GO
 CREATE OR ALTER PROC DSTAIKHOAN
 AS 
 BEGIN
-	select MATK, ACCOUNT, MAKH from TAIKHOAN where ACCOUNT <> 'admin'
+	select MATK, ACCOUNT, MANV from TAIKHOAN where ACCOUNT <> 'admin'
 END
 
 GO
@@ -360,24 +330,24 @@ GO
 /*==============================================================*/
 /* Stored procedure: Tìm tài khoản theo mã khách hàng           */
 /*==============================================================*/
-CREATE OR ALTER PROC FindAccountByMaKH @makh int
-AS 
-BEGIN
-	select MATK, ACCOUNT, MAKH from TAIKHOAN where MAKH = @makh
-END
+--CREATE OR ALTER PROC FindAccountByMaKH @makh int
+--AS 
+--BEGIN
+--	select MATK, ACCOUNT, MAKH from TAIKHOAN where MAKH = @makh
+--END
 
 GO
 /*==============================================================*/
 /* Stored procedure: ĐĂNG KÝ	(Đăng ký tài khoản và thông tin)*/
 /*==============================================================*/
-CREATE OR ALTER PROC DANGKY @tenkh nvarchar(30), @ngaysinh datetime, 
-@sdt nchar(20), @email nchar(30), @taikhoan char(50), @matkhau char(50)
+CREATE OR ALTER PROC DANGKY @tennv nvarchar(30), @cmnd nvarchar(12),
+@sdt nchar(10), @email nchar(30), @maloainv int, @taikhoan char(50), @matkhau char(50)
 AS
 BEGIN
 	IF (not exists (SELECT * FROM TAIKHOAN T WHERE T.ACCOUNT = @taikhoan))
 	BEGIN
-		INSERT INTO KHACHHANG(TENKH,NGAYSINH,SDT,EMAIL) VALUES (@tenkh,@ngaysinh,@sdt,@email)
-		INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MAKH) VALUES (@taikhoan,@matkhau,(SELECT MAX(MAKH) FROM KHACHHANG))
+		INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES (@tennv,@cmnd,@sdt,@email,@maloainv)
+		INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MANV) VALUES (@taikhoan,@matkhau,(SELECT MAX(MANV) FROM NHANVIEN))
 	END
 	ELSE RETURN N'Tên tài khoản đã tồn tại!'
 END
@@ -396,56 +366,13 @@ END
 
 GO
 /*==============================================================*/
-/* Stored procedure: LẤY DANH SÁCH KHÁCH HÀNG	                */
-/*==============================================================*/
-CREATE OR ALTER PROC DSKHACHHANG
-AS
-BEGIN
-	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG
-END
-
-GO
-/*==============================================================*/
 /* Stored procedure: Tìm khách hàng theo tên	                */
 /*==============================================================*/
-CREATE OR ALTER PROC TIMKHACHHANGTHEOTEN @tenkh nvarchar(30)
-AS
-BEGIN
-	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG where dbo.fuConvertToUnsign1(TENKH) like N'%' + dbo.fuConvertToUnsign1(@tenkh) + '%'
-END
-
-GO
-
-/*==============================================================*/
-/* Stored procedure: Xóa Khách Hàng và tài khoản tương ứng      */
-/*==============================================================*/
-CREATE OR ALTER PROC XOAKHACHHANG @makh int
-AS
-BEGIN
-	IF (exists (SELECT * FROM KHACHHANG k WHERE k.MAKH = @makh))
-	BEGIN
-		--DELETE CHITIETVEXE WHERE MAVE = (SELECT MAVE FROM VEXE WHERE MAKH = @makh)
-		--DELETE VEXE WHERE MAKH = @makh
-		IF exists (SELECT * FROM VEXE WHERE MAKH = @makh) 
-		RETURN N'Không thể xóa! Khách hàng đã đặt vé xe'
-		DELETE TAIKHOAN WHERE MAKH = @makh
-		DELETE KHACHHANG WHERE MAKH = @makh
-	END
-END
-
-GO
-
-/*==============================================================*/
-/* Stored procedure: Sửa thông tin khách hàng                   */
-/*==============================================================*/
-CREATE OR ALTER PROC SUATHONGTINKHACHHANG @makh int, @tenkh nvarchar(30), @ngaysinh datetime, 
-@sdt nchar(20), @email nchar(30)
-AS
-BEGIN
-	UPDATE KHACHHANG
-	SET TENKH = @tenkh, NGAYSINH = @ngaysinh, SDT = @sdt, EMAIL = @email
-	WHERE MAKH = @makh
-END
+--CREATE OR ALTER PROC TIMKHACHHANGTHEOTEN @tenkh nvarchar(30)
+--AS
+--BEGIN
+--	select MAKH,TENKH,NGAYSINH,SDT,EMAIL from KHACHHANG where dbo.fuConvertToUnsign1(TENKH) like N'%' + dbo.fuConvertToUnsign1(@tenkh) + '%'
+--END
 
 GO
 /*==============================================================*/
@@ -670,7 +597,7 @@ BEGIN
 	BEGIN
 			UPDATE NHANVIEN
 			SET TENNV = @tennv, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
-			WHERE MANV = @manv
+			WHERE MANV = @manv		
 	END
 	ELSE RETURN N'Loại NV không phù hợp'
 END
@@ -681,9 +608,18 @@ GO
 /*==============================================================*/
 CREATE OR ALTER PROC XOANHANVIEN @manv int
 AS 
+begin
 	IF exists (SELECT * FROM CHUYENXE WHERE MATAIXE = @manv)
 	RETURN N'Không thể xóa! Nhân viên đã được phân công vào các chuyến xe'
-	DELETE NHANVIEN WHERE MANV = @manv
+	IF EXISTS (SELECT MANV FROM TAIKHOAN WHERE MANV = @manv)
+	BEGIN
+		delete TAIKHOAN where MANV = @manv
+		delete NHANVIEN WHERE MANV = @manv
+	END
+	ELSE
+		delete NHANVIEN WHERE MANV = @manv
+end	
+
 
 GO
 /*==============================================================*/
@@ -826,12 +762,12 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50), @machuyen int, @makh int, 
+CREATE OR ALTER PROC THEMVE @tenve nvarchar(50), @ghichu nvarchar(50),@tenkh nvarchar(50), @sdtkh nvarchar(10), @machuyen int, @makh int, 
 @ghe char(2), @trangthai nvarchar(20) 
 as 
 begin
-	insert into VEXE(TENVE, GHICHU, MACHUYEN, MAKH)
-	values (@tenve, @ghichu, @machuyen, @makh)
+	insert into VEXE(TENVE, GHICHU,TENKH,SDTKH, MACHUYEN, MANV)
+	values (@tenve, @ghichu,@tenkh,@sdtkh, @machuyen, @makh)
 
 	DECLARE @MAVE INT
 	SELECT @MAVE = MAX(MAVE) FROM VEXE
@@ -850,7 +786,7 @@ go
 CREATE OR ALTER PROC DSVEXE
 AS 
 BEGIN
-	select MAVE, TENVE, GHICHU, MACTVX, MACHUYEN, MAKH from VEXE
+	select MAVE, TENVE, GHICHU, TENKH , SDTKH, MACTVX, MACHUYEN, MANV from VEXE
 END
 
 GO
@@ -866,8 +802,8 @@ GO
 CREATE OR ALTER PROC TIMKHACHHANGTHEOTEN_VEXE @tenkh nvarchar(30)
 AS
 BEGIN
-	select v.MAVE, v.TENVE, v.GHICHU, v.MACTVX, v.MACHUYEN, v.MAKH from KHACHHANG kh join VEXE v on kh.MAKH = v.MAKH
-	where dbo.fuConvertToUnsign1(kh.TENKH) like N'%' + dbo.fuConvertToUnsign1(@tenkh) + '%'
+	select v.MAVE, v.TENVE, v.GHICHU, v.TENKH, v.SDTKH, v.MACTVX, v.MACHUYEN, v.MANV from VEXE v
+	where dbo.fuConvertToUnsign1(v.TENKH) like N'%' + dbo.fuConvertToUnsign1(@tenkh) + '%'
 END
 
 GO
@@ -888,12 +824,12 @@ BEGIN
 END
 GO
 
-CREATE OR ALTER PROC TIMTHONGTINVETHEOKHACHHANG @makh int
-AS
-BEGIN
-	SELECT VEXE.MAVE, GIODI, TENVE, VITRIGHE, BIENSO
-	FROM VEXE JOIN CHITIETVEXE ON VEXE.MAVE=CHITIETVEXE.MAVE JOIN XE ON CHITIETVEXE.MAXE=XE.MAXE
-	WHERE MAKH=@makh
-END
-GO
+--CREATE OR ALTER PROC TIMTHONGTINVETHEOKHACHHANG @makh int
+--AS
+--BEGIN
+--	SELECT VEXE.MAVE, GIODI, TENVE, VITRIGHE, BIENSO
+--	FROM VEXE JOIN CHITIETVEXE ON VEXE.MAVE=CHITIETVEXE.MAVE JOIN XE ON CHITIETVEXE.MAXE=XE.MAXE
+--	WHERE MAKH=@makh
+--END
+--GO
 
