@@ -40,14 +40,14 @@ namespace WindowsFormsApp1
                     this.Hide();
                     bdkAdmin.ShowDialog();
                 }
-                else
-                {
-                    DataRow row = DataProvider.Instance.ExcuteQuery("GETKHACHHANG @usenamer", new object[] { username }).Rows[0];
-                    KhachHang user = new KhachHang(row);
-                    BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
-                    this.Hide();
-                    bangDieuKhien.ShowDialog();
-                }
+                //else
+                //{
+                //    DataRow row = DataProvider.Instance.ExcuteQuery("GETKHACHHANG @usename", new object[] { username }).Rows[0];
+                //    KhachHang user = new KhachHang(row);
+                //    BangDieuKhien bangDieuKhien = new BangDieuKhien(user);
+                //    this.Hide();
+                //    bangDieuKhien.ShowDialog();
+                //}
             }
             else lblError.Visible = true;
             txtPw.Clear();
@@ -63,12 +63,6 @@ namespace WindowsFormsApp1
         private void txtLogin_Click(object sender, EventArgs e)
         {
             checkLogin();
-        }
-        private void btnDkiTK_Click(object sender, EventArgs e)
-        {
-            DangKiTaiKhoang dk = new DangKiTaiKhoang();
-            this.Hide();
-            dk.Show();
         }
         private void txtPw_KeyUp(object sender, KeyEventArgs e)
         {

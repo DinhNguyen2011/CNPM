@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAO;
 using WindowsFormsApp1.KiemSoatAmin;
 
 namespace WindowsFormsApp1
@@ -14,6 +15,17 @@ namespace WindowsFormsApp1
     
     public partial class BangDieuKhienAdmin : Form
     {
+        private static BangDieuKhienAdmin instance;
+        public static BangDieuKhienAdmin Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new BangDieuKhienAdmin();
+                return instance;
+            }
+            private set { instance = value; }
+        }
         public BangDieuKhienAdmin()
         {
             InitializeComponent();
@@ -39,7 +51,6 @@ namespace WindowsFormsApp1
             userQuanLyTuyenXe1.BringToFront();
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
             userQuanLyVeXe1.Visible = false;
 
@@ -49,7 +60,6 @@ namespace WindowsFormsApp1
             userQuanLyTuyenXe1.Visible = true;
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
             userQuanLyVeXe1.Visible = false;
             btnQLTuyenXe.PerformClick();
@@ -57,13 +67,9 @@ namespace WindowsFormsApp1
         private void btnThongTinKH_Click(object sender, EventArgs e)
         {
             PnMovingad.Left = btnQLKH.Left + 60;
-            userQuanLyKhachHang1.Visible = true;
-            userQuanLyKhachHang1.BringToFront();
-            userQuanLyTuyenXe1.Visible = false;
-            userQuanLyChuyenXe1.Visible = false;
-            userQuanLyNhanVien1.Visible = false;
-            userQuanLyXe1.Visible = false;
-            userQuanLyVeXe1.Visible = false;
+            DangKiTaiKhoang dk = new DangKiTaiKhoang();
+            this.Hide();
+            dk.ShowDialog();
         }
 
         private void btnLichTrinh_Click(object sender, EventArgs e)
@@ -73,7 +79,6 @@ namespace WindowsFormsApp1
             userQuanLyNhanVien1.BringToFront();
             userQuanLyTuyenXe1.Visible = false;
             userQuanLyChuyenXe1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
             userQuanLyVeXe1.Visible = false;
         }
@@ -86,7 +91,6 @@ namespace WindowsFormsApp1
             userQuanLyTuyenXe1.Visible = false;
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyVeXe1.Visible = false;
         }
         private void userQuanLyXe1_Load(object sender, EventArgs e)
@@ -113,7 +117,6 @@ namespace WindowsFormsApp1
             userQuanLyChuyenXe1.BringToFront();
             userQuanLyTuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
             userQuanLyVeXe1.Visible = false;
         }
@@ -126,7 +129,6 @@ namespace WindowsFormsApp1
             userQuanLyChuyenXe1.Visible = false;
             userQuanLyTuyenXe1.Visible = false;
             userQuanLyNhanVien1.Visible = false;
-            userQuanLyKhachHang1.Visible = false;
             userQuanLyXe1.Visible = false;
         }
 

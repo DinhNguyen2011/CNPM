@@ -70,7 +70,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             if (VeXeDAO.Instance.xoaVeXe(v.Mave) > 0)
             {
                 LoadData();
-                MessageBox.Show("Đã xóa khách hàng vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã xóa vé xe vừa chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         private void btnXoaVeXe_Click(object sender, EventArgs e)
         {
-            string tenkh = KhachHangDAO.Instance.getTenKhachHangByID(listVexe[index].Makh);
+            string tenkh = listVexe[index].Tenkh;
             int mave = listVexe[index].Mave;
             if (MessageBox.Show("Bạn có muốn xóa vé xe của khách hàng " + tenkh + " có mã vé xe là " + mave + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     btnXoaVeXe.Enabled = true;
                     VeXe v = listVexe[indexRow];
                     txtTenVe.Text = v.Tenve;
-                    txtTenKH.Text = KhachHangDAO.Instance.getTenKhachHangByID(v.Makh);
+                    txtTenKH.Text = v.Tenkh;
                     txtghichu.Text = v.Ghichu;
                 }
             }
@@ -174,7 +174,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     btnXoaVeXe.Enabled = true;
                     VeXe v = listVexe[indexRow];
                     txtTenVe.Text = v.Tenve;
-                    txtTenKH.Text = KhachHangDAO.Instance.getTenKhachHangByID(v.Makh);
+                    txtTenKH.Text = v.Tenkh;
                     txtghichu.Text = v.Ghichu;
                     index = indexRow;
 

@@ -9,7 +9,6 @@ GO
 USE QuanLyBanVeXe
 GO
 drop table if exists CHUYENXE;
-drop table if exists KHACHHANG;
 drop table if exists LOAINV;
 drop table if exists NHANVIEN;
 drop table if exists TAIXE;
@@ -18,6 +17,7 @@ drop table if exists VEXE;
 drop table if exists XE;
 drop table if exists CHITIETCHUYENXE;
 drop table if exists CHITIETVEXE;
+drop table if exists TAIKHOAN;
 
 /*==============================================================*/
 /* Table: LOAINV                                                */
@@ -136,7 +136,7 @@ delete from TUYENXE
 delete from XE
 delete from NHANVIEN
 delete from LOAINV
-delete from TAIKHOAN where ACCOUNT <> 'admin'
+delete from TAIKHOAN
 delete from VEXE
 delete from CHITIETVEXE
 
@@ -161,7 +161,7 @@ INSERT INTO LOAINV(TENLOAI) VALUES
 -- Nhân viên
 INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES 
 (N'Đặng Minh Nghĩa',		'111111111111','0123123123','nghia@gmail.com',1),
-(N'Trương Quang Phát',		'222222222222','0123456789','phat@gmail.com',1),
+(N'Nguyễn Chí Đức',		'222222222222','0123456789','duc@gmail.com',1),
 (N'Nguyễn Ái Thiềm Định',	'333333333333','0239537148','dinh@gmail.com',1),
 (N'Phạm Ngọc Thanh Thảo',	'224426205522','0528215947','hoangz@gmail.com',1),
 (N'Đặng Tiến Anh',			'654309174406','0155553739','kaka@gmail.com',1),
@@ -169,7 +169,7 @@ INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES
 (N'Nguyễn Thị Kim Hào',		'894517914263','0483883085','deeznut@gmail.com',2),
 (N'Phạm Ngọc Lánh',			'599406425321','0468171235','khabanh@gmail.com',2),
 (N'Đặng Khánh Linh',		'724399276242','0560126193','alolaoa@gmail.com',2),
-(N'Đặng Văn Cẩn',			'379899828569','0609782104','dinhngu@gmail.com',2),
+(N'Trương Quang Phát',		'379899828569','0609782104','phat@gmail.com',2),
 (N'Tống Thị Thúy Hòa',		'205972125541','0732151374','conginuadau@gmail.com',3),
 (N'Phạmvăn Hinh',			'812511772689','0171776400','longlong@gmail.com',3),
 (N'Nguyễn Thị Phương Nam',	'130625601702','0131530769','lowgigi@gmail.com',3),
@@ -279,15 +279,15 @@ INSERT INTO CHUYENXE(TENCHUYEN,GIODI,GIODEN,GIAVE,MATAIXE,MATUYEN,MAXE) VALUES
 -- Tài khoản				  
 INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD) VALUES ('admin','2251022057731868917119086224872421513662') --pass la 123456
 INSERT INTO TAIKHOAN(ACCOUNT,PASSWORD,MANV) VALUES
-('yasuovippro','3244185981728979115075721453575112',1), --pass la 123
-('toibidien','3244185981728979115075721453575112',2),
-('contrai','3244185981728979115075721453575112',3),
-('phat','3244185981728979115075721453575112',4)
+('yasuovippro','3244185981728979115075721453575112',7), --pass la 123
+('toibidien','3244185981728979115075721453575112',8),
+('contrai','3244185981728979115075721453575112',9),
+('phat','3244185981728979115075721453575112',10)
 
 -- Vé xe
-INSERT INTO VEXE(TENVE,GHICHU,MACHUYEN,MANV) VALUES
-(N'Vé xe QB đi TPHCM','toi bi say xe',41,4),
-(N'Vé xe di choi','',12,3)
+INSERT INTO VEXE(TENVE,GHICHU,TENKH,SDTKH,MACHUYEN,MANV) VALUES
+(N'Vé xe QB đi TPHCM','toi bi say xe',N'Nguyễn Chí Đức','0123456789',41,4),
+(N'Vé xe di choi','',N'Nguyễn Định','0123456897',12,3)
 
 -- Chi tiết vé
 INSERT INTO CHITIETVEXE(GIODI,GIODEN,GIAVE,VITRIGHE,TRANGTHAI,MAXE,MAVE) VALUES
@@ -309,13 +309,14 @@ END
 
 GO
 
---create or alter proc GETNHANVIEN @taikhoan char(50)
---as
---begin
---	select KHACHHANG.MAKH, TENKH, NGAYSINH, SDT, EMAIL from KHACHHANG join TAIKHOAN on KHACHHANG.MAKH=TAIKHOAN.MAKH where TAIKHOAN.ACCOUNT=@taikhoan
---end
+create or alter proc GETNHANVIEN @taikhoan char(50)
+as
+begin
+	select NHANVIEN.MANV, TENNV, CMND, SDT, EMAIL, MALOAINV  from NHANVIEN join TAIKHOAN on NHANVIEN.MANV=TAIKHOAN.MANV where TAIKHOAN.ACCOUNT=@taikhoan
+end
 
 GO
+
 /*==============================================================*/
 /* Stored procedure: Lấy danh sách tài khoản		            */
 /*==============================================================*/
@@ -326,15 +327,14 @@ BEGIN
 END
 
 GO
-
 /*==============================================================*/
-/* Stored procedure: Tìm tài khoản theo mã khách hàng           */
+/* Stored procedure: Tìm tài khoản theo mã nhân viên            */
 /*==============================================================*/
---CREATE OR ALTER PROC FindAccountByMaKH @makh int
---AS 
---BEGIN
---	select MATK, ACCOUNT, MAKH from TAIKHOAN where MAKH = @makh
---END
+CREATE OR ALTER PROC FindAccountByMaNV @manv int
+AS 
+BEGIN
+	select MATK, ACCOUNT, MANV from TAIKHOAN where MANV = @manv
+END
 
 GO
 /*==============================================================*/
@@ -344,6 +344,8 @@ CREATE OR ALTER PROC DANGKY @tennv nvarchar(30), @cmnd nvarchar(12),
 @sdt nchar(10), @email nchar(30), @maloainv int, @taikhoan char(50), @matkhau char(50)
 AS
 BEGIN
+	if exists (select CMND from NHANVIEN where NHANVIEN.CMND = @cmnd)
+		RETURN N'Trùng CMND'
 	IF (not exists (SELECT * FROM TAIKHOAN T WHERE T.ACCOUNT = @taikhoan))
 	BEGIN
 		INSERT INTO NHANVIEN(TENNV,CMND,SDT,EMAIL,MALOAINV) VALUES (@tennv,@cmnd,@sdt,@email,@maloainv)
@@ -593,16 +595,22 @@ GO
 CREATE OR ALTER PROC SUATHONGTINNV @manv int, @tennv nvarchar(30), @sdt nchar(20), @email nvarchar(20), @maloainv int
 AS 
 BEGIN
-	IF (exists (SELECT * FROM LOAINV WHERE MALOAINV = @maloainv))
-	BEGIN
-			UPDATE NHANVIEN
-			SET TENNV = @tennv, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
-			WHERE MANV = @manv		
-	END
-	ELSE RETURN N'Loại NV không phù hợp'
+	if (@maloainv = 2) 
+	begin
+		UPDATE NHANVIEN
+			SET TENNV = @tennv, SDT = @sdt, EMAIL = @email
+			WHERE MANV = @manv	
+	end
+	else
+	begin
+		UPDATE NHANVIEN
+		SET TENNV = @tennv, SDT = @sdt, EMAIL = @email, MALOAINV = @maloainv
+		WHERE MANV = @manv
+	end
 END
 
 GO
+select * from NHANVIEN
 /*==============================================================*/
 /* Stored procedure: Xóa nhân viên			                    */
 /*==============================================================*/
@@ -638,10 +646,21 @@ GO
 CREATE OR ALTER PROC DSTENLOAINV
 AS
 BEGIN
-	select TENLOAI from LOAINV
+	select TENLOAI from LOAINV 
 END
 
 GO
+
+CREATE OR ALTER PROC getIDLoaiOfNVBanVe
+AS
+BEGIN
+	select l.MALOAINV 
+	from LOAINV l
+	where dbo.fuConvertToUnsign1(l.TENLOAI) = dbo.fuConvertToUnsign1(N'nhan vien ban ve')
+END
+
+GO
+
 /*==============================================================*/
 /* Stored procedure: Thêm loại nhân viên	                    */
 /*==============================================================*/

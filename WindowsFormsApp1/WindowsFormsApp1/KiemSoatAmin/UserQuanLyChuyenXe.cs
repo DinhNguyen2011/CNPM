@@ -169,7 +169,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
             List<ChuyenXe> listFindChuyenXe = ChuyenXeDAO.Instance.Tim_DSChuyenXe_TheoGioDi_TenTuyen(giodi,matuyen);
             if (listFindChuyenXe.Count != 0)
             {
-                //btnXoaNV.Enabled = true;
                 dgvChuyenXe.DataSource = listFindChuyenXe;
                 dgvChuyenXe.Refresh();
                 listChuyenXe = listFindChuyenXe;

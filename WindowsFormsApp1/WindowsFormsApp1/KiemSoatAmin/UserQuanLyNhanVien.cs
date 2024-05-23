@@ -19,6 +19,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
     {
         private List<NhanVien> listNhanVien;
         private List<LoaiNV> listLoaiNV;
+        private List<TaiKhoan> listTaiKhoan;
         private int indexNhanVien = -1;
         private int indexLoaiNV = -1;
         public UserQuanLyNhanVien()
@@ -26,6 +27,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             InitializeComponent();
             dgvQLNV.AutoGenerateColumns = false;
             dgvLoaiNV.AutoGenerateColumns = false;
+            dgvtaikhoan.AutoGenerateColumns = true;
         }
 
         #region xử lý phụ
@@ -85,7 +87,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void reset()
         {
             txtCCCD.Text = txtemail.Text = txtsdt.Text = txttimnv.Text = TxtTenNV.Text = txtLoaiNV.Text = "";
-            cmbloainv.SelectedIndex = 0;
             TxtTenNV.Focus();
         }
         #endregion
@@ -96,6 +97,13 @@ namespace WindowsFormsApp1.KiemSoatAmin
             reset();
             LoadNhanVien();
             LoadLoaiNV();
+            LoadTaiKhoan();
+        }
+        public void LoadTaiKhoan()
+        {
+            listTaiKhoan = TaiKhoanDAO.Instance.getDSTaiKhoan();
+            dgvtaikhoan.DataSource = listTaiKhoan;
+            dgvtaikhoan.Refresh();
         }
         public void LoadNhanVien()
         {
@@ -117,6 +125,11 @@ namespace WindowsFormsApp1.KiemSoatAmin
             string sdt = txtsdt.Text.Replace(" ", "");
             string cccd = txtCCCD.Text.Replace(" ", "");
             int maloai = LoaiNVDAO.Instance.getIDByTenloai(cmbloainv.SelectedValue.ToString());
+            if (maloai == 2)
+            {
+                MessageBox.Show("Nhân viên bán vé sẽ được tự động thêm khi tạo tài khoản. Thêm thất bại!!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
             if (isValidEmail(email) == false)
             {
                 MessageBox.Show("Email không hợp lệ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -150,7 +163,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         public void suaNhanVien()
         {
             string ten = chuanHoaChuoi(TxtTenNV.Text);
-            string email = txtemail.Text.Replace(" ","");
+            string email = txtemail.Text.Replace(" ", "");
             string sdt = txtsdt.Text.Replace(" ", "");
             int maloai = LoaiNVDAO.Instance.getIDByTenloai(cmbloainv.SelectedValue.ToString());
             if (isValidEmail(email) == false)
@@ -163,9 +176,21 @@ namespace WindowsFormsApp1.KiemSoatAmin
                 MessageBox.Show("Số điện thoại không hợp lệ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            try
+            NhanVien nv = listNhanVien[indexNhanVien];
+            int maloaiCu = nv.Maloainv;
+            if (maloai == 2 || maloaiCu == 2)
             {
-                NhanVien nv = listNhanVien[indexNhanVien];
+                nv.Tennv = ten;
+                nv.Sdt = sdt;
+                nv.Email = email;
+                if (NhanVienDAO.Instance.suaNhanVien(nv) > 0)
+                {
+                    LoadData();
+                    MessageBox.Show("Sửa thông tin thành công. Nhưng không thể thay đổi loại nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {   
                 nv.Tennv = ten;
                 nv.Sdt = sdt;
                 nv.Email = email;
@@ -175,10 +200,6 @@ namespace WindowsFormsApp1.KiemSoatAmin
                     LoadData();
                     MessageBox.Show("Đã sửa thông tin nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void xoaNhanVien()
@@ -249,8 +270,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
         #region Form Event
         private void UserQuanLyNhanVien_Load(object sender, EventArgs e)
         {
-            LoadNhanVien();
-            LoadLoaiNV();
+            LoadData();
         }
         private void btnthemloainv_Click(object sender, EventArgs e)
         {
@@ -317,45 +337,33 @@ namespace WindowsFormsApp1.KiemSoatAmin
         }
         private void btnThemNV_Click(object sender, EventArgs e)
         {
-
+            themNhanVien();
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
         {
-
+            suaNhanVien();
         }
 
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-
-        }
-        private void btnThemNV_Click_1(object sender, EventArgs e)
-        {
-            themNhanVien();
+            string tennv = listNhanVien[indexNhanVien].Tennv;
+            int manv = listNhanVien[indexNhanVien].Manv;
+            if (MessageBox.Show("Xóa nhân viên " + tennv + " có mã nv là "+manv+ " sẽ xóa luôn tài khoản tương ứng(nếu có). Bạn có muốn tiếp tục?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                xoaNhanVien();
+            }
         }
         private void btnHienthi_Click(object sender, EventArgs e)
         {
             LoadData();
         }
-        private void btnSuaNV_Click_1(object sender, EventArgs e)
-        {
-            suaNhanVien();
-        }
-        private void btnXoaNV_Click_1(object sender, EventArgs e)
-        {
-            string tennv = listNhanVien[indexNhanVien].Tennv;
-            int manv = listNhanVien[indexNhanVien].Manv;
-            if (MessageBox.Show("Bạn có muốn xóa nhân viên " + tennv + " có mã nhân viên " + manv + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                xoaNhanVien();
-            }
-        }
         private void btnTimNV_Click(object sender, EventArgs e)
         {
             timNhanVien();
         }
-
-
         #endregion
+
+
     }
 }

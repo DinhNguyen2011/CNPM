@@ -45,12 +45,27 @@ namespace WindowsFormsApp1
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             return regex.IsMatch(email);
         }
+        public bool isValidCCCD(string cccd)
+        {
+            if (string.IsNullOrEmpty(cccd))
+            {
+                return false;
+            }
+            if (cccd.Length != 12)
+                return false;
+            foreach (char s in cccd)
+            {
+                if (s < 48 || s > 57)
+                    return false;
+            }
+            return true;
+        }
         #endregion
 
         #region Method
-        private bool DangKy(string tenkh, string sdt, string email, string taikhoan, string matkhau)
+        private bool DangKy(string tennv,string cccd, string sdt, string email, int maloainv, string taikhoan, string matkhau)
         {
-            return TaiKhoanDAO.Instance.Register(tenkh, sdt, email, taikhoan, matkhau);
+            return TaiKhoanDAO.Instance.Register(tennv,cccd, sdt, email,maloainv, taikhoan, matkhau);
         }
         #endregion
 
@@ -74,13 +89,14 @@ namespace WindowsFormsApp1
         {
             try
             {
-                string tenkh = txtTenNguoiDung.Text;
+                string tennv = txtTenNguoiDung.Text;
                 string sdt = txtSĐT.Text;
                 string email = txtEmail.Text;
                 string taikhoan = txtTenDK.Text;
                 string matkhau = txtMatKhau.Text;
                 string nhaplaimk = txtNhapLaiMK.Text;
-                if (tenkh == "" || sdt == "" || email == "" || taikhoan == "" || matkhau == "")
+                string cccd = txtcmnd.Text;
+                if (tennv == "" || sdt == "" || email == "" || taikhoan == "" || matkhau == "" || cccd == "")
                 {
                     lblThongBao.Text = "Vui lòng nhập đầy đủ thông tin";
                     lblThongBao.Visible = true;
@@ -104,8 +120,14 @@ namespace WindowsFormsApp1
                     lblThongBao.Visible = true;
                     return;
                 }
-
-                if (DangKy(tenkh, sdt, email, taikhoan, matkhau))
+                if (!isValidCCCD(cccd))
+                {
+                    lblThongBao.Text = "Căn cước công dân không hợp lệ. Vui lòng nhập lại";
+                    lblThongBao.Visible = true;
+                    return;
+                }
+                int maloainv = LoaiNVDAO.Instance.getIDOfNVBanVe();
+                if (DangKy(tennv,cccd, sdt, email, maloainv, taikhoan, matkhau))
                 {
                     lblThongBao.Text = "Đăng ký tài khoản thành công";
                     lblThongBao.Visible = true;
@@ -119,8 +141,13 @@ namespace WindowsFormsApp1
                     lblThongBao.Text = "Tên đăng nhập đã tồn tại";
                     lblThongBao.Visible = true;
                 }
+                else if (ex.Message.StartsWith("Conversion failed when converting the nvarchar value 'Trùng CMND'"))
+                {
+                    lblThongBao.Text = "Trùng CCCD";
+                    lblThongBao.Visible = true;
+                }    
                 else
-                    throw ex;
+                    MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void txtSĐT_KeyPress(object sender, KeyPressEventArgs e)
@@ -142,5 +169,12 @@ namespace WindowsFormsApp1
 
 
         #endregion
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            BangDieuKhienAdmin bdk = new BangDieuKhienAdmin();
+            this.Hide();
+            bdk.ShowDialog();
+        }
     }
 }

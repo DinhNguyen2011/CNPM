@@ -84,9 +84,6 @@ namespace WindowsFormsApp1.DAO
             }
             catch (SqlException e)
             {
-                if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Loại NV không phù hợp'"))
-                    MessageBox.Show("Loại NV không phù hợp", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
                     MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;

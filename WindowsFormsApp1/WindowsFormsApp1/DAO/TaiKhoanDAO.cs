@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DTO;
 
 namespace WindowsFormsApp1.DAO
@@ -59,24 +60,23 @@ namespace WindowsFormsApp1.DAO
 
             return result.Rows.Count > 0;
         }
-        public bool Register(string tenkh, DateTime ngaysinh, string sdt, string email, string taikhoan, string matkhau)
+        public bool Register(string tennv, string cmnd, string sdt, string email, int maloainv, string taikhoan, string matkhau)
         {
             string hashPass = maHoaPassword(matkhau);
-            string query = "DANGKY @tenkh , @ngaysinh , @sdt , @email , @taikhoan , @matkhau";
-            int result = DataProvider.Instance.ExcuteNonQuery(query, new object[] {tenkh, ngaysinh, sdt, email, taikhoan, hashPass });
-
+            string query = "DANGKY @tennv , @cmnd , @sdt , @email , @maloainv , @taikhoan , @matkhau";
+            int result = DataProvider.Instance.ExcuteNonQuery(query, new object[] {tennv, cmnd, sdt, email, maloainv, taikhoan, hashPass });
             return result > 0;
         }
-        public TaiKhoan findTaiKhoanByMaKH(KhachHang kh)
-        {
-            TaiKhoan tk = null;
-            string query = "FindAccountByMaKH @makh";
-            DataTable result = DataProvider.Instance.ExcuteQuery(query, new object[] {kh.Makh});
-            foreach (DataRow item in result.Rows)
-            {
-                tk = new TaiKhoan(item);
-            }
-            return tk;
-        }
+        //public TaiKhoan findTaiKhoanByMaKH(KhachHang kh)
+        //{
+        //    TaiKhoan tk = null;
+        //    string query = "FindAccountByMaKH @makh";
+        //    DataTable result = DataProvider.Instance.ExcuteQuery(query, new object[] {kh.Makh});
+        //    foreach (DataRow item in result.Rows)
+        //    {
+        //        tk = new TaiKhoan(item);
+        //    }
+        //    return tk;
+        //}
     }
 }

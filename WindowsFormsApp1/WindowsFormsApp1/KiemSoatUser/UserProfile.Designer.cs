@@ -73,7 +73,7 @@
             this.txtTen.SelectedText = "";
             this.txtTen.Size = new System.Drawing.Size(504, 72);
             this.txtTen.TabIndex = 2;
-            this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
+            //this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
             // rdbtNam
             // 
@@ -87,7 +87,7 @@
             this.rdbtNam.TabStop = true;
             this.rdbtNam.Text = "Nam";
             this.rdbtNam.UseVisualStyleBackColor = true;
-            this.rdbtNam.CheckedChanged += new System.EventHandler(this.rdbtNam_CheckedChanged);
+            //this.rdbtNam.CheckedChanged += new System.EventHandler(this.rdbtNam_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -101,7 +101,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            //this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // dtpkNgaySinh
             // 
@@ -121,7 +121,7 @@
             this.dtpkNgaySinh.TabIndex = 11;
             this.dtpkNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpkNgaySinh.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
-            this.dtpkNgaySinh.ValueChanged += new System.EventHandler(this.dtpkNgaySinh_ValueChanged);
+            //this.dtpkNgaySinh.ValueChanged += new System.EventHandler(this.dtpkNgaySinh_ValueChanged);
             // 
             // txtDiaChi
             // 
@@ -146,7 +146,7 @@
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(504, 72);
             this.txtDiaChi.TabIndex = 15;
-            this.txtDiaChi.Leave += new System.EventHandler(this.txtDiaChi_Leave);
+            //this.txtDiaChi.Leave += new System.EventHandler(this.txtDiaChi_Leave);
             // 
             // txtSDT
             // 
@@ -171,8 +171,8 @@
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(515, 72);
             this.txtSDT.TabIndex = 13;
-            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdt_KeyPress);
-            this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
+            //this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdt_KeyPress);
+            //this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
             // 
             // guna2Elipse1
             // 
@@ -201,7 +201,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(515, 72);
             this.txtEmail.TabIndex = 28;
-            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
+            //this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // guna2Button5
             // 
@@ -393,7 +393,7 @@
             this.txtGhichu.SelectedText = "";
             this.txtGhichu.Size = new System.Drawing.Size(504, 72);
             this.txtGhichu.TabIndex = 48;
-            this.txtGhichu.Leave += new System.EventHandler(this.txtGhichu_Leave);
+            //this.txtGhichu.Leave += new System.EventHandler(this.txtGhichu_Leave);
             // 
             // UserProfile
             // 

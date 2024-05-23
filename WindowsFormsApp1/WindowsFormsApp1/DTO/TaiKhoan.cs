@@ -11,23 +11,23 @@ namespace WindowsFormsApp1.DTO
     {
         private int maTK;
         private string account;
-        private int maKH;
+        private int manv;
 
         public int MaTK { get => maTK; set => maTK = value; }
         public string Account { get => account; set => account = value; }
-        public int MaKH { get => maKH; set => maKH = value; }
+        public int Manv { get => manv; set => manv = value; }
 
-        public TaiKhoan(int maTK, string account, int maKH)
+        public TaiKhoan(int maTK, string account, int manv)
         {
             this.MaTK = maTK;
             this.Account = account;
-            this.MaKH = maKH;
+            this.Manv = manv;
         }
 
-        public TaiKhoan(string account, int maKH)
+        public TaiKhoan(string account, int manv)
         {
             this.account = account;
-            this.maKH = maKH;
+            this.manv = manv;
         }
 
         public TaiKhoan() { }
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1.DTO
         {
             this.MaTK = (int)row["maTK"];
             this.Account = row["account"].ToString();
-            this.MaKH = (int)row["maKH"];
+            this.manv = (int)row["manv"];
         }
 
     }

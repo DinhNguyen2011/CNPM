@@ -67,7 +67,7 @@
             this.btnChiTietVe.Size = new System.Drawing.Size(270, 69);
             this.btnChiTietVe.TabIndex = 30;
             this.btnChiTietVe.Text = "Xem Chi Tiết Vé";
-            this.btnChiTietVe.Click += new System.EventHandler(this.btnChiTietVe_Click);
+            //this.btnChiTietVe.Click += new System.EventHandler(this.btnChiTietVe_Click);
             // 
             // guna2Elipse1
             // 
@@ -152,7 +152,7 @@
             this.dgvChiTietveXe.ThemeStyle.RowsStyle.Height = 35;
             this.dgvChiTietveXe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvChiTietveXe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvChiTietveXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietveXe_CellClick);
+            //this.dgvChiTietveXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietveXe_CellClick);
             // 
             // guna2Button5
             // 

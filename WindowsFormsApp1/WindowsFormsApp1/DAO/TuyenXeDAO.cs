@@ -53,7 +53,7 @@ namespace WindowsFormsApp1.DAO
                 if (e.Message.StartsWith("Conversion failed when converting the nvarchar value 'Tuyến xe đã tồn tại!' "))
                     MessageBox.Show("Tuyến xe đã tồn tại", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    throw e;
+                    MessageBox.Show(e.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
         }

@@ -98,5 +98,12 @@ namespace WindowsFormsApp1.DAO
             maloai = (int)DataProvider.Instance.ExcuteScalar(query);
             return maloai;
         }
+        public int getIDOfNVBanVe()
+        {
+            int maloai = -1;
+            string query = "getIDLoaiOfNVBanVe";
+            maloai = (int)DataProvider.Instance.ExcuteScalar(query);
+            return maloai;
+        }
     }
 }

@@ -53,7 +53,6 @@
     <Compile Include="DAO\ChiTietVeXeDAO.cs" />
     <Compile Include="DAO\ChuyenXeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\LoaiNVDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
@@ -62,7 +61,6 @@
     <Compile Include="DAO\XeDAO.cs" />
     <Compile Include="DTO\ChiTietVeXe.cs" />
     <Compile Include="DTO\ChuyenXe.cs" />
-    <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DTO\LichTrinh.cs" />
     <Compile Include="DAO\TuyenXeDAO.cs" />
     <Compile Include="DTO\LoaiNV.cs" />
@@ -113,12 +111,6 @@
     </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyChuyenXe.Designer.cs">
       <DependentUpon>UserQuanLyChuyenXe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyKhachHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KiemSoatAmin\UserQuanLyKhachHang.Designer.cs">
-      <DependentUpon>UserQuanLyKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="KiemSoatAmin\UserQuanLyNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -190,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyChuyenXe.resx">
       <DependentUpon>UserQuanLyChuyenXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KiemSoatAmin\UserQuanLyKhachHang.resx">
-      <DependentUpon>UserQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KiemSoatAmin\UserQuanLyNhanVien.resx">
       <DependentUpon>UserQuanLyNhanVien.cs</DependentUpon>
