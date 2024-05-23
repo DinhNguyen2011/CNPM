@@ -23,7 +23,6 @@ namespace WindowsFormsApp1.GUI
             txtGio.Text = veXe.Giodi;
             txtXe.Text = veXe.Xe;
             txtGhe.Text = veXe.Ghe;
-            btnHidden.Focus();
         }
 
     }

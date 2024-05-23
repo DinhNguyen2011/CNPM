@@ -48,9 +48,9 @@ namespace WindowsFormsApp1
         #endregion
 
         #region Method
-        private bool DangKy(string tenkh, DateTime ngaysinh, string sdt, string email, string taikhoan, string matkhau)
+        private bool DangKy(string tenkh, string sdt, string email, string taikhoan, string matkhau)
         {
-            return TaiKhoanDAO.Instance.Register(tenkh, ngaysinh, sdt, email, taikhoan, matkhau);
+            return TaiKhoanDAO.Instance.Register(tenkh, sdt, email, taikhoan, matkhau);
         }
         #endregion
 
@@ -75,7 +75,6 @@ namespace WindowsFormsApp1
             try
             {
                 string tenkh = txtTenNguoiDung.Text;
-                DateTime ngaysinh = DateTime.Parse(dtNS.Value.ToString());
                 string sdt = txtSĐT.Text;
                 string email = txtEmail.Text;
                 string taikhoan = txtTenDK.Text;
@@ -106,7 +105,7 @@ namespace WindowsFormsApp1
                     return;
                 }
 
-                if (DangKy(tenkh, ngaysinh, sdt, email, taikhoan, matkhau))
+                if (DangKy(tenkh, sdt, email, taikhoan, matkhau))
                 {
                     lblThongBao.Text = "Đăng ký tài khoản thành công";
                     lblThongBao.Visible = true;
@@ -141,8 +140,7 @@ namespace WindowsFormsApp1
         }
 
 
+
         #endregion
-
-
     }
 }

@@ -355,8 +355,7 @@ namespace WindowsFormsApp1.KiemSoatAmin
             timNhanVien();
         }
 
+
         #endregion
-
-
     }
 }
