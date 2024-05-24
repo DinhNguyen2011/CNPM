@@ -107,7 +107,7 @@ namespace WindowsFormsApp1.KiemSoatUser
                 List<VeXeTam> listTimKiem = new List<VeXeTam>();    
                 foreach (VeXeTam vexe in listVe)
                 {
-                    if (vexe.TenKH != txtTenKH.Text || vexe.Sdt!=txtSdt.Text) continue;
+                    if (vexe.TenKH.ToLower() != txtTenKH.Text.ToLower() && vexe.Sdt!=txtSdt.Text) continue;
                     VeXeTam tam = new VeXeTam(vexe.Ma, vexe.TenKH, vexe.Sdt, vexe.Giodi, vexe.Tuyen, vexe.Ghe, vexe.Xe, vexe.Trangthai);
                     listTimKiem.Add(tam);
                 }    
