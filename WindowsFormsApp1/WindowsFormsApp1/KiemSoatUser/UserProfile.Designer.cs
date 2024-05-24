@@ -72,7 +72,7 @@
             this.txtTen.PlaceholderText = "Nhập tên";
             this.txtTen.SelectedText = "";
             this.txtTen.Size = new System.Drawing.Size(504, 72);
-            this.txtTen.TabIndex = 2;
+            this.txtTen.TabIndex = 1;
             this.txtTen.Leave += new System.EventHandler(this.txtTen_Leave);
             // 
             // rdbtNam
@@ -97,7 +97,7 @@
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(83, 42);
-            this.radioButton2.TabIndex = 9;
+            this.radioButton2.TabIndex = 6;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nữ";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.dtpkNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkNgaySinh.Name = "dtpkNgaySinh";
             this.dtpkNgaySinh.Size = new System.Drawing.Size(291, 63);
-            this.dtpkNgaySinh.TabIndex = 11;
+            this.dtpkNgaySinh.TabIndex = 7;
             this.dtpkNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpkNgaySinh.Value = new System.DateTime(2024, 4, 1, 21, 53, 1, 386);
             this.dtpkNgaySinh.Leave += new System.EventHandler(this.dtpkNgaySinh_ValueChanged);
@@ -145,7 +145,7 @@
             this.txtDiaChi.PlaceholderText = "Nhập địa chỉ ";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(504, 72);
-            this.txtDiaChi.TabIndex = 15;
+            this.txtDiaChi.TabIndex = 2;
             this.txtDiaChi.Leave += new System.EventHandler(this.txtDiaChi_Leave);
             // 
             // txtSDT
@@ -170,7 +170,7 @@
             this.txtSDT.PlaceholderText = "SĐT liên hệ";
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(515, 72);
-            this.txtSDT.TabIndex = 13;
+            this.txtSDT.TabIndex = 5;
             this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
             // 
             // guna2Elipse1
@@ -199,7 +199,7 @@
             this.txtEmail.PlaceholderText = "Nhập email liên hệ";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(515, 72);
-            this.txtEmail.TabIndex = 28;
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // guna2Button5
@@ -391,7 +391,7 @@
             this.txtGhichu.PlaceholderText = "Nơi đón..";
             this.txtGhichu.SelectedText = "";
             this.txtGhichu.Size = new System.Drawing.Size(504, 72);
-            this.txtGhichu.TabIndex = 48;
+            this.txtGhichu.TabIndex = 3;
             this.txtGhichu.Leave += new System.EventHandler(this.txtGhichu_Leave);
             // 
             // UserProfile

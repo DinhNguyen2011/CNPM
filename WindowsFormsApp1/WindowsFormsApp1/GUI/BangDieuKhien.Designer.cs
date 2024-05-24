@@ -44,11 +44,6 @@
             this.btnThanhToan2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnXacNhanKH = new Guna.UI2.WinForms.Guna2Button();
             this.btnXacNhanVe = new Guna.UI2.WinForms.Guna2Button();
-            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
-            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
-            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
-            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
-            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.btnTam();
             this.guna2ElipseDatVe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseTimKiem = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -57,6 +52,11 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lbHello = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.userLichTrinh1 = new WindowsFormsApp1.KiemSoatUser.UserLichTrinh();
+            this.userProfile1 = new WindowsFormsApp1.KiemSoatUser.UserProfile();
+            this.userChiTietVeXe1 = new WindowsFormsApp1.KiemSoatUser.UserChiTietVeXe();
+            this.userThanhToan1 = new WindowsFormsApp1.KiemSoatUser.UserThanhToan();
+            this.userDatVe1 = new WindowsFormsApp1.KiemSoatUser.btnTam();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -324,6 +324,72 @@
             this.btnXacNhanVe.Text = "Đặt vé";
             this.btnXacNhanVe.Click += new System.EventHandler(this.btnXacNhanVe_Click);
             // 
+            // guna2ElipseDatVe
+            // 
+            this.guna2ElipseDatVe.TargetControl = this;
+            // 
+            // guna2ElipseProfile
+            // 
+            this.guna2ElipseProfile.TargetControl = this;
+            // 
+            // guna2ElipseTimKiem
+            // 
+            this.guna2ElipseTimKiem.TargetControl = this;
+            // 
+            // guna2ElipseThanhToan
+            // 
+            this.guna2ElipseThanhToan.TargetControl = this;
+            // 
+            // guna2ElipseCTVeXe
+            // 
+            this.guna2ElipseCTVeXe.TargetControl = this;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button1.Location = new System.Drawing.Point(71, 19);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(51, 48);
+            this.guna2Button1.TabIndex = 6;
+            this.guna2Button1.Click += new System.EventHandler(this.LogOut_Click);
+            // 
+            // lbHello
+            // 
+            this.lbHello.AutoSize = true;
+            this.lbHello.Font = new System.Drawing.Font("Segoe Print", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHello.ForeColor = System.Drawing.Color.Indigo;
+            this.lbHello.Location = new System.Drawing.Point(170, 18);
+            this.lbHello.Name = "lbHello";
+            this.lbHello.Size = new System.Drawing.Size(366, 50);
+            this.lbHello.TabIndex = 7;
+            this.lbHello.Text = "Hello, Tên khách hàng !!";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.lbHello);
+            this.guna2Panel1.Controls.Add(this.panel2);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.PnMoving);
+            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.Controls.Add(this.btnMiniSize);
+            this.guna2Panel1.Controls.Add(this.btnClose);
+            this.guna2Panel1.Location = new System.Drawing.Point(227, 38);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1753, 1138);
+            this.guna2Panel1.TabIndex = 8;
+            // 
             // userLichTrinh1
             // 
             this.userLichTrinh1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -370,71 +436,6 @@
             this.userDatVe1.Name = "userDatVe1";
             this.userDatVe1.Size = new System.Drawing.Size(1600, 820);
             this.userDatVe1.TabIndex = 0;
-            // 
-            // guna2ElipseDatVe
-            // 
-            this.guna2ElipseDatVe.TargetControl = this;
-            // 
-            // guna2ElipseProfile
-            // 
-            this.guna2ElipseProfile.TargetControl = this;
-            // 
-            // guna2ElipseTimKiem
-            // 
-            this.guna2ElipseTimKiem.TargetControl = this;
-            // 
-            // guna2ElipseThanhToan
-            // 
-            this.guna2ElipseThanhToan.TargetControl = this;
-            // 
-            // guna2ElipseCTVeXe
-            // 
-            this.guna2ElipseCTVeXe.TargetControl = this;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(71, 19);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(51, 48);
-            this.guna2Button1.TabIndex = 6;
-            // 
-            // lbHello
-            // 
-            this.lbHello.AutoSize = true;
-            this.lbHello.Font = new System.Drawing.Font("Segoe Print", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHello.ForeColor = System.Drawing.Color.Indigo;
-            this.lbHello.Location = new System.Drawing.Point(170, 18);
-            this.lbHello.Name = "lbHello";
-            this.lbHello.Size = new System.Drawing.Size(366, 50);
-            this.lbHello.TabIndex = 7;
-            this.lbHello.Text = "Hello, Tên khách hàng !!";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.lbHello);
-            this.guna2Panel1.Controls.Add(this.panel2);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.PnMoving);
-            this.guna2Panel1.Controls.Add(this.panel1);
-            this.guna2Panel1.Controls.Add(this.btnMiniSize);
-            this.guna2Panel1.Controls.Add(this.btnClose);
-            this.guna2Panel1.Location = new System.Drawing.Point(227, 38);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1753, 1138);
-            this.guna2Panel1.TabIndex = 8;
             // 
             // BangDieuKhien
             // 

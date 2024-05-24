@@ -46,6 +46,8 @@
             this.txtGio = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtTrangthai = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 327);
+            this.label3.Location = new System.Drawing.Point(50, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(183, 50);
             this.label3.TabIndex = 4;
@@ -84,7 +86,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 245);
+            this.label4.Location = new System.Drawing.Point(50, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 50);
             this.label4.TabIndex = 5;
@@ -114,7 +116,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(345, 245);
+            this.label7.Location = new System.Drawing.Point(345, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 50);
             this.label7.TabIndex = 8;
@@ -124,7 +126,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(50, 585);
+            this.label8.Location = new System.Drawing.Point(50, 577);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 50);
             this.label8.TabIndex = 9;
@@ -134,7 +136,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(50, 665);
+            this.label9.Location = new System.Drawing.Point(50, 657);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 50);
             this.label9.TabIndex = 10;
@@ -155,7 +157,7 @@
             this.txtGhe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGhe.ForeColor = System.Drawing.Color.Black;
             this.txtGhe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGhe.Location = new System.Drawing.Point(460, 245);
+            this.txtGhe.Location = new System.Drawing.Point(460, 249);
             this.txtGhe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGhe.Name = "txtGhe";
             this.txtGhe.PasswordChar = '\0';
@@ -180,7 +182,7 @@
             this.txtMa.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa.ForeColor = System.Drawing.Color.Black;
             this.txtMa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMa.Location = new System.Drawing.Point(213, 245);
+            this.txtMa.Location = new System.Drawing.Point(213, 249);
             this.txtMa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMa.Name = "txtMa";
             this.txtMa.PasswordChar = '\0';
@@ -205,7 +207,7 @@
             this.txtNguoiDat.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNguoiDat.ForeColor = System.Drawing.Color.Black;
             this.txtNguoiDat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNguoiDat.Location = new System.Drawing.Point(225, 327);
+            this.txtNguoiDat.Location = new System.Drawing.Point(225, 332);
             this.txtNguoiDat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNguoiDat.Name = "txtNguoiDat";
             this.txtNguoiDat.PasswordChar = '\0';
@@ -280,7 +282,7 @@
             this.txtGio.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGio.ForeColor = System.Drawing.Color.Black;
             this.txtGio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGio.Location = new System.Drawing.Point(181, 585);
+            this.txtGio.Location = new System.Drawing.Point(181, 577);
             this.txtGio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGio.Name = "txtGio";
             this.txtGio.PasswordChar = '\0';
@@ -305,7 +307,7 @@
             this.txtXe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtXe.ForeColor = System.Drawing.Color.Black;
             this.txtXe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtXe.Location = new System.Drawing.Point(181, 665);
+            this.txtXe.Location = new System.Drawing.Point(181, 657);
             this.txtXe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtXe.Name = "txtXe";
             this.txtXe.PasswordChar = '\0';
@@ -320,22 +322,58 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Stencil", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 139);
+            this.label2.Location = new System.Drawing.Point(189, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(289, 85);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ticket";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(50, 733);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(183, 50);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Trạng thái :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTrangthai
+            // 
+            this.txtTrangthai.BorderColor = System.Drawing.Color.Black;
+            this.txtTrangthai.BorderRadius = 10;
+            this.txtTrangthai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTrangthai.DefaultText = "";
+            this.txtTrangthai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTrangthai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTrangthai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTrangthai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTrangthai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTrangthai.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangthai.ForeColor = System.Drawing.Color.Black;
+            this.txtTrangthai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTrangthai.Location = new System.Drawing.Point(225, 733);
+            this.txtTrangthai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTrangthai.Name = "txtTrangthai";
+            this.txtTrangthai.PasswordChar = '\0';
+            this.txtTrangthai.PlaceholderText = "";
+            this.txtTrangthai.ReadOnly = true;
+            this.txtTrangthai.SelectedText = "";
+            this.txtTrangthai.Size = new System.Drawing.Size(292, 50);
+            this.txtTrangthai.TabIndex = 74;
+            this.txtTrangthai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormHienThiVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(583, 767);
+            this.ClientSize = new System.Drawing.Size(583, 790);
             this.Controls.Add(this.txtXe);
             this.Controls.Add(this.txtGio);
             this.Controls.Add(this.txtTuyen);
             this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtTrangthai);
             this.Controls.Add(this.txtNguoiDat);
             this.Controls.Add(this.txtMa);
             this.Controls.Add(this.txtGhe);
@@ -344,6 +382,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -379,5 +418,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGio;
         private Guna.UI2.WinForms.Guna2TextBox txtXe;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2TextBox txtTrangthai;
     }
 }

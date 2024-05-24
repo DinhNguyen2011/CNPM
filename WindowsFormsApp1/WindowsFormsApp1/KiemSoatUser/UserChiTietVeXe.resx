@@ -124,6 +124,26 @@
     <value>49</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEIAAAAwCAYAAAClvqwiAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAA1FJREFUaEPt2knITlEcx/HHPBcLcyhSCgtFMmTYWsrKhpUk40LyyrAhpGTKUCSU
+        ElaiiCRDNkosbERSiMxK5u9vcet2+793Ouee+6j7q8/m7X3OOc//uc+95znntJo0afI/pBumYh0u4AFe
+        4Bt+4j0e4SI2Yia6Im+6YBM+4A1Woa0yGtuhwf0t6CV2QW2kRUXYj+Tr56L2DMNp/EJygEXpijmGoUhG
+        RdgH63UdqC0a2AroErUG5+IjliBKWhFkG2pJX5yHNSifdKX1QVoRpJZC6KtwH9aAqvDK+FtS8EIMwENY
+        g4n7jWvYgFkYBV1F/TAOc7AZd6H/tdooImgh9Fi8DGsgkR/Yi7HImwk4Bd0orTbzCFqIHbAGEbmHiSib
+        KXgCq+0swQoxCfq0rUHISfSEa/rjKaw+0gQphB5dt2ANQA7BR9TPQVh9ZAlSiAWwOhfdM3TvcI2m2Edg
+        9ZFHkEJcgtW5Jj3D4RoV4TisPvKqvBBj0NnUWbNK1+jroPuL1X4RlRdiGayO9cOqF1yzEFb7RVVeiOWw
+        Ot4JH9kKq/2iKi/ECGj9IN7pJ1i/DstEP5/jbZe1BpVnOu7gCzQlngafWY3XsN5gFk3Pb2IgmjRp0qRJ
+        kxozCPq1WXblSLNOPRJ9Ro9sPcI/4za0F1J51sJ6g0XNho9o8qYCxNvWyrmPH3yp0XQ13mlZ6+Ejms5b
+        7S9FpfFViPlwTW+8hdX+IlQaH4XYAx/RvcZqX/uolU+rXQuhVWwf0f5JZ7to2hasPC6F8FWE7rgKqw/R
+        inflKVsIX0XQqtVRWH3IOQRJmUJoCV5L8a7Rqpf2O60+RI/RkQiSsleENmdcLtnJ0CaR1XZkJYLF5R6h
+        hV59otrGy5vxOIC0DSQ5gaBxKURE03N9ulug5Ti9WW0AayNYp2K0CazDHTfwB1YbcdfRA0GTpxB5tup9
+        uQLtwgdPViF0hkmHN87E/laVw9CjtJakFUJF0OMtio73aMfL+l8XuuIWo9bou2sNLlmEKEOgfcusm10e
+        36EbZ1usSs9DcoAanFWEeHQqZjd0VDD5+izPoTOXg9FW0SFOLbC8g66QrCLEo03dGdAb06HSx9AmkU7E
+        fMUz6AzWWWj/VIdLirTfpEmTImm1/gFJ5mO6OHd+mAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="guna2Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZwAAACECAYAAACks517AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -289,7 +309,7 @@
   <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="huyVeButton.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

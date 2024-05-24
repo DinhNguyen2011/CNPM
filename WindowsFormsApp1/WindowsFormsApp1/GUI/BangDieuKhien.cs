@@ -154,6 +154,7 @@ namespace WindowsFormsApp1
             tabIndex = 4;
             PnMoving.Left = btnKiemTraVe.Left + 60;
             userChiTietVeXe1.Visible = true;
+            userChiTietVeXe1.setValue();
             userChiTietVeXe1.BringToFront();
             resetColorOfTitlePage();
             btnKiemTraVe.FillColor = Color.FromArgb(0, 192, 0);

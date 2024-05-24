@@ -17,13 +17,15 @@ namespace WindowsFormsApp1.GUI
         {
             InitializeComponent();
             txtMa.Text = veXe.Ma.ToString();
-            txtNguoiDat.Text = veXe.NguoiDat;
+            txtNguoiDat.Text = veXe.TenKH;
             txtSDT.Text = veXe.Sdt;
             txtTuyen.Text = veXe.Tuyen;
             txtGio.Text = veXe.Giodi;
             txtXe.Text = veXe.Xe;
             txtGhe.Text = veXe.Ghe;
+            txtTrangthai.Text = veXe.Trangthai;
         }
 
+        
     }
 }
