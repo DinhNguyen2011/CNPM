@@ -26,6 +26,13 @@ namespace WindowsFormsApp1.GUI
             txtTrangthai.Text = veXe.Trangthai;
         }
 
-        
+        private void btnXuatVe_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(this.Width, 850);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, 874));
+            bitmap.Save("../../../../Ticket/"+txtMa.Text+".png");
+            MessageBox.Show("Xuất vé thành công", "Thông báo");
+            return;
+        }
     }
 }
