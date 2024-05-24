@@ -77,10 +77,18 @@ namespace WindowsFormsApp1.KiemSoatUser
         {
             int a= cbDiemDi.SelectedIndex;
             int b= cbDiemDen.SelectedIndex;
-            if (cbDiemDi.Items.Count -1 >= b) cbDiemDi.SelectedIndex = b;
-            else cbDiemDi.SelectedIndex = -1;
-            if (cbDiemDen.Items.Count -1 >= a) cbDiemDen.SelectedIndex = a;
-            else cbDiemDen.SelectedIndex = -1;
+            if (cbDiemDi.Items.Count - 1 < b) cbDiemDi.SelectedIndex = b;
+            else
+            {
+                cbDiemDi.SelectedIndex = -1;
+                cbDiemDi.StartIndex = -1;
+            }
+            if (cbDiemDen.Items.Count - 1 < a) cbDiemDen.SelectedIndex = a;
+            else
+            {
+                cbDiemDen.SelectedIndex = -1;
+                cbDiemDen.StartIndex = -1;
+            }
         }
 
         private void dgvLichTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
